@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { FiShoppingCart } from "react-icons/fi";
-import navbg from "../assets/navbg.png"; 
+import navbg from "../assets/navbg.png";
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ cart }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // GSAP animation for hover effect
   useEffect(() => {
@@ -24,11 +26,7 @@ const Navbar = () => {
   // Track scroll position to change background
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 400) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 400);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -39,20 +37,16 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div
-      className={`w-full mx-auto px-4 sm:px-6 fixed z-20 lg:px-6 transition duration-300 ${
-        isScrolled ? "bg-cover bg-center shadow-md" : "shadow-md"
-      }`}
+    <div className={`w-full fixed z-20 transition duration-300 ${isScrolled ? "bg-cover bg-center shadow-md" : "shadow-md"}`}
       style={{
         backgroundImage: isScrolled ? `url(${navbg})` : "none",
       }}
     >
-      <nav className="border-gray-200 py-8">
+      <nav className="container mx-auto px-4 sm:px-6 py-8">
         <div className="flex justify-between items-center">
           <p className="text-2xl font-semibold text-black">Sof-Scroll</p>
           <button
-            data-collapse-toggle="mobile-menu"
-            type="button"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden text-gray-500 hover:text-gray-900 focus:outline-none"
             aria-controls="mobile-menu"
             aria-expanded="false"
@@ -67,61 +61,19 @@ const Navbar = () => {
           </button>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8 items-center" id="mobile-menu">
-            <a href="#" className="text-gray-700 hover:text-dark nav-item">
-              Home
-            </a>
-
-            {/* Products Dropdown */}
-            <div className="relative group">
-              <button className="text-gray-700 hover:text-dark nav-item flex items-center">
-                Products
-                <svg
-                  className="w-4 h-4 ml-1"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-              </button>
-
-              {/* Dropdown content */}
-              <div className="absolute hidden group-hover:block bg-white shadow-md mt-0.4 rounded-md w-32">
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
-                >
-                  Product 1
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
-                >
-                  Product 2
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-200"
-                >
-                  Product 3
-                </a>
-              </div>
-            </div>
-
-            <a href="#" className="text-gray-700 hover:text-dark nav-item">
-              About
-            </a>
-            <a href="#" className="text-gray-700 hover:text-dark nav-item">
-              Contact Us
-            </a>
-
-            <div className="relative group">
+          <div className="hidden md:flex space-x-8 items-center">
+            <Link to="/" className="text-gray-700 hover:text-dark nav-item">Home</Link>
+            <Link to="/all-products" className="text-gray-700 hover:text-dark nav-item">Products</Link>
+            <Link to="/about-us" className="text-gray-700 hover:text-dark nav-item">About</Link>
+            <Link to="/contact" className="text-gray-700 hover:text-dark nav-item">Contact Us</Link>
+            <Link to="/cart" className="relative">
               <FiShoppingCart className="w-6 h-6" />
-            </div>
+              {cart.length > 0 && (
+                <div className="absolute bottom-4 -right-3 bg-red-600 w-6 h-6 rounded-full text-white text-center">
+                  {cart.length}
+                </div>
+              )}
+            </Link>
           </div>
         </div>
       </nav>

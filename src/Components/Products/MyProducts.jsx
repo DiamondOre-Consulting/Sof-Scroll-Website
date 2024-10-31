@@ -1,10 +1,9 @@
-import React from "react"; 
-import tissue1 from "../assets/tissue1.png";
-import Allproducts from "./Products/AllProducts.js";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Allproducts from './AllProducts';
+import { Link } from 'react-router-dom';
 
-const BestSellers = ({ cart, setCart }) => {
-  console.log("all products", Allproducts);
+const MyProducts = ({ cart, setCart }) => {
+  // Add product to cart
   const addToCart = (product) => {
     if (!cart.find((item) => item.itemCode === product.itemCode)) {
       setCart((prevCart) => [...prevCart, { ...product, quantity: 1 }]);
@@ -17,12 +16,10 @@ const BestSellers = ({ cart, setCart }) => {
   };
 
   return (
-    <div>
-      <div className="py-10">
-        <h1 className="text-center text-4xl mf">Our Best Sellers</h1>
-
-        <div className="grid grid-cols-3 mx-auto mt-20 gap-6 px-6">
-        {Allproducts.slice(0, 6).map((product, index) => {
+    <div className="py-40">
+      <h1 className="text-center text-5xl mf">All Products</h1>
+      <div className="grid grid-cols-3 mx-auto mt-20 gap-6 px-6">
+        {Allproducts.map((product, index) => {
           const isInCart = cart.find((item) => item.itemCode === product.itemCode);
 
           return (
@@ -48,10 +45,9 @@ const BestSellers = ({ cart, setCart }) => {
             </Link>
           );
         })}
-        </div>
       </div>
     </div>
   );
 };
 
-export default BestSellers;
+export default MyProducts;

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
-import herobg from "../assets/herobg.png"; // Import your image
-import pattern1 from '../assets/pattern1.png'
+import herobg from "../assets/herobg.png";
+import pattern1 from '../assets/pattern1.png';
 
 const Hero = () => {
   useEffect(() => {
@@ -14,23 +14,21 @@ const Hero = () => {
     tl.to(span, { duration: 0.2, yPercent: 0 });
 
     button.addEventListener("mouseenter", () => tl.play(0));
-
-    // Clean up event listener on unmount
-    return () => {
-      button.removeEventListener("mouseenter", () => tl.play(0));
-    };
+    return () => button.removeEventListener("mouseenter", () => tl.play(0));
   }, []);
+
   return (
     <div
-      className="relative  bg-cover bg-center h-screen flex items-center"
+      className="h-screen bg-cover bg-center flex items-center relative"
       style={{ backgroundImage: `url(${herobg})` }}
     >
       <div className="container mx-auto px-4">
-        {/* Left Side Content */}
         <div className="max-w-xl text-left text-white">
-          <h1 className="text-5xl font-bold mb-8 text-dark mf leading-tight">Luxury You Can Trust, Softness You Can Feel</h1>
-          <p className="text-xl mb-6 text-gray-600 ">
-          From everyday use to special moments, our tissues provide the perfect blend of elegance and functionality
+          <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight mf  text-dark">
+            Luxury You Can Trust, Softness You Can Feel
+          </h1>
+          <p className="text-lg md:text-xl mb-6 text-gray-600">
+            From everyday use to special moments, our tissues provide the perfect blend of elegance and functionality.
           </p>
           <a
             href="#"
@@ -40,8 +38,7 @@ const Hero = () => {
           </a>
         </div>
       </div>
-<img src={pattern1} alt="" className="relative" />
-
+      <img src={pattern1} alt="Pattern" className="absolute bottom-20 right-0 w-48 md:flex hidden" />
     </div>
   );
 };

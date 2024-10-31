@@ -8,13 +8,14 @@ import ContactUs from '../../Components/ContactUs'
 import WhyUs from '../../Components/WhyUs'
 
 
-const MainHome = () => {
+const MainHome = ({ cart, setCart }) => {
   return (
     <div>
       <Hero/>
       <AboutUs/>
-      <BestSellers/>
-      <PopularCategories/>
+      <BestSellers cart={cart} setCart={setCart}/>
+  
+      {/* <PopularCategories/> */}
       <WhyUs/>
       <Testimonials/>
       <ContactUs/>
