@@ -56,7 +56,7 @@ const AboutUs = () => {
 
       {/* Manufacturing Process Section */}
       <section className="py-16 px-4 bg-light">
-        <h2 className="text-4xl font-bold text-center  mb-1 mf">
+        <h2 className="text-5xl font-bold text-center  mb-1 mf">
           Our Manufacturing Process
         </h2>
         <div className="mx-auto w-40 h-1 bg-dark  mb-8"></div>
@@ -64,14 +64,14 @@ const AboutUs = () => {
           {/* Process Steps */}
           <div className="p-4 rounded-full  transform transition-all duration-300 relative ">
             <img
-              src={manufacturingImage}
+              src="https://www.papertr.com/wp-content/uploads/2021/04/Getting-Into-Tissue-Paper-Manufacturing-Business2-696x428-1.jpg"
               alt="Manufacturing Step"
               className="h-60  border border-2  border-dashed border-dark p-2 w-60 object-cover  rounded-full"
             />
-            <div className="text-5xl text-center w-20 h-20 z-20 flex absolute top-40  text-white justify-center items-center  rounded-full bg-dark">
+            <div className="text-5xl text-center w-20 h-20 z-20 mf flex absolute top-40  text-white justify-center items-center  rounded-full bg-dark">
               1
             </div>
-            <h3 className="text-2xl font-semibold mt-4">Sourcing</h3>
+            <h3 className="text-3xl font-semibold mt-4 mf">Sourcing</h3>
             <p className="mt-2 text-gray-600">
               We source the finest raw materials to ensure the highest quality
               products.
@@ -80,14 +80,14 @@ const AboutUs = () => {
 
           <div className="p-4 rounded-full  transform transition-all duration-300 relative ">
             <img
-              src={manufacturingImage}
+              src="https://www.shutterstock.com/image-photo/toilet-paper-production-line-worker-260nw-2157905227.jpg"
               alt="Manufacturing Step"
               className="h-60  border border-2  border-dashed border-dark p-2 w-60 object-cover  rounded-full"
             />
-            <div className="text-5xl text-center w-20 h-20 z-20 flex absolute top-40  text-white justify-center items-center  rounded-full bg-dark">
+            <div className="text-5xl text-center w-20 h-20 z-20 flex absolute mf top-40  text-white justify-center items-center  rounded-full bg-dark">
               2
             </div>
-            <h3 className="text-2xl font-semibold mt-4">Production</h3>
+            <h3 className="text-3xl font-semibold mt-4 mf ">Production</h3>
             <p className="mt-2 text-gray-600">
               Our advanced machinery guarantees precision and efficiency in
               production.
@@ -96,14 +96,14 @@ const AboutUs = () => {
 
           <div className="p-4 rounded-full  transform transition-all duration-300 relative ">
             <img
-              src={manufacturingImage}
+              src="https://www.papertr.com/wp-content/uploads/2022/02/Ekran-Resmi-2022-02-09-17.50.52-1024x512.png"
               alt="Manufacturing Step"
               className="h-60  border border-2  border-dashed border-dark p-2 w-60 object-cover  rounded-full"
             />
-            <div className="text-5xl text-center w-20 h-20 z-20 flex absolute top-40  text-white justify-center items-center  rounded-full bg-dark">
+            <div className="text-5xl text-center mf w-20 h-20 z-20 flex absolute top-40  text-white justify-center items-center  rounded-full bg-dark">
               3
             </div>
-            <h3 className="text-2xl font-semibold mt-4"> Quality Control</h3>
+            <h3 className="text-3xl font-semibold mt-4 mf"> Quality Control</h3>
             <p className="mt-2 text-gray-600">
               Each product undergoes strict quality checks to ensure customer
               satisfaction.
@@ -114,7 +114,7 @@ const AboutUs = () => {
 
       {/* Team Section */}
       <section className="py-16 px-4 ">
-        <h2 className="text-5xl font-bold text-center text-white  mb-8 mf">Meet Our Team</h2>
+        <h2 className="text-5xl font-bold text-center text-black mb-8 mf">Meet Our Team</h2>
         <div className="flex flex-col md:flex-row justify-center  items-center">
           {/* Founder */}
           <div className="flex flex-col items-center bg-white  rounded-lg shadow-md p-6 m-4 transform transition-all duration-300 hover:shadow-lg">
