@@ -2,6 +2,7 @@ import React from "react";
 import tissue1 from "../assets/tissue1.png";
 import Allproducts from "./Products/AllProducts.js";
 import { Link } from "react-router-dom";
+import pattern1 from '../assets/pattern1.png'
 
 const BestSellers = ({ cart, setCart }) => {
   console.log("all products", Allproducts);
@@ -18,9 +19,9 @@ const BestSellers = ({ cart, setCart }) => {
 
   return (
     <div>
-      <div className="py-10">
-        <h1 className="text-center text-4xl mf">Our Best Sellers</h1>
-
+      <div className="py-10 relative">
+        <h1 className="text-center text-5xl mx-auto mf relative">Our Best Sellers</h1>
+      <img src={pattern1} alt="" className="absolute -top-20 right-0 " />
         <div className="grid grid-cols-3 mx-auto mt-20 gap-6 px-6">
         {Allproducts.slice(0, 6).map((product, index) => {
           const isInCart = cart.find((item) => item.itemCode === product.itemCode);
@@ -28,7 +29,7 @@ const BestSellers = ({ cart, setCart }) => {
           return (
             <Link to={`/product/${product.itemCode}`} key={index}>
               <div className="w-auto bg-white shadow border hover:border-dark hover:border-2 rounded">
-                <div className="h-52 w-full flex flex-col justify-between p-4 bg-cover bg-center"
+                <div className="h-60 w-full flex flex-col justify-between p-4 bg-cover bg-center"
                   style={{ backgroundImage: `url(${product.imageUrl})` }}
                 ></div>
                 <div className="p-4 flex flex-col items-center">

@@ -113,7 +113,7 @@ const AboutUs = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 px-4 bg-dark">
+      <section className="py-16 px-4 ">
         <h2 className="text-5xl font-bold text-center text-white  mb-8 mf">Meet Our Team</h2>
         <div className="flex flex-col md:flex-row justify-center  items-center">
           {/* Founder */}

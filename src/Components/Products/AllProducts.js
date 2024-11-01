@@ -9,7 +9,7 @@ const Allproducts = [
     weight: "110gms",
     description: "(1 bundle consist of 112 packets)",
     setOfPackets: "1 Twenty Foot Container",
-    imageUrl: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSjee0w2TX-QsdMtJkXI8KCfp3xVZPDh_xolqMf9uvjiF4JAkaKHX4eQVHKHNnfR0kwJTG7YeZttHMA6-S6Z2XYOINsRdlBnLBL3G4RqBQq", // Dummy placeholder image URL
+    imageUrl: "https://rukminim2.flixcart.com/image/1200/1200/l20rma80/facial-tissue/l/9/t/soft-tissue-paper-napkin-tissue-paper-100-pack-of-1-1-100-fliqa-original-imagdgpqyqgfavgp.jpeg", // Dummy placeholder image URL
   },
   {
     name: "Toilet Tissue Paper Roll",
@@ -21,7 +21,7 @@ const Allproducts = [
     weight: "110gms",
     description: "128 Rolls in 1 Carton",
     setOfPackets: "1 Twenty Foot Container",
-    imageUrl: "https://via.placeholder.com/150", // Dummy placeholder image URL
+    imageUrl: "https://m.media-amazon.com/images/I/31GYpPjkDOL._AC_UF1000,1000_QL80_.jpg", // Dummy placeholder image URL
   },
   {
     name: "HRT Roll",
@@ -33,7 +33,7 @@ const Allproducts = [
     weight: "1.8KG",
     description: "6 Rolls in 1 Carton",
     setOfPackets: "1 Twenty Foot Container",
-    imageUrl: "https://via.placeholder.com/150", // Dummy placeholder image URL
+    imageUrl: "https://m.media-amazon.com/images/I/41t1KMeiDCL._SL1500_.jpg", // Dummy placeholder image URL
   },
   {
     name: "JRT Roll",
@@ -45,7 +45,7 @@ const Allproducts = [
     weight: "500gms",
     description: "30 Rolls in 1 Carton",
     setOfPackets: "1 Twenty Foot Container",
-    imageUrl: "https://via.placeholder.com/150", // Dummy placeholder image URL
+    imageUrl: "https://atozofficesupplier.com/wp-content/uploads/2020/04/ti.jpg", // Dummy placeholder image URL
   },
   {
     name: "JRT Roll",
@@ -57,7 +57,7 @@ const Allproducts = [
     weight: "700gms",
     description: "30 Rolls in 1 Carton",
     setOfPackets: "1 Twenty Foot Container",
-    imageUrl: "https://via.placeholder.com/150", // Dummy placeholder image URL
+    imageUrl: "https://cdn.paperindex.com/productimages/DSC_6628_1208220073544.JPG", // Dummy placeholder image URL
   },
   {
     name: "Maxi Tissue Roll",
@@ -69,7 +69,7 @@ const Allproducts = [
     weight: "2kg",
     description: "8 Rolls in 1 Carton",
     setOfPackets: "1 Twenty Foot Container",
-    imageUrl: "https://via.placeholder.com/150", // Dummy placeholder image URL
+    imageUrl: "https://5.imimg.com/data5/OR/TT/MY-8177771/maxi-roll-500x500.jpg", // Dummy placeholder image URL
   },
   {
     name: "Kitchen Utility Industrial Tissue Roll",
@@ -81,7 +81,7 @@ const Allproducts = [
     weight: "2kg",
     description: "6 Rolls in 1 Carton",
     setOfPackets: "1 Twenty Foot Container",
-    imageUrl: "https://via.placeholder.com/150", // Dummy placeholder image URL
+    imageUrl: "https://m.media-amazon.com/images/I/915-f0aIGKL.jpg", // Dummy placeholder image URL
   },
   {
     name: "Hospital Tissue Paper Bed/ Couch Roll",
@@ -93,7 +93,7 @@ const Allproducts = [
     weight: "2.3kg",
     description: "6 Rolls in 1 Carton",
     setOfPackets: "1 Twenty Foot Container",
-    imageUrl: "https://via.placeholder.com/150", // Dummy placeholder image URL
+    imageUrl: "https://5.imimg.com/data5/VR/GE/MY-20217639/hospital-bed-roll-tissue-500x500.jpg", // Dummy placeholder image URL
   },
   {
     name: "Cellulose Mini Tissue Rolls",
@@ -105,7 +105,7 @@ const Allproducts = [
     weight: "500gms",
     description: "15 Rolls in 1 Carton",
     setOfPackets: "1 Twenty Foot Container",
-    imageUrl: "https://via.placeholder.com/150", // Dummy placeholder image URL
+    imageUrl: "https://3.imimg.com/data3/MF/DW/MY-8177771/dsc_0187-500x500.jpg", // Dummy placeholder image URL
   },
   {
     name: "Facial Tissue Box",
@@ -117,7 +117,7 @@ const Allproducts = [
     weight: null,
     description: "48 Set in 1 Carton",
     setOfPackets: "1 Twenty Foot Container",
-    imageUrl: "https://via.placeholder.com/150", // Dummy placeholder image URL
+    imageUrl: "https://5.imimg.com/data5/KM/RN/MY-6174548/255_tissues-500x500.jpg", // Dummy placeholder image URL
   }
 ];
 

@@ -103,6 +103,10 @@ const ProductDetails = ({ cart, setCart }) => {
             <p>
               <strong>Weight:</strong> {product.weight}
             </p>
+
+            <p>
+              <strong>Set Of Packets:</strong> {product.setOfPackets}
+            </p>
           </div>
 
           <div className="flex items-center mt-6">
