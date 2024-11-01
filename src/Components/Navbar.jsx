@@ -37,7 +37,7 @@ const Navbar = ({ cart }) => {
   }, []);
 
   return (
-    <div className={`w-full fixed z-20 transition duration-300 ${isScrolled ? "bg-cover bg-center shadow-md" : "shadow-md"}`}
+    <div className={`w-full fixed z-50 transition duration-300 ${isScrolled ? "bg-cover bg-center shadow-md" : "shadow-md"}`}
       style={{
         backgroundImage: isScrolled ? `url(${navbg})` : "none",
       }}
