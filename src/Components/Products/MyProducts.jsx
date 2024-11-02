@@ -1,6 +1,7 @@
 import React from 'react';
 import Allproducts from './AllProducts';
 import { Link } from 'react-router-dom';
+import productsbg from '../../assets/productsbg.jpg'
 
 const MyProducts = ({ cart, setCart }) => {
   // Add product to cart
@@ -16,8 +17,25 @@ const MyProducts = ({ cart, setCart }) => {
   };
 
   return (
-    <div className="pt-40 md:py-40">
-      <h1 className="text-center text-5xl mf">All Products</h1>
+    <div className="pt-20 md:pt-40 md:py-24">
+      {/* products bg */}
+       <div className="relative bg-cover bg-center h-96 " style={{ backgroundImage: `url('${productsbg}')` }}>
+      <div className="absolute inset-0 bg-black opacity-70"></div> {/* Black overlay */}
+      <div className="relative flex flex-col justify-center items-center h-full text-white text-center">
+        <h2 className="text-4xl md:text-8xl  mf font-semibold mb-4">
+          All Products
+        </h2>
+        <div className='mx-auto w-80 h-1 bg-white'></div>
+        {/* <Link
+            to={'/contact-us'}
+            className="button inline-grid border bg-white border-dark rounded-full py-2 px-10 w-40 text-center text-black overflow-hidden  transition-all duration-300"
+          >
+            <span>Contact Us</span>
+          </Link> */}
+      </div>
+    </div>
+
+      {/* <h1 className="text-center text-5xl mf">All Products</h1> */}
       <div className="grid grid grid-cols-1 md:grid-cols-3 mx-auto mt-20 gap-6 px-6">
         {Allproducts.map((product, index) => {
           const isInCart = cart.find((item) => item.itemCode === product.itemCode);

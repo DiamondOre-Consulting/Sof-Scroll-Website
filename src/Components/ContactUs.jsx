@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { Link } from "react-router-dom";
+import contactbg from '../assets/contactusbg.jpg'
 
 const ContactUs = () => {
 
@@ -18,10 +19,10 @@ const ContactUs = () => {
   }, []);
 
   return (
-    <div className="relative bg-cover bg-center h-96 " style={{ backgroundImage: "url('https://st3.depositphotos.com/1010613/32213/i/450/depositphotos_322133934-stock-photo-white-popular-contact-web-icons.jpg')" }}>
-      <div className="absolute inset-0 bg-black opacity-50"></div> {/* Black overlay */}
+    <div className="relative bg-cover bg-center h-96 " style={{ backgroundImage: `url('${contactbg}')` }}>
+      <div className="absolute inset-0 bg-black opacity-70"></div> {/* Black overlay */}
       <div className="relative flex flex-col justify-center items-center h-full text-white text-center">
-        <h2 className="text-6xl  mf font-semibold mb-4">
+        <h2 className="text-2xl md:text-6xl  mf font-semibold mb-4">
           Contact Us for a Better Deal
         </h2>
         <Link

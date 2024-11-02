@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2  gap-20  pb-8">
           {/* Logo and Contact Info */}
           <div>
-            <img src={logo} alt="Sof-Scroll Logo" className="w-40 mb-4" />
+            <img src={logo} alt="Sof-Scroll Logo" className="w-52 mb-4" />
 
             {/* Navigation Links */}
             <div>
