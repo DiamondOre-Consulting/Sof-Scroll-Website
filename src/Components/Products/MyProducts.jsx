@@ -16,9 +16,9 @@ const MyProducts = ({ cart, setCart }) => {
   };
 
   return (
-    <div className="py-40">
+    <div className="pt-40 md:py-40">
       <h1 className="text-center text-5xl mf">All Products</h1>
-      <div className="grid grid-cols-3 mx-auto mt-20 gap-6 px-6">
+      <div className="grid grid grid-cols-1 md:grid-cols-3 mx-auto mt-20 gap-6 px-6">
         {Allproducts.map((product, index) => {
           const isInCart = cart.find((item) => item.itemCode === product.itemCode);
 

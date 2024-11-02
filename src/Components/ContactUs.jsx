@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
+import { Link } from "react-router-dom";
 
 const ContactUs = () => {
 
@@ -23,12 +24,12 @@ const ContactUs = () => {
         <h2 className="text-6xl  mf font-semibold mb-4">
           Contact Us for a Better Deal
         </h2>
-        <a
-            href="#"
+        <Link
+            to={'/contact-us'}
             className="button inline-grid border bg-white border-dark rounded-full py-2 px-10 w-40 text-center text-black overflow-hidden  transition-all duration-300"
           >
             <span>Contact Us</span>
-          </a>
+          </Link>
       </div>
     </div>
   );

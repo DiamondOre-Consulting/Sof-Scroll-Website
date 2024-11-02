@@ -75,8 +75,8 @@ const ProductDetails = ({ cart, setCart }) => {
   const isInCart = cart.some((item) => item.itemCode === itemCode);
 
   return (
-    <div className="w-full mx-auto p-4 pt-28 px-20 ">
-      <div className="grid grid-cols-2 gap-10 items-start mt-4">
+    <div className="w-full mx-auto p-4 pt-28 px-10 md:px-20 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 items-start mt-4">
         <img
           src={mainImage}
           alt={product.name}

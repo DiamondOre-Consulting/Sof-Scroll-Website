@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { FiShoppingCart } from "react-icons/fi";
 import navbg from "../assets/navbg.png";
 import { Link } from "react-router-dom";
+import logo from '../assets/Sof-Scroll.png'
 
 const Navbar = ({ cart }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,9 +43,9 @@ const Navbar = ({ cart }) => {
         backgroundImage: isScrolled ? `url(${navbg})` : "none",
       }}
     >
-      <nav className="container mx-auto px-4 sm:px-6 py-8">
+      <nav className="container mx-auto px-4 sm:px-6 py-4">
         <div className="flex justify-between items-center">
-          <p className="text-2xl font-semibold text-black">Sof-Scroll</p>
+         <Link to={'/'}><img src={logo} alt=""  className=""/></Link> 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden text-gray-500 hover:text-gray-900 focus:outline-none"
@@ -61,11 +62,11 @@ const Navbar = ({ cart }) => {
           </button>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8 items-center">
+          <div className="hidden md:flex space-x-8 items-center ">
             <Link to="/" className="text-gray-700 hover:text-dark nav-item">Home</Link>
             <Link to="/all-products" className="text-gray-700 hover:text-dark nav-item">Products</Link>
             <Link to="/about-us" className="text-gray-700 hover:text-dark nav-item">About</Link>
-            <Link to="/contact" className="text-gray-700 hover:text-dark nav-item">Contact Us</Link>
+            <Link to="/contact-us" className="text-gray-700 hover:text-dark nav-item">Contact Us</Link>
             <Link to="/cart" className="relative">
               <FiShoppingCart className="w-6 h-6" />
               {cart.length > 0 && (

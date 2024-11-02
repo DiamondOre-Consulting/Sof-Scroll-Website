@@ -8,6 +8,7 @@ import AboutusPage from "./Pages/AboutusPage";
 import MyProducts from "./Components/Products/MyProducts";
 import CartPage from "./Components/Products/CartPage";
 import ProductDetails from "./Components/Products/ProductDetails";
+import ContactUsPage from "./Pages/ContactUsPage";
 
 function App() {
   // Cart state and useEffect to save/load from localStorage
@@ -29,6 +30,7 @@ function App() {
         <Route path="/all-products" element={<MyProducts cart={cart} setCart={setCart} />} />
         <Route path="/product/:itemCode" element={<ProductDetails cart={cart} setCart={setCart} />} />
         <Route path="/cart" element={<CartPage cart={cart} setCart={setCart} />} />
+        <Route path="/contact-us" element={<ContactUsPage/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>

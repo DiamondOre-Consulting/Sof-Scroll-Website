@@ -5,7 +5,7 @@ import pattern2 from '../assets/pattern2.png'
 const AboutUs = () => {
   return (
     <div className=" relative">
-      <div className="max-w-3xl xl mx-auto text-center py-20">
+      <div className="max-w-3xl xl mx-auto text-center py-10 md:py-20 px-4 md:px-0">
         <h1 className="text-4xl mf">About Us</h1>
 
         <p className="mt-10 mb-10">
@@ -27,7 +27,7 @@ const AboutUs = () => {
         >
           Read More
         </Link>
-        <img src={pattern2} alt="" className="absolute top-10 left-0 " />
+        <img src={pattern2} alt="" className="absolute top-10 left-0 md:flex hidden " />
       </div>
   
     </div>

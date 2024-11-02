@@ -57,45 +57,43 @@ const CartPage = ({ cart, setCart }) => {
     const orderDetails = `
         <div style="display: flex; flex-wrap: wrap; gap: 10px;">
             ${cart
-                .map(
-                    (item) => `
+              .map(
+                (item) => `
                     <div style="flex: 1 1 150px; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; width: 150px; text-align: center;">
                         <img src="${item.imageUrl}" alt="${item.name}" style="width: 100%; height: auto; object-fit: cover;" />
                         <p><strong>Product:</strong> ${item.name}</p>
                         <p><strong>Quantity:</strong> ${item.quantity}</p>
                     </div>`
-                )
-                .join("")}
+              )
+              .join("")}
         </div>`;
 
     // Prepare order data for EmailJS
     const orderData = {
-        to_name: "Owner", // Replace with actual owner's name if needed
-        from_name: userInfo.name,
-        name: userInfo.name,
-        email: userInfo.email,
-        phone: userInfo.phone,
-        address: userInfo.address,
-        orderDetails, // HTML for cart items
+      to_name: "Owner", // Replace with actual owner's name if needed
+      from_name: userInfo.name,
+      name: userInfo.name,
+      email: userInfo.email,
+      phone: userInfo.phone,
+      address: userInfo.address,
+      orderDetails, // HTML for cart items
     };
 
     // Send email using EmailJS
     emailjs
-        .send(
-            "service_uwuijxf",    // Your EmailJS service ID
-            "template_je04x6n",   // Your EmailJS template ID
-            orderData,
-            "iz6s-w2-bkXxSr9fL"   // Your EmailJS user ID
-        )
-        .then((response) => {
-            console.log("Order sent!", response);
-            alert("Order placed successfully!");
-            clearCart(); // Clear cart after order placement
-        })
-        .catch((error) => console.error("Order sending error:", error));
-};
-
-
+      .send(
+        "service_uwuijxf", // Your EmailJS service ID
+        "template_je04x6n", // Your EmailJS template ID
+        orderData,
+        "iz6s-w2-bkXxSr9fL" // Your EmailJS user ID
+      )
+      .then((response) => {
+        console.log("Order sent!", response);
+        alert("Order placed successfully!");
+        clearCart(); // Clear cart after order placement
+      })
+      .catch((error) => console.error("Order sending error:", error));
+  };
 
   return (
     <div className="container mx-auto pt-28">
@@ -104,33 +102,33 @@ const CartPage = ({ cart, setCart }) => {
         {cart.map((item, index) => (
           <li
             key={index}
-            className="flex justify-between mb-1 border items-center pr-6"
+            className="grid grid-cols-4  mb-1 border items-center pr-2 md:pr-6"
           >
             <img
               src={item?.imageUrl}
               alt={item?.name}
-              className="w-40 h-28 object-cover"
+              className="w-20  h-24 md:w-40 md:h-28 object-cover"
             />
-            <p>{item.name}</p>
-            <div className="flex items-center mt-6">
+            <p className="text-xs md:text-lg max-w-20 md:max-w-52 text-center mx-auto  ">{item.name}</p>
+            <div className="flex items-center mx-auto mt-6">
               <button
                 onClick={() => decreaseQuantity(index)}
-                className="px-4 py-2 border border-black rounded-sm"
+                className="px-2 md:px-4 py-1 md:py-2 border border-black rounded-sm"
                 disabled={item.quantity <= 1}
               >
                 -
               </button>
-              <span className="mx-4 text-lg">{item.quantity}</span>
+              <span className="mx-2 md:mx-4 textxs md:text-lg">{item.quantity}</span>
               <button
                 onClick={() => increaseQuantity(index)}
-                className="px-4 py-2 border border-black rounded-sm"
+                className="px-2 md:px-4 py-1 md:py-2 border border-black rounded-sm"
               >
                 +
               </button>
             </div>
             <button
               onClick={() => removeItem(index)}
-              className="text-red-500 font-bold ml-4"
+              className="text-red-500 font-bold ml-10 md:ml-60"
             >
               ✖
             </button>
@@ -138,17 +136,19 @@ const CartPage = ({ cart, setCart }) => {
         ))}
       </ul>
 
-      <div className="max-w-md mt-4">
+      <div className="md:max-w-md mt-4 px-4  md:px-0 ">
         <div className="grid grid-cols-2 gap-4 text-white">
-          <Link to={'/all-products'} className="py-4 text-center bg-dark px-2">Continue Shopping</Link>
+          <Link to={"/all-products"} className="py-4 text-center bg-dark px-2">
+            Continue Shopping
+          </Link>
           <button onClick={clearCart} className="py-4 text-center bg-dark px-2">
             Clear Cart
           </button>
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-10 px-4 mt-10">
-        <div className="border border-1"></div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-4 mt-10">
+        <div className="border border-1 md:block hidden"></div>
         <div>
           <form onSubmit={handleOrder} className="flex flex-col gap-4">
             <div className="flex flex-col">

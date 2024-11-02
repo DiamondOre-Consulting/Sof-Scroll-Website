@@ -56,11 +56,11 @@ const AboutUs = () => {
 
       {/* Manufacturing Process Section */}
       <section className="py-16 px-4 bg-light">
-        <h2 className="text-5xl font-bold text-center  mb-1 mf">
+        <h2 className="text-4xl md:text-5xl font-bold text-center  mb-1 mf">
           Our Manufacturing Process
         </h2>
         <div className="mx-auto w-40 h-1 bg-dark  mb-8"></div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-8 px-10 md:px-20">
           {/* Process Steps */}
           <div className="p-4 rounded-full  transform transition-all duration-300 relative ">
             <img
@@ -189,26 +189,37 @@ const AboutUs = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4">
-        <h2 className="text-4xl font-bold text-center mb-8">
-          Our Achievements
-        </h2>
-        <div className="flex flex-wrap justify-center">
-          <div className="m-4">
-            <h3 className="text-6xl font-bold">1M+</h3>
-            <p className="text-gray-600">Products Sold</p>
-          </div>
-          <div className="m-4">
-            <h3 className="text-6xl font-bold">99%</h3>
-            <p className="text-gray-600">Customer Satisfaction</p>
-          </div>
-          <div className="m-4">
-            <h3 className="text-6xl font-bold">5+</h3>
-            <p className="text-gray-600">Years of Experience</p>
-          </div>
-          <div className="m-4">
-            <h3 className="text-6xl font-bold">10+</h3>
-            <p className="text-gray-600">Awards Won</p>
+      <section
+        className="py-16 px-4 relative"
+        style={{
+          backgroundImage: `url(${'https://kempttissues.com/assets/img/home/bg-client.jpg'})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black opacity-60"></div>
+
+        {/* Achievements Content */}
+        <div className="relative z-10 text-center text-white">
+          <h2 className="text-5xl font-bold mb-8">Our Achievements</h2>
+          <div className="flex flex-wrap justify-center">
+            <div className="m-4 text-center">
+              <h3 className="text-6xl font-bold">1M+</h3>
+              <p className="text-gray-300">Products Sold</p>
+            </div>
+            <div className="m-4 text-center">
+              <h3 className="text-6xl font-bold">99%</h3>
+              <p className="text-gray-300">Customer Satisfaction</p>
+            </div>
+            <div className="m-4 text-center">
+              <h3 className="text-6xl font-bold">5+</h3>
+              <p className="text-gray-300">Years of Experience</p>
+            </div>
+            <div className="m-4 text-center">
+              <h3 className="text-6xl font-bold">10+</h3>
+              <p className="text-gray-300">Awards Won</p>
+            </div>
           </div>
         </div>
       </section>

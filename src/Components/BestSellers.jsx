@@ -22,7 +22,7 @@ const BestSellers = ({ cart, setCart }) => {
       <div className="py-10 relative">
         <h1 className="text-center text-5xl mx-auto mf relative">Our Best Sellers</h1>
       {/* <img src={pattern1} alt="" className="absolute -top-20 right-0 " /> */}
-        <div className="grid grid-cols-3 mx-auto mt-20 gap-6 px-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 mx-auto mt-20 gap-6 px-6">
         {Allproducts.slice(0, 6).map((product, index) => {
           const isInCart = cart.find((item) => item.itemCode === product.itemCode);
 
