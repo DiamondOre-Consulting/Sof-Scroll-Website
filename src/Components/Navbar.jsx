@@ -49,7 +49,7 @@ const Navbar = ({ cart }) => {
     >
       <nav className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
         {/* Logo on the Left Side */}
-        <img src={logo} alt="Logo" className="w-40 md:w-40" />
+        <img src={logo} alt="Logo" className="w-28 md:w-40" />
 
         {/* Right Side - Links and Cart Icon */}
         <div className="hidden md:flex space-x-8 items-center">
@@ -84,7 +84,7 @@ const Navbar = ({ cart }) => {
           >
             <FiShoppingCart className="w-8 h-8 text-gray-700 hover:text-dark" />
             {cart.length > 0 && (
-              <div className="absolute -top-2 -right-2 bg-red-600 w-6 h-6 rounded-full text-white text-xs text-center">
+              <div className="absolute -top-2 -right-2 bg-red-600 w-6 h-6 rounded-full text-white text-xs flex items-center justify-center text-center">
                 {cart.length}
               </div>
             )}
