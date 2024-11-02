@@ -28,7 +28,7 @@ const Navbar = ({ cart }) => {
   // Track scroll position to change background
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 400);
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
