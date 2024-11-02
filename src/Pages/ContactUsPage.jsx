@@ -6,7 +6,7 @@ const ContactUsPage = () => {
   return (
     <div className="pt-20 md:pt-24">
       <div
-        className="relative bg-cover bg-center h-96 "
+        className="relative bg-cover bg-center h-60 md:h-96 "
         style={{ backgroundImage: `url('${contactbg}')` }}
       >
         <div className="absolute inset-0 bg-black opacity-70"></div>{" "}

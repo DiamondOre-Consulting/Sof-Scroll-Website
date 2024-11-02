@@ -4,7 +4,7 @@ import pattern2 from '../assets/pattern2.png'
 
 const AboutUs = () => {
   return (
-    <div className=" relative">
+    <div className="-mt-40 md:mt-0 relative">
       <div className="max-w-3xl xl mx-auto text-center py-10 md:py-20 px-4 md:px-0">
         <h1 className="text-4xl mf">About Us</h1>
 

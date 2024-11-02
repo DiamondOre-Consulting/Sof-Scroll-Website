@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import herobg from "../assets/herobg.png";
 import pattern1 from '../assets/pattern1.png';
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   useEffect(() => {
@@ -19,23 +20,23 @@ const Hero = () => {
 
   return (
     <div
-      className="h-screen bg-cover bg-center flex items-center relative"
+      className="h-screen bg-cover bg-center flex items-center relative -top-20 md:top-0"
       style={{ backgroundImage: `url(${herobg})` }}
     >
       <div className="container mx-auto px-4">
         <div className="max-w-xl text-left text-white">
-          <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight mf  text-dark">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight mf  text-dark">
             Luxury You Can Trust, Softness You Can Feel
           </h1>
           <p className="text-lg md:text-xl mb-6 text-gray-600">
             From everyday use to special moments, our tissues provide the perfect blend of elegance and functionality.
           </p>
-          <a
-            href="#"
+          <Link
+            to={'/all-products'}
             className="button inline-grid border border-dark rounded-full py-2 px-10 w-40 text-center text-black overflow-hidden hover:bg-dark hover:text-white transition-all duration-300"
           >
             <span>Shop Now</span>
-          </a>
+          </Link>
         </div>
       </div>
       <img src={pattern1} alt="Pattern" className="absolute bottom-20 right-0 w-48 md:flex hidden" />
