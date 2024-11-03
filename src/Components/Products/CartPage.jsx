@@ -95,6 +95,14 @@ const CartPage = ({ cart, setCart }) => {
       .catch((error) => console.error("Order sending error:", error));
   };
 
+
+
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   return (
     <div className="container mx-auto pt-28">
       <h2 className="text-5xl text-center mf mt-6 mb-10">Your Cart</h2>

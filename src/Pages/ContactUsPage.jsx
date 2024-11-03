@@ -1,8 +1,16 @@
 // ContactUsPage.js
-import React from "react";
+import React, { useEffect } from "react";
 import contactbg from '../assets/contactusbg.jpg'
 
 const ContactUsPage = () => {
+
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
+  
   return (
     <div className="pt-20 md:pt-24">
       <div

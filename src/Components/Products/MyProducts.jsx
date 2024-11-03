@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Allproducts from './AllProducts';
 import { Link } from 'react-router-dom';
 import productsbg from '../../assets/productsbg.jpg'
@@ -15,6 +15,16 @@ const MyProducts = ({ cart, setCart }) => {
   const removeFromCart = (product) => {
     setCart((prevCart) => prevCart.filter((item) => item.itemCode !== product.itemCode));
   };
+
+
+
+  // for starting page from the top
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
 
   return (
     <div className="pt-20 md:pt-24 md:py-24">

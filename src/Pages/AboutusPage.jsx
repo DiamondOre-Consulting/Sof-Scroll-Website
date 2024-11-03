@@ -16,6 +16,14 @@ const AboutUs = () => {
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
 
+
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
+
   return (
     <div className="">
       {/* Hero Section */}
