@@ -95,13 +95,9 @@ const CartPage = ({ cart, setCart }) => {
       .catch((error) => console.error("Order sending error:", error));
   };
 
-
-
-  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
 
   return (
     <div className="container mx-auto pt-28">
@@ -117,7 +113,9 @@ const CartPage = ({ cart, setCart }) => {
               alt={item?.name}
               className="w-20  h-24 md:w-40 md:h-28 object-cover"
             />
-            <p className="text-xs md:text-lg max-w-20 md:max-w-52 text-center mx-auto  ">{item.name}</p>
+            <p className="text-xs md:text-lg max-w-20 md:max-w-52 text-center mx-auto  ">
+              {item.name}
+            </p>
             <div className="flex items-center mx-auto mt-6">
               <button
                 onClick={() => decreaseQuantity(index)}
@@ -126,7 +124,9 @@ const CartPage = ({ cart, setCart }) => {
               >
                 -
               </button>
-              <span className="mx-2 md:mx-4 textxs md:text-lg">{item.quantity}</span>
+              <span className="mx-2 md:mx-4 textxs md:text-lg">
+                {item.quantity}
+              </span>
               <button
                 onClick={() => increaseQuantity(index)}
                 className="px-2 md:px-4 py-1 md:py-2 border border-black rounded-sm"
@@ -171,32 +171,48 @@ const CartPage = ({ cart, setCart }) => {
                 required
               />
             </div>
-            <input
-              type="email"
-              name="email"
-              value={userInfo.email}
-              onChange={handleChange}
-              placeholder="Email"
-              required
-            />
-            <input
-              type="tel"
-              name="phone"
-              value={userInfo.phone}
-              onChange={handleChange}
-              placeholder="Phone"
-              required
-            />
-            <textarea
-              name="address"
-              value={userInfo.address}
-              onChange={handleChange}
-              placeholder="Address"
-              required
-            />
+
+            <div className="flex flex-col ">
+              <label>Email</label>
+              <input
+                type="email"
+                name="email"
+                value={userInfo.email}
+                onChange={handleChange}
+                placeholder="Email"
+                required
+                className="border border-1 py-2 mt-1 px-1 "
+              />
+            </div>
+
+            <div className="flex flex-col">
+              <label>Phone</label>
+              <input
+                type="tel"
+                name="phone"
+                value={userInfo.phone}
+                onChange={handleChange}
+                className="border border-1 py-2 px-1"
+                placeholder="Phone"
+                required
+              />
+            </div>
+
+            <div className="flex flex-col">
+              <label>Address</label>
+              <textarea
+                name="address"
+                value={userInfo.address}
+                onChange={handleChange}
+                placeholder="Address"
+                className="border border-1 py-2 px-1 mt-1"
+                required
+              />
+            </div>
+
             <button
               type="submit"
-              className="bg-green-500 text-white py-2 rounded"
+              className="bg-dark text-white py-2 rounded-sm"
             >
               Submit Order
             </button>
