@@ -6,7 +6,6 @@ import PopularCategories from "../../Components/PopularCategories";
 import Testimonials from "../../Components/Testimonials";
 import ContactUs from "../../Components/ContactUs";
 import WhyUs from "../../Components/WhyUs";
-import Chatboat from "../Chatboat";
 
 const MainHome = ({ cart, setCart }) => {
   useEffect(() => {
@@ -25,7 +24,6 @@ const MainHome = ({ cart, setCart }) => {
       <Testimonials />
       <ContactUs />
 
-     <Chatboat/>
     </div>
   );
 };

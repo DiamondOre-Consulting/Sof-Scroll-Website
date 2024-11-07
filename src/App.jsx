@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import MainHome from "./Pages/HomeMain/MainHome";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
@@ -9,6 +9,7 @@ import MyProducts from "./Components/Products/MyProducts";
 import CartPage from "./Components/Products/CartPage";
 import ProductDetails from "./Components/Products/ProductDetails";
 import ContactUsPage from "./Pages/ContactUsPage";
+import { MdWhatsapp } from "react-icons/md";
 
 function App() {
   // Cart state and useEffect to save/load from localStorage
@@ -30,8 +31,11 @@ function App() {
         <Route path="/all-products" element={<MyProducts cart={cart} setCart={setCart} />} />
         <Route path="/product/:itemCode" element={<ProductDetails cart={cart} setCart={setCart} />} />
         <Route path="/cart" element={<CartPage cart={cart} setCart={setCart} />} />
-        <Route path="/contact-us" element={<ContactUsPage/>}/>
+        <Route path="/contact-us" element={<ContactUsPage />} />
       </Routes>
+      <Link target='_blank' className="p-[0.65rem] bg-[#02b72c] hover:bg-white bottom-[2.2rem] shadow-sm shadow-red cursor-pointer hover:text-[#107829] text-white duration-200  flex items-center justify-center rounded-full   fixed right-4 z-[1000000000] text-[2.1rem] " to={'https://wa.me/9876543210?text=Hello'}>
+        <MdWhatsapp className='' />
+      </Link>
       <Footer />
     </BrowserRouter>
   );
