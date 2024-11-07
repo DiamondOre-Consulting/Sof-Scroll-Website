@@ -52,7 +52,7 @@ const MyProducts = ({ cart, setCart }) => {
 
           return (
             <Link to={`/product/${product.itemCode}`} key={index}>
-              <div className="w-auto bg-white shadow border hover:border-dark hover:border-2 rounded">
+              <div className="w-auto bg-white shadow border border-dark border-2 hover:border-dark hover:border-2 rounded">
                 <div className="h-60 w-full flex flex-col justify-between p-4 bg-cover bg-center"
                   style={{ backgroundImage: `url(${product.imageUrl})` }}
                 ></div>

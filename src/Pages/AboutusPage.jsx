@@ -16,13 +16,9 @@ const AboutUs = () => {
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
 
-
-  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-
 
   return (
     <div className="">
@@ -122,7 +118,10 @@ const AboutUs = () => {
 
       {/* Team Section */}
       <section className="py-16 px-4 ">
-        <h2 className="text-5xl font-bold text-center text-black mb-8 mf">Meet Our Team</h2>
+        <h2 className="text-4xl md:text-6xl font-bold text-center text-black mb-1 mf">
+          Meet Our Team
+        </h2>
+        <div className="w-40 h-1 bg-dark mx-auto mb-8"></div>
         <div className="flex flex-col md:flex-row justify-center  items-center">
           {/* Founder */}
           <div className="flex flex-col items-center bg-white  rounded-lg shadow-md p-6 m-4 transform transition-all duration-300 hover:shadow-lg">
@@ -200,7 +199,7 @@ const AboutUs = () => {
       <section
         className="py-16 px-4 relative"
         style={{
-          backgroundImage: `url(${'https://kempttissues.com/assets/img/home/bg-client.jpg'})`,
+          backgroundImage: `url(${"https://kempttissues.com/assets/img/home/bg-client.jpg"})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -210,7 +209,7 @@ const AboutUs = () => {
 
         {/* Achievements Content */}
         <div className="relative z-10 text-center text-white">
-          <h2 className="text-5xl font-bold mb-8">Our Achievements</h2>
+          <h2 className="text-5xl font-bold mb-8 mf">Our Achievements</h2>
           <div className="flex flex-wrap justify-center">
             <div className="m-4 text-center">
               <h3 className="text-6xl font-bold">1M+</h3>

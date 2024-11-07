@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Allproducts from "./AllProducts";
+import ExploreProducts from "./ExploreProducts";
 
 const ProductDetails = ({ cart, setCart }) => {
   const { itemCode } = useParams();
@@ -151,6 +152,11 @@ const ProductDetails = ({ cart, setCart }) => {
             </Link>
           </div>
         </div>
+      </div>
+
+
+      <div>
+        <ExploreProducts cart={cart} setCart={setCart}/>
       </div>
     </div>
   );

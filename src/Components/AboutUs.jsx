@@ -6,7 +6,8 @@ const AboutUs = () => {
   return (
     <div className="-mt-40 md:mt-0 relative">
       <div className="max-w-3xl xl mx-auto text-center py-10 md:py-20 px-4 md:px-0">
-        <h1 className="text-4xl mf">About Us</h1>
+        <h1 className="text-5xl md:text-6xl mf mb-1"><span className="text-dark">About </span>Us</h1>
+        <div className="w-20 md:w-52 h-1 bg-dark mx-auto"></div>
 
         <p className="mt-10 mb-10">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum

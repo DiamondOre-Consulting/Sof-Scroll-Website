@@ -20,7 +20,8 @@ const BestSellers = ({ cart, setCart }) => {
   return (
     <div>
       <div className="py-10 relative">
-        <h1 className="text-center text-5xl mx-auto mf relative">Our Best Sellers</h1>
+        <h1 className="text-center text-6xl mx-auto mf relative mb-1"><span className="text-dark">Our Best </span>Sellers</h1>
+        <div className="bg-dark w-40 h-1 mx-auto"></div>
       {/* <img src={pattern1} alt="" className="absolute -top-20 right-0 " /> */}
         <div className="grid grid-cols-1 md:grid-cols-3 mx-auto mt-20 gap-6 px-6">
         {Allproducts.slice(0, 6).map((product, index) => {
@@ -28,7 +29,7 @@ const BestSellers = ({ cart, setCart }) => {
 
           return (
             <Link to={`/product/${product.itemCode}`} key={index}>
-              <div className="w-auto bg-white shadow border-0 hover:border-dark hover:border-2 rounded">
+              <div className="w-auto bg-white shadow border-dark border-2 hover:border-dark hover:border-2 rounded">
                 <div className="h-72 w-full flex flex-col justify-between p-4 bg-cover bg-center"
                   style={{ backgroundImage: `url(${product.imageUrl})` }}
                 ></div>

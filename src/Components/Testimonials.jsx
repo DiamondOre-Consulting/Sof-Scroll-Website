@@ -1,129 +1,101 @@
-import React, { useState, useEffect } from "react";
+import Marquee from "react-fast-marquee"; // Or use your custom Marquee component if available
 
 const testimonials = [
   {
-    name: "John Doe",
-    image: "https://via.placeholder.com/100",
-    text: "This service is amazing! I highly recommend it to anyone who wants quality work.",
-    title: "CEO, ExampleCorp",
+    name: "Jack",
+    username: "@jack",
+    body: "I've never seen anything like this before. It's amazing. I love it.",
+    img: "https://avatar.vercel.sh/jack",
   },
   {
-    name: "Jane Smith",
-    image: "https://via.placeholder.com/100",
-    text: "Excellent experience! The team is very professional and attentive.",
-    title: "Marketing Director, CompanyX",
+    name: "Jill",
+    username: "@jill",
+    body: "I don't know what to say. I'm speechless. This is amazing.",
+    img: "https://avatar.vercel.sh/jill",
   },
   {
-    name: "Alice Johnson",
-    image: "https://via.placeholder.com/100",
-    text: "Great service and quality! I’m extremely happy with the results.",
-    title: "Product Manager, TechSolutions",
+    name: "John",
+    username: "@john",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "https://avatar.vercel.sh/john",
   },
   {
-    name: "Michael Brown",
-    image: "https://via.placeholder.com/100",
-    text: "The best investment I've ever made for my company.",
-    title: "CTO, InnovationsHub",
+    name: "Jane",
+    username: "@jane",
+    body: "The quality and service are unmatched. Highly recommend.",
+    img: "https://avatar.vercel.sh/jane",
   },
   {
-    name: "Sarah Lee",
-    image: "https://via.placeholder.com/100",
-    text: "Wonderful service and great attention to detail.",
-    title: "Founder, CreativeWorks",
+    name: "Jenny",
+    username: "@jenny",
+    body: "Incredible attention to detail. A true masterpiece.",
+    img: "https://avatar.vercel.sh/jenny",
+  },
+  {
+    name: "Jenny",
+    username: "@jenny",
+    body: "Incredible attention to detail. A true masterpiece.",
+    img: "https://avatar.vercel.sh/jenny",
+  },
+  {
+    name: "Jenny",
+    username: "@jenny",
+    body: "Incredible attention to detail. A true masterpiece.",
+    img: "https://avatar.vercel.sh/jenny",
+  },
+  {
+    name: "James",
+    username: "@james",
+    body: "A seamless experience from start to finish. Exceptional work.",
+    img: "https://avatar.vercel.sh/james",
   },
 ];
 
-const Testimonials = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 5000); // Auto-slide every 5 seconds
-    return () => clearInterval(interval); // Clear interval on component unmount
-  }, []);
-
-  const goToPrevious = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-  };
-
+const ReviewCard = ({ img, name, username, body }) => {
   return (
-    <div className="bg-light py-20 px-6 relative">
-      <h2 className="text-center text-5xl font-semibold text-gray-700 mb-12 mf">
-        What Our Clients Say
-      </h2>
-      <div className="absolute right-28 top-28 flex">
-        <button
-          onClick={goToPrevious}
-          className="border border-1 border-black p-2 mr-2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 transition-colors"
-        >
-          <svg
-            className="h-8 w-8 text-gray-500"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-        </button>
-        <button
-          onClick={goToNext}
-          className="border border-1 border-black p-2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 transition-colors"
-        >
-          <svg
-            className="h-8 w-8 text-gray-500"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </button>
-      </div>
-
-      <div className="relative max-w-6xl mx-auto overflow-hidden">
-        <div
-          className="flex transition-transform duration-700 ease-in-out"
-          style={{
-            transform: `translateX(-${currentIndex * (100 / (window.innerWidth < 768 ? 1 : 4))}%)`, // Adjust for responsive slides
-            width: `${testimonials.length * (100 / (window.innerWidth < 768 ? 1 : 4))}%`, // Adjust width based on screen size
-          }}
-        >
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className={`flex-none ${window.innerWidth < 768 ? "w-full" : "w-1/4"} p-4 bg-white rounded-lg shadow-lg text-center mx-2`}
-            >
-              <img
-                src={testimonial.image}
-                alt={testimonial.name}
-                className="w-20 h-20 rounded-full mx-auto mb-4"
-              />
-              <h3 className="text-lg font-semibold text-gray-800">
-                {testimonial.name}
-              </h3>
-              <p className="text-gray-500 text-sm mb-2">{testimonial.title}</p>
-              <p className="text-gray-600 mt-4">{testimonial.text}</p>
-            </div>
-          ))}
+    <figure className="w-96 h-40 p-4 border rounded-xl bg-gray-50 dark:bg-gray-800 shadow-md hover:shadow-lg transition mx-4 duration-300 ease-in-out">
+      <div className="flex items-center gap-3">
+        <img className="w-10 h-10 rounded-full" src={img} alt={name} />
+        <div>
+          <figcaption className="text-sm font-medium text-gray-900 dark:text-gray-100">
+            {name}
+          </figcaption>
+          <p className="text-xs font-light text-gray-500 dark:text-gray-400">
+            {username}
+          </p>
         </div>
       </div>
+      <blockquote className="mt-2 text-gray-700 dark:text-gray-300">
+        {body}
+      </blockquote>
+    </figure>
+  );
+};
+
+const Testimonials = () => {
+  const firstRow = testimonials.slice(0, testimonials.length / 2);
+  const secondRow = testimonials.slice(testimonials.length / 2);
+
+  return (
+    <div className="relative flex flex-col items-center justify-center py-16 bg-light dark:bg-gray-900">
+      <h2 className="text-4xl md:text-5xl font-semibold text-gray-700 dark:text-gray-100 mb-10 mf  mx-auto ">
+        Our Clients’ Feedback
+      </h2>
+
+      <Marquee pauseOnHover gradient={false} speed={50} className="mb-8">
+        {firstRow.map((testimonial) => (
+          <ReviewCard key={testimonial.username} {...testimonial} />
+        ))}
+      </Marquee>
+
+      <Marquee pauseOnHover gradient={false} speed={50} direction="right">
+        {secondRow.map((testimonial) => (
+          <ReviewCard key={testimonial.username} {...testimonial} />
+        ))}
+      </Marquee>
+
+      <div className="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-gray-100 dark:from-gray-900 pointer-events-none"></div>
+      <div className="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-gray-100 dark:from-gray-900 pointer-events-none"></div>
     </div>
   );
 };

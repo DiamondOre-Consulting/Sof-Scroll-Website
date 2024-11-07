@@ -54,12 +54,13 @@ const Navbar = ({ cart }) => {
         {/* Right Side - Links and Cart Icon */}
         <div className="hidden md:flex space-x-8 items-center">
           <NavLink to="/" label="Home" location={location.pathname} />
+        
+          <NavLink to="/about-us" label="About Us" location={location.pathname} />
           <NavLink
             to="/all-products"
             label="Products"
             location={location.pathname}
           />
-          <NavLink to="/about-us" label="About" location={location.pathname} />
           <NavLink
             to="/contact-us"
             label="Contact Us"
@@ -116,15 +117,16 @@ const Navbar = ({ cart }) => {
                 location={location.pathname}
                 onClick={() => setIsMenuOpen(false)}
               />
-              <NavLink
-                to="/all-products"
-                label="Products"
-                location={location.pathname}
-                onClick={() => setIsMenuOpen(false)}
-              />
+             
               <NavLink
                 to="/about-us"
                 label="About"
+                location={location.pathname}
+                onClick={() => setIsMenuOpen(false)}
+              />
+               <NavLink
+                to="/all-products"
+                label="Products"
                 location={location.pathname}
                 onClick={() => setIsMenuOpen(false)}
               />
