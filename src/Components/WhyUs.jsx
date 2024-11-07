@@ -22,28 +22,28 @@ const WhyUs = () => {
   ];
 
   return (
-    <div className="bg-light  py-16">
+    <div className="py-16 bg-light">
       <div className="text-center">
-        <h2 className="text-gray-600 mb-4 text-sm">Why Soft-scroll Tissues?</h2>
-        <h1 className="text-3xl md:text-4xl max-w-4xl mx-auto  mf text-black mb-10">
+        <h2 className="mb-4 text-sm text-gray-600">Why Soft-scroll Tissues?</h2>
+        <h1 className="max-w-4xl mx-auto mb-10 text-3xl text-black md:text-4xl mf">
           The Most Stylish, Hygienic & Soft Tissues
         </h1>
       </div>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-6 md:px-0">
+      <div className="grid grid-cols-1 gap-10 px-6 mx-auto w-fit md:grid-cols-2 md:px-0">
         {categories.map((category, index) => (
           <div
             key={index}
-            className="relative border border-dark rounded-lg p-4 text-center"
+            className="relative p-4 text-center max-w-[38rem] border rounded-lg border-dark"
           >
             <img
               src={category.image}
               alt={category.title}
-              className="w-full h-64 object-cover rounded-lg mb-4"
+              className="object-cover w-full h-[18rem] mb-4 rounded-lg"
             />
-            {/* <div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-gray-400 text-xs">
+            {/* <div className="absolute text-xs text-gray-400 transform -translate-x-1/2 top-4 left-1/2">
                   {category.description}
                 </div> */}
-            <h3 className="text-lg font-semibold mt-4 mf">{category.title}</h3>
+            <h3 className="mt-4 text-lg font-semibold mf">{category.title}</h3>
           </div>
         ))}
       </div>

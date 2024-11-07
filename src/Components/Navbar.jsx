@@ -40,21 +40,20 @@ const Navbar = ({ cart }) => {
 
   return (
     <div
-      className={`w-full fixed z-50 transition duration-300 ${
-        isScrolled ? "bg-cover bg-center shadow-md" : "shadow-md"
-      }`}
+      className={`w-full fixed z-50 transition duration-300 ${isScrolled ? "bg-cover bg-center shadow-md" : "shadow-md"
+        }`}
       style={{
         backgroundImage: isScrolled ? `url(${navbg})` : "none",
       }}
     >
-      <nav className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+      <nav className="container flex items-center justify-between px-4 py-1 mx-auto sm:px-6">
         {/* Logo on the Left Side */}
-        <img src={logo} alt="Logo" className="w-28 md:w-40" />
+        <img src={logo} alt="Logo" className="w-[10rem] md:w-40" />
 
         {/* Right Side - Links and Cart Icon */}
-        <div className="hidden md:flex space-x-8 items-center">
+        <div className="items-center hidden space-x-8 md:flex">
           <NavLink to="/" label="Home" location={location.pathname} />
-        
+
           <NavLink to="/about-us" label="About Us" location={location.pathname} />
           <NavLink
             to="/all-products"
@@ -67,9 +66,9 @@ const Navbar = ({ cart }) => {
             location={location.pathname}
           />
           <Link to="/cart" className="relative">
-            <FiShoppingCart className="w-6 h-6 text-gray-700 hover:text-dark" />
+            <FiShoppingCart className="w-6 h-6 text-gray-800 hover:text-dark" />
             {cart.length > 0 && (
-              <div className="absolute -top-2 -right-2 bg-red-600 w-5 h-5 rounded-full text-white text-xs text-center">
+              <div className="absolute w-5 h-5 text-xs text-center text-white bg-red-600 rounded-full -top-2 -right-2">
                 {cart.length}
               </div>
             )}
@@ -77,15 +76,15 @@ const Navbar = ({ cart }) => {
         </div>
 
         {/* Cart Icon and Menu Toggle Button for Small Screens */}
-        <div className="md:hidden flex items-center">
+        <div className="flex items-center md:hidden">
           <Link
             to="/cart"
             className="relative mr-3"
             onClick={() => setIsMenuOpen(false)}
           >
-            <FiShoppingCart className="w-8 h-8 text-gray-700 hover:text-dark" />
+            <FiShoppingCart className="text-gray-800 h-7 w-7 hover:text-dark" />
             {cart.length > 0 && (
-              <div className="absolute -top-2 -right-2 bg-red-600 w-6 h-6 rounded-full text-white text-xs flex items-center justify-center text-center">
+              <div className="absolute flex items-center justify-center w-6 h-6 text-xs text-center text-white bg-red-600 rounded-full -top-2 -right-2">
                 {cart.length}
               </div>
             )}
@@ -93,11 +92,11 @@ const Navbar = ({ cart }) => {
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-gray-700 hover:text-gray-900 ml-2 focus:outline-none"
+            className="ml-2 text-gray-800 hover:text-gray-900 focus:outline-none"
             aria-controls="mobile-menu"
             aria-expanded={isMenuOpen}
           >
-            <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+            <svg className="h-9 w-9" fill="currentColor" viewBox="0 0 20 20">
               <path
                 fillRule="evenodd"
                 d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
@@ -109,22 +108,22 @@ const Navbar = ({ cart }) => {
 
         {/* Mobile Menu (Dropdown) */}
         {isMenuOpen && (
-          <div className="absolute top-full left-0 w-full bg-white shadow-lg md:hidden">
-            <div className="flex flex-col items-center py-4 space-y-4">
+          <div className="absolute left-0 w-full h-screen bg-[#2f2f2f53] backdrop-blur-sm shadow-lg top-full md:hidden">
+            <div className="flex flex-col items-center py-10 space-y-4 bg-white shadow-md">
               <NavLink
                 to="/"
                 label="Home"
                 location={location.pathname}
                 onClick={() => setIsMenuOpen(false)}
               />
-             
+
               <NavLink
                 to="/about-us"
                 label="About"
                 location={location.pathname}
                 onClick={() => setIsMenuOpen(false)}
               />
-               <NavLink
+              <NavLink
                 to="/all-products"
                 label="Products"
                 location={location.pathname}
@@ -148,17 +147,15 @@ const Navbar = ({ cart }) => {
 const NavLink = ({ to, label, location, onClick }) => (
   <Link
     to={to}
-    className={`nav-item text-gray-700 hover:text-dark relative ${
-      location === to ? "font-semibold text-dark" : ""
-    }`}
+    className={`nav-item text-gray-900 hover:text-dark relative ${location === to ? "font-semibold text-dark" : ""
+      }`}
     onClick={onClick}
   >
     {label}
     {/* Hover Underline Effect */}
     <span
-      className={`absolute left-0 -bottom-1 w-full h-0.5 bg-dark transform transition-transform duration-300 scale-x-0 ${
-        location === to ? "scale-x-100" : "hover:scale-x-100"
-      }`}
+      className={`absolute left-0 -bottom-1 w-full h-0.5 bg-dark transform transition-transform duration-300 scale-x-0 ${location === to ? "scale-x-100" : "hover:scale-x-100"
+        }`}
     ></span>
   </Link>
 );

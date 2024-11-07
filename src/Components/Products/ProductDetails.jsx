@@ -76,33 +76,31 @@ const ProductDetails = ({ cart, setCart }) => {
   const isInCart = cart.some((item) => item.itemCode === itemCode);
 
   return (
-    <div className="w-full mx-auto p-4 pt-28 px-10 md:px-20 ">
-      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 items-start mt-4">
+    <div className="w-full max-w-[78rem] p-4 px-10 mx-auto pt-28 md:px-20 ">
+      <div className="grid items-start grid-cols-1 mt-4 md:grid-cols-2 md:gap-10">
         <img
           src={mainImage}
           alt={product.name}
-          className="w-full h-96 object-cover rounded-sm shadow-sm"
+          className="object-cover w-full rounded-sm shadow-sm h-96"
         />
 
         <div className="flex flex-col">
-          <h1 className="text-5xl font-semibold mt-6 mf">{product.name}</h1>
-          <p className="text-gray-700 mt-2">{product.description}</p>
+          <h1 className="text-5xl font-semibold mf">{product.name}</h1>
+          <p className="mt-2 text-gray-700">{product.description}</p>
 
-          <div className="mt-4 space-y-2">
+          <div className="space-y-1 ">
             <p>
               <strong>Quality:</strong> {product.quality}
             </p>
             <p>
-              <strong>Ply:</strong> {product.ply}
+              <strong>Ply:</strong> {product.ply} | <strong>GSM:</strong> {product.gsm} |  <strong>Weight:</strong> {product.weight}
+
             </p>
             <p>
               <strong>Pulls:</strong> {product.pulls}
             </p>
+
             <p>
-              <strong>GSM:</strong> {product.gsm}
-            </p>
-            <p>
-              <strong>Weight:</strong> {product.weight}
             </p>
 
             <p>
@@ -111,10 +109,10 @@ const ProductDetails = ({ cart, setCart }) => {
           </div>
 
           <div className="flex items-center mt-6">
-            <div className="border border-1 border-black">
+            <div className="border border-black border-1">
               <button
                 onClick={decreaseQuantity}
-                className="px-4 py-2 border border-black border-t-0 border-b-0 border-l-0 border-1 rounded-sm"
+                className="px-4 py-2 border border-t-0 border-b-0 border-l-0 border-black rounded-sm border-1"
                 disabled={quantity <= 1}
               >
                 -
@@ -122,7 +120,7 @@ const ProductDetails = ({ cart, setCart }) => {
               <span className="mx-4 text-lg">{quantity}</span>
               <button
                 onClick={increaseQuantity}
-                className="px-4 py-2 border border-black border-t-0 border-b-0 border-r-0 border-1 rounded-sm"
+                className="px-4 py-2 border border-t-0 border-b-0 border-r-0 border-black rounded-sm border-1"
               >
                 +
               </button>
@@ -134,7 +132,7 @@ const ProductDetails = ({ cart, setCart }) => {
               <>
                 <button
                   onClick={removeFromCart}
-                  className="mt-6 px-6 py-4 bg-red-500 text-white rounded-sm hover:bg-red-700 transition"
+                  className="px-6 py-4 mt-6 text-white transition bg-red-500 rounded-sm hover:bg-red-700"
                 >
                   Remove from Cart
                 </button>
@@ -142,21 +140,25 @@ const ProductDetails = ({ cart, setCart }) => {
             ) : (
               <button
                 onClick={() => addToCart(quantity)}
-                className="mt-6 px-6 py-4 bg-dark text-white rounded-sm hover:bg-blue-700 transition"
+                className="px-6 py-4 mt-6 text-white transition rounded-sm bg-dark hover:bg-blue-700"
               >
                 Add to Cart
               </button>
             )}
-            <Link to={'/cart'} className="mt-6 px-6 py-2 bg-black text-white rounded-sm hover:bg-blue-700 transition text-center flex justify-center items-center">
+            <Link to={'/cart'} className="flex items-center justify-center px-6 py-2 mt-6 text-center text-white transition bg-black rounded-sm hover:bg-blue-700">
               Buy Now
             </Link>
           </div>
         </div>
       </div>
-
+      <div className="mt-4">
+        <p className="text-center text-gray-700">
+          {product.fullDesc}
+        </p>
+      </div>
 
       <div>
-        <ExploreProducts cart={cart} setCart={setCart}/>
+        <ExploreProducts cart={cart} setCart={setCart} />
       </div>
     </div>
   );

@@ -23,33 +23,33 @@ const AboutUs = () => {
   return (
     <div className="">
       {/* Hero Section */}
-      <div className="flex flex-col items-center justify-center relative">
+      <div className="relative flex flex-col items-center justify-center">
         <img
           src="https://www.premiertissues.com/images/about/banner.png"
           alt="Pattern"
-          className="absolute z-20 mx-auto inset-0 w-full h-full object-fill "
+          className="absolute inset-0 z-20 object-fill w-full h-full mx-auto "
         />
-        <h1 className="text-5xl font-bold text-black relative pt-28 pb-20 z-10 mt-10 mf">
+        <h1 className="relative z-10 pb-20 mt-10 text-5xl font-bold text-black pt-28 mf">
           About Us
         </h1>
       </div>
 
       {/* About Us Content */}
-      <section className=" px-4">
+      <section className="px-4 ">
         <div className="flex flex-col md:flex-row">
           {/* Left Side: Paragraphs */}
-          <div className="p-4 max-w-3xl mx-auto text-center">
-            <p className="text-gray-700 mb-4">
+          <div className="max-w-3xl p-4 mx-auto text-center">
+            <p className="mb-4 text-gray-700">
               We are dedicated to providing the highest quality tissue products,
               ensuring customer satisfaction through innovation and excellence
               in every step of our manufacturing process.
             </p>
-            <p className="text-gray-700 mb-4">
+            <p className="mb-4 text-gray-700">
               Our commitment to sustainability and responsible sourcing reflects
               in every product we create, supporting both our customers and the
               environment.
             </p>
-            <p className="text-gray-700 mb-4">
+            <p className="mb-4 text-gray-700">
               Join us in our journey as we expand our horizons and continue to
               deliver products that meet the evolving needs of our customers.
             </p>
@@ -59,56 +59,60 @@ const AboutUs = () => {
       </section>
 
       {/* Manufacturing Process Section */}
-      <section className="py-16 px-4 bg-light">
-        <h2 className="text-4xl md:text-5xl font-bold text-center  mb-1 mf">
+      <section className="px-4 py-16 bg-light">
+        <h2 className="mb-1 text-4xl font-bold text-center md:text-5xl mf">
           Our Manufacturing Process
         </h2>
-        <div className="mx-auto w-40 h-1 bg-dark  mb-8"></div>
-        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-8 px-10 md:px-20">
+        <div className="w-40 h-1 mx-auto mb-8 bg-dark"></div>
+        <div className="grid grid-cols-1 px-10 md:grid-cols-3 md:gap-8 md:px-20">
           {/* Process Steps */}
-          <div className="p-4 rounded-full  transform transition-all duration-300 relative ">
-            <img
-              src="https://www.papertr.com/wp-content/uploads/2021/04/Getting-Into-Tissue-Paper-Manufacturing-Business2-696x428-1.jpg"
-              alt="Manufacturing Step"
-              className="h-60  border border-2  border-dashed border-dark p-2 w-60 object-cover  rounded-full"
-            />
-            <div className="text-5xl text-center w-20 h-20 z-20 mf flex absolute top-40  text-white justify-center items-center  rounded-full bg-dark">
-              1
+          <div className="relative flex flex-col items-center justify-center p-4 transition-all duration-300 transform rounded-full ">
+            <div>
+              <img
+                src="https://www.papertr.com/wp-content/uploads/2021/04/Getting-Into-Tissue-Paper-Manufacturing-Business2-696x428-1.jpg"
+                alt="Manufacturing Step"
+                className="object-cover p-2 border-2 border-dashed rounded-full h-60 border-dark w-60"
+              />
+              <div className="absolute z-20 flex items-center justify-center w-16 h-16 pb-2 text-5xl text-center text-white rounded-full mf top-40 bg-dark">
+                1
+              </div>
             </div>
-            <h3 className="text-3xl font-semibold mt-4 mf">Sourcing</h3>
-            <p className="mt-2 text-gray-600">
+            <h3 className="mt-4 text-3xl font-semibold mf">Sourcing</h3>
+            <p className="mt-2 text-center text-gray-600">
               We source the finest raw materials to ensure the highest quality
               products.
             </p>
           </div>
-
-          <div className="p-4 rounded-full  transform transition-all duration-300 relative ">
-            <img
-              src="https://www.shutterstock.com/image-photo/toilet-paper-production-line-worker-260nw-2157905227.jpg"
-              alt="Manufacturing Step"
-              className="h-60  border border-2  border-dashed border-dark p-2 w-60 object-cover  rounded-full"
-            />
-            <div className="text-5xl text-center w-20 h-20 z-20 flex absolute mf top-40  text-white justify-center items-center  rounded-full bg-dark">
-              2
+          <div className="relative flex flex-col items-center justify-center p-4 transition-all duration-300 transform rounded-full ">
+            <div>
+              <img
+                src="https://www.shutterstock.com/image-photo/toilet-paper-production-line-worker-260nw-2157905227.jpg"
+                alt="Manufacturing Step"
+                className="object-cover p-2 border-2 border-dashed rounded-full h-60 border-dark w-60"
+              />
+              <div className="absolute z-20 flex items-center justify-center w-16 h-16 pb-2 text-5xl text-center text-white rounded-full mf top-40 bg-dark">
+                2
+              </div>
             </div>
-            <h3 className="text-3xl font-semibold mt-4 mf ">Production</h3>
-            <p className="mt-2 text-gray-600">
+            <h3 className="mt-4 text-3xl font-semibold mf ">Production</h3>
+            <p className="mt-2 text-center text-gray-600">
               Our advanced machinery guarantees precision and efficiency in
               production.
             </p>
           </div>
-
-          <div className="p-4 rounded-full  transform transition-all duration-300 relative ">
-            <img
-              src="https://www.papertr.com/wp-content/uploads/2022/02/Ekran-Resmi-2022-02-09-17.50.52-1024x512.png"
-              alt="Manufacturing Step"
-              className="h-60  border border-2  border-dashed border-dark p-2 w-60 object-cover  rounded-full"
-            />
-            <div className="text-5xl text-center mf w-20 h-20 z-20 flex absolute top-40  text-white justify-center items-center  rounded-full bg-dark">
-              3
+          <div className="relative flex flex-col items-center justify-center p-4 transition-all duration-300 transform rounded-full ">
+            <div>
+              <img
+                src="https://www.papertr.com/wp-content/uploads/2022/02/Ekran-Resmi-2022-02-09-17.50.52-1024x512.png"
+                alt="Manufacturing Step"
+                className="object-cover p-2 border-2 border-dashed rounded-full h-60 border-dark w-60"
+              />
+              <div className="absolute z-20 flex items-center justify-center w-16 h-16 pb-2 text-5xl text-center text-white rounded-full mf top-40 bg-dark">
+                3
+              </div>
             </div>
-            <h3 className="text-3xl font-semibold mt-4 mf"> Quality Control</h3>
-            <p className="mt-2 text-gray-600">
+            <h3 className="mt-4 text-3xl font-semibold mf"> Quality Control</h3>
+            <p className="mt-2 text-center text-gray-600">
               Each product undergoes strict quality checks to ensure customer
               satisfaction.
             </p>
@@ -117,87 +121,61 @@ const AboutUs = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 px-4 ">
-        <h2 className="text-4xl md:text-6xl font-bold text-center text-black mb-1 mf">
+      <section className="px-4 py-16 ">
+        <h2 className="mb-1 text-4xl font-bold text-center text-black md:text-6xl mf">
           Meet Our Team
         </h2>
-        <div className="w-40 h-1 bg-dark mx-auto mb-8"></div>
-        <div className="flex flex-col md:flex-row justify-center  items-center">
+        <div className="w-40 h-1 mx-auto mb-8 bg-dark"></div>
+        <div className="flex flex-col items-center justify-center md:flex-row">
           {/* Founder */}
-          <div className="flex flex-col items-center bg-white  rounded-lg shadow-md p-6 m-4 transform transition-all duration-300 hover:shadow-lg">
+          <div className="flex flex-col w-[20rem] items-center p-6 m-4 transition-all duration-300 transform bg-white rounded-lg  ">
             <img
               src={teamImage1}
               alt="Harshawardhan Singh"
-              className="rounded-full h-48 w-48 object-cover mb-4"
+              className="object-cover size-[10rem] shadow-[0px_0px_30px_#000] border-[7px] border-white mb-4 rounded-full"
             />
-            <h3 className="text-2xl font-semibold text-center">
+            <h3 className="text-[1.2rem] mt-3 font-semibold text-center">
               Harshawardhan Singh
             </h3>
-            <p className="text-gray-600 text-center">Founder</p>
-            <p className="mt-2 text-gray-600 text-center">
-              "Proven track record in launching and growing businesses with
-              expertise in FMCG, Retail, Banking & Financial Sector."
-            </p>
-            <p className="mt-2 text-gray-600 text-center">
-              Career Length: <strong>21 Years</strong>
-            </p>
-            <p className="mt-2 text-gray-600 text-center">
-              Skills:{" "}
-              <strong>
-                Brand building, Product Launch, Business Management
-              </strong>
-            </p>
+            <p className="font-semibold text-center text-gray-600 text-[1rem]">Founder</p>
+
           </div>
 
           {/* Co-Founder */}
-          <div className="flex flex-col items-center bg-white rounded-lg shadow-md p-6 m-4 transform transition-all duration-300 hover:shadow-lg">
+          <div className="flex flex-col w-[20rem] items-center p-6 m-4 transition-all duration-300 transform bg-white rounded-lg  ">
             <img
               src={teamImage3}
               alt="Yashashrri H Singh"
-              className="rounded-full h-48 w-48 object-cover mb-4"
+              className="object-cover size-[10rem] shadow-[0px_0px_30px_#000] border-[7px] border-white mb-4 rounded-full"
             />
-            <h3 className="text-2xl font-semibold text-center">
+            <h3 className="text-[1.2rem] mt-3 font-semibold text-center">
               Yashashrri H Singh
             </h3>
-            <p className="text-gray-600 text-center">Co-Founder</p>
-            <p className="mt-2 text-gray-600 text-center">
-              "Dynamic and result-oriented professional driving business growth
-              through strategic marketing initiatives."
-            </p>
-            <p className="mt-2 text-gray-600 text-center">
-              Career Length: <strong>18 Years</strong>
-            </p>
-            <p className="mt-2 text-gray-600 text-center">
-              Skills:{" "}
-              <strong>Strategic Thinking, Leadership, Communication</strong>
-            </p>
+            <p className="font-semibold text-center text-gray-600 text-[1rem]">Co-Founder</p>
+
           </div>
 
+
           {/* Team Member */}
-          <div className="flex flex-col items-center bg-white rounded-lg shadow-md p-10 m-4 transform transition-all duration-300 hover:shadow-lg">
+          <div className="flex flex-col w-[20rem] items-center p-6 m-4 transition-all duration-300 transform bg-white rounded-lg  ">
             <img
               src={teamImage2}
               alt="Alexander Mohandas"
-              className="rounded-full h-48 w-48 object-cover mb-4"
+              className="object-cover size-[10rem] shadow-[0px_0px_30px_#000] border-[7px] border-white mb-4 rounded-full"
             />
-            <h3 className="text-2xl font-semibold text-center">
+            <h3 className="text-[1.2rem] mt-3 font-semibold text-center">
               Alexander Mohandas
             </h3>
-            <p className="text-gray-600 text-center">Senior Team Member</p>
-            <p className="mt-2 text-gray-600 text-center">
-              "With over two decades of experience, passionate about building
-              businesses and ensuring customer satisfaction."
-            </p>
-            <p className="mt-2 text-gray-600 text-center">
-              Career Length: <strong>20+ Years</strong>
-            </p>
+            <p className="font-semibold text-center text-gray-600 text-[1rem]">Senior Team Member</p>
+
           </div>
+
         </div>
       </section>
 
       {/* Stats Section */}
       <section
-        className="py-16 px-4 relative"
+        className="relative px-4 py-16"
         style={{
           backgroundImage: `url(${"https://kempttissues.com/assets/img/home/bg-client.jpg"})`,
           backgroundSize: "cover",
@@ -209,7 +187,7 @@ const AboutUs = () => {
 
         {/* Achievements Content */}
         <div className="relative z-10 text-center text-white">
-          <h2 className="text-5xl font-bold mb-8 mf">Our Achievements</h2>
+          <h2 className="mb-8 text-5xl font-bold mf">Our Achievements</h2>
           <div className="flex flex-wrap justify-center">
             <div className="m-4 text-center">
               <h3 className="text-6xl font-bold">1M+</h3>

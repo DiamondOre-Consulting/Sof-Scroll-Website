@@ -20,26 +20,28 @@ const Hero = () => {
 
   return (
     <div
-      className="h-screen bg-cover bg-center flex items-center relative -top-20 md:top-0"
+      className="relative flex items-center h-screen bg-center bg-cover -top-20 md:top-0"
       style={{ backgroundImage: `url(${herobg})` }}
     >
-      <div className="container mx-auto px-4">
+      <div className="container px-4 sm:px-8 mx-auto max-w-[77rem]">
         <div className="max-w-xl text-left text-white">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight mf  text-dark">
+          <h1 className="mb-6 text-4xl font-bold leading-tight sm:text-5xl md:text-6xl mf text-dark">
             Luxury You Can Trust, Softness You Can Feel
           </h1>
-          <p className="text-lg md:text-xl mb-6 text-gray-600">
+          <p className="mb-6 text-lg text-gray-700 md:text-xl">
             From everyday use to special moments, our tissues provide the perfect blend of elegance and functionality.
           </p>
-          <Link
+          <Link to={'/all-products'} className="Btn">
+          </Link>
+          {/* <Link
             to={'/all-products'}
-            className="button inline-grid border border-dark rounded-full py-2 px-10 w-40 text-center text-black overflow-hidden hover:bg-dark hover:text-white transition-all duration-300"
+            className="inline-grid w-40 px-10 py-2 overflow-hidden text-center text-black transition-all duration-300 border rounded-full button border-dark hover:bg-dark hover:text-white"
           >
             <span>Shop Now</span>
-          </Link>
+          </Link> */}
         </div>
       </div>
-      <img src={pattern1} alt="Pattern" className="absolute bottom-20 right-0 w-48 md:flex hidden" />
+      <img src={pattern1} alt="Pattern" className="absolute right-0 hidden w-48 bottom-20 md:flex" />
     </div>
   );
 };

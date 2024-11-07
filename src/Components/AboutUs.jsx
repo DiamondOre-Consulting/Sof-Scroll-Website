@@ -4,12 +4,12 @@ import pattern2 from '../assets/pattern2.png'
 
 const AboutUs = () => {
   return (
-    <div className="-mt-40 md:mt-0 relative">
-      <div className="max-w-3xl xl mx-auto text-center py-10 md:py-20 px-4 md:px-0">
-        <h1 className="text-5xl md:text-6xl mf mb-1"><span className="text-dark">About </span>Us</h1>
-        <div className="w-20 md:w-52 h-1 bg-dark mx-auto"></div>
+    <div className="relative -mt-40 md:mt-0">
+      <div className="flex flex-col items-center justify-center max-w-3xl px-4 py-10 mx-auto text-center xl md:py-20 md:px-0">
+        <h1 className="mb-1 text-5xl md:text-6xl mf"><span className="text-dark">About </span>Us</h1>
+        <div className="w-20 h-1 mx-auto md:w-52 bg-dark"></div>
 
-        <p className="mt-10 mb-10">
+        <p className="mt-10 mb-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
           asperiores, minima quibusdam dignissimos sequi magnam, odit delectus
           quas ratione saepe similique eum voluptates nam consectetur vero
@@ -24,13 +24,13 @@ const AboutUs = () => {
 
         <Link
           to="/about-us"
-          className="bg-black  text-white  rounded-full py-3 px-10 "
+          className="Btn-dark"
         >
-          Read More
+          {/* Read More */}
         </Link>
-        <img src={pattern2} alt="" className="absolute top-10 left-0 md:flex hidden " />
+        <img src={pattern2} alt="" className="absolute left-0 hidden top-10 md:flex " />
       </div>
-  
+
     </div>
   );
 };

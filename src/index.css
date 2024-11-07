@@ -3,7 +3,96 @@
 @tailwind utilities;
 
 
-.mf{
+.mf {
     /* font-family: "Rammetto One", sans-serif; */
     font-family: "Neuton", serif;
+}
+
+
+.Btn,
+.Btn-dark {
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 9999px;
+    background: linear-gradient(to right, #ff0084, #000, #fff, #c300ff, #000, #fff);
+    background-size: 250%;
+    color: #000000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.3);
+    animation: shine_2 3s infinite linear;
+}
+
+.Btn::before {
+    position: absolute;
+    content: "Shop Now";
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 98%;
+    height: 94%;
+    border-radius: 9999px;
+    background-color: #3D5C26;
+    background-size: 200%;
+    box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.3);
+}
+
+.Btn-dark::before {
+    position: absolute;
+    content: "Read more...";
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 98%;
+    height: 94%;
+    border-radius: 9999px;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-size: 200%;
+    box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.3);
+}
+
+
+.Btn:active,
+.Btn-dark:active {
+    transform: scale(0.95);
+}
+
+.Btn:hover,
+.Btn-dark:hover {
+    animation: hoverEffect_2 1.5s infinite alternate;
+}
+
+.Btn:hover::before,
+.Btn-dark:hover::before {
+    animation: hoverEffect_2 1.5s infinite alternate;
+}
+
+@keyframes shine_2 {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+@keyframes hoverEffect_2 {
+    0% {
+        background-position: left;
+        box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+        background-position: right;
+        box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.7);
+    }
 }
