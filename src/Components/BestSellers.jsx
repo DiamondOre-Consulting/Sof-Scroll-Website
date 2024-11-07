@@ -27,6 +27,7 @@ const BestSellers = ({ cart, setCart }) => {
           {Allproducts.slice(0, 6).map((product, index) => {
             const isInCart = cart.find((item) => item.itemCode === product.itemCode);
 
+
             return (
               <Link to={`/product/${product.itemCode}`} key={index}>
                 <div className="w-[22rem] bg-white border-2 rounded shadow border-dark hover:border-dark hover:border-2">
