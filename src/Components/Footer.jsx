@@ -7,7 +7,7 @@ import {
 } from 'react-icons/bs'
 import { CiClock1 } from "react-icons/ci";
 import { IoMdMail } from "react-icons/io";
-import logo from '../assets/sof-scroll.png'
+import logo from '../assets/Sof-Scroll.png'
 import { MdOutlineSmartphone } from 'react-icons/md';
 import { FaLocationDot } from 'react-icons/fa6';
 

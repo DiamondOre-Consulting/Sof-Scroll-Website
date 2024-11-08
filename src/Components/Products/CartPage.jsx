@@ -3,6 +3,8 @@ import emailjs from "emailjs-com";
 import { Link } from "react-router-dom";
 import BreadCrumbs from "../BreadCrumbs";
 import { MdDelete } from "react-icons/md";
+import { IoMdSend } from "react-icons/io";
+import { toast, ToastContainer } from "react-toastify";
 
 const CartPage = ({ cart, setCart }) => {
   const [userInfo, setUserInfo] = useState({
@@ -11,6 +13,9 @@ const CartPage = ({ cart, setCart }) => {
     phone: "",
     address: "",
   });
+
+  const [loadingToastId, setLoadingToastId] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   // Load cart from localStorage on mount
   useEffect(() => {
@@ -52,19 +57,31 @@ const CartPage = ({ cart, setCart }) => {
     setUserInfo((prev) => ({ ...prev, [name]: value }));
   };
 
+  console.log(cart)
+
+
   const handleOrder = (e) => {
     e.preventDefault();
 
+    if (!userInfo.name || !userInfo.email || !userInfo.phone || !userInfo.address) {
+      return toast.error("All fields are required")
+    }
+
+    const toastId = toast.loading('Sending message...');
+    setLoadingToastId(toastId);
+
+
     // Create flex-wrapped HTML for each cart item
     const orderDetails = `
-        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;">
             ${cart
         .map(
           (item) => `
                     <div style="flex: 1 1 150px; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; width: 150px; text-align: center;">
                         <img src="${item.imageUrl}" alt="${item.name}" style="width: 100%; height: auto; object-fit: cover;" />
+                        <p><strong>Item code:</strong> ${item.itemCode}</p>
                         <p><strong>Product:</strong> ${item.name}</p>
-                        <p><strong>Quantity:</strong> ${item.quantity}</p>
+                        <p><strong>Quantity:</strong> ${item.quantity} | <strong>Weight:</strong> ${item.weight}</p>
                     </div>`
         )
         .join("")}
@@ -91,7 +108,13 @@ const CartPage = ({ cart, setCart }) => {
       )
       .then((response) => {
         console.log("Order sent!", response);
-        alert("Order placed successfully!");
+        toast.update(toastId, {
+          render: 'Email sent successfully!',
+          type: 'success',
+          isLoading: false,
+          autoClose: 3000,
+        });
+        toast.success("Order placed successfully!");
         clearCart(); // Clear cart after order placement
       })
       .catch((error) => console.error("Order sending error:", error));
@@ -174,22 +197,23 @@ const CartPage = ({ cart, setCart }) => {
         {cart.length !== 0 &&
           <div className=" px-4 mt-10 mx-auto max-w-[40rem]">
             <div>
-              <form onSubmit={handleOrder} className="flex flex-col gap-4">
+              <form onSubmit={handleOrder} noValidate className="flex flex-col gap-4">
                 <div className="flex flex-col">
-                  <label>Name</label>
+                  <label className="text-[0.95rem] px-1 text-gray-600 font-semibold">Name</label>
                   <input
                     type="text"
                     name="name"
-                    className="px-1 py-2 border"
+                    className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-dark"
+
                     value={userInfo.name}
                     onChange={handleChange}
-                    placeholder="Name"
+                    placeholder="Enter Name..."
                     required
                   />
                 </div>
 
                 <div className="flex flex-col ">
-                  <label>Email</label>
+                  <label className="text-[0.95rem] px-1 text-gray-600 font-semibold">Email</label>
                   <input
                     type="email"
                     name="email"
@@ -197,42 +221,65 @@ const CartPage = ({ cart, setCart }) => {
                     onChange={handleChange}
                     placeholder="Email"
                     required
-                    className="px-1 py-2 mt-1 border border-1 "
+                    className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-dark"
                   />
                 </div>
 
                 <div className="flex flex-col">
-                  <label>Phone</label>
+                  <label className="text-[0.95rem] px-1 text-gray-600 font-semibold">Phone</label>
                   <input
                     type="tel"
                     name="phone"
                     value={userInfo.phone}
                     onChange={handleChange}
-                    className="px-1 py-2 border border-1"
+                    className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-dark"
                     placeholder="Phone"
                     required
                   />
                 </div>
 
                 <div className="flex flex-col">
-                  <label>Address</label>
+                  <label className="text-[0.95rem] px-1 text-gray-600 font-semibold">Address</label>
                   <textarea
                     name="address"
                     value={userInfo.address}
                     onChange={handleChange}
                     placeholder="Address"
-                    className="px-1 py-2 mt-1 border border-1"
+                    rows={2}
+                    className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-dark"
                     required
                   />
                 </div>
 
                 <button
-                  type="submit"
-                  className="py-2 text-white rounded-sm bg-dark"
+                  type='submit'
+                  className="relative flex items-center w-full px-6 py-[0.6rem] overflow-hidden font-medium text-center transition-all rounded-md bg-[#476e2a] group"
                 >
-                  Submit Order
+                  <span
+                    className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rounded bg-dark group-hover:-mr-4 group-hover:-mt-4"
+                  >
+                    <span
+                      className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"
+                    ></span>
+                  </span>
+                  <span
+                    className="absolute bottom-0 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rotate-180 rounded bg-dark group-hover:-ml-4 group-hover:-mb-4"
+                  >
+                    <span
+                      className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"
+                    ></span>
+                  </span>
+                  <span
+                    className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full rounded-md bg-dark group-hover:translate-x-0"
+                  ></span>
+                  <span
+                    className="relative flex w-full text-center text-white transition-colors duration-200 ease-in-out group-hover:text-white"
+                  > {loading ? 'Sending...' : <span className='flex items-center justify-center w-full gap-2'>Send Message <IoMdSend /></span>}
+                  </span>
                 </button>
               </form>
+              <ToastContainer />
+
             </div>
           </div>}
       </div>
