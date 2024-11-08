@@ -140,12 +140,12 @@ const ProductDetails = ({ cart, setCart }) => {
             ) : (
               <button
                 onClick={() => addToCart(quantity)}
-                className="px-6 py-4 mt-6 text-white transition rounded-sm bg-dark hover:bg-blue-700"
+                className="px-6 py-4 mt-6 text-white transition rounded-sm bg-dark hover:bg-green-700"
               >
                 Add to Cart
               </button>
             )}
-            <Link to={'/cart'} className="flex items-center justify-center px-6 py-2 mt-6 text-center text-white transition bg-black rounded-sm hover:bg-blue-700">
+            <Link to={'/cart'} className="flex items-center justify-center px-6 py-2 mt-6 text-center text-white transition bg-black rounded-sm hover:bg-gray-800">
               Buy Now
             </Link>
           </div>
