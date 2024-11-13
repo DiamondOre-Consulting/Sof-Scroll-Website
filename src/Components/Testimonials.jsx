@@ -83,14 +83,14 @@ const Testimonials = () => {
       </h2>
 
       <Marquee pauseOnHover gradient={false} speed={50} className="mb-8">
-        {firstRow.map((testimonial) => (
-          <ReviewCard key={testimonial.username} {...testimonial} />
+        {firstRow.map((testimonial, index) => (
+          <ReviewCard key={index + 1} {...testimonial} />
         ))}
       </Marquee>
 
       <Marquee pauseOnHover gradient={false} speed={50} direction="right">
-        {secondRow.map((testimonial) => (
-          <ReviewCard key={testimonial.username} {...testimonial} />
+        {secondRow.map((testimonial, index) => (
+          <ReviewCard key={index + 1} {...testimonial} />
         ))}
       </Marquee>
 

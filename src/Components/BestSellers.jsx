@@ -23,14 +23,14 @@ const BestSellers = ({ cart, setCart }) => {
         <h1 className="relative mx-auto mb-1 text-6xl text-center mf"><span className="text-dark">Our Best </span>Sellers</h1>
         <div className="w-40 h-1 mx-auto bg-dark"></div>
         {/* <img src={pattern1} alt="" className="absolute right-0 -top-20 " /> */}
-        <div className="grid items-center justify-center grid-cols-1 gap-6 px-6 mx-auto mt-20 w-fit sm:grid-cols-2 md:grid-cols-3">
+        <div className="grid items-center justify-center grid-cols-1 gap-6 px-6 mx-auto mt-20 w-fit sm:grid-cols-2 lg:grid-cols-3">
           {Allproducts.slice(0, 6).map((product, index) => {
             const isInCart = cart.find((item) => item.itemCode === product.itemCode);
 
 
             return (
               <Link to={`/product/${product.itemCode}`} key={index}>
-                <div className="w-[22rem] bg-white border-2 rounded shadow border-dark hover:border-dark hover:border-2">
+                <div className="max-w-[22rem] min-w-[18rem] bg-white border-2 rounded shadow border-dark hover:border-dark hover:border-2">
                   <img src={product.imageUrl} alt="" className="h-[14rem] w-full" />
                   <div className="flex flex-col items-center p-4">
                     <h1 className="mt-1 text-center text-gray-800">{product.name}</h1>

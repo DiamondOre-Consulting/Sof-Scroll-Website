@@ -4,6 +4,7 @@ import teamImage1 from "../assets/harshawardhan.jpeg"; // Team member image 1
 import teamImage2 from "../assets/Alex.jpeg"; // Team member image 2
 import teamImage3 from "../assets/yashashrri.jpeg"; // Team member image 3
 import patternImage from "../assets/22.png"; // Background pattern image
+import BreadCrumbs from "../Components/BreadCrumbs";
 
 const AboutUs = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -20,22 +21,19 @@ const AboutUs = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    { label: 'About Us' },
+  ];
+
   return (
     <div className="">
-      {/* Hero Section */}
-      <div className="relative flex flex-col items-center justify-center">
-        <img
-          src="https://www.premiertissues.com/images/about/banner.png"
-          alt="Pattern"
-          className="absolute inset-0 z-20 object-fill w-full h-full mx-auto "
-        />
-        <h1 className="relative z-10 pb-20 mt-10 text-5xl font-bold text-black pt-28 mf">
-          About Us
-        </h1>
-      </div>
+      <BreadCrumbs headText={"About Us"} items={breadcrumbItems} />
+
+
 
       {/* About Us Content */}
-      <section className="px-4 ">
+      <section className="px-4 mt-24 mb-0">
         <div className="flex flex-col md:flex-row">
           {/* Left Side: Paragraphs */}
           <div className="max-w-3xl p-4 mx-auto text-center">
@@ -56,10 +54,15 @@ const AboutUs = () => {
           </div>
           {/* Right Side: Changing Image */}
         </div>
+        <img
+          src="https://www.premiertissues.com/images/about/banner.png"
+          alt="Pattern"
+          className="relative inset-0 z-20 object-fill w-full h-full mx-auto top-[-5rem] md:top-[-10rem]"
+        />
       </section>
 
       {/* Manufacturing Process Section */}
-      <section className="px-4 py-16 bg-light">
+      <section className="px-4 py-16 bg-light relative top-[-9rem] md:top-[-15rem]">
         <h2 className="mb-1 text-4xl font-bold text-center md:text-5xl mf">
           Our Manufacturing Process
         </h2>
@@ -121,7 +124,7 @@ const AboutUs = () => {
       </section>
 
       {/* Team Section */}
-      <section className="px-4 py-16 ">
+      <section className="px-4 py-16 relative top-[-9rem] md:top-[-15rem]">
         <h2 className="mb-1 text-4xl font-bold text-center text-black md:text-6xl mf">
           Meet Our Team
         </h2>
@@ -175,7 +178,7 @@ const AboutUs = () => {
 
       {/* Stats Section */}
       <section
-        className="relative px-4 py-16"
+        className="relative px-4 py-16  top-[-9rem] md:top-[-15rem]"
         style={{
           backgroundImage: `url(${"https://kempttissues.com/assets/img/home/bg-client.jpg"})`,
           backgroundSize: "cover",
