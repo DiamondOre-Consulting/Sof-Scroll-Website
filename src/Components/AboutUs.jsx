@@ -10,24 +10,15 @@ const AboutUs = () => {
         <div className="w-20 h-1 mx-auto md:w-52 bg-dark"></div>
 
         <p className="mt-10 mb-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-          asperiores, minima quibusdam dignissimos sequi magnam, odit delectus
-          quas ratione saepe similique eum voluptates nam consectetur vero
-          perspiciatis ex perferendis, suscipit repudiandae excepturi dolorem
-          rerum incidunt corporis. Voluptates rem perspiciatis enim porro eius
-          provident sit, inventore, adipisci dolorum cupiditate omnis quam
-          tenetur? Aliquam nostrum autem, vitae porro voluptates iste earum
-          obcaecati! Minima magnam illo necessitatibus illum eos omnis in
-          laborum assumenda labore quaerat, vero dolores quis quod, itaque qui
-          veritatis quia maxime.
+        Our tissue paper conversion process transforms large rolls of tissue paper into consumer-friendly products like toilet paper, facial tissues, paper napkins, and paper towels. Starting with quality raw materials—often wood pulp or recycled paper—the pulp is processed and formed into continuous paper sheets with optimal moisture content. These large sheets are then slit into smaller rolls, embossed for texture and softness, and perforated for easy tearing. Finally, the tissue is packaged in various formats using automated machinery for efficiency and consistency. This sustainable process combines innovation with quality to meet diverse consumer needs.
         </p>
 
         <Link
-          to="/about-us"
-          className="Btn-dark"
-        >
-          {/* Read More */}
-        </Link>
+            to={'/about-us'}
+            className="inline-grid w-40 px-10 py-2 overflow-hidden text-center text-black transition-all duration-300 border rounded-full button border-dark hover:bg-dark hover:text-white"
+          >
+            <span>About US</span>
+          </Link>
         <img src={pattern2} alt="" className="absolute left-0 hidden top-10 md:flex " />
       </div>
 

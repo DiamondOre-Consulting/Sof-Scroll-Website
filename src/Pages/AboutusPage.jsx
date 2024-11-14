@@ -36,33 +36,24 @@ const AboutUs = () => {
       <section className="px-4 mt-24 mb-0">
         <div className="flex flex-col md:flex-row">
           {/* Left Side: Paragraphs */}
-          <div className="max-w-3xl p-4 mx-auto text-center">
+          <div className=" p-4 mx-auto text-center">
             <p className="mb-4 text-gray-700">
-              We are dedicated to providing the highest quality tissue products,
-              ensuring customer satisfaction through innovation and excellence
-              in every step of our manufacturing process.
+            Tissue paper conversion is the process of transforming large rolls of tissue paper into convenient consumer products like toilet paper, facial tissue, paper napkins, and paper towels. This process involves specialized machinery and techniques to create products that meet consumer demands for softness, strength, and absorbency.
+            </p>
+            <p className="mb-4 text-gray-700 float-right">
+            The journey begins with high-quality raw materials, typically wood pulp or recycled paper, which undergo refining and processing to achieve the desired properties. A papermaking machine with a fourdrinier wire is then used to create a continuous sheet of tissue. Through various steps, including vacuum suction, press rolls, and drying cylinders, the sheet reaches an optimal moisture level, ready for further conversion.
             </p>
             <p className="mb-4 text-gray-700">
-              Our commitment to sustainability and responsible sourcing reflects
-              in every product we create, supporting both our customers and the
-              environment.
-            </p>
-            <p className="mb-4 text-gray-700">
-              Join us in our journey as we expand our horizons and continue to
-              deliver products that meet the evolving needs of our customers.
+            In the converting facility, the large tissue roll is first slit into smaller rolls, then embossed for added softness and strength. The tissue is perforated for easy tearing and finally packaged into consumer-friendly formats. Using robotic and automated machinery ensures precise and efficient packaging, with materials chosen to balance consumer preferences and sustainability.
             </p>
           </div>
           {/* Right Side: Changing Image */}
         </div>
-        <img
-          src="https://www.premiertissues.com/images/about/banner.png"
-          alt="Pattern"
-          className="relative inset-0 z-20 object-fill w-full h-full mx-auto top-[-5rem] md:top-[-10rem]"
-        />
+       
       </section>
 
       {/* Manufacturing Process Section */}
-      <section className="px-4 py-16 bg-light relative top-[-9rem] md:top-[-15rem]">
+      <section className="px-4 py-16 bg-light top-[-9rem] md:top-[-15rem]">
         <h2 className="mb-1 text-4xl font-bold text-center md:text-5xl mf">
           Our Manufacturing Process
         </h2>
@@ -124,7 +115,7 @@ const AboutUs = () => {
       </section>
 
       {/* Team Section */}
-      <section className="px-4 py-16 relative top-[-9rem] md:top-[-15rem]">
+      <section className="px-4 py-16  ">
         <h2 className="mb-1 text-4xl font-bold text-center text-black md:text-6xl mf">
           Meet Our Team
         </h2>
@@ -176,41 +167,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section
-        className="relative px-4 py-16  top-[-9rem] md:top-[-15rem]"
-        style={{
-          backgroundImage: `url(${"https://kempttissues.com/assets/img/home/bg-client.jpg"})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black opacity-60"></div>
-
-        {/* Achievements Content */}
-        <div className="relative z-10 text-center text-white">
-          <h2 className="mb-8 text-5xl font-bold mf">Our Achievements</h2>
-          <div className="flex flex-wrap justify-center">
-            <div className="m-4 text-center">
-              <h3 className="text-6xl font-bold">1M+</h3>
-              <p className="text-gray-300">Products Sold</p>
-            </div>
-            <div className="m-4 text-center">
-              <h3 className="text-6xl font-bold">99%</h3>
-              <p className="text-gray-300">Customer Satisfaction</p>
-            </div>
-            <div className="m-4 text-center">
-              <h3 className="text-6xl font-bold">5+</h3>
-              <p className="text-gray-300">Years of Experience</p>
-            </div>
-            <div className="m-4 text-center">
-              <h3 className="text-6xl font-bold">10+</h3>
-              <p className="text-gray-300">Awards Won</p>
-            </div>
-          </div>
-        </div>
-      </section>
+    
     </div>
   );
 };

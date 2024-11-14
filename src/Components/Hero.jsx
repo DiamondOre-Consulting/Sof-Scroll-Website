@@ -18,7 +18,7 @@ const Hero = () => {
     return () => button.removeEventListener("mouseenter", () => tl.play(0));
   }, []);
 
-  return (
+  return ( 
     <div
       className="relative flex items-center h-screen bg-center bg-cover -top-20 md:top-0"
       style={{ backgroundImage: `url(${herobg})` }}
@@ -31,14 +31,14 @@ const Hero = () => {
           <p className="mb-6 text-lg text-gray-700 md:text-xl">
             From everyday use to special moments, our tissues provide the perfect blend of elegance and functionality.
           </p>
-          <Link to={'/all-products'} className="Btn">
-          </Link>
-          {/* <Link
+          {/* <Link to={'/all-products'} className="Btn">
+          </Link> */}
+          <Link
             to={'/all-products'}
             className="inline-grid w-40 px-10 py-2 overflow-hidden text-center text-black transition-all duration-300 border rounded-full button border-dark hover:bg-dark hover:text-white"
           >
             <span>Shop Now</span>
-          </Link> */}
+          </Link>
         </div>
       </div>
       <img src={pattern1} alt="Pattern" className="absolute right-0 hidden w-48 bottom-20 md:flex" />
