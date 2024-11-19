@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { Link } from "react-router-dom";
-import herobg from "../assets/tisssuevideo.mp4";
+import { TextRevealCard, TextRevealCardTitle, TextRevealCardDescription } from "../Components/ui/TextRevealCard";
+
 
 const Hero = () => {
   useEffect(() => {
@@ -17,31 +18,37 @@ const Hero = () => {
     return () => button.removeEventListener("mouseenter", () => tl.play(0));
   }, []);
 
-  return (
-    <div className="relative flex items-center h-screen -top-20 md:top-0">
-      {/* Video Background */}
-      <div className="absolute h-screen bg-black opacity-75"></div>
-      <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        src={herobg}
-        autoPlay
-        loop
-        muted
-      ></video>
-
-      {/* Content Overlay */}
-      <div className="container relative px-4 sm:px-8 mx-auto max-w-[77rem] text-white">
-        <div className="max-w-xl text-left">
-          <h1 className="mb-6 text-4xl font-bold leading-tight sm:text-5xl md:text-6xl text-light">
+  return ( 
+    <div
+      className="relative flex items-center h-screen bg-center bg-cover -top-20 md:top-0"
+      style={{ backgroundImage: `url(${herobg})` }}
+    >
+      <div className="container px-4 sm:px-8 mx-auto max-w-[77rem]">
+        <div className="max-w-xl text-left text-white">
+          {/* <h1 className="mb-6 text-4xl font-bold leading-tight sm:text-5xl md:text-6xl mf text-dark">
             Luxury You Can Trust, Softness You Can Feel
-          </h1>
-          {/* <p className="mb-6 text-lg text-gray-300 md:text-xl">
-            From everyday use to special moments, our tissues provide the
-            perfect blend of elegance and functionality.
+          </h1> */}
+          {/* <p className="mb-6 text-lg text-gray-700 md:text-xl">
+            From everyday use to special moments, our tissues provide the perfect blend of elegance and functionality.
           </p> */}
+          <div className="flex items-center justify-center w-[100%]">
+      <TextRevealCard
+        text="Sof Scroll"
+        revealText="Luxury You Can Trust, Softness You Can Feel"
+        className="w-96"
+      >
+        {/* Add optional children here */}
+        {/* <TextRevealCardTitle>Exciting Title</TextRevealCardTitle> */}
+        {/* <TextRevealCardDescription> */}
+          {/* This is an awesome description for the card. */}
+        {/* </TextRevealCardDescription> */}
+        </TextRevealCard>
+        </div>
+          {/* <Link to={'/all-products'} className="Btn">
+          </Link> */}
           <Link
-            to={"/all-products"}
-            className="inline-grid w-40 px-10 py-2 overflow-hidden text-center text-black transition-all duration-300 border rounded-full button border-dark hover:bg-dark hover:text-white"
+            to={'/all-products'}
+            className="ml-36 inline-grid w-40 px-10 py-2 overflow-hidden text-center text-black transition-all duration-300 border rounded-full button border-dark hover:bg-dark hover:text-white"
           >
             <span>Shop Now</span>
           </Link>
