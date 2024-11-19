@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 
 import { Link } from "react-router-dom";
 
-import { TextRevealCard, TextRevealCardTitle, TextRevealCardDescription } from "../Components/ui/TextRevealCard";
+import WordRotate from "@/components/ui/word-rotate";
 
 import tisssuevideo from '../assets/tisssuevideo.mp4'
 
@@ -14,29 +14,6 @@ import tisssuevideo from '../assets/tisssuevideo.mp4'
 
 const Hero = () => {
 
-  useEffect(() => {
-
-    const button = document.querySelector(".button");
-
-    const span = button.querySelector("span");
-
-    const tl = gsap.timeline({ paused: true });
-
-
-
-    tl.to(span, { duration: 0.2, yPercent: -150, ease: "power2.in" });
-
-    tl.set(span, { yPercent: 150 });
-
-    tl.to(span, { duration: 0.2, yPercent: 0 });
-
-
-
-    button.addEventListener("mouseenter", () => tl.play(0));
-
-    return () => button.removeEventListener("mouseenter", () => tl.play(0));
-
-  }, []);
 
 
 
@@ -84,27 +61,10 @@ const Hero = () => {
 
           <div className="flex items-center justify-center w-[100%]">
 
-      <TextRevealCard
-
-        text="Sof Scroll"
-
-        revealText="Luxury You Can Trust, Softness You Can Feel"
-
-        className="w-96"
-
-      >
-
-        {/* Add optional children here */}
-
-        {/* <TextRevealCardTitle>Exciting Title</TextRevealCardTitle> */}
-
-        {/* <TextRevealCardDescription> */}
-
-          {/* This is an awesome description for the card. */}
-
-        {/* </TextRevealCardDescription> */}
-
-        </TextRevealCard>
+          <WordRotate
+      className="text-4xl font-bold text-white"
+      words={["Sof Scroll ", "Sof-scroll"]}
+    />
 
         </div>
 

@@ -7,10 +7,7 @@ const AboutUs = () => {
   return (
     <>
     
-      <WordRotate
-      className="text-4xl font-bold text-black dark:text-white"
-      words={["Word", "Rotate"]}
-    />
+     
 
 
       <div className="relative -mt-40 md:mt-0">
