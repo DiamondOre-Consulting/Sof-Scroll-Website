@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
-import herobg from "../assets/herobg.png";
-import pattern1 from '../assets/pattern1.png';
 import { Link } from "react-router-dom";
 import { TextRevealCard, TextRevealCardTitle, TextRevealCardDescription } from "../Components/ui/TextRevealCard";
 
@@ -56,7 +54,9 @@ const Hero = () => {
           </Link>
         </div>
       </div>
-      <img src={pattern1} alt="Pattern" className="absolute right-0 hidden w-48 bottom-20 md:flex" />
+
+      {/* Decorative Pattern Image */}
+      {/* <img src={pattern1} alt="Pattern" className="absolute right-0 hidden w-48 bottom-20 md:flex" /> */}
     </div>
   );
 };

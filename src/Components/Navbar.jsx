@@ -11,50 +11,49 @@ const Navbar = ({ cart }) => {
   const location = useLocation();
 
   // GSAP animation for hover effect
-  useEffect(() => {
-    gsap.fromTo(
-      ".nav-item",
-      { opacity: 0, y: -20 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.3,
-        stagger: 0.2,
-        ease: "power3.out",
-      }
-    );
-  }, []);
+  // useEffect(() => {
+  //   gsap.fromTo(
+  //     ".nav-item",
+  //     { opacity: 0, y: -20 },
+  //     {
+  //       opacity: 1,
+  //       y: 0,
+  //       duration: 0.3,
+  //       stagger: 0.2,
+  //       ease: "power3.out",
+  //     }
+  //   );
+  // }, []);
 
   // Track scroll position to change background
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setIsScrolled(window.scrollY > 50);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
-    <div
-      className={`w-full fixed z-50 transition duration-300 ${isScrolled ? "bg-cover bg-center shadow-md" : "shadow-md"
-        }`}
-      style={{
-        backgroundImage: isScrolled ? `url(${navbg})` : "none",
-      }}
-    >
-      <nav className="container flex items-center justify-between px-4 py-1 mx-auto sm:px-6">
+    <div className="w-full fixed z-50 bg-white ">
+      <div className="bg-black py-2   ">dklfj</div>
+      <nav className="container flex items-center justify-between px-4 py-6 mx-auto sm:px-6">
         {/* Logo on the Left Side */}
-        <img src={logo} alt="Logo" className="w-[10rem] md:w-40" />
-
-        {/* Right Side - Links and Cart Icon */}
+        {/* <img src={logo} alt="Logo" className="w-[10rem] md:w-40" /> */}
+        <p>YOUR LOGO</p>
+     
         <div className="items-center hidden space-x-8 md:flex">
           <NavLink to="/" label="Home" location={location.pathname} />
 
-          <NavLink to="/about-us" label="About Us" location={location.pathname} />
+          <NavLink
+            to="/about-us"
+            label="About Us"
+            location={location.pathname}
+          />
           <NavLink
             to="/all-products"
             label="Products"
@@ -147,15 +146,17 @@ const Navbar = ({ cart }) => {
 const NavLink = ({ to, label, location, onClick }) => (
   <Link
     to={to}
-    className={`nav-item text-gray-900 hover:text-dark relative ${location === to ? "font-semibold text-dark" : ""
-      }`}
+    className={`nav-item text-gray-900 hover:text-dark relative ${
+      location === to ? "font-semibold text-dark" : ""
+    }`}
     onClick={onClick}
   >
     {label}
     {/* Hover Underline Effect */}
     <span
-      className={`absolute left-0 -bottom-1 w-full h-0.5 bg-dark transform transition-transform duration-300 scale-x-0 ${location === to ? "scale-x-100" : "hover:scale-x-100"
-        }`}
+      className={`absolute left-0 -bottom-1 w-full h-0.5 bg-dark transform transition-transform duration-300 scale-x-0 ${
+        location === to ? "scale-x-100" : "hover:scale-x-100"
+      }`}
     ></span>
   </Link>
 );
