@@ -77,7 +77,7 @@ const Testimonials = () => {
   const secondRow = testimonials.slice(testimonials.length / 2);
 
   return (
-    <div className="relative flex flex-col items-center justify-center py-16 bg-light ">
+    <div className="relative flex flex-col items-center justify-center py-16 ">
       <h2 className="mx-auto mb-10 text-4xl font-semibold text-gray-700 md:text-5xl mf ">
         Our Clients’ Feedback
       </h2>

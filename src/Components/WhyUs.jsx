@@ -1,5 +1,6 @@
 import React from "react";
 import tissue1 from "../assets/tissue1.png";
+import BackgroundGradient from '../Components/ui/Card'
 
 const WhyUs = () => {
   const categories = [
@@ -22,18 +23,20 @@ const WhyUs = () => {
   ];
 
   return (
-    <div className="py-16 bg-light">
+    <div className="py-16 m-6 rounded-3xl bg-[#CDC1FF]">
       <div className="text-center">
         <h2 className="mb-4 text-sm text-gray-600">Why Soft-scroll Tissues?</h2>
         <h1 className="max-w-4xl mx-auto mb-10 text-3xl text-black md:text-4xl mf">
           The Most Stylish, Hygienic & Soft Tissues
         </h1>
       </div>
+      
       <div className="grid grid-cols-1 gap-10 px-6 mx-auto w-fit md:grid-cols-2 md:px-0">
         {categories.map((category, index) => (
-          <div
+          <BackgroundGradient>        
+            <div
             key={index}
-            className="relative p-4 text-center max-w-[38rem] border rounded-lg border-dark"
+            className="relative bg-white  p-4 text-center max-w-[38rem] border rounded-3xl border-dark"
           >
             <img
               src={category.image}
@@ -45,6 +48,7 @@ const WhyUs = () => {
                 </div> */}
             <h3 className="mt-4 text-lg font-semibold mf">{category.title}</h3>
           </div>
+          </BackgroundGradient>
         ))}
       </div>
     </div>

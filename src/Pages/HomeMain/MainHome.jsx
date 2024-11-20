@@ -17,12 +17,19 @@ const MainHome = ({ cart, setCart }) => {
   return (
     <div>
       <Hero />
+      <div className=" border-orange-400  m-8 rounded-full border-t-4 sticky top-14 z-50"></div>
       <AboutUs />
+      <div className=" border-orange-400 m-8 rounded-full border-t-4 sticky top-14 z-50"></div>
       <BestSellers cart={cart} setCart={setCart} />
+      <div className=" border-orange-400 m-8 rounded-full border-t-4 sticky top-14 z-50"></div>
       {/* <PopularCategories/> */}
       <WhyUs />
+      <div className=" border-orange-400  m-8 rounded-fullborder-t-4 sticky top-14 z-50"></div>
       <Testimonials />
+      <div className=" border-orange-400  m-8 rounded-fullborder-t-4 sticky top-14 z-50"></div>
       <ContactUs />
+      <div className=" border-orange-400  m-8 rounded-fullborder-t-4 sticky top-14 z-50"></div>
+
 
     </div>
   );

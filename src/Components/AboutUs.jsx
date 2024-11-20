@@ -10,7 +10,8 @@ const AboutUs = () => {
      
 
 
-      <div className="relative -mt-40 md:mt-0">
+      <div className="relative  -mt-40 md:mt-0">
+       
         <div className="flex flex-col items-center justify-center max-w-3xl px-4 py-10 mx-auto text-center xl md:py-20 md:px-0">
           <h1 className="mb-1 text-5xl md:text-6xl mf">
             <span className="text-dark">About </span>Us
