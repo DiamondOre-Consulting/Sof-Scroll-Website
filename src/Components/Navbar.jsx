@@ -46,7 +46,7 @@ const Navbar = ({ cart }) => {
         {/* <img src={logo} alt="Logo" className="w-[10rem] md:w-40" /> */}
         <p>YOUR LOGO</p>
      
-        <div className="items-center hidden space-x-8 md:flex">
+        <div className="items-center hidden space-x-8 md:flex uppercase">
           <NavLink to="/" label="Home" location={location.pathname} />
 
           <NavLink
