@@ -4,7 +4,7 @@ import { MdKeyboardArrowRight } from 'react-icons/md';
 
 const BreadCrumbs = ({ items, headText }) => {
     return (
-        <div className='relative flex flex-col items-center justify-center py-8 overflow-hidden top-[4.5rem] bg-[#1b2f0c]'>
+        <div className='relative flex flex-col items-center justify-center py-8 overflow-hidden bg-dark'>
             <div
                 className="absolute inset-0 "
                 style={{
@@ -35,15 +35,10 @@ const BreadCrumbs = ({ items, headText }) => {
             <div
                 className='absolute size-[25rem] lg:size-[40rem] top-[10%] right-[-20%] lg:top-[8%] lg:right-[-10%] rounded-full z-6'
                 style={{
-                    background: 'radial-gradient(circle, #3D5C26 2%, rgba(36, 67, 230, 0) 65%)',
+                    background: 'radial-gradient(circle, #AD49E1 2%, rgba(36, 67, 230, 0) 65%)',
                 }}
             ></div>
-            <div
-                className='absolute size-[25rem] lg:size-[40rem] top-[10%] left-[-20%] lg:top-[8%] lg:left-[-10%] rounded-full z-6'
-                style={{
-                    background: 'radial-gradient(circle,#314f1a 2%, #1b2f0c6b 65%)',
-                }}
-            ></div>
+
         </div>
     )
 }

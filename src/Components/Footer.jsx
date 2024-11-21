@@ -16,9 +16,9 @@ const contactStyle = "text-[0.95rem] flex items-start sm:items-center lg:items-s
 
 const Footer = () => {
   return (
-    <footer className="relative flex flex-col items-center justify-center mt-20 overflow-x-hidden">
+    <footer className="relative flex flex-col items-center justify-center overflow-x-hidden">
 
-      <div className="w-full px-4 pt-8 mx-auto bg-gray-200 sm:px-28">
+      <div className="w-full px-4 pt-8 mx-auto bg-light sm:px-28">
         <div className="py-8">
           <div className="flex flex-wrap items-center justify-around">
             {/* About Section */}

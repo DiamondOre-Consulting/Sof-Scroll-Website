@@ -1,6 +1,7 @@
 import React from "react";
 import tissue1 from "../assets/tissue1.png";
 import BackgroundGradient from '../Components/ui/Card'
+import ShineBorder from "./ui/shine-border";
 
 const WhyUs = () => {
   const categories = [
@@ -23,31 +24,31 @@ const WhyUs = () => {
   ];
 
   return (
-    <div className="py-16 m-6 rounded-3xl bg-[#CDC1FF]">
+    <div className="py-6 rounded-lg bg-slate-50">
       <div className="text-center">
-        <h2 className="mb-4 text-sm text-gray-600">Why Soft-scroll Tissues?</h2>
-        <h1 className="max-w-4xl mx-auto mb-10 text-3xl text-black md:text-4xl mf">
+        <h2 className="mb-4 text-gray-600 text-md">Why Soft-scroll Tissues?</h2>
+        <h1 className="max-w-4xl mx-auto mb-12 text-3xl text-black md:text-4xl mf">
           The Most Stylish, Hygienic & Soft Tissues
         </h1>
       </div>
-      
+
       <div className="grid grid-cols-1 gap-10 px-6 mx-auto w-fit md:grid-cols-2 md:px-0">
         {categories.map((category, index) => (
-          <BackgroundGradient>        
+          <BackgroundGradient key={index}>
             <div
-            key={index}
-            className="relative bg-white  p-4 text-center max-w-[38rem] border rounded-3xl border-dark"
-          >
-            <img
-              src={category.image}
-              alt={category.title}
-              className="object-cover w-full h-[18rem] mb-4 rounded-lg"
-            />
-            {/* <div className="absolute text-xs text-gray-400 transform -translate-x-1/2 top-4 left-1/2">
+
+              className="relative bg-white  p-4 text-center max-w-[38rem] border rounded-3xl border-dark"
+            >
+              <img
+                src={category.image}
+                alt={category.title}
+                className="object-cover w-full h-[18rem] mb-4 rounded-lg"
+              />
+              {/* <div className="absolute text-xs text-gray-400 transform -translate-x-1/2 top-4 left-1/2">
                   {category.description}
                 </div> */}
-            <h3 className="mt-4 text-lg font-semibold mf">{category.title}</h3>
-          </div>
+              <h3 className="mt-4 text-xl font-semibold mf">{category.title}</h3>
+            </div>
           </BackgroundGradient>
         ))}
       </div>

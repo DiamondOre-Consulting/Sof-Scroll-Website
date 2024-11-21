@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { Link } from "react-router-dom";
 import contactbg from '../assets/contactusbg.jpg'
+import ContactSection from "./ContactSection";
+import ShineBorder from "./ui/shine-border";
 
 const ContactUs = () => {
 
@@ -19,19 +21,27 @@ const ContactUs = () => {
   }, []);
 
   return (
-    <div className="relative bg-cover bg-center h-96 " style={{ backgroundImage: `url('${contactbg}')` }}>
-      <div className="absolute inset-0 bg-black opacity-70"></div> {/* Black overlay */}
-      <div className="relative flex flex-col justify-center items-center h-full text-white text-center">
-        <h2 className="text-2xl md:text-6xl  mf font-semibold mb-4">
-          Contact Us for a Better Deal
-        </h2>
-        <Link
-            to={'/contact-us'}
-            className="button inline-grid border bg-white border-dark rounded-full py-2 px-10 w-40 text-center text-black overflow-hidden  transition-all duration-300"
-          >
-            <span>Contact Us</span>
-          </Link>
-      </div>
+    // <div className="relative bg-center bg-cover h-96 " style={{ backgroundImage: `url('${contactbg}')` }}>
+    //   <div className="absolute inset-0 bg-black opacity-70"></div> {/* Black overlay */}
+    //   <div className="relative flex flex-col items-center justify-center h-full text-center text-white">
+    //     <h2 className="mb-4 text-2xl font-semibold md:text-6xl mf">
+    //       Contact Us for a Better Deal
+    //     </h2>
+    //     <Link
+    //         to={'/contact-us'}
+    //         className="inline-grid w-40 px-10 py-2 overflow-hidden text-center text-black transition-all duration-300 bg-white border rounded-full button border-dark"
+    //       >
+    //         <span>Contact Us</span>
+    //       </Link>
+    //   </div>
+    // </div>
+
+    <div className="flex flex-col items-center justify-center w-full py-10 rounded-md  bg-slate-50">
+
+      <h2 className="mx-auto text-4xl font-semibold text-gray-700 md:text-5xl mf ">
+        Contact Us
+      </h2>
+      <ContactSection contact={false} />
     </div>
   );
 };
