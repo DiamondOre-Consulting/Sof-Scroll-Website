@@ -3,6 +3,31 @@ import { Link, useParams } from "react-router-dom";
 import Allproducts from "./AllProducts";
 import ExploreProducts from "./ExploreProducts";
 import BreadCrumbs from "../BreadCrumbs";
+import PropTypes from "prop-types";
+
+const productI = {
+  previews: [
+    {
+      previewUrl:
+        "https://cdn.easyfrontend.com/pictures/ecommerce/headphone2.png",
+      thumbUrl:
+        "https://cdn.easyfrontend.com/pictures/ecommerce/headphone2-1.png",
+    },
+    {
+      previewUrl:
+        "https://cdn.easyfrontend.com/pictures/ecommerce/headphone2-2.png",
+      thumbUrl:
+        "https://cdn.easyfrontend.com/pictures/ecommerce/headphone2-2.png",
+    },
+    {
+      previewUrl:
+        "https://cdn.easyfrontend.com/pictures/ecommerce/headphone2-3.png",
+      thumbUrl:
+        "https://cdn.easyfrontend.com/pictures/ecommerce/headphone2-3.png",
+    },
+  ],
+
+};
 
 const ProductDetails = ({ cart, setCart }) => {
   const { itemCode } = useParams();
@@ -82,17 +107,47 @@ const ProductDetails = ({ cart, setCart }) => {
     { label: product.name },
   ];
 
+  const ProductPreviews = ({ previews }) => {
+    const [index, setIndex] = useState(0);
+
+    return (
+      <div className=" bg-gray-50 dark:bg-slate-800 rounded-xl lg:mr-6">
+        <div className="text-center md:p-6">
+          <img
+            src={previews[index].previewUrl}
+            alt=""
+            className="w-full max-w-full mx-auto lg:h-[22rem] lg:max-w-[30rem] object-cover h-auto"
+          />
+        </div>
+
+        <ul className="flex items-center justify-center gap-3">
+          {previews.map((preview, i) => (
+            <li
+              className="flex items-center justify-center w-24 h-24 p-1 border border-gray-200 rounded-md cursor-pointer dark:border-slate-700"
+              key={i}
+              onClick={() => setIndex(i)}
+            >
+              <img src={preview.thumbUrl} alt="" className="h-auto max-w-full" />
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
+
+  ProductPreviews.propTypes = {
+    previews: PropTypes.array.isRequired,
+  };
+
   return (
     <>
-      <BreadCrumbs headText={product.name} items={breadcrumbItems} />
+      {/* <BreadCrumbs headText={product.name} items={breadcrumbItems} /> */}
 
-      <div className="w-full max-w-[78rem] p-4 px-4 sm:px-10 mx-auto pt-28 md:px-20 ">
-        <div className="grid items-start grid-cols-1 mt-4 md:grid-cols-2 md:gap-10">
-          <img
-            src={mainImage}
-            alt={product.name}
-            className="object-cover w-full rounded-md shadow-sm h-96"
-          />
+      <div className="w-full max-w-[80rem] p-4 px-4 sm:px-10 mx-auto pt-6 md:px-20 lg:px-6">
+        <div className="grid items-center grid-cols-1 mt-4 lg:grid-cols-2 md:gap-10">
+          <div className="w-full">
+            <ProductPreviews previews={product.previews} />
+          </div>
 
           <div className="flex flex-col">
             <h1 className="text-4xl font-semibold mf">{product.name}</h1>
@@ -171,9 +226,41 @@ const ProductDetails = ({ cart, setCart }) => {
           </p>
         </div>
 
-        <div>
-          <ExploreProducts cart={cart} setCart={setCart} />
+
+      </div>
+      <div className="w-full p-4 pb-10 bg-slate-200">
+        <h2 className="mb-6 font-bold text-center mf text-[2.7rem]">Product Features</h2>
+        <div className="flex items-center justify-center gap-8">
+          <div className="flex flex-col items-center justify-center">
+            <img className="object-cover rounded-full size-20" src="https://img.freepik.com/free-photo/healthy-beautiful-manicure-with-cotton-pads_23-2148766541.jpg?semt=ais_hybrid" alt="" />
+            <h1 className="text-[0.9rem] font-semibold">Soft Tissue</h1>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <img className="object-cover rounded-full size-20" src="https://img.freepik.com/free-photo/top-view-hand-book_23-2147624852.jpg?semt=ais_hybrid" alt="" />
+            <h1 className="text-[0.9rem] font-semibold">Soft Comforty</h1>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <img className="object-cover rounded-full size-20" src="https://img.freepik.com/free-photo/eco-friendly-recycling-concept_23-2148737656.jpg?semt=ais_hybrid" alt="" />
+            <h1 className="text-[0.9rem] font-semibold">Eco Friendly</h1>
+
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <img className="object-cover rounded-full size-20" src="https://img.freepik.com/free-photo/napkin-wooden-table_1339-5587.jpg?ga=GA1.1.1044272893.1732183300&semt=ais_hybrid" alt="" />
+            <h1 className="text-[0.9rem] font-semibold">Quick Dry</h1>
+
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <img className="object-cover rounded-full size-20" src="https://img.freepik.com/free-vector/toilet-tissue-roll-element-vector_53876-169051.jpg?ga=GA1.1.1044272893.1732183300&semt=ais_hybrid" alt="" />
+            <h1 className="text-[0.9rem] font-semibold">Disposable</h1>
+
+          </div>
+
+
         </div>
+      </div>
+
+      <div>
+        <ExploreProducts cart={cart} setCart={setCart} />
       </div>
     </>
   );
