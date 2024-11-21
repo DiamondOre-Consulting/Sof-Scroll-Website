@@ -5,6 +5,7 @@ import teamImage2 from "../assets/Alex.jpeg"; // Team member image 2
 import teamImage3 from "../assets/yashashrri.jpeg"; // Team member image 3
 import patternImage from "../assets/22.png"; // Background pattern image
 import BreadCrumbs from "../Components/BreadCrumbs";
+import yashi from "../assets/yashi.jpeg";
 
 const AboutUs = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -21,95 +22,153 @@ const AboutUs = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const breadcrumbItems = [
-    { label: 'Home', href: '/' },
-    { label: 'About Us' },
-  ];
+  const breadcrumbItems = [{ label: "Home", href: "/" }, { label: "About Us" }];
 
   return (
     <div className="">
-      <BreadCrumbs headText={"About Us"} items={breadcrumbItems} />
-
-
+      {/* <BreadCrumbs items={breadcrumbItems} /> */}
 
       {/* About Us Content */}
-      <section className="px-4 mt-24 mb-0">
-        <div className="flex flex-col md:flex-row">
-          {/* Left Side: Paragraphs */}
-          <div className=" p-4 mx-auto text-center">
-            <p className="mb-4 text-gray-700">
-            Tissue paper conversion is the process of transforming large rolls of tissue paper into convenient consumer products like toilet paper, facial tissue, paper napkins, and paper towels. This process involves specialized machinery and techniques to create products that meet consumer demands for softness, strength, and absorbency.
-            </p>
-            <p className="mb-4 text-gray-700 float-right">
-            The journey begins with high-quality raw materials, typically wood pulp or recycled paper, which undergo refining and processing to achieve the desired properties. A papermaking machine with a fourdrinier wire is then used to create a continuous sheet of tissue. Through various steps, including vacuum suction, press rolls, and drying cylinders, the sheet reaches an optimal moisture level, ready for further conversion.
-            </p>
-            <p className="mb-4 text-gray-700">
-            In the converting facility, the large tissue roll is first slit into smaller rolls, then embossed for added softness and strength. The tissue is perforated for easy tearing and finally packaged into consumer-friendly formats. Using robotic and automated machinery ensures precise and efficient packaging, with materials chosen to balance consumer preferences and sustainability.
-            </p>
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-6  px-10 items-center">
+        <div className="p-4 text-start text-justify">
+          <h1 className="font-bold text-gray-800 text-4xl mb-3">
+            Know More About Me
+          </h1>
+          <div className="flex gap-1 mb-8">
+            <div className="w-[9.5rem] h-[3.5px] bg-dark rounded-full"></div>
+            <div className="w-[4rem] h-[3.5px] bg-dark rounded-full"></div>
+            <div className="w-[3.5px] h-[3.5px] bg-dark rounded-full"></div>
           </div>
-          {/* Right Side: Changing Image */}
+          <p className="mb-4 text-gray-700">
+            Our company specializes in tissue paper conversion, turning large
+            rolls into essential products like toilet paper, facial tissue,
+            napkins, and paper towels. Using advanced machinery and techniques,
+            we ensure each product meets high standards for softness, strength,
+            and absorbency. Starting with premium raw materials—wood pulp or
+            recycled paper—our process involves refining, papermaking, slitting,
+            embossing, perforating, and packaging for consumer convenience.
+          </p>
+          <p className="mb-4 text-gray-700">
+            Leading us is our Co-Founder, a visionary with over 18 years of
+            experience in business growth and strategic marketing. Her
+            impressive background includes key roles at TNT in the Middle East,
+            UK, and Nordic regions, as well as co-founding Kapital Seed 9 and
+            managing processes at Accenture and TNT Logistics India.
+          </p>
+          <p className="mb-4 text-gray-700">
+            Her strategic thinking, leadership, and commitment to sustainability
+            guide our dedication to producing quality tissue products that meet
+            evolving consumer needs globally.
+          </p>
         </div>
-       
+
+        <div>
+          <img src={yashi} alt="Company Image" className="rounded-md " />
+        </div>
       </section>
 
       {/* Manufacturing Process Section */}
-      <section className="px-4 py-16 bg-light top-[-9rem] md:top-[-15rem]">
-        <h2 className="mb-1 text-4xl font-bold text-center md:text-5xl mf">
+      <section className="px-4 py-16 -top-36 md:-top-60 bg-gray-50">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800 mf mb-10">
           Our Manufacturing Process
         </h2>
-        <div className="w-40 h-1 mx-auto mb-8 bg-dark"></div>
-        <div className="grid grid-cols-1 px-10 md:grid-cols-3 md:gap-8 md:px-20">
-          {/* Process Steps */}
-          <div className="relative flex flex-col items-center justify-center p-4 transition-all duration-300 transform rounded-full ">
-            <div>
-              <img
-                src="https://www.papertr.com/wp-content/uploads/2021/04/Getting-Into-Tissue-Paper-Manufacturing-Business2-696x428-1.jpg"
-                alt="Manufacturing Step"
-                className="object-cover p-2 border-2 border-dashed rounded-full h-60 border-dark w-60"
-              />
-              <div className="absolute z-20 flex items-center justify-center w-16 h-16 pb-2 text-5xl text-center text-white rounded-full mf top-40 bg-dark">
-                1
+        <div class="container mx-auto px-4 py-8">
+          <div class="relative wrap overflow-hidden">
+            <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border left-1/2"></div>
+            <div class="mb-8 flex justify-between items-center w-full right-timeline">
+              <div class="order-1 w-5/12"></div>
+              <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-12 h-12 rounded-full">
+                <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
+              </div>
+              <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+                <h3 class="mb-3 font-bold text-gray-800 text-xl">
+                Raw Material Selection
+                </h3>
+                <p class="text-gray-700 leading-tight">
+                High-quality wood pulp or recycled paper is selected as the primary raw material. The chosen material is refined and processed to ensure that the final product has the desired strength, softness, and absorbency.
+                </p>
               </div>
             </div>
-            <h3 className="mt-4 text-3xl font-semibold mf">Sourcing</h3>
-            <p className="mt-2 text-center text-gray-600">
-              We source the finest raw materials to ensure the highest quality
-              products.
-            </p>
-          </div>
-          <div className="relative flex flex-col items-center justify-center p-4 transition-all duration-300 transform rounded-full ">
-            <div>
-              <img
-                src="https://www.shutterstock.com/image-photo/toilet-paper-production-line-worker-260nw-2157905227.jpg"
-                alt="Manufacturing Step"
-                className="object-cover p-2 border-2 border-dashed rounded-full h-60 border-dark w-60"
-              />
-              <div className="absolute z-20 flex items-center justify-center w-16 h-16 pb-2 text-5xl text-center text-white rounded-full mf top-40 bg-dark">
-                2
+            <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+              <div class="order-1 w-5/12"></div>
+              <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-12 h-12 rounded-full">
+                <h1 class="mx-auto font-semibold text-lg text-white">2</h1>
+              </div>
+              <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+                <h3 class="mb-3 font-bold text-gray-800 text-xl">
+                Papermaking
+                </h3>
+                <p class="text-gray-700 leading-tight">
+                The refined pulp mixture is spread over a fourdrinier wire, forming a continuous sheet. Excess water is removed using vacuum suction, and press rolls and dryer cylinders further reduce moisture, resulting in a continuous, optimally-moist sheet of tissue paper.
+                </p>
               </div>
             </div>
-            <h3 className="mt-4 text-3xl font-semibold mf ">Production</h3>
-            <p className="mt-2 text-center text-gray-600">
-              Our advanced machinery guarantees precision and efficiency in
-              production.
-            </p>
-          </div>
-          <div className="relative flex flex-col items-center justify-center p-4 transition-all duration-300 transform rounded-full ">
-            <div>
-              <img
-                src="https://www.papertr.com/wp-content/uploads/2022/02/Ekran-Resmi-2022-02-09-17.50.52-1024x512.png"
-                alt="Manufacturing Step"
-                className="object-cover p-2 border-2 border-dashed rounded-full h-60 border-dark w-60"
-              />
-              <div className="absolute z-20 flex items-center justify-center w-16 h-16 pb-2 text-5xl text-center text-white rounded-full mf top-40 bg-dark">
-                3
+            <div class="mb-8 flex justify-between items-center w-full right-timeline">
+              <div class="order-1 w-5/12"></div>
+              <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-12 h-12 rounded-full">
+                <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
+              </div>
+              <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+                <h3 class="mb-3 font-bold text-gray-800 text-xl">
+                Slitting
+                </h3>
+                <p class="text-gray-700 leading-tight">
+                In the tissue paper converting facility, the large tissue roll is slit into smaller rolls of predetermined widths. This step may be done manually or with automated machinery for increased productivity.
+                </p>
               </div>
             </div>
-            <h3 className="mt-4 text-3xl font-semibold mf"> Quality Control</h3>
-            <p className="mt-2 text-center text-gray-600">
-              Each product undergoes strict quality checks to ensure customer
-              satisfaction.
-            </p>
+
+
+            <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+              <div class="order-1 w-5/12"></div>
+              <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-12 h-12 rounded-full">
+                <h1 class="mx-auto font-semibold text-lg text-white">4</h1>
+              </div>
+              <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+                <h3 class="mb-3 font-bold text-gray-800 text-xl">
+                 Embossing
+                </h3>
+                <p class="text-gray-700 leading-tight">
+                The tissue paper is passed through heated embossing rolls, which imprint patterns or designs onto the surface. Embossing not only adds visual appeal but also increases the softness, strength, and absorbency of the tissue.
+                </p>
+              </div>
+            </div>
+
+
+
+            <div class="mb-8 flex justify-between items-center w-full right-timeline">
+              <div class="order-1 w-5/12"></div>
+              <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-12 h-12 rounded-full">
+                <h1 class="mx-auto font-semibold text-lg text-white">5</h1>
+              </div>
+              <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+                <h3 class="mb-3 font-bold text-gray-800 text-xl">
+                Perforation
+                </h3>
+                <p class="text-gray-700 leading-tight">
+                The tissue paper is perforated at regular intervals to allow easy tearing for consumers. Perforation can be achieved through mechanical or laser techniques, ensuring a clean and consistent tear every time.
+                </p>
+              </div>
+            </div>
+
+
+
+            <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+              <div class="order-1 w-5/12"></div>
+              <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-12 h-12 rounded-full">
+                <h1 class="mx-auto font-semibold text-lg text-white">6</h1>
+              </div>
+              <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+                <h3 class="mb-3 font-bold text-gray-800 text-xl">
+                Packaging
+                </h3>
+                <p class="text-gray-700 leading-tight">
+                The tissue paper is packaged into consumer-friendly formats, such as rolls or folded sheets. Automated machinery is used for precise and efficient packaging, and materials like plastic or cardboard are selected based on consumer preferences and sustainability.
+                </p>
+              </div>
+            </div>
+
+            
           </div>
         </div>
       </section>
@@ -131,8 +190,9 @@ const AboutUs = () => {
             <h3 className="text-[1.2rem] mt-3 font-semibold text-center">
               Harshawardhan Singh
             </h3>
-            <p className="font-semibold text-center text-gray-600 text-[1rem]">Founder</p>
-
+            <p className="font-semibold text-center text-gray-600 text-[1rem]">
+              Founder
+            </p>
           </div>
 
           {/* Co-Founder */}
@@ -145,10 +205,10 @@ const AboutUs = () => {
             <h3 className="text-[1.2rem] mt-3 font-semibold text-center">
               Yashashrri H Singh
             </h3>
-            <p className="font-semibold text-center text-gray-600 text-[1rem]">Co-Founder</p>
-
+            <p className="font-semibold text-center text-gray-600 text-[1rem]">
+              Co-Founder
+            </p>
           </div>
-
 
           {/* Team Member */}
           <div className="flex flex-col w-[20rem] items-center p-6 m-4 transition-all duration-300 transform bg-white rounded-lg  ">
@@ -160,14 +220,12 @@ const AboutUs = () => {
             <h3 className="text-[1.2rem] mt-3 font-semibold text-center">
               Alexander Mohandas
             </h3>
-            <p className="font-semibold text-center text-gray-600 text-[1rem]">Senior Team Member</p>
-
+            <p className="font-semibold text-center text-gray-600 text-[1rem]">
+              Senior Team Member
+            </p>
           </div>
-
         </div>
       </section>
-
-    
     </div>
   );
 };
