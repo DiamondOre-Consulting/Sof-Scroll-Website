@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import pattern2 from "../assets/pattern2.png";
-import WordRotate from "@/components/ui/word-rotate";
 import TextReveal from "@/components/ui/text-reveal";
 
 const AboutUs = () => {
   return (
     <>
       <div className="relative ">
-        <div className="flex flex-col items-center justify-center  px-4 py-10 mx-auto text-start xl md:py-10 md:px-0">
+        <div className="flex flex-col items-center justify-center px-4 py-10 mx-auto text-start xl md:py-10 md:px-0">
           <h1 className="mb-1 text-5xl md:text-6xl mf">
             <span className="text-dark">About </span>Us
           </h1>
