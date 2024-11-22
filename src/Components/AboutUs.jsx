@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import pattern2 from "../assets/pattern2.png";
-import WordRotate from "@/components/ui/word-rotate";
 import TextReveal from "@/components/ui/text-reveal";
 
 const AboutUs = () => {
