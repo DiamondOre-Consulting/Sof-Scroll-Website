@@ -2,34 +2,24 @@ import React from "react";
 import { Link } from "react-router-dom";
 import pattern2 from "../assets/pattern2.png";
 import WordRotate from "@/components/ui/word-rotate";
+import TextReveal from "@/components/ui/text-reveal";
 
 const AboutUs = () => {
   return (
     <>
-
-
-
-
       <div className="relative ">
-
-        <div className="flex flex-col items-center justify-center max-w-3xl px-4 py-10 mx-auto text-center xl md:py-20 md:px-0">
+        <div className="flex flex-col items-center justify-center  px-4 py-10 mx-auto text-start xl md:py-10 md:px-0">
           <h1 className="mb-1 text-5xl md:text-6xl mf">
             <span className="text-dark">About </span>Us
           </h1>
           <div className="w-20 h-1 mx-auto md:w-52 bg-dark"></div>
 
-          <p className="mt-10 mb-4">
-            Our tissue paper conversion process transforms large rolls of tissue
-            paper into consumer-friendly products like toilet paper, facial
-            tissues, paper napkins, and paper towels. Starting with quality raw
-            materials—often wood pulp or recycled paper—the pulp is processed
-            and formed into continuous paper sheets with optimal moisture
-            content. These large sheets are then slit into smaller rolls,
-            embossed for texture and softness, and perforated for easy tearing.
-            Finally, the tissue is packaged in various formats using automated
-            machinery for efficiency and consistency. This sustainable process
-            combines innovation with quality to meet diverse consumer needs.
-          </p>
+          <div className="z-10 w-full mf">
+            <TextReveal text=" Our tissue paper conversion process turns large tissue rolls into consumer-ready products such as toilet paper, facial tissues, napkins, and paper towels. Using quality raw materials like wood pulp or recycled paper, the pulp is processed into continuous sheets, which are then slit, embossed, and perforated for convenience. Finally, automated machinery packages the tissue in various formats, ensuring quality and efficiency in a sustainable way to meet consumer needs." />
+          </div>
+          {/* <p className="mt-10 mb-4 md:text-5xl">
+        
+          </p> */}
 
           <Link
             to={"/about-us"}
@@ -37,11 +27,6 @@ const AboutUs = () => {
           >
             <span>About US</span>
           </Link>
-          <img
-            src={pattern2}
-            alt=""
-            className="absolute left-0 hidden top-10 md:flex "
-          />
         </div>
       </div>
     </>

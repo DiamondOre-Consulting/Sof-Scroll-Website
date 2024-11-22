@@ -16,7 +16,7 @@ const MainHome = ({ cart, setCart }) => {
 
 
   return (
-    <div className=" bg-bgMain">
+    <div className="">
       <Hero />
       <AboutUs />
       <BestSellers cart={cart} setCart={setCart} />
