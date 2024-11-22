@@ -32,48 +32,51 @@ const ExploreProducts = ({ cart, setCart }) => {
   }, [selectedProduct]); // Dependency array includes selectedProduct
 
   return (
-    <div className="py-10 relative">
-      <h1 className="text-center text-4xl md:text-6xl mx-auto relative mb-2 mf">
+    <div className="relative py-10">
+      <h1 className="relative mx-auto mb-2 text-4xl text-center md:text-6xl mf">
         <span className="text-dark mf">Explore </span>more products
       </h1>
-      <div className="bg-dark w-20 md:w-60 h-1 mx-auto mb-10"></div>
+      <div className="w-20 h-1 mx-auto mb-10 bg-dark md:w-60"></div>
       <Marquee pauseOnHover={true}>
-        <div className="flex space-x-6">
+        <div className="flex mx-3 space-x-6">
           {Allproducts.slice(1, 10).map((product, index) => {
             const isInCart = cart.find(
               (item) => item.itemCode === product.itemCode
             );
 
             return (
-              <Link 
-                to={`/product/${product.itemCode}`} 
-                key={index}
-                onClick={() => setSelectedProduct(product)} // Update selected product on click
-              >
-                <div className="bg-white shadow border-dark border-2 hover:border-dark rounded flex flex-col">
-                  <div
-                    className="h-60 w-80 flex flex-col justify-between p-4 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${product.imageUrl})` }}
-                  ></div>
-                  <div className="p-4 flex flex-col items-center">
-                    <h1 className="text-gray-800 text-center mt-1">
+              <div key={index}>
+                <div className="w-[18rem] h-[21rem] flex flex-col bg-gray-100 border rounded-lg shadow-md overflow-hidden transition-transform duration-300  hover:shadow-2xl border-gray-200 hover:border-dark">
+                  <div className="relative">
+                    <img
+                      src={product.imageUrl}
+                      alt={product.name}
+                      className="h-[12rem] w-full object-cover transition-opacity duration-300 hover:opacity-90"
+                    />
+                    <div className="absolute px-2 py-1 text-xs font-medium text-white bg-black rounded top-2 left-2 bg-opacity-60">
+                      New Arrival
+                    </div>
+                  </div>
+                  <div className="flex flex-col px-4 pb-3 mt-2 space-y">
+                    <h1 className="text-[1.15rem] font-semibold text-gray-800 truncate transition-colors duration-300 hover:text-dark">
                       {product.name}
                     </h1>
-                    <p className="text-gray-400 font-light text-xs text-center">
+                    <p className="text-sm text-gray-600 truncate">
                       {product.description}
                     </p>
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault();
-                        isInCart ? removeFromCart(product) : addToCart(product);
-                      }}
-                      className={`py-2 px-4 ${isInCart ? "bg-red-600" : "bg-dark"} text-white rounded mt-4 w-full flex items-center justify-center`}
-                    >
-                      {isInCart ? "Remove from Cart" : "Add to Cart"}
-                    </button>
+                    <p className="text-xs italic text-gray-700">
+                      Quality: <span className='text-gray-500'>{product.quality}</span>
+                    </p>
+
                   </div>
+                  <Link
+                    to={`/product/${product.itemCode}`}
+                    className="w-[93%] p-2 mx-auto text-center text-white transition-transform duration-300 rounded-md bg-dark hover:scale-105 hover:bg-opacity-90"
+                  >
+                    View Product
+                  </Link>
                 </div>
-              </Link>
+              </div>
             );
           })}
         </div>

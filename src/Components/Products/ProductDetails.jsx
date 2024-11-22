@@ -137,18 +137,18 @@ const ProductDetails = ({ cart, setCart }) => {
           <img
             src={previews[index].previewUrl}
             alt=""
-            className="w-full max-w-full mx-auto lg:h-[22rem] lg:max-w-[30rem] object-cover h-auto"
+            className="w-full max-w-full mx-auto h-[50vw] lg:h-[22rem] lg:max-w-[30rem] object-cover rounded-md"
           />
         </div>
 
-        <ul className="flex items-center justify-center gap-3">
+        <ul className="flex items-center justify-center gap-3 pt-2">
           {previews.map((preview, i) => (
             <li
-              className="flex items-center justify-center w-24 h-24 p-1 border border-gray-200 rounded-md cursor-pointer dark:border-slate-700"
+              className="flex items-center justify-center w-24 h-24 p-1 overflow-hidden border border-gray-200 rounded-md cursor-pointer dark:border-slate-700"
               key={i}
               onClick={() => setIndex(i)}
             >
-              <img src={preview.thumbUrl} alt="" className="h-auto max-w-full" />
+              <img src={preview.thumbUrl} alt="" className="object-cover w-full h-full rounded-md" />
             </li>
           ))}
         </ul>

@@ -332,7 +332,7 @@ const CartPage = ({ cart, setCart }) => {
 
                   <button
                     type='submit'
-                    className="relative flex items-center w-full px-6 py-[0.6rem] overflow-hidden font-medium text-center transition-all rounded-md bg-[#476e2a] group"
+                    className="relative flex items-center w-full px-6 py-[0.6rem] overflow-hidden font-medium text-center transition-all rounded-md bg-[#2F8B69] group"
                   >
                     <span
                       className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rounded bg-dark group-hover:-mr-4 group-hover:-mt-4"
