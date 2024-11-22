@@ -34,6 +34,13 @@ const ProductDetails = ({ cart, setCart }) => {
   const [product, setProduct] = useState(null);
   const [mainImage, setMainImage] = useState(null);
   const [quantity, setQuantity] = useState(1); // Initialize quantity state
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedOptions, setSelectedOptions] = useState({
+    rawMaterial: "",
+    ply: "",
+    packaging: "",
+    quantity: 1
+  });
 
   useEffect(() => {
     const foundProduct = Allproducts.find((prod) => prod.itemCode === itemCode);
@@ -47,52 +54,66 @@ const ProductDetails = ({ cart, setCart }) => {
         setQuantity(cartItem.quantity);
       }
     }
-  }, [itemCode, cart]); // Depend on cart to update quantity if product is added/removed
+  }, [itemCode, cart]); // Depend on cart to update quantity if product is added/
+
+
+  const addToCart = () => {
+    if (
+      !selectedOptions.rawMaterial ||
+      !selectedOptions.ply ||
+      !selectedOptions.packaging ||
+      !selectedOptions.quantity
+    ) {
+      alert("Please select all options before adding to the cart!");
+      return;
+    }
+
+    const updatedCart = cart?.map((cartItem) => {
+      // Check if the product with the same itemCode already exists in the cart
+      if (cartItem.itemCode === product.itemCode) {
+        return {
+          ...cartItem,
+          options: [...cartItem.options, selectedOptions], // Push another option
+        };
+      }
+
+      setSelectedOptions({
+        rawMaterial: "",
+        ply: "",
+        packaging: "",
+        quantity: 1
+      })
+
+      return cartItem;
+    });
+
+    // Check if the product is new and not already in the cart
+    const isProductInCart = cart.some(
+      (cartItem) => cartItem.itemCode === product.itemCode
+    );
+
+    if (!isProductInCart) {
+      updatedCart.push({ ...product, options: [selectedOptions] }); // Add as a new product with the first option
+    }
+
+    setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+    setIsModalOpen(false); // Close modal after adding to cart
+  };
+
+  const handleOptionChange = (field, value) => {
+    setSelectedOptions((prevOptions) => ({
+      ...prevOptions,
+      [field]: value,
+    }));
+  };
+
+  if (!product) {
+    return <div>Product not found!</div>;
+  }
 
   const updateCartInLocalStorage = (newCart) => {
     localStorage.setItem("cart", JSON.stringify(newCart));
-  };
-
-  const addToCart = (newQuantity) => {
-    const existingItem = cart.find((item) => item.itemCode === itemCode);
-    if (existingItem) {
-      // Update quantity if already in cart
-      const updatedCart = cart.map((item) =>
-        item.itemCode === itemCode ? { ...item, quantity: newQuantity } : item
-      );
-      setCart(updatedCart);
-      updateCartInLocalStorage(updatedCart); // Update local storage
-    } else {
-      // Add new item to cart
-      const updatedCart = [...cart, { ...product, quantity: newQuantity }];
-      setCart(updatedCart);
-      updateCartInLocalStorage(updatedCart); // Update local storage
-    }
-  };
-
-  const removeFromCart = () => {
-    const updatedCart = cart.filter((item) => item.itemCode !== itemCode);
-    setCart(updatedCart);
-    updateCartInLocalStorage(updatedCart); // Update local storage
-  };
-
-  const increaseQuantity = () => {
-    setQuantity((prevQuantity) => {
-      const newQuantity = prevQuantity + 1;
-      addToCart(newQuantity); // Auto update cart when increasing
-      return newQuantity;
-    });
-  };
-
-  const decreaseQuantity = () => {
-    setQuantity((prevQuantity) => {
-      if (prevQuantity > 1) {
-        const newQuantity = prevQuantity - 1;
-        addToCart(newQuantity); // Auto update cart when decreasing
-        return newQuantity;
-      }
-      return prevQuantity; // Prevent going below 1
-    });
   };
 
   if (!product) {
@@ -177,43 +198,17 @@ const ProductDetails = ({ cart, setCart }) => {
               </p>
             </div>
 
-            <div className="flex items-center mt-6">
-              <div className="border border-black border-1">
-                <button
-                  onClick={decreaseQuantity}
-                  className="px-4 py-2 border border-t-0 border-b-0 border-l-0 border-black rounded-sm border-1"
-                  disabled={quantity <= 1}
-                >
-                  -
-                </button>
-                <span className="mx-4 text-lg">{quantity}</span>
-                <button
-                  onClick={increaseQuantity}
-                  className="px-4 py-2 border border-t-0 border-b-0 border-r-0 border-black rounded-sm border-1"
-                >
-                  +
-                </button>
-              </div>
-            </div>
+
 
             <div className="flex items-center justify-start gap-4 mt-6">
-              {isInCart ? (
-                <>
-                  <button
-                    onClick={removeFromCart}
-                    className="px-4 py-[0.62rem] text-white transition bg-red-500 rounded hover:bg-red-700"
-                  >
-                    Remove from Cart
-                  </button>
-                </>
-              ) : (
+              <div className="actions">
                 <button
-                  onClick={() => addToCart(quantity)}
-                  className="px-8 py-[0.62rem] text-white transition rounded-sm bg-dark hover:bg-green-700"
+                  onClick={() => setIsModalOpen(true)}
+                  className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-700"
                 >
                   Add to Cart
                 </button>
-              )}
+              </div>
               <Link to={'/cart'} className="Btn-Buy">
                 Buy Now
               </Link>
@@ -230,27 +225,27 @@ const ProductDetails = ({ cart, setCart }) => {
       </div>
       <div className="w-full p-4 pb-10 bg-slate-200">
         <h2 className="mb-6 font-bold text-center mf text-[2.7rem]">Product Features</h2>
-        <div className="flex items-center justify-center gap-8">
-          <div className="flex flex-col items-center justify-center">
-            <img className="object-cover rounded-full size-20" src="https://img.freepik.com/free-photo/healthy-beautiful-manicure-with-cotton-pads_23-2148766541.jpg?semt=ais_hybrid" alt="" />
+        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
+          <div className="flex flex-col items-center justify-center gap-1">
+            <img className="object-cover rounded-full size-24 sm:size-28 md:size-32" src="https://img.freepik.com/free-photo/healthy-beautiful-manicure-with-cotton-pads_23-2148766541.jpg?semt=ais_hybrid" alt="" />
             <h1 className="text-[0.9rem] font-semibold">Soft Tissue</h1>
           </div>
-          <div className="flex flex-col items-center justify-center">
-            <img className="object-cover rounded-full size-20" src="https://img.freepik.com/free-photo/top-view-hand-book_23-2147624852.jpg?semt=ais_hybrid" alt="" />
+          <div className="flex flex-col items-center justify-center gap-1">
+            <img className="object-cover rounded-full size-24 sm:size-28 md:size-32" src="https://img.freepik.com/free-photo/top-view-hand-book_23-2147624852.jpg?semt=ais_hybrid" alt="" />
             <h1 className="text-[0.9rem] font-semibold">Soft Comforty</h1>
           </div>
-          <div className="flex flex-col items-center justify-center">
-            <img className="object-cover rounded-full size-20" src="https://img.freepik.com/free-photo/eco-friendly-recycling-concept_23-2148737656.jpg?semt=ais_hybrid" alt="" />
+          <div className="flex flex-col items-center justify-center gap-1">
+            <img className="object-cover rounded-full size-24 sm:size-28 md:size-32" src="https://img.freepik.com/free-photo/eco-friendly-recycling-concept_23-2148737656.jpg?semt=ais_hybrid" alt="" />
             <h1 className="text-[0.9rem] font-semibold">Eco Friendly</h1>
 
           </div>
-          <div className="flex flex-col items-center justify-center">
-            <img className="object-cover rounded-full size-20" src="https://img.freepik.com/free-photo/napkin-wooden-table_1339-5587.jpg?ga=GA1.1.1044272893.1732183300&semt=ais_hybrid" alt="" />
+          <div className="flex flex-col items-center justify-center gap-1">
+            <img className="object-cover rounded-full size-24 sm:size-28 md:size-32" src="https://img.freepik.com/free-photo/napkin-wooden-table_1339-5587.jpg?ga=GA1.1.1044272893.1732183300&semt=ais_hybrid" alt="" />
             <h1 className="text-[0.9rem] font-semibold">Quick Dry</h1>
 
           </div>
-          <div className="flex flex-col items-center justify-center">
-            <img className="object-cover rounded-full size-20" src="https://img.freepik.com/free-vector/toilet-tissue-roll-element-vector_53876-169051.jpg?ga=GA1.1.1044272893.1732183300&semt=ais_hybrid" alt="" />
+          <div className="flex flex-col items-center justify-center gap-1">
+            <img className="object-cover rounded-full size-24 sm:size-28 md:size-32" src="https://img.freepik.com/free-vector/toilet-tissue-roll-element-vector_53876-169051.jpg?ga=GA1.1.1044272893.1732183300&semt=ais_hybrid" alt="" />
             <h1 className="text-[0.9rem] font-semibold">Disposable</h1>
 
           </div>
@@ -262,6 +257,90 @@ const ProductDetails = ({ cart, setCart }) => {
       <div>
         <ExploreProducts cart={cart} setCart={setCart} />
       </div>
+      {isModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="p-6 bg-white rounded-lg shadow-lg w-96">
+            <h2 className="mb-4 text-xl font-semibold">Select Options</h2>
+
+            <div className="space-y-4">
+              {/* Raw Material */}
+              <div>
+                <label className="block font-semibold">Raw Material:</label>
+                <select
+                  className="w-full p-2 border border-gray-300 rounded"
+                  value={selectedOptions.rawMaterial}
+                  onChange={(e) =>
+                    handleOptionChange("rawMaterial", e.target.value)
+                  }
+                >
+                  <option value="">Select</option>
+                  <option value="Virgin">Virgin</option>
+                  <option value="Recycle">Recycle</option>
+                  <option value="Bamboo">Bamboo</option>
+                </select>
+              </div>
+
+              {/* Ply */}
+              <div>
+                <label className="block font-semibold">Ply:</label>
+                <select
+                  className="w-full p-2 border border-gray-300 rounded"
+                  value={selectedOptions.ply}
+                  onChange={(e) => handleOptionChange("ply", e.target.value)}
+                >
+                  <option value="">Select</option>
+                  <option value="1 Ply">1 Ply</option>
+                  <option value="2 Ply">2 Ply</option>
+                  <option value="3 Ply">3 Ply</option>
+                  <option value="4 Ply">4 Ply</option>
+                </select>
+              </div>
+
+              {/* Packaging */}
+              <div>
+                <label className="block font-semibold">Packaging:</label>
+                <select
+                  className="w-full p-2 border border-gray-300 rounded"
+                  value={selectedOptions.packaging}
+                  onChange={(e) =>
+                    handleOptionChange("packaging", e.target.value)
+                  }
+                >
+                  <option value="">Select</option>
+                  <option value="18 rolls (MOQ: 36000 rolls)">
+                    18 rolls (MOQ: 36000 rolls)
+                  </option>
+                  <option value="24 rolls (MOQ: 48000 rolls)">
+                    24 rolls (MOQ: 48000 rolls)
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div className="flex items-center justify-center gap-3 mt-4">
+              <label className="block font-semibold">Quantity </label>
+              :
+              <input
+                className="w-full p-2 border border-gray-300 rounded outline-none"
+
+                type="text" value={selectedOptions.quantity} onChange={(e) => handleOptionChange("quantity", e.target.value)} />
+            </div>
+            <div className="flex justify-end mt-6 space-x-4">
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="px-4 py-2 border border-gray-300 rounded"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={addToCart}
+                className="px-4 py-2 text-white bg-green-500 rounded hover:bg-green-700"
+              >
+                Confirm
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

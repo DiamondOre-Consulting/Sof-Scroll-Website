@@ -5,7 +5,8 @@ import BreadCrumbs from "../BreadCrumbs";
 import { MdDelete } from "react-icons/md";
 import { IoMdSend } from "react-icons/io";
 import { toast, ToastContainer } from "react-toastify";
-import { FaCheck } from "react-icons/fa6";
+import { FaCheck, FaMinus, FaPlus } from "react-icons/fa6";
+import { FaBox, FaCogs, FaIndustry, FaLayerGroup, FaBoxOpen } from 'react-icons/fa';
 
 const CartPage = ({ cart, setCart }) => {
   const [userInfo, setUserInfo] = useState({
@@ -30,16 +31,18 @@ const CartPage = ({ cart, setCart }) => {
     setCart(updatedCart);
   };
 
-  const increaseQuantity = (index) => {
+  const increaseQuantity = (index, proInd) => {
     const updatedCart = [...cart];
-    updatedCart[index].quantity += 1;
+    updatedCart[proInd].options[index].quantity = Number(updatedCart[proInd].options[index].quantity) + 1;
     updateCartInLocalStorage(updatedCart);
   };
 
-  const decreaseQuantity = (index) => {
+  console.log(cart)
+
+  const decreaseQuantity = (index, proInd) => {
     const updatedCart = [...cart];
-    if (updatedCart[index].quantity > 1) {
-      updatedCart[index].quantity -= 1;
+    if (updatedCart[proInd].options[index].quantity > 1) {
+      updatedCart[proInd].options[index].quantity = Number(updatedCart[proInd].options[index].quantity) - 1;
       updateCartInLocalStorage(updatedCart);
     }
   };
@@ -48,6 +51,31 @@ const CartPage = ({ cart, setCart }) => {
     const updatedCart = cart.filter((_, i) => i !== index);
     updateCartInLocalStorage(updatedCart);
   };
+
+  const removeOptionFromProduct = (optionIndex, proInd) => {
+    // Create a new updated cart by filtering the specific option within the product
+    const updatedCart = cart.map((item, index) => {
+      if (index === proInd) {
+        // Filter out the option at optionIndex
+        const updatedOptions = item.options.filter((_, optIndex) => optIndex !== optionIndex);
+
+        // If there are no options left, remove the whole product
+        if (updatedOptions.length === 0) {
+          return null; // Returning null will allow us to filter out this item in the next step
+        }
+
+        return {
+          ...item,
+          options: updatedOptions,
+        };
+      }
+      return item; // For other products, leave them unchanged
+    }).filter(item => item !== null); // Remove any products that are now null
+
+    // After filtering the option or product, update the cart in local storage
+    updateCartInLocalStorage(updatedCart);
+  };
+
 
   const clearCart = () => {
     localStorage.removeItem("cart");
@@ -151,7 +179,7 @@ const CartPage = ({ cart, setCart }) => {
 
 
 
-      {success ? <div className="flex items-center justify-center pt-28">
+      {success ? <div className="flex items-center justify-center pt-8">
         <div className="flex flex-col items-center justify-center p-10 pb-16 bg-gray-200 rounded-lg">
           <FaCheck className="text-white bg-dark text-[3.6rem] mb-2 border-2 border-dark rounded-full p-2" />
           <h2 className="font-semibold text-[1.5rem]">😊 Order Placed Successfully</h2>
@@ -161,47 +189,70 @@ const CartPage = ({ cart, setCart }) => {
           </div>
         </div>
       </div> :
-        <div className="container sm:px-10 px-4 max-w-[77rem] mx-auto pt-28">
+        <div className="container sm:px-10 px-4 max-w-[77rem] mx-auto pt-8">
           {/* <h2 className="mt-6 mb-10 text-5xl text-center mf">Your Cart</h2> */}
-          <ul>
-            {cart.map((item, index) => (
-              <li
-                key={index}
-                className="relative grid items-center grid-cols-3 pr-6 mb-1 border rounded shadow-lg md:pr-6"
-              >
-                <img
-                  src={item?.imageUrl}
-                  alt={item?.name}
-                  className="object-cover h-24 w-28 md:w-40 md:h-28"
-                />
-                <p className="mx-auto text-[1.05rem] text-center md:text-lg  max-w-52 ">
-                  {item.name}
-                </p>
-                <div className="flex items-center mx-auto">
-                  <button
-                    onClick={() => decreaseQuantity(index)}
-                    className="px-2 py-1 border border-black rounded-sm md:px-4 md:py-2"
-                    disabled={item.quantity <= 1}
-                  >
-                    -
-                  </button>
-                  <span className="mx-2 text-lg md:mx-4">
-                    {item.quantity}
-                  </span>
-                  <button
-                    onClick={() => increaseQuantity(index)}
-                    className="px-2 py-1 border border-black rounded-sm md:px-4 md:py-2"
-                  >
-                    +
-                  </button>
-                </div>
+          <ul className="space-y-6">
+            {cart.map((item, proInd) => (
+              <div className="relative p-6 space-y-4 overflow-hidden border rounded-lg shadow-md bg-gray-50" key={item?.itemCode}>
                 <button
-                  onClick={() => removeItem(index)}
+                  onClick={() => removeItem(proInd)}
                   className="absolute top-0 right-0 p-[0.4rem] ml-10 font-bold text-red-500 shadow-md bg-gray-200 text-[1.5rem] md:ml-60"
                 >
                   <MdDelete />
                 </button>
-              </li>
+                <div className="flex items-center gap-6">
+                  <img className="object-cover rounded-lg w-[20%] md:w-[15%]" src={item?.imageUrl} alt={item?.name} />
+                  <div className="space-y-2">
+                    <p className="text-xl font-semibold text-gray-800">{item?.name}</p>
+                    <p className="text-sm text-gray-600">{item?.description}</p>
+                    <p className="text-sm text-gray-500">Quality: {item?.quality}</p>
+                  </div>
+                </div>
+                {item.options.map((option, index) => (
+                  <div className="relative flex flex-wrap items-center justify-between gap-2 p-3 pr-16 bg-white border rounded-lg shadow-sm" key={index}>
+                    <button
+                      onClick={() => removeOptionFromProduct(index, proInd)}
+                      className="absolute top-0 right-0 p-[0.4rem] ml-10 font-bold text-red-500 shadow-md bg-gray-200 text-[1.5rem] md:ml-60"
+                    >
+                      <MdDelete />
+                    </button>
+                    <div className="flex items-center gap-2 mr-6">
+                      <FaBoxOpen className="text-gray-600" />
+                      <p className="text-gray-700"><strong>Packaging:</strong> {option?.packaging}</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FaBox className="text-gray-600" />
+                      <p className="text-gray-700"><strong>Ply:</strong> {option?.ply}</p>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <FaIndustry className="text-gray-600" />
+                      <p className="font-medium text-gray-700"><strong>Raw Materials:</strong> {option?.rawMaterial}</p>
+                    </div>
+
+                    <div className="flex items-center overflow-hidden border border-gray-400 rounded shadow">
+                      <button
+                        onClick={() => decreaseQuantity(index, proInd)}
+                        className="text-[1rem] bg-red-500 text-white size-8 flex items-center justify-center"
+                        disabled={option.quantity <= 1}
+                      >
+                        <FaMinus />
+                      </button>
+                      <span className="min-w-[3rem] px-2 text-center">
+                        {option.quantity}
+                      </span>
+                      <button
+                        onClick={() => increaseQuantity(index, proInd)}
+                        className="text-[1rem] bg-green-500 text-white flex items-center justify-center   size-8"
+                      >
+                        <FaPlus />
+                      </button>
+                    </div>
+
+
+                  </div>
+                ))}
+              </div>
             ))}
           </ul>
 
