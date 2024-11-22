@@ -35,7 +35,7 @@ const BreadCrumbs = ({ items, headText }) => {
             <div
                 className='absolute size-[25rem] lg:size-[40rem] top-[10%] right-[-20%] lg:top-[8%] lg:right-[-10%] rounded-full z-6'
                 style={{
-                    background: 'radial-gradient(circle, #AD49E1 2%, rgba(36, 67, 230, 0) 65%)',
+                    background: 'radial-gradient(circle, #1CA39D 2%, rgba(36, 67, 230, 0) 65%)',
                 }}
             ></div>
 

@@ -7,7 +7,7 @@ const AboutUs = () => {
   return (
     <>
       <div className="relative ">
-        <div className="flex flex-col items-center justify-center  px-4 py-10 mx-auto text-start xl md:py-10 md:px-0">
+        <div className="flex flex-col items-center justify-center px-4 py-10 mx-auto text-start xl md:py-10 md:px-0">
           <h1 className="mb-1 text-5xl md:text-6xl mf">
             <span className="text-dark">About </span>Us
           </h1>
