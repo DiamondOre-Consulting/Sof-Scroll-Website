@@ -18,16 +18,24 @@ const Allproducts = [
       },
       {
         previewUrl:
-          "https://rukminim2.flixcart.com/image/1200/1200/l20rma80/facial-tissue/l/9/t/soft-tissue-paper-napkin-tissue-paper-100-pack-of-1-1-100-fliqa-original-imagdgpqyqgfavgp.jpeg",
+          "https://s3.tebi.io/sof-scroll/napkin-wooden-table.jpg",
         thumbUrl:
-          "https://rukminim2.flixcart.com/image/1200/1200/l20rma80/facial-tissue/l/9/t/soft-tissue-paper-napkin-tissue-paper-100-pack-of-1-1-100-fliqa-original-imagdgpqyqgfavgp.jpeg",
+          "https://s3.tebi.io/sof-scroll/napkin-wooden-table.jpg",
       },
       {
         previewUrl:
-          "https://m.media-amazon.com/images/I/31GYpPjkDOL._AC_UF1000,1000_QL80_.jpg",
+          "https://s3.tebi.io/sof-scroll/person-holding-white-nasal-handkerchief.jpg",
         thumbUrl:
-          "https://m.media-amazon.com/images/I/31GYpPjkDOL._AC_UF1000,1000_QL80_.jpg",
+          "https://s3.tebi.io/sof-scroll/person-holding-white-nasal-handkerchief.jpg",
       },
+
+      {
+        previewUrl:
+          "https://s3.tebi.io/sof-scroll/3873218-hd_1920_1080_25fps.mp4",
+        thumbUrl:
+          "https://s3.tebi.io/sof-scroll/3873218-hd_1920_1080_25fps.mp4",
+      },
+
     ],
     imageUrl: "https://rukminim2.flixcart.com/image/1200/1200/l20rma80/facial-tissue/l/9/t/soft-tissue-paper-napkin-tissue-paper-100-pack-of-1-1-100-fliqa-original-imagdgpqyqgfavgp.jpeg", // Dummy placeholder image URL
     fullDesc: "Soft Tissue Paper Napkins (Item Code: STPN10027) offer a premium, ultra-soft touch with 100 single-ply sheets at 17 GSM. Each packet is designed for maximum comfort and absorbency, weighing 110 grams for a lightweight yet durable feel. Delivered in bundles of 112 packets, these napkins are ideal for bulk needs and come packaged in a 20-foot container, ensuring ample supply for any setting. Perfect for those seeking quality and convenience in every sheet."
@@ -45,15 +53,15 @@ const Allproducts = [
     previews: [
       {
         previewUrl:
-          "https://rukminim2.flixcart.com/image/1200/1200/l20rma80/facial-tissue/l/9/t/soft-tissue-paper-napkin-tissue-paper-100-pack-of-1-1-100-fliqa-original-imagdgpqyqgfavgp.jpeg",
+          "https://s3.tebi.io/sof-scroll/pexels-arturoaez220-10744480.jpg",
         thumbUrl:
-          "https://rukminim2.flixcart.com/image/1200/1200/l20rma80/facial-tissue/l/9/t/soft-tissue-paper-napkin-tissue-paper-100-pack-of-1-1-100-fliqa-original-imagdgpqyqgfavgp.jpeg",
+          "https://s3.tebi.io/sof-scroll/pexels-arturoaez220-10744480.jpg",
       },
       {
         previewUrl:
-          "https://rukminim2.flixcart.com/image/1200/1200/l20rma80/facial-tissue/l/9/t/soft-tissue-paper-napkin-tissue-paper-100-pack-of-1-1-100-fliqa-original-imagdgpqyqgfavgp.jpeg",
+          "https://s3.tebi.io/sof-scroll/pexels-hermaion-191845%20%281%29.jpg",
         thumbUrl:
-          "https://rukminim2.flixcart.com/image/1200/1200/l20rma80/facial-tissue/l/9/t/soft-tissue-paper-napkin-tissue-paper-100-pack-of-1-1-100-fliqa-original-imagdgpqyqgfavgp.jpeg",
+          "https://s3.tebi.io/sof-scroll/pexels-hermaion-191845%20%281%29.jpg",
       },
       {
         previewUrl:
@@ -62,7 +70,7 @@ const Allproducts = [
           "https://m.media-amazon.com/images/I/31GYpPjkDOL._AC_UF1000,1000_QL80_.jpg",
       },
     ],
-    imageUrl: "https://m.media-amazon.com/images/I/31GYpPjkDOL._AC_UF1000,1000_QL80_.jpg", // Dummy placeholder image URL
+    imageUrl: "https://s3.tebi.io/sof-scroll/pexels-hermaion-191845%20%281%29.jpg", // Dummy placeholder image URL
     fullDesc: "The Toilet Tissue Paper Roll (Item Code: TR100100) provides 300 soft, highly absorbent 2-ply sheets per roll at 17 GSM, ensuring optimal comfort and durability. Each roll weighs 110 grams, offering excellent quality in every pull. Packed conveniently with 128 rolls per carton, these tissue rolls are available in bulk within a 20-foot container, making them ideal for high-demand settings that require consistent supply and premium quality."
   },
   {

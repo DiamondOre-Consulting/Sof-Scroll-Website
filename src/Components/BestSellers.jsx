@@ -30,7 +30,7 @@ const BestSellers = ({ cart, setCart }) => {
 
             return (
               <Link to={`/product/${product.itemCode}`} key={index}>
-                <div className="max-w-[22rem] min-w-[18rem] bg-white border-2 rounded shadow border-dark hover:border-dark hover:border-2">
+                <div className="max-w-[22rem] min-w-[18rem] bg-white border-2 rounded shadow  hover:border-dark hover:border-2">
                   <img src={product.imageUrl} alt="" className="h-[14rem] w-full" />
                   <div className="flex flex-col items-center p-4">
                     <h1 className="mt-1 text-center text-gray-800">{product.name}</h1>
