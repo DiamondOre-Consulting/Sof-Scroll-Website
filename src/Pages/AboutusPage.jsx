@@ -192,20 +192,47 @@ const AboutUs = () => {
           <div className="flex items-center justify-between">
             <div className="max-w-[60vw]">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur obcaecati optio veniam fuga dolor explicabo
-                consequatur libero dignissimos ratione laboriosam quod
-                architecto iure unde officiis, debitis laudantium odit rem
-                iusto.
+                Harshawardhan Singh is a visionary founder and seasoned business
+                leader with over 21 years of extensive experience in the FMCG,
+                Retail, Credit Rating, Banking, and Financial sectors. With a
+                strong track record in launching and scaling businesses,
+                Harshawardhan brings an exceptional blend of strategic thinking,
+                market insight, and operational excellence. His expertise lies
+                in building brands, orchestrating successful product launches,
+                and driving sustainable growth across various industries.
+              </p>
+
+              <p>
+                As the founder of Kapital Seed 9, Harshawardhan is at the helm
+                of his latest venture, where he leverages his deep understanding
+                of market dynamics to create innovative solutions that cater to
+                evolving consumer needs. His career highlights include
+                leadership roles such as Associate Director at OliveMoney, Zonal
+                Head for South India at SMERA Ratings Limited, and Associate
+                Vice President at PropEquity Analytics, among others.
+                Harshawardhan has also held influential positions at industry
+                leaders like CRISIL Limited, ICRA, Brickwork Ratings, and
+                Colgate Palmolive, contributing to each with his skills in brand
+                building, business management, and market expansion.
+              </p>
+              <p>
+                A respected figure in his field, Harshawardhan has consistently
+                driven impact through his ability to lead teams, manage
+                large-scale projects, and develop growth strategies that are
+                both innovative and effective. His dedication to excellence and
+                commitment to results make him a trusted partner and leader in
+                every venture he undertakes.
               </p>
             </div>
             <div className="flex flex-col items-center">
               <img
-                className="border-2 border-gray-300 rounded-full w-40 h-40 object-cover"
+                className="border-2 border-gray-300 rounded-full w-80 h-80 object-cover"
                 src={teamImage1}
                 alt="Team Member"
               />
-              <p className="mt-4 text-center font-semibold">John Doe</p>
+              <p className="mt-4 text-center font-bold text-2xl">
+                Harshawardhan Singh
+              </p>
             </div>
           </div>
 
@@ -213,22 +240,65 @@ const AboutUs = () => {
           <div className="flex items-center justify-between flex-row-reverse">
             <div className="max-w-[60vw]">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur obcaecati optio veniam fuga dolor explicabo
-                consequatur libero dignissimos ratione laboriosam quod
-                architecto iure unde officiis, debitis laudantium odit rem
-                iusto.
+                Alexander Mohandas is a seasoned business leader and commerce
+                graduate from St. Joseph’s, bringing over 20 years of expertise
+                across customer experience, sales, and marketing. His career
+                spans some of the world’s most respected multinational
+                companies, including the Yum! Brands chain (KFC & Pizza Hut),
+                HSBC, 24/7, and most recently, Probe Information, where he
+                served as Assistant Vice President.
+              </p>
+              <p>
+                Known for his deep understanding of customer needs and his
+                commitment to exceptional service, Alexander has been
+                instrumental in driving growth and enhancing customer
+                satisfaction. His passion for fostering innovation and aligning
+                business strategies with customer demands has enabled him to
+                build and expand businesses with a forward-thinking approach.
+                Alexander’s leadership style is rooted in a pursuit of
+                excellence and a strong grasp of the market landscape, allowing
+                him to adeptly steer through complex challenges and deliver
+                sustainable success.
               </p>
             </div>
             <div className="flex flex-col items-center">
               <img
-                className="border-2 border-gray-300 rounded-full w-40 h-40 object-cover"
+                className="border-2 border-gray-300 rounded-full w-80 h-80 object-cover"
                 src={teamImage2}
                 alt="Team Member"
               />
-              <p className="mt-4 text-center font-semibold">Jane Smith</p>
+              <p className="mt-4 text-center text-xl font-bold">Jane Smith</p>
             </div>
           </div>
+
+
+
+
+          <div className="flex items-center justify-between">
+            <div className="max-w-[60vw]">
+              <p>
+              Yashashrri H Singh is a dynamic and results-driven co-founder with 18 years of diverse experience across business development, banking, customer relationships, and strategic marketing. As a seasoned leader, she brings a sharp strategic vision and exceptional communication skills to drive business growth and ensure alignment with the company’s goals. 
+              </p>
+
+              <p>
+              In her role at Kapital Seed 9, Yashashrri has been instrumental in steering the company's growth through innovative marketing and customer-centric strategies. Her background includes significant experience with global brands like TNT, where she handled commercial billing processes for the Middle East, UK, and Nordic regions, as well as leadership roles at Accenture in the UK and Nordic process division.
+              </p>
+              <p>
+              Yashashrri’s career showcases her deep expertise in strategic thinking, leadership, and relationship management. Her dedication to excellence and proven track record of success make her a key player in building robust business foundations and fostering long-lasting client relationships.
+              </p>
+            </div>
+            <div className="flex flex-col items-center">
+              <img
+                className="border-2 border-gray-300 rounded-full w-80 h-80 object-cover"
+                src={teamImage3}
+                alt="Team Member"
+              />
+              <p className="mt-4 text-center font-bold text-2xl">
+              Yashashrri H Singh
+              </p>
+            </div>
+          </div>
+
         </div>
       </section>
     </div>
