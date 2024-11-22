@@ -45,7 +45,7 @@ const Navbar = ({ cart }) => {
 
   return (
     <>
-      <div className="relative flex flex-wrap px-12 items-center justify-between py-2 bg-[#000a12eb]">
+      <div className="relative z-10 flex flex-wrap items-center justify-between px-12 py-2 bg-dark">
 
         <div className="text-white ">
           <span className=" text-[0.9rem] w-fit underline">Special offer: Get 50% off.</span>
