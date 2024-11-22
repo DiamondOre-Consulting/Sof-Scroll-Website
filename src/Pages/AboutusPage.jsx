@@ -267,7 +267,7 @@ const AboutUs = () => {
                 src={teamImage2}
                 alt="Team Member"
               />
-              <p className="mt-4 text-center text-xl font-bold">Jane Smith</p>
+              <p className="mt-4 text-center text-xl font-bold">Alexander Mohandas</p>
             </div>
           </div>
 
