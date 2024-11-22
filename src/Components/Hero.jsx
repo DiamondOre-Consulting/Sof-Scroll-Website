@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import LetterPullup from "@/components/ui/letter-pullup";
 import tisssuevideo from "../assets/tisssuevideo.mp4";
-import ShineBorder from "./ui/shine-border";
 import AnimatedText from "./AnimatedText";
 
 const Hero = () => {
