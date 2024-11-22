@@ -16,10 +16,10 @@ export const TextRevealByWord = ({
   const words = text.split(" ");
 
   return (
-    (<div ref={targetRef} className={cn("relative z-0 h-[200vh]", className)}>
+    (<div ref={targetRef} className={cn("relative z-0 h-[150vh]", className)}>
       <div
         className={
-          "sticky top-20 mx-auto flex  justify-center  items-center bg-transparent px-[1rem] "
+          "sticky top-20 mx-auto flex h-[50%]  items-center bg-transparent px-[1rem] "
         }>
         <p
           ref={targetRef}
