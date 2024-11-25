@@ -1,51 +1,10 @@
 const Allproducts = [
-  // {
-  //   name: "Soft Tissue Paper Napkins",
-  //   itemCode: "STPN10027",
-  //   pulls: "100 Sheet",
-  //   ply: 1,
-  //   gsm: 17,
-  //   quality: "SUPER SOFT",
-  //   weight: "110gms",
-  //   description: "(1 bundle consist of 112 packets)",
-  //   setOfPackets: "1 Twenty Foot Container",
-  //   previews: [
-  //     {
-  //       previewUrl:
-  //         "https://rukminim2.flixcart.com/image/1200/1200/l20rma80/facial-tissue/l/9/t/soft-tissue-paper-napkin-tissue-paper-100-pack-of-1-1-100-fliqa-original-imagdgpqyqgfavgp.jpeg",
-  //       thumbUrl:
-  //         "https://rukminim2.flixcart.com/image/1200/1200/l20rma80/facial-tissue/l/9/t/soft-tissue-paper-napkin-tissue-paper-100-pack-of-1-1-100-fliqa-original-imagdgpqyqgfavgp.jpeg",
-  //     },
-  //     {
-  //       previewUrl:
-  //         "https://s3.tebi.io/sof-scroll/napkin-wooden-table.jpg",
-  //       thumbUrl:
-  //         "https://s3.tebi.io/sof-scroll/napkin-wooden-table.jpg",
-  //     },
-  //     {
-  //       previewUrl:
-  //         "https://s3.tebi.io/sof-scroll/person-holding-white-nasal-handkerchief.jpg",
-  //       thumbUrl:
-  //         "https://s3.tebi.io/sof-scroll/person-holding-white-nasal-handkerchief.jpg",
-  //     },
-
-  //     {
-  //       previewUrl:
-  //         "https://s3.tebi.io/sof-scroll/3873218-hd_1920_1080_25fps.mp4",
-  //       thumbUrl:
-  //         "https://s3.tebi.io/sof-scroll/3873218-hd_1920_1080_25fps.mp4",
-  //     },
-
-  //   ],
-  //   imageUrl: "https://rukminim2.flixcart.com/image/1200/1200/l20rma80/facial-tissue/l/9/t/soft-tissue-paper-napkin-tissue-paper-100-pack-of-1-1-100-fliqa-original-imagdgpqyqgfavgp.jpeg", // Dummy placeholder image URL
-  //   fullDesc: "Soft Tissue Paper Napkins (Item Code: STPN10027) offer a premium, ultra-soft touch with 100 single-ply sheets at 17 GSM. Each packet is designed for maximum comfort and absorbency, weighing 110 grams for a lightweight yet durable feel. Delivered in bundles of 112 packets, these napkins are ideal for bulk needs and come packaged in a 20-foot container, ensuring ample supply for any setting. Perfect for those seeking quality and convenience in every sheet."
-  // },
 
 
   // category 1
 
   {
-    name: "Toilet Tissue Paper Roll",
+    name: "Toilet Tissue Paper Roll / 24 Rolls in a Packet / Virgin/Wood Pulp",
     category:"Toilet Rolls",
     itemCode: "TR100100",
     pulls: "140 Pulls",
@@ -85,7 +44,7 @@ const Allproducts = [
 
 
   {
-    name: "Toilet Tissue Paper Roll",
+    name: "Toilet Tissue Paper Roll / Virgin/Wood Pulp / 48 Rolls in a Packet ",
     category:"Toilet Rolls",
     itemCode: "TR100100",
     pulls: "140 Pulls",
@@ -125,7 +84,7 @@ const Allproducts = [
 
  
   {
-    name: "Toilet Tissue Paper Roll",
+    name: "Toilet Tissue Paper Roll / Recycle Material / 24 Rolls in a Packet",
     category:"Toilet Rolls",
     itemCode: "TR100100",
     pulls: "140 Pulls",
@@ -166,7 +125,7 @@ const Allproducts = [
 
 
   {
-    name: "Toilet Tissue Paper Roll",
+    name: "Toilet Tissue Paper Roll / Recycle Material / 48 Rolls in a Packet",
     category:"Toilet Rolls",
     itemCode: "TR100100",
     pulls: "140 Pulls",
@@ -207,7 +166,7 @@ const Allproducts = [
 
 
   {
-    name: "Toilet Tissue Paper Roll Bamboo Made",
+    name: "Toilet Tissue Paper Roll Bamboo Made / Recycle Material / 24 Rolls in a Packet",
     category:"Toilet Rolls",
     itemCode: "TR100100",
     pulls: "140 Pulls",
@@ -248,7 +207,7 @@ const Allproducts = [
 
 
   {
-    name: "Toilet Tissue Paper Roll Bamboo Made",
+    name: "Toilet Tissue Paper Roll Bamboo Made / Recycle Material / 48 Rolls in a Packet",
     category:"Toilet Rolls",
     itemCode: "TR100100",
     pulls: "140 Pulls",
@@ -289,7 +248,7 @@ const Allproducts = [
 
 
   {
-    name: "Toilet Tissue Paper Jumbo",
+    name: "Toilet Tissue Paper Jumbo / Recycle Material / 6 Rolls in a Packet",
     category:"Toilet Rolls",
     itemCode: "TR100100",
     pulls: "500 Pulls",
@@ -417,8 +376,8 @@ const Allproducts = [
   name: "Kitchen Tissue Roll",
   category:"Kitchen Rolls",
   itemCode: "TR100100",
-  pulls: "500 Pulls",
-  SheetCount : "500 Sheets",
+  pulls: "50 Pulls",
+  SheetCount : "50 Sheets",
   dimensions: "23 cm*21 cm)",
   ply:2,
   gsm: 18,
@@ -455,7 +414,7 @@ const Allproducts = [
 // category 4
 
 {
-  name: "Facial Tissue Box",
+  name: "Facial Tissue Box / Pack of 6 Boxes",
   category:"Facial Tissue",
   itemCode: "TR100100",
   pulls: "100 Pulls",
@@ -494,7 +453,7 @@ const Allproducts = [
 
 
 {
-  name: "Cube Facial Tissue",
+  name: "Cube Facial Tissue / Pack of 20 Boxes",
   category:"Facial Tissue",
   itemCode: "TR100100",
   pulls: "50 Pulls",
