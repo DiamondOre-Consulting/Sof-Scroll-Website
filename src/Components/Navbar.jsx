@@ -38,18 +38,18 @@ const Navbar = ({ cart }) => {
           <p className="text-xl font-bold">YOUR LOGO</p>
 
           {/* Desktop Menu */}
-          <div className="items-center hidden h-[4.5rem] space-x-8 uppercase border md:flex justify-center">
+          <div className="items-center hidden h-[4.5rem] space-x-8 uppercase  md:flex justify-center">
             <NavLink to="/" label="Home" location={location.pathname} />
             <NavLink to="/about-us" label="About Us" location={location.pathname} />
             <NavLink
               label="Products"
               location={location.pathname}
               dropdownItems={[
-                { to: "/products/toilet-tissue", label: "Toilet Tissue" },
-                { to: "/products/kitchen-tissue", label: "Kitchen Tissue" },
-                { to: "/products/hand-towels", label: "Hand Towels" },
-                { to: "/products/facial-tissue", label: "Facial Tissue" },
-                { to: "/products/napkins", label: "Napkins" },
+                { to: "/products/category/Toilet Rolls", label: "Toilet Tissue" },
+                { to: "/products/category/Kitchen Rolls", label: "Kitchen Tissue" },
+                { to: "/products/category/Hospital Roll", label: "Hospital Roll" },
+                { to: "/products/category/Facial Tissue", label: "Facial Tissue" },
+                { to: "/products/category/Paper Towel", label: "Paper Towel" },
               ]}
             />
             <NavLink to="/contact-us" label="Contact Us" location={location.pathname} />
@@ -114,11 +114,11 @@ const Navbar = ({ cart }) => {
                   label="Products"
                   location={location.pathname}
                   dropdownItems={[
-                    { to: "/products/toilet-tissue", label: "Toilet Tissue" },
-                    { to: "/products/kitchen-tissue", label: "Kitchen Tissue" },
-                    { to: "/products/hand-towels", label: "Hand Towels" },
-                    { to: "/products/facial-tissue", label: "Facial Tissue" },
-                    { to: "/products/napkins", label: "Napkins" },
+                    { to: "/products/category/Toilet Rolls", label: "Toilet Tissue" },
+                    { to: "/products/category/Kitchen Rolls", label: "Kitchen Tissue" },
+                    { to: "/products/category/Hospital Roll", label: "Hospital Roll" },
+                    { to: "/products/category/Facial Tissue", label: "Facial Tissue" },
+                    { to: "/products/category/Paper Towel", label: "Paper Towel" },
                   ]}
                   isMobile={true}
                   activeDropdown={activeDropdown}
