@@ -499,7 +499,6 @@ const Allproducts = [
   category:"Hospital Roll",
   itemCode: "TR100100",
   pulls: "100 mtr long",
-  SheetCount : "50 Sheets",
   dimensions: "60 CM Width * 100 Mtr Long, White 100 Mtr long",
   ply: 1,
   gsm: 18-19,
