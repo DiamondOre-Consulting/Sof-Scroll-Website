@@ -9,6 +9,7 @@ import WhyUs from "../../Components/WhyUs";
 import FAQPage from "@/Components/FAQPage";
 import OurStrength from "@/Components/OurStrength";
 import GoogleReviews from "@/Components/GoogleReviews";
+import PopularCategory from "@/Components/PopularCategory";
 
 const MainHome = ({ cart, setCart }) => {
   useEffect(() => {
@@ -21,12 +22,13 @@ const MainHome = ({ cart, setCart }) => {
     <div className="">
       <Hero />
       <AboutUs />
-      <OurStrength/>
+      <OurStrength />
+      <PopularCategory />
       <BestSellers cart={cart} setCart={setCart} />
       {/* <PopularCategories/> */}
       <WhyUs />
       <Testimonials />
-      <GoogleReviews/>
+      <GoogleReviews />
       <ContactUs />
       <FAQPage />
 
