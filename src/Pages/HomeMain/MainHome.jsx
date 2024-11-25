@@ -28,7 +28,7 @@ const MainHome = ({ cart, setCart }) => {
       {/* <PopularCategories/> */}
       <WhyUs />
       <Testimonials />
-      <GoogleReviews />
+      {/* <GoogleReviews /> */}
       <ContactUs />
       <FAQPage />
 
