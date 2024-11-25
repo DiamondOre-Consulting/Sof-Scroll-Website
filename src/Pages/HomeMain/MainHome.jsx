@@ -8,6 +8,7 @@ import ContactUs from "../../Components/ContactUs";
 import WhyUs from "../../Components/WhyUs";
 import FAQPage from "@/Components/FAQPage";
 import OurStrength from "@/Components/OurStrength";
+import GoogleReviews from "@/Components/GoogleReviews";
 
 const MainHome = ({ cart, setCart }) => {
   useEffect(() => {
@@ -25,6 +26,7 @@ const MainHome = ({ cart, setCart }) => {
       {/* <PopularCategories/> */}
       <WhyUs />
       <Testimonials />
+      <GoogleReviews/>
       <ContactUs />
       <FAQPage />
 

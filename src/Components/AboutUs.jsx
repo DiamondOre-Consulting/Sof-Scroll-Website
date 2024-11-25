@@ -11,7 +11,12 @@ const AboutUs = () => {
           <h1 className="mb-1 text-5xl md:text-6xl mf">
             <span className="text-dark">About </span>Us
           </h1>
-          <div className="w-20 h-1 mx-auto md:w-52 bg-dark"></div>
+          <div className="flex gap-1 mb-8">
+            <div className="w-[2.5rem] h-[3.5px] bg-dark rounded-full"></div>
+            <div className="w-[7rem] h-[3.5px] bg-dark rounded-full"></div>
+            <div className="w-[3.5px] h-[3.5px] bg-dark rounded-full"></div>
+            <div className="w-[3.5px] h-[3.5px] bg-dark rounded-full"></div>
+          </div>
 
           <div className="z-10 w-full mf">
             <TextRevealByWord text=" Our tissue paper conversion process turns large tissue rolls into consumer-ready products such as toilet paper, facial tissues, napkins, and paper towels. Using quality raw materials like wood pulp or recycled paper, the pulp is processed into continuous sheets, which are then slit, embossed, and perforated for convenience. Finally, automated machinery packages the tissue in various formats, ensuring quality and efficiency in a sustainable way to meet consumer needs." />

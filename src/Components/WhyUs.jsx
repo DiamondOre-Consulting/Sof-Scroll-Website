@@ -1,7 +1,7 @@
 import React from "react";
 import tissue1 from "../assets/tissue1.png";
-import BackgroundGradient from '../Components/ui/Card'
-import ShineBorder from "./ui/shine-border";
+
+
 
 const WhyUs = () => {
   const categories = [
@@ -34,7 +34,7 @@ const WhyUs = () => {
 
       <div className="grid grid-cols-1 gap-10 px-6 mx-auto w-fit md:grid-cols-2 md:px-0">
         {categories.map((category, index) => (
-          <BackgroundGradient key={index}>
+         
             <div
 
               className="relative bg-white  p-4 text-center max-w-[38rem] border rounded-3xl border-dark"
@@ -49,7 +49,7 @@ const WhyUs = () => {
                 </div> */}
               <h3 className="mt-4 text-xl font-semibold mf">{category.title}</h3>
             </div>
-          </BackgroundGradient>
+        
         ))}
       </div>
     </div>
