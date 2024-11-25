@@ -83,7 +83,30 @@ const Allproducts = [
     weight: "1.8KG",
     description: "6 Rolls in 1 Carton",
     setOfPackets: "1 Twenty Foot Container",
-    imageUrl: "https://m.media-amazon.com/images/I/41t1KMeiDCL._SL1500_.jpg", // Dummy placeholder image URL
+
+    previews: [
+      {
+        previewUrl:
+          "https://s3.tebi.io/sof-scroll/pexels-vie-studio-3963079.jpg",
+        thumbUrl:
+          "https://s3.tebi.io/sof-scroll/pexels-vie-studio-3963079.jpg",
+      },
+      {
+        previewUrl:
+          "https://s3.tebi.io/sof-scroll/pexels-shvetsa-3962440.jpg",
+        thumbUrl:
+          "https://s3.tebi.io/sof-scroll/pexels-shvetsa-3962440.jpg",
+      },
+      {
+        previewUrl:
+          "https://s3.tebi.io/sof-scroll/pexels-shvetsa-3962439.jpg",
+        thumbUrl:
+          "https://s3.tebi.io/sof-scroll/pexels-shvetsa-3962439.jpg",
+      },
+    ],
+
+
+    imageUrl: "https://s3.tebi.io/sof-scroll/pexels-vie-studio-3963079.jpg", // Dummy placeholder image URL
     fullDesc: "The HRT Roll (Item Code: HR100250) offers 1,085 high-quality, absorbent 1-ply pulls per roll, crafted at 40 GSM for a durable towel-like feel. Each roll weighs 1.8 kg, providing exceptional absorbency and strength. Packed with 6 rolls per carton, these rolls are perfect for settings requiring high-capacity towel solutions and come available in bulk within a 20-foot container to meet large-scale needs efficiently."
   },
   {
@@ -96,6 +119,27 @@ const Allproducts = [
     weight: "500gms",
     description: "30 Rolls in 1 Carton",
     setOfPackets: "1 Twenty Foot Container",
+    previews: [
+      {
+        previewUrl:
+          "https://s3.tebi.io/sof-scroll/pexels-vie-studio-3963079.jpg",
+        thumbUrl:
+          "https://s3.tebi.io/sof-scroll/pexels-vie-studio-3963079.jpg",
+      },
+      {
+        previewUrl:
+          "https://s3.tebi.io/sof-scroll/pexels-shvetsa-3962440.jpg",
+        thumbUrl:
+          "https://s3.tebi.io/sof-scroll/pexels-shvetsa-3962440.jpg",
+      },
+      {
+        previewUrl:
+          "https://s3.tebi.io/sof-scroll/pexels-shvetsa-3962439.jpg",
+        thumbUrl:
+          "https://s3.tebi.io/sof-scroll/pexels-shvetsa-3962439.jpg",
+      },
+    ],
+
     imageUrl: "https://atozofficesupplier.com/wp-content/uploads/2020/04/ti.jpg", // Dummy placeholder image URL
     fullDesc: "The JRT Roll (Item Code: JRT100150) delivers 500 feet of soft, highly absorbent 2-ply tissue, crafted at 17 GSM for optimal comfort and durability. Each roll weighs 500 grams and is packed with 30 rolls per carton, ensuring an ample supply for high-traffic areas. Available in a 20-foot container, these rolls are ideal for facilities requiring a reliable, bulk tissue solution that combines softness with high absorbency."
   },
@@ -109,6 +153,27 @@ const Allproducts = [
     weight: "700gms",
     description: "30 Rolls in 1 Carton",
     setOfPackets: "1 Twenty Foot Container",
+    previews: [
+      {
+        previewUrl:
+          "https://s3.tebi.io/sof-scroll/pexels-vie-studio-3963079.jpg",
+        thumbUrl:
+          "https://s3.tebi.io/sof-scroll/pexels-vie-studio-3963079.jpg",
+      },
+      {
+        previewUrl:
+          "https://s3.tebi.io/sof-scroll/pexels-shvetsa-3962440.jpg",
+        thumbUrl:
+          "https://s3.tebi.io/sof-scroll/pexels-shvetsa-3962440.jpg",
+      },
+      {
+        previewUrl:
+          "https://s3.tebi.io/sof-scroll/pexels-shvetsa-3962439.jpg",
+        thumbUrl:
+          "https://s3.tebi.io/sof-scroll/pexels-shvetsa-3962439.jpg",
+      },
+    ],
+
     imageUrl: "https://cdn.paperindex.com/productimages/DSC_6628_1208220073544.JPG", // Dummy placeholder image URL
     fullDesc: "The JRT Roll (Item Code: JRT100225) provides 750 feet of soft, highly absorbent 2-ply tissue, made with 17 GSM paper for superior comfort and strength. Each roll weighs 700 grams, offering an ideal balance of durability and softness. Packaged with 30 rolls per carton, these JRT rolls are perfect for high-traffic environments and come in a 20-foot container for convenient bulk supply."
   },

@@ -7,6 +7,7 @@ import Testimonials from "../../Components/Testimonials";
 import ContactUs from "../../Components/ContactUs";
 import WhyUs from "../../Components/WhyUs";
 import FAQPage from "@/Components/FAQPage";
+import OurStrength from "@/Components/OurStrength";
 
 const MainHome = ({ cart, setCart }) => {
   useEffect(() => {
@@ -19,6 +20,7 @@ const MainHome = ({ cart, setCart }) => {
     <div className="">
       <Hero />
       <AboutUs />
+      <OurStrength/>
       <BestSellers cart={cart} setCart={setCart} />
       {/* <PopularCategories/> */}
       <WhyUs />

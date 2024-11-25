@@ -18,11 +18,11 @@ const AboutUs = () => {
           </div>
           {/* <p className="mt-10 mb-4 md:text-5xl">
         
-          </p> */}
+          </p> */}  
 
           <Link
             to={"/about-us"}
-            className="inline-grid w-40 px-10 py-2 overflow-hidden text-center text-black transition-all duration-300 border rounded-full button border-dark hover:bg-dark hover:text-white"
+            className="inline-grid w-52 px-4 py-2 text-xl overflow-hidden text-center text-black transition-all duration-300 border rounded-full button border-dark hover:bg-dark hover:text-white"
           >
             <span>About US</span>
           </Link>
