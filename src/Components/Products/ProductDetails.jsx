@@ -26,7 +26,6 @@ const productI = {
         "https://cdn.easyfrontend.com/pictures/ecommerce/headphone2-3.png",
     },
   ],
-
 };
 
 const ProductDetails = ({ cart, setCart }) => {
@@ -175,12 +174,8 @@ const ProductDetails = ({ cart, setCart }) => {
             <p className="mt-2 font-semibold">{product?.quality}</p>
             <p className="py-3 text-gray-700 ">{product.description}</p>
 
-
-
-
             <div className="flex gap-4 my-2 space-y-1 text-left">
               <p className="mt-[0.15rem] font-medium text-[0.95rem] text-gray-500 ">Dimension  <span className="text-dark font-semibold border-2 ml-4 border-dark p-[0.3rem] text-[0.9rem] ">{product?.dimensions}</span></p>
-
             </div>
 
             <div className="flex gap-4 pb-3 my-2 space-y-1 text-left border-b-2">
@@ -215,7 +210,7 @@ const ProductDetails = ({ cart, setCart }) => {
                   Add to Cart
                 </button>
               </div>
-              <Link to={'/cart'} className="w-full px-4 py-2 text-center text-white bg-blue-500 rounded hover:bg-blue-700"
+              <Link to={'/cart'} className="w-full px-4 py-2 text-center text-white rounded bg-dark hover:bg-[#1d8883]"
               >
                 Buy Now
               </Link>
