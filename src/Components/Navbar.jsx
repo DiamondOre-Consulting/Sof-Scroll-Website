@@ -45,6 +45,7 @@ const Navbar = ({ cart }) => {
               label="Products"
               location={location.pathname}
               dropdownItems={[
+                { to: "/all-products", label: "All products" },
                 { to: "/products/category/Toilet Rolls", label: "Toilet Tissue" },
                 { to: "/products/category/Kitchen Rolls", label: "Kitchen Tissue" },
                 { to: "/products/category/Hospital Roll", label: "Hospital Roll" },
@@ -114,6 +115,7 @@ const Navbar = ({ cart }) => {
                   label="Products"
                   location={location.pathname}
                   dropdownItems={[
+                    { to: "/all-products", label: "All products" },
                     { to: "/products/category/Toilet Rolls", label: "Toilet Tissue" },
                     { to: "/products/category/Kitchen Rolls", label: "Kitchen Tissue" },
                     { to: "/products/category/Hospital Roll", label: "Hospital Roll" },
@@ -160,7 +162,7 @@ const NavLink = ({
 
   return (
     <div
-      className={`relative item-center flex-col justify-center h-full flex group ${isMobile && "w-full  text-center"}`}
+      className={`relative item-center flex-col  justify-center h-full flex group ${isMobile && "w-full  text-center"}`}
       onClick={isMobile && dropdownItems ? handleDropdownToggle : null}
     >
       <div
@@ -188,7 +190,7 @@ const NavLink = ({
       {/* Dropdown */}
       {dropdownItems && (
         <div
-          className={`md:absolute left-0 top-12 z-50 md:w-40 ml-24 md:ml-0 mt-2 bg-white md:bg-light rounded-md ${isMobile
+          className={`md:absolute overflow-hidden left-0 top-12 z-50 md:w-40 ml-24 md:ml-0 mt-2 bg-white md:bg-light rounded-md ${isMobile
             ? `transition-all duration-200 ease-in-out ${isActive ? "block" : "hidden"
             }`
             : "group-hover:block hidden"
@@ -198,7 +200,7 @@ const NavLink = ({
             <Link
               key={index}
               to={item.to}
-              className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              className="block px-4 py-2 text-[0.9rem] text-gray-700 hover:bg-gray-100"
               onClick={onClick}
             >
               {item.label}

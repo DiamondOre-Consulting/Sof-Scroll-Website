@@ -18,7 +18,13 @@ const CartPage = ({ cart, setCart }) => {
 
   const [checkoutActive, setCheckoutActive] = useState(false)
 
-  let price = 1699
+  const calculateTotalPrice = (cart) => {
+    return cart.reduce((total, item) => {
+      return total + (item.price * item.quantity); // Multiply price by quantity for each item
+    }, 0); // 0 is the initial value of the accumulator
+  };
+
+  let price = calculateTotalPrice(cart)
 
   const [loadingToastId, setLoadingToastId] = useState(null);
   const [success, setSuccess] = useState(false)
@@ -79,28 +85,40 @@ const CartPage = ({ cart, setCart }) => {
 
     // Create flex-wrapped HTML for each cart item
     const orderDetails = `
-       <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
-  <tr>
-    ${cart.map(item => `
-      <td width="50%" style="padding: 10px; text-align: center; border: 1px solid #ddd;">
-        <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
-          <tr>
-            <td style="padding-bottom: 10px;">
-              <img src="${item.imageUrl}" alt="${item.name}" style="width: 100%; height: auto; object-fit: cover; max-width: 150px;" />
-            </td>
-          </tr>
-          <tr>
-            <td style="font-size: 14px; line-height: 1.5;">
-              <p><strong>Item code:</strong> ${item.itemCode}</p>
-              <p><strong>Product:</strong> ${item.name}</p>
-              <p><strong>Quantity:</strong> ${item.quantity} | <strong>Weight:</strong> ${item.weight}</p>
-            </td>
-          </tr>
-        </table>
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td style="font-size: 14px; line-height: 1.5; padding-bottom:4px;">
+        <strong>Total Order Price : ₹${price}</strong> 
       </td>
-    `).join('')}
-  </tr>
-</table>`
+    </tr>
+    <tr>
+      <td colspan="2" style="padding-top: 10px; text-align: center;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 10px;">
+          ${cart.map(item => `
+            <div style="border: 1px solid #ddd; padding: 10px; text-align: center;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td style="padding-bottom: 10px;">
+                    <img src="${item.imageUrl}" alt="${item.name}" style="width: 100%; height: auto; object-fit: cover; max-width: 150px;" />
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-size: 14px; line-height: 1.5;">
+                    <p><strong>Item code:</strong> ${item.itemCode}</p>
+                    <p>${item.name}</p>
+                    <p><strong>Quantity:</strong> ${item.quantity} | <strong>Weight:</strong> ${item.weight}</p>
+                    <p><strong>Price:</strong> ₹${item.price} x ${item.quantity} = ₹${item.price * item.quantity}</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          `).join('')}
+        </div>
+      </td>
+    </tr>
+  </table>
+`;
+
 
 
     // Prepare order data for EmailJS
@@ -151,12 +169,12 @@ const CartPage = ({ cart, setCart }) => {
 
 
   return (
-    <>
+    <div className="select-none">
       <BreadCrumbs headText={"Your Cart"} items={breadcrumbItems} />
 
 
 
-      {success ? <div className="flex items-center justify-center pt-8">
+      {success ? <div className="flex items-start justify-center h-[80vh] pt-24">
         <div className="flex flex-col items-center justify-center p-10 pb-16 bg-gray-200 rounded-lg">
           <FaCheck className="text-white bg-dark text-[3.6rem] mb-2 border-2 border-dark rounded-full p-2" />
           <h2 className="font-semibold text-[1.5rem]">😊 Order Placed Successfully</h2>
@@ -170,67 +188,71 @@ const CartPage = ({ cart, setCart }) => {
           <div className="container mb-40 sm:px-10 gap-4 px-2 lg:flex max-w-[80rem] mx-auto pt-8">
             {/* <h2 className="mt-6 mb-10 text-5xl text-center mf">Your Cart</h2> */}
             {cart.length !== 0 &&
-              <div className=" px-4 mx-auto bg-slate-50 border border-slate-300 rounded-md py-4 max-w-[40rem] w-full">
-                <form onSubmit={handleOrder} noValidate className="top-0 flex flex-col gap-4 lg:sticky">
-                  <div className="flex flex-col">
-                    <label className="text-[0.95rem] px-1 text-gray-600 font-semibold">Name</label>
-                    <input
-                      type="text"
-                      name="name"
-                      className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-dark"
+              <div className="border border-gray-300 h-fit mx-auto bg-slate-50 lg:sticky top-20  rounded-md  max-w-[40rem] w-full">
+                <div className="p-4 rounded-md border-[0.3rem] border-light">
+                  <form onSubmit={handleOrder} noValidate className="flex flex-col gap-3 m-2 ">
+                    <div className="flex flex-col">
+                      <label className="text-[0.95rem] px-1 text-gray-600 font-semibold ">Name <span className="text-red-500 text-[1.3rem] relative top-[0.2rem] right-[0.2rem]">*</span></label>
+                      <input
+                        type="text"
+                        name="name"
+                        className="w-full p-2 border rounded focus:outline-none border-dark"
 
-                      value={userInfo.name}
-                      onChange={handleChange}
-                      placeholder="Enter Name..."
-                      required
-                    />
-                  </div>
+                        value={userInfo.name}
+                        onChange={handleChange}
+                        placeholder="Enter Name..."
+                        required
+                      />
+                    </div>
 
-                  <div className="flex flex-col ">
-                    <label className="text-[0.95rem] px-1 text-gray-600 font-semibold">Email</label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={userInfo.email}
-                      onChange={handleChange}
-                      placeholder="Email"
-                      required
-                      className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-dark"
-                    />
-                  </div>
+                    <div className="flex flex-col ">
+                      <label className="text-[0.95rem] px-1 text-gray-600 font-semibold">Email <span className="text-red-500 text-[1.3rem] relative top-[0.2rem] right-[0.2rem]">*</span></label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={userInfo.email}
+                        onChange={handleChange}
+                        placeholder="Email"
+                        required
+                        className="w-full p-2 border rounded focus:outline-none border-dark"
+                      />
+                    </div>
 
-                  <div className="flex flex-col">
-                    <label className="text-[0.95rem] px-1 text-gray-600 font-semibold">Phone</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={userInfo.phone}
-                      onChange={handleChange}
-                      className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-dark"
-                      placeholder="Phone"
-                      required
-                    />
-                  </div>
+                    <div className="flex flex-col">
+                      <label className="text-[0.95rem] px-1 text-gray-600 font-semibold">Phone <span className="text-red-500 text-[1.3rem] relative top-[0.2rem] right-[0.2rem]">*</span></label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={userInfo.phone}
+                        onChange={handleChange}
+                        className="w-full p-2 border rounded focus:outline-none border-dark"
+                        placeholder="Phone"
+                        required
+                      />
+                    </div>
 
-                  <div className="flex flex-col">
-                    <label className="text-[0.95rem] px-1 text-gray-600 font-semibold">Address</label>
-                    <textarea
-                      name="address"
-                      value={userInfo.address}
-                      onChange={handleChange}
-                      placeholder="Address"
-                      rows={4}
-                      className="w-full p-2 border rounded resize-none focus:outline-none focus:ring-1 focus:ring-dark"
-                      required
-                    />
-                  </div>
+                    <div className="flex flex-col">
+                      <label className="text-[0.95rem] px-1 text-gray-600 font-semibold">Address <span className="text-red-500 text-[1.3rem] relative top-[0.2rem] right-[0.2rem]">*</span></label>
+                      <textarea
+                        name="address"
+                        value={userInfo.address}
+                        onChange={handleChange}
+                        placeholder="Address"
+                        rows={4}
+                        className="w-full p-2 border rounded resize-none focus:outline-none border-dark"
+                        required
+                      />
+                    </div>
 
 
-                </form>
-                <ToastContainer />
+                  </form>
+                </div>
+
 
               </div>}
-
+            <div className="relative z-[1000000]">
+              <ToastContainer className={"z-[10000] relative"} />
+            </div>
             {cart.length === 0 ?
               <div className="flex flex-col w-full items-center h-[50vh] justify-center gap-4 py-6">
                 <h2 className="text-[1.4rem] font-semibold">😞 OOPS! Your cart is empty</h2>
@@ -238,7 +260,7 @@ const CartPage = ({ cart, setCart }) => {
                   Continue Shopping
                 </Link>
               </div> :
-              <div className="bottom-0 flex flex-wrap items-center justify-between w-full gap-4 p-1 mt-4 border rounded-md shadow-md h-fit lg:mt-0 bg-light border-[#d2ceb2] max-w-[40rem] mx-auto">
+              <div className="bottom-0 flex flex-wrap items-center justify-between w-full gap-4 p-1 mt-4 border rounded-md shadow-md h-fit lg:mt-0 bg-light border-[#d2ceb2] max-w-[40rem] lg:max-w-[35rem] mx-auto">
 
                 <div className="flex flex-wrap items-center justify-center w-full bg-white rounded lg:items-start lg:gap-4 lg:flex-col">
                   <ul className="mb-4 space-y-6">
@@ -246,7 +268,7 @@ const CartPage = ({ cart, setCart }) => {
                       <div className="relative p-4 py-1 space-y-2 overflow-hidden border rounded-md bg-gray-50" key={item?.itemCode}>
                         <button
                           onClick={() => removeItem(index)}
-                          className="absolute top-0 right-0 p-[0.4rem] ml-10 font-bold text-red-500 shadow-md bg-gray-200 text-[1.5rem] md:ml-60"
+                          className="absolute top-0 z-10 right-0 p-[0.4rem] ml-10 font-bold text-red-500 shadow-md bg-gray-200 text-[1.5rem] md:ml-60"
                         >
                           <MdDelete />
                         </button>
@@ -264,17 +286,17 @@ const CartPage = ({ cart, setCart }) => {
                         </div>
                         <div className="relative flex flex-wrap items-center justify-between gap-2 p-3 py-1 bg-white border rounded-md shadow-sm" >
 
-                          <p className="flex justify-between w-full text-gray-700 lg:px-1" >Subtotal : <span className="font-semibold text-gray-700 ">₹{price}</span></p>
+                          <p className="flex justify-between w-full text-gray-700 lg:px-1" >Subtotal : <span className="font-semibold text-gray-700 ">₹{Number(item?.quantity) * Number(item?.price)}</span></p>
 
                         </div>
                       </div>
                     ))}
                   </ul>
-                  <p className="flex justify-between w-full px-4 text-gray-700 " >Total : <span className="font-semibold text-black text-[1.1rem]">₹{price}</span></p>
-                  <button className="w-full p-2 m-1 mt-2 font-semibold text-white bg-blue-500 rounded sm:mt-1 ">Place Order</button>
+                  <p className="flex justify-between w-full px-4 text-gray-800 " >Total : <span className="font-semibold pr-3 text-black text-[1.1rem]">₹{price}</span></p>
+                  <button onClick={handleOrder} className="w-full p-2 m-1 mt-2 font-semibold text-white bg-blue-500 rounded sm:mt-1 ">Place Order</button>
                 </div>
-                <div className="flex items-center justify-center w-full gap-2 font-semibold text-white sm:flex-row">
-                  <button onClick={clearCart} className=" p-2 font-semibold text-center text-white bg-red-500 rounded w-[12rem] hover:bg-red-600">
+                <div className="flex items-center justify-center w-full gap-2 mt-4 font-semibold text-white sm:flex-row lg:flex-col">
+                  <button onClick={clearCart} className=" p-2 font-semibold text-center text-white bg-red-500 rounded w-[12rem] sm:w-full lg:w-full hover:bg-red-600">
                     Clear Cart
                   </button>
                   <Link to={"/all-products"} className="w-full p-2 font-semibold text-center text-white bg-green-600 rounded hover:bg-dark">
@@ -354,124 +376,33 @@ const CartPage = ({ cart, setCart }) => {
             </ul>
 
             {cart.length === 0 ?
-              <div className="flex flex-col items-center h-[50vh] justify-center gap-4 py-6">
+              <div className="flex w-full flex-col items-center h-[50vh] justify-center gap-4 py-6">
                 <h2 className="text-[1.4rem] font-semibold">😞 OOPS! Your cart is empty</h2>
                 <Link to={"/all-products"} className="px-5 py-3 font-semibold tracking-wide text-center text-white bg-green-700 rounded hover:bg-dark">
                   Continue Shopping
                 </Link>
               </div> :
-              <div className="sticky mt-4 lg:mt-0 lg:sticky lg:top-0 lg:max-w-[25rem] bottom-0 flex flex-wrap items-center justify-between w-full gap-4 p-1 border rounded-md shadow-md bg-light">
+              <div className="sticky mt-4 lg:mt-0 lg:sticky lg:top-20 lg:max-w-[25rem] bottom-0 h-fit flex flex-wrap items-center justify-between w-full gap-4 p-1 border rounded-md shadow-md bg-light">
 
                 <div className="flex flex-wrap items-center justify-between w-full px-3 py-2 bg-white rounded lg:p-4 lg:items-start lg:gap-4 lg:flex-col">
                   <span className="text-[1.05rem] lg:pb-2 lg:border-b lg:w-full">Cart Total</span>
                   <p className="flex justify-between text-gray-700 lg:px-1 lg:w-full" >Subtotal : <span className="font-semibold text-black text-[1.1rem]">₹{price}</span></p>
                   <button onClick={() => setCheckoutActive(true)} className="w-full p-2 px-6 m-1 mt-2 font-semibold text-white bg-blue-500 rounded sm:w-fit sm:mt-1 lg:w-full">Checkout</button>
                 </div>
-                <div className="flex items-center justify-center w-full gap-2 font-semibold text-white sm:flex-row">
-                  <button onClick={clearCart} className=" p-2 font-semibold text-center text-white bg-red-500 rounded w-[12rem] hover:bg-red-600">
+                <div className="flex items-center justify-center w-full gap-2 font-semibold text-white sm:flex-row lg:flex-col">
+                  <button onClick={clearCart} className=" p-2 font-semibold text-center text-white bg-red-500 rounded w-[12rem] sm:w-full hover:bg-red-600">
                     Clear Cart
                   </button>
-                  <Link to={"/all-products"} className="w-full p-2 font-semibold text-center text-white bg-green-600 rounded hover:bg-dark">
+                  <Link to={"/all-products"} className="w-full p-2 font-semibold text-center text-white bg-green-600 rounded lg:w-full hover:bg-dark">
                     Continue Shopping
                   </Link>
 
                 </div>
               </div>}
-
-            {/* {cart.length !== 0 &&
-          <div className=" px-4 mt-10 mx-auto max-w-[40rem]">
-            <div>
-              <form onSubmit={handleOrder} noValidate className="flex flex-col gap-4">
-                <div className="flex flex-col">
-                  <label className="text-[0.95rem] px-1 text-gray-600 font-semibold">Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-dark"
-
-                    value={userInfo.name}
-                    onChange={handleChange}
-                    placeholder="Enter Name..."
-                    required
-                  />
-                </div>
-
-                <div className="flex flex-col ">
-                  <label className="text-[0.95rem] px-1 text-gray-600 font-semibold">Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={userInfo.email}
-                    onChange={handleChange}
-                    placeholder="Email"
-                    required
-                    className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-dark"
-                  />
-                </div>
-
-                <div className="flex flex-col">
-                  <label className="text-[0.95rem] px-1 text-gray-600 font-semibold">Phone</label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={userInfo.phone}
-                    onChange={handleChange}
-                    className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-dark"
-                    placeholder="Phone"
-                    required
-                  />
-                </div>
-
-                <div className="flex flex-col">
-                  <label className="text-[0.95rem] px-1 text-gray-600 font-semibold">Address</label>
-                  <textarea
-                    name="address"
-                    value={userInfo.address}
-                    onChange={handleChange}
-                    placeholder="Address"
-                    rows={2}
-                    className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-dark"
-                    required
-                  />
-                </div>
-
-                <button
-                  type='submit'
-                  className="relative flex items-center w-full px-6 py-[0.6rem] overflow-hidden font-medium text-center transition-all rounded-md bg-[#2F8B69] group"
-                >
-                  <span
-                    className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rounded bg-dark group-hover:-mr-4 group-hover:-mt-4"
-                  >
-                    <span
-                      className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"
-                    ></span>
-                  </span>
-                  <span
-                    className="absolute bottom-0 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rotate-180 rounded bg-dark group-hover:-ml-4 group-hover:-mb-4"
-                  >
-                    <span
-                      className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"
-                    ></span>
-                  </span>
-                  <span
-                    className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full rounded-md bg-dark group-hover:translate-x-0"
-                  ></span>
-                  <span
-                    className="relative flex w-full text-center text-white transition-colors duration-200 ease-in-out group-hover:text-white"
-                  > <span className='flex items-center justify-center w-full gap-2'>Submit order <IoMdSend /></span>
-                  </span>
-                </button>
-              </form>
-              <ToastContainer />
-
-            </div>
-          </div>} */}
-
-
           </div >
       }
 
-    </>
+    </div>
   );
 };
 

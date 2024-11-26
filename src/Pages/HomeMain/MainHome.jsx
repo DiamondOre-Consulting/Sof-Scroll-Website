@@ -19,7 +19,7 @@ const MainHome = ({ cart, setCart }) => {
 
 
   return (
-    <div className="">
+    <div className="select-none">
       <Hero />
       <AboutUs />
       <OurStrength />

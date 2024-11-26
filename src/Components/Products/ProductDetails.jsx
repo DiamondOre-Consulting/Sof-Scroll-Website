@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Allproducts from "./AllProducts";
 import ExploreProducts from "./ExploreProducts";
 import BreadCrumbs from "../BreadCrumbs";
@@ -14,8 +14,7 @@ const ProductDetails = ({ cart, setCart }) => {
   const [mainImage, setMainImage] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [quantity, setQuantity] = useState(0); // Initialize quantity state
-
-  let price = 289
+  const navigate = useNavigate()
 
   useEffect(() => {
     const foundProduct = Allproducts.find((prod) => prod.itemCode === itemCode);
@@ -54,6 +53,7 @@ const ProductDetails = ({ cart, setCart }) => {
 
   const removeFromCart = () => {
     const updatedCart = cart.filter((item) => item.itemCode !== itemCode);
+    setQuantity(quantity - 1)
     setCart(updatedCart);
     updateCartInLocalStorage(updatedCart); // Update local storage
   };
@@ -83,6 +83,15 @@ const ProductDetails = ({ cart, setCart }) => {
   }
 
   const isInCart = cart.some((item) => item.itemCode === itemCode);
+
+  const buyButton = () => {
+    if (isInCart) {
+      navigate('/cart')
+    } else {
+      addToCart(1)
+      navigate('/cart')
+    }
+  }
 
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
@@ -167,13 +176,13 @@ const ProductDetails = ({ cart, setCart }) => {
     <>
       <BreadCrumbs headText={product.name} items={breadcrumbItems} />
 
-      <div className="w-full max-w-[80rem] p-4 pt-1 px-4 sm:px-10 mx-auto  md:px-20 lg:px-6">
-        <div className="grid items-start grid-cols-1 gap-6 mt-4 lg:grid-cols-2 md:gap-0">
+      <div className="w-full select-none max-w-[80rem] p-4 pt-1 px-4 sm:px-10 mx-auto  md:px-20 lg:px-6">
+        <div className="grid items-center grid-cols-1 gap-6 mt-4 lg:grid-cols-2 md:gap-0">
           <div className="w-full">
             <ProductPreviews previews={product.previews} videoUrl={product.previews[product.previews.length - 1].previewUrl} />
           </div>
 
-          <div className="flex flex-col w-full">
+          <div className="flex flex-col w-full mt-4">
             <h1 className="text-3xl font-[600] mf">{product.name}</h1>
             <p className="mt-2 font-semibold">{product?.quality}</p>
             <p className="py-3 text-gray-700 ">{product.description}</p>
@@ -194,19 +203,16 @@ const ProductDetails = ({ cart, setCart }) => {
             </div>
 
             <div className="my-2 text-left">
-              <p className="font-medium text-green-600">Special price</p>
+              {/* <p className="font-medium text-green-600">Special price</p> */}
               <div className="flex items-baseline space-x-2">
-                {/* Current price */}
-                <span className="text-2xl font-bold text-gray-900">₹{quantity < 1 ? price : price * quantity}</span>
-                {/* Original price */}
-                <span className="text-gray-500 line-through">₹799</span>
-                {/* Discount percentage */}
-                <span className="font-medium text-green-600">63% off</span>
+                <span className="text-2xl font-bold text-gray-900">₹{quantity < 1 ? product.price : product.price * quantity}</span>
+                {/* <span className="text-gray-500 line-through">₹799</span> */}
+                {/* <span className="font-medium text-green-600">63% off</span> */}
               </div>
             </div>
 
             <div className="flex items-center justify-start gap-4 mt-2">
-              <div className="min-w-[35%] actions">
+              <div className="min-w-[9rem] actions">
 
                 {
                   quantity < 1 ? <button
@@ -216,7 +222,7 @@ const ProductDetails = ({ cart, setCart }) => {
                     Add to Cart
                   </button> :
                     <div className="flex items-center justify-between font-semibold text-white bg-blue-700 rounded-md">
-                      <div onClick={decreaseQuantity} className="p-3 px-5 cursor-pointer">
+                      <div onClick={quantity === 1 ? removeFromCart : decreaseQuantity} className="p-3 px-5 cursor-pointer">
                         <FaMinus />
                       </div>
                       <span className="text-[1.2rem]">{quantity}</span>
@@ -226,15 +232,15 @@ const ProductDetails = ({ cart, setCart }) => {
                     </div>
                 }
               </div>
-              <Link to={'/cart'} className="w-full px-4 py-2 text-center text-white rounded bg-dark hover:bg-[#1d8883]"
+              <div onClick={() => buyButton()} className="w-full px-4 py-2 text-center text-white rounded bg-dark hover:bg-[#1d8883]"
               >
                 Buy Now
-              </Link>
+              </div>
             </div>
           </div>
         </div>
         <div className="my-8">
-          <p className="text-center text-gray-700">
+          <p className="text-center text-gray-700 ">
             {product.fullDesc}
           </p>
         </div>
