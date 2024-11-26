@@ -6,7 +6,7 @@ import AnimatedText from "./AnimatedText";
 const Hero = () => {
   return (
     // <ShineBorder className={"w-full "}>
-    <div className=" flex mx-6 items-center h-[85vh] relative rounded-xl  overflow-hidden bg-center bg-cover ">
+    <div className=" flex sm:mx-6 mx-3 items-center h-[85vh] relative rounded-xl  overflow-hidden bg-center bg-cover ">
       <video
         src={tisssuevideo}
         autoPlay
