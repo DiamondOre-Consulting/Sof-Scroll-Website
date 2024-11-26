@@ -38,14 +38,14 @@ const MyProducts = ({ cart, setCart }) => {
 
 
         {/* <h1 className="text-5xl text-center mf">All Products</h1> */}
-        <div className="grid items-center justify-center grid-cols-1 gap-6 px-6 mx-auto mt-20 w-fit sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid items-center justify-center grid-cols-1 gap-6 px-6 mx-auto max-w-[80rem] mt-20 w-fit sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
           {Allproducts.map((product, index) => {
             const isInCart = cart.find((item) => item.itemCode === product.itemCode);
 
             return (
               <div key={index}>
-                <div className="w-[18rem] h-[21rem] flex flex-col bg-gray-100 border rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-2xl border-gray-200 hover:border-dark">
+                <div className="max-w-[22rem] w-full  h-[21rem] flex flex-col bg-gray-100 border rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-2xl border-gray-200 hover:border-dark">
                   <div className="relative">
                     <img
                       src={product.imageUrl}

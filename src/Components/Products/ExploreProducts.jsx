@@ -31,6 +31,8 @@ const ExploreProducts = ({ cart, setCart }) => {
     }
   }, [selectedProduct]); // Dependency array includes selectedProduct
 
+  console.log(Allproducts)
+
   return (
     <div className="relative py-10">
       <h1 className="relative mx-auto mb-2 text-4xl text-center md:text-6xl mf">
@@ -46,7 +48,7 @@ const ExploreProducts = ({ cart, setCart }) => {
 
             return (
               <div key={index}>
-                <div className="w-[18rem] h-[21rem] flex flex-col bg-gray-100 border rounded-lg shadow-md overflow-hidden transition-transform duration-300  hover:shadow-2xl border-gray-200 hover:border-dark">
+                <div className="max-w-[19rem] w-full h-[21rem] flex flex-col bg-gray-100 border rounded-lg shadow-md overflow-hidden transition-transform duration-300  hover:shadow-2xl border-gray-200 hover:border-dark">
                   <div className="relative">
                     <img
                       src={product.imageUrl}

@@ -6,6 +6,68 @@ import teamImage3 from "../assets/yashashrri.jpeg"; // Team member image 3
 import patternImage from "../assets/22.png"; // Background pattern image
 import BreadCrumbs from "../Components/BreadCrumbs";
 import yashi from "../assets/yashi.jpeg";
+import { FaRegCalendarAlt } from "react-icons/fa";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+
+const timelineData = [
+  {
+    title: "Raw Material Selection",
+    date: "2024-01-01",
+    description: ` High-quality wood pulp or recycled paper is selected as the
+                  primary raw material. The chosen material is refined and
+                  processed to ensure that the final product has the desired
+                  strength, softness, and absorbency.`,
+    icon: <FaRegCalendarAlt />,
+  },
+  {
+    title: "Papermaking",
+    date: "2024-02-01",
+    description: `The refined pulp mixture is spread over a fourdrinier wire,
+                  forming a continuous sheet. Excess water is removed using
+                  vacuum suction, and press rolls and dryer cylinders further
+                  reduce moisture, resulting in a continuous, optimally-moist
+                  sheet of tissue paper.`,
+    icon: <FaRegCalendarAlt />,
+  },
+  {
+    title: "Slitting",
+    date: "2024-03-01",
+    description: ` In the tissue paper converting facility, the large tissue roll
+                  is slit into smaller rolls of predetermined widths. This step
+                  may be done manually or with automated machinery for increased
+                  productivity.`,
+    icon: <FaRegCalendarAlt />,
+  },
+  {
+    title: "Embossing",
+    date: "2024-04-01",
+    description: `  The tissue paper is passed through heated embossing rolls,
+                  which imprint patterns or designs onto the surface. Embossing
+                  not only adds visual appeal but also increases the softness,
+                  strength, and absorbency of the tissue.`,
+    icon: <FaRegCalendarAlt />,
+  },
+  {
+    title: "Perforation",
+    date: "2024-05-01",
+    description: `The tissue paper is perforated at regular intervals to allow
+                  easy tearing for consumers. Perforation can be achieved
+                  through mechanical or laser techniques, ensuring a clean and
+                  consistent tear every time.`,
+    icon: <FaRegCalendarAlt />,
+  },
+  {
+    title: "Packaging",
+    date: "2024-06-01",
+    description: `The tissue paper is packaged into consumer-friendly formats,
+                  such as rolls or folded sheets. Automated machinery is used
+                  for precise and efficient packaging, and materials like
+                  plastic or cardboard are selected based on consumer
+                  preferences and sustainability.`,
+    icon: <FaRegCalendarAlt />,
+  },
+];
 
 const AboutUs = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -29,9 +91,9 @@ const AboutUs = () => {
       {/* <BreadCrumbs items={breadcrumbItems} /> */}
 
       {/* About Us Content */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-6  px-10 items-center">
-        <div className="p-4 text-start text-justify">
-          <h1 className="font-bold text-gray-800 text-4xl mb-3">
+      <section className="grid items-center grid-cols-1 gap-10 mt-6 sm:px-10 md:grid-cols-2">
+        <div className="p-4 text-justify text-start">
+          <h1 className="mb-3 text-4xl font-bold text-gray-800">
             Know More About Me
           </h1>
           <div className="flex gap-1 mb-8">
@@ -69,128 +131,45 @@ const AboutUs = () => {
 
       {/* Manufacturing Process Section */}
       <section className="px-4 py-16 -top-36 md:-top-60 bg-gray-50">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800 mf mb-10">
+        <h2 className="mb-10 text-4xl font-bold text-center text-gray-800 md:text-5xl mf">
           Our Manufacturing Process
         </h2>
-        <div class="container mx-auto px-4 py-8">
-          <div class="relative wrap overflow-hidden">
-            <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border left-1/2"></div>
-            <div class="mb-8 flex justify-between items-center w-full right-timeline">
-              <div class="order-1 w-5/12"></div>
-              <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-12 h-12 rounded-full">
-                <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
-              </div>
-              <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-                <h3 class="mb-3 font-bold text-gray-800 text-xl">
-                  Raw Material Selection
-                </h3>
-                <p class="text-gray-700 leading-tight">
-                  High-quality wood pulp or recycled paper is selected as the
-                  primary raw material. The chosen material is refined and
-                  processed to ensure that the final product has the desired
-                  strength, softness, and absorbency.
-                </p>
-              </div>
-            </div>
-            <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-              <div class="order-1 w-5/12"></div>
-              <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-12 h-12 rounded-full">
-                <h1 class="mx-auto font-semibold text-lg text-white">2</h1>
-              </div>
-              <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-                <h3 class="mb-3 font-bold text-gray-800 text-xl">
-                  Papermaking
-                </h3>
-                <p class="text-gray-700 leading-tight">
-                  The refined pulp mixture is spread over a fourdrinier wire,
-                  forming a continuous sheet. Excess water is removed using
-                  vacuum suction, and press rolls and dryer cylinders further
-                  reduce moisture, resulting in a continuous, optimally-moist
-                  sheet of tissue paper.
-                </p>
-              </div>
-            </div>
-            <div class="mb-8 flex justify-between items-center w-full right-timeline">
-              <div class="order-1 w-5/12"></div>
-              <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-12 h-12 rounded-full">
-                <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
-              </div>
-              <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-                <h3 class="mb-3 font-bold text-gray-800 text-xl">Slitting</h3>
-                <p class="text-gray-700 leading-tight">
-                  In the tissue paper converting facility, the large tissue roll
-                  is slit into smaller rolls of predetermined widths. This step
-                  may be done manually or with automated machinery for increased
-                  productivity.
-                </p>
-              </div>
-            </div>
-
-            <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-              <div class="order-1 w-5/12"></div>
-              <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-12 h-12 rounded-full">
-                <h1 class="mx-auto font-semibold text-lg text-white">4</h1>
-              </div>
-              <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-                <h3 class="mb-3 font-bold text-gray-800 text-xl">Embossing</h3>
-                <p class="text-gray-700 leading-tight">
-                  The tissue paper is passed through heated embossing rolls,
-                  which imprint patterns or designs onto the surface. Embossing
-                  not only adds visual appeal but also increases the softness,
-                  strength, and absorbency of the tissue.
-                </p>
-              </div>
-            </div>
-
-            <div class="mb-8 flex justify-between items-center w-full right-timeline">
-              <div class="order-1 w-5/12"></div>
-              <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-12 h-12 rounded-full">
-                <h1 class="mx-auto font-semibold text-lg text-white">5</h1>
-              </div>
-              <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-                <h3 class="mb-3 font-bold text-gray-800 text-xl">
-                  Perforation
-                </h3>
-                <p class="text-gray-700 leading-tight">
-                  The tissue paper is perforated at regular intervals to allow
-                  easy tearing for consumers. Perforation can be achieved
-                  through mechanical or laser techniques, ensuring a clean and
-                  consistent tear every time.
-                </p>
-              </div>
-            </div>
-
-            <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-              <div class="order-1 w-5/12"></div>
-              <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-12 h-12 rounded-full">
-                <h1 class="mx-auto font-semibold text-lg text-white">6</h1>
-              </div>
-              <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-                <h3 class="mb-3 font-bold text-gray-800 text-xl">Packaging</h3>
-                <p class="text-gray-700 leading-tight">
-                  The tissue paper is packaged into consumer-friendly formats,
-                  such as rolls or folded sheets. Automated machinery is used
-                  for precise and efficient packaging, and materials like
-                  plastic or cardboard are selected based on consumer
-                  preferences and sustainability.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className="container px-2 py-8 mx-auto ">
+          <VerticalTimeline>
+            {timelineData.map((item, index) => (
+              <VerticalTimelineElement
+                key={index}
+                iconStyle={{ background: "#2D3748", color: "#fff" }} // Tailwind background and text color for icon
+                icon={item.icon}
+                contentStyle={{
+                  background: "#F1F0E8", color: "#333",
+                  border: "2px solid #E2E8F0" // Light gray border for content card
+                }}
+                contentArrowStyle={{ borderRight: "7px solid #F1F0E8" }} // Arrow color to match content background
+                lineStyle={{ border: "2px solid #000000" }} // Set the line (vertical divider) border to black
+              >
+                <h3 className="text-xl font-semibold text-gray-800">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
+              </VerticalTimelineElement>
+            ))}
+          </VerticalTimeline>
         </div>
-      </section>
+
+
+      </section >
 
       {/* Team Section */}
-      <section className="px-4 py-16  ">
+      < section className="px-4 py-16 " >
         <h2 className="mb-1 text-4xl font-bold text-center text-black md:text-6xl mf">
           Meet Our Team
         </h2>
         <div className="w-40 h-1 mx-auto mb-8 bg-dark"></div>
 
-        <div className="grid grid-cols-1 gap-10 px-20">
+        <div className="grid grid-cols-1 gap-10 sm:px-20">
           {/* First Section: Text on Left, Image on Right */}
-          <div className="flex items-center justify-between">
-            <div className="max-w-[60vw]">
+          <div className="flex flex-col items-center justify-between sm:flex-row">
+
+            <div className="lg:max-w-[60vw]">
               <p>
                 Harshawardhan Singh is a visionary founder and seasoned business
                 leader with over 21 years of extensive experience in the FMCG,
@@ -226,18 +205,18 @@ const AboutUs = () => {
             </div>
             <div className="flex flex-col items-center">
               <img
-                className="border-2 border-gray-300 rounded-full w-80 h-80 object-cover"
+                className="object-cover border-2 border-gray-300 rounded-full min-w-80 h-80"
                 src={teamImage1}
                 alt="Team Member"
               />
-              <p className="mt-4 text-center font-bold text-2xl">
+              <p className="mt-4 text-2xl font-bold text-center">
                 Harshawardhan Singh
               </p>
             </div>
           </div>
 
           {/* Second Section: Text on Right, Image on Left */}
-          <div className="flex items-center justify-between flex-row-reverse">
+          <div className="flex flex-col items-center justify-between sm:flex-row-reverse">
             <div className="max-w-[60vw]">
               <p>
                 Alexander Mohandas is a seasoned business leader and commerce
@@ -263,45 +242,46 @@ const AboutUs = () => {
             </div>
             <div className="flex flex-col items-center">
               <img
-                className="border-2 border-gray-300 rounded-full w-80 h-80 object-cover"
+                className="object-cover border-2 border-gray-300 rounded-full min-w-80 h-80"
                 src={teamImage2}
                 alt="Team Member"
               />
-              <p className="mt-4 text-center text-xl font-bold">Alexander Mohandas</p>
+              <p className="mt-4 text-xl font-bold text-center">Alexander Mohandas</p>
             </div>
           </div>
 
 
 
 
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col items-center justify-between sm:flex-row">
+
             <div className="max-w-[60vw]">
               <p>
-              Yashashrri H Singh is a dynamic and results-driven co-founder with 18 years of diverse experience across business development, banking, customer relationships, and strategic marketing. As a seasoned leader, she brings a sharp strategic vision and exceptional communication skills to drive business growth and ensure alignment with the company’s goals. 
+                Yashashrri H Singh is a dynamic and results-driven co-founder with 18 years of diverse experience across business development, banking, customer relationships, and strategic marketing. As a seasoned leader, she brings a sharp strategic vision and exceptional communication skills to drive business growth and ensure alignment with the company’s goals.
               </p>
 
               <p>
-              In her role at Kapital Seed 9, Yashashrri has been instrumental in steering the company's growth through innovative marketing and customer-centric strategies. Her background includes significant experience with global brands like TNT, where she handled commercial billing processes for the Middle East, UK, and Nordic regions, as well as leadership roles at Accenture in the UK and Nordic process division.
+                In her role at Kapital Seed 9, Yashashrri has been instrumental in steering the company's growth through innovative marketing and customer-centric strategies. Her background includes significant experience with global brands like TNT, where she handled commercial billing processes for the Middle East, UK, and Nordic regions, as well as leadership roles at Accenture in the UK and Nordic process division.
               </p>
               <p>
-              Yashashrri’s career showcases her deep expertise in strategic thinking, leadership, and relationship management. Her dedication to excellence and proven track record of success make her a key player in building robust business foundations and fostering long-lasting client relationships.
+                Yashashrri’s career showcases her deep expertise in strategic thinking, leadership, and relationship management. Her dedication to excellence and proven track record of success make her a key player in building robust business foundations and fostering long-lasting client relationships.
               </p>
             </div>
             <div className="flex flex-col items-center">
               <img
-                className="border-2 border-gray-300 rounded-full w-80 h-80 object-cover"
+                className="object-cover border-2 border-gray-300 rounded-full min-w-80 h-80"
                 src={teamImage3}
                 alt="Team Member"
               />
-              <p className="mt-4 text-center font-bold text-2xl">
-              Yashashrri H Singh
+              <p className="mt-4 text-2xl font-bold text-center">
+                Yashashrri H Singh
               </p>
             </div>
           </div>
 
         </div>
-      </section>
-    </div>
+      </ section>
+    </div >
   );
 };
 
