@@ -16,6 +16,10 @@ const CartPage = ({ cart, setCart }) => {
     address: "",
   });
 
+  const [checkoutActive, setCheckoutActive] = useState(false)
+
+  let price = 1699
+
   const [loadingToastId, setLoadingToastId] = useState(null);
   const [success, setSuccess] = useState(false)
   const navigate = useNavigate()
@@ -31,18 +35,16 @@ const CartPage = ({ cart, setCart }) => {
     setCart(updatedCart);
   };
 
-  const increaseQuantity = (index, proInd) => {
+  const increaseQuantity = (index) => {
     const updatedCart = [...cart];
-    updatedCart[proInd].options[index].quantity = Number(updatedCart[proInd].options[index].quantity) + 1;
+    updatedCart[index].quantity += 1;
     updateCartInLocalStorage(updatedCart);
   };
 
-  console.log(cart)
-
-  const decreaseQuantity = (index, proInd) => {
+  const decreaseQuantity = (index) => {
     const updatedCart = [...cart];
-    if (updatedCart[proInd].options[index].quantity > 1) {
-      updatedCart[proInd].options[index].quantity = Number(updatedCart[proInd].options[index].quantity) - 1;
+    if (updatedCart[index].quantity > 1) {
+      updatedCart[index].quantity -= 1;
       updateCartInLocalStorage(updatedCart);
     }
   };
@@ -51,31 +53,6 @@ const CartPage = ({ cart, setCart }) => {
     const updatedCart = cart.filter((_, i) => i !== index);
     updateCartInLocalStorage(updatedCart);
   };
-
-  const removeOptionFromProduct = (optionIndex, proInd) => {
-    // Create a new updated cart by filtering the specific option within the product
-    const updatedCart = cart.map((item, index) => {
-      if (index === proInd) {
-        // Filter out the option at optionIndex
-        const updatedOptions = item.options.filter((_, optIndex) => optIndex !== optionIndex);
-
-        // If there are no options left, remove the whole product
-        if (updatedOptions.length === 0) {
-          return null; // Returning null will allow us to filter out this item in the next step
-        }
-
-        return {
-          ...item,
-          options: updatedOptions,
-        };
-      }
-      return item; // For other products, leave them unchanged
-    }).filter(item => item !== null); // Remove any products that are now null
-
-    // After filtering the option or product, update the cart in local storage
-    updateCartInLocalStorage(updatedCart);
-  };
-
 
   const clearCart = () => {
     localStorage.removeItem("cart");
@@ -189,92 +166,12 @@ const CartPage = ({ cart, setCart }) => {
           </div>
         </div>
       </div> :
-        <div className="container sm:px-10 px-4 max-w-[77rem] mx-auto pt-8">
-          {/* <h2 className="mt-6 mb-10 text-5xl text-center mf">Your Cart</h2> */}
-          <ul className="space-y-6">
-            {cart.map((item, proInd) => (
-              <div className="relative p-6 space-y-4 overflow-hidden border rounded-lg shadow-md bg-gray-50" key={item?.itemCode}>
-                <button
-                  onClick={() => removeItem(proInd)}
-                  className="absolute top-0 right-0 p-[0.4rem] ml-10 font-bold text-red-500 shadow-md bg-gray-200 text-[1.5rem] md:ml-60"
-                >
-                  <MdDelete />
-                </button>
-                <div className="flex items-center gap-6">
-                  <img className="object-cover rounded-lg w-[20%] md:w-[15%]" src={item?.imageUrl} alt={item?.name} />
-                  <div className="space-y-2">
-                    <p className="text-xl font-semibold text-gray-800">{item?.name}</p>
-                    <p className="text-sm text-gray-600">{item?.description}</p>
-                    <p className="text-sm text-gray-500">Quality: {item?.quality}</p>
-                  </div>
-                </div>
-                <div className="relative flex flex-wrap items-center justify-between gap-2 p-3 pr-16 bg-white border rounded-lg shadow-sm" >
-                  {/* <button
-                    onClick={() => removeOptionFromProduct(index, proInd)}
-                    className="absolute top-0 right-0 p-[0.4rem] ml-10 font-bold text-red-500 shadow-md bg-gray-200 text-[1.5rem] md:ml-60"
-                  >
-                    <MdDelete />
-                  </button> */}
-                  <div className="flex items-center gap-2 mr-6">
-                    <FaBoxOpen className="text-gray-600" />
-                    <p className="text-gray-700"><strong>Packaging:</strong> {item?.Packaging}</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <FaBox className="text-gray-600" />
-                    <p className="text-gray-700"><strong>Ply:</strong> {item?.ply}</p>
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <FaIndustry className="text-gray-600" />
-                    <p className="font-medium text-gray-700"><strong>Raw Materials:</strong> {item?.rawMaterial}</p>
-                  </div>
-
-                  {/* <div className="flex items-center overflow-hidden border border-gray-400 rounded shadow">
-                    <button
-                      onClick={() => decreaseQuantity(index, proInd)}
-                      className="text-[1rem] bg-red-500 text-white size-8 flex items-center justify-center"
-                      disabled={cart.quantity <= 1}
-                    >
-                      <FaMinus />
-                    </button>
-                    <span className="min-w-[3rem] px-2 text-center">
-                      {cart.quantity}
-                    </span>
-                    <button
-                      onClick={() => increaseQuantity(index, proInd)}
-                      className="text-[1rem] bg-green-500 text-white flex items-center justify-center   size-8"
-                    >
-                      <FaPlus />
-                    </button>
-                  </div> */}
-
-
-                </div>
-              </div>
-            ))}
-          </ul>
-
-          {cart.length === 0 ?
-            <div className="flex flex-col items-center h-[50vh] justify-center gap-4 py-6">
-              <h2 className="text-[1.4rem] font-semibold">😞 OOPS! Your cart is empty</h2>
-              <Link to={"/all-products"} className="px-5 py-3 font-semibold tracking-wide text-center text-white bg-green-700 rounded hover:bg-dark">
-                Continue Shopping
-              </Link>
-            </div> :
-            <div className="flex flex-col items-end justify-center gap-2 pt-4 font-semibold text-white sm:flex-row">
-              <button onClick={clearCart} className="px-2 py-3 text-center bg-red-600 rounded w-full sm:max-w-[18rem] hover:bg-red-700">
-                Clear Cart
-              </button>
-              <Link to={"/all-products"} className="px-2 py-3 text-center bg-green-700 rounded w-full sm:max-w-[18rem] hover:bg-dark">
-                Continue Shopping
-              </Link>
-
-            </div>}
-
-          {cart.length !== 0 &&
-            <div className=" px-4 mt-10 mx-auto max-w-[40rem]">
-              <div>
-                <form onSubmit={handleOrder} noValidate className="flex flex-col gap-4">
+        checkoutActive ?
+          <div className="container mb-40 sm:px-10 gap-4 px-2 lg:flex max-w-[80rem] mx-auto pt-8">
+            {/* <h2 className="mt-6 mb-10 text-5xl text-center mf">Your Cart</h2> */}
+            {cart.length !== 0 &&
+              <div className=" px-4 mx-auto bg-slate-50 border border-slate-300 rounded-md py-4 max-w-[40rem] w-full">
+                <form onSubmit={handleOrder} noValidate className="top-0 flex flex-col gap-4 lg:sticky">
                   <div className="flex flex-col">
                     <label className="text-[0.95rem] px-1 text-gray-600 font-semibold">Name</label>
                     <input
@@ -322,44 +219,256 @@ const CartPage = ({ cart, setCart }) => {
                       value={userInfo.address}
                       onChange={handleChange}
                       placeholder="Address"
-                      rows={2}
-                      className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-dark"
+                      rows={4}
+                      className="w-full p-2 border rounded resize-none focus:outline-none focus:ring-1 focus:ring-dark"
                       required
                     />
                   </div>
 
-                  <button
-                    type='submit'
-                    className="relative flex items-center w-full px-6 py-[0.6rem] overflow-hidden font-medium text-center transition-all rounded-md bg-[#2F8B69] group"
-                  >
-                    <span
-                      className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rounded bg-dark group-hover:-mr-4 group-hover:-mt-4"
-                    >
-                      <span
-                        className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"
-                      ></span>
-                    </span>
-                    <span
-                      className="absolute bottom-0 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rotate-180 rounded bg-dark group-hover:-ml-4 group-hover:-mb-4"
-                    >
-                      <span
-                        className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"
-                      ></span>
-                    </span>
-                    <span
-                      className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full rounded-md bg-dark group-hover:translate-x-0"
-                    ></span>
-                    <span
-                      className="relative flex w-full text-center text-white transition-colors duration-200 ease-in-out group-hover:text-white"
-                    > <span className='flex items-center justify-center w-full gap-2'>Submit order <IoMdSend /></span>
-                    </span>
-                  </button>
+
                 </form>
                 <ToastContainer />
 
-              </div>
-            </div>}
-        </div>
+              </div>}
+
+            {cart.length === 0 ?
+              <div className="flex flex-col w-full items-center h-[50vh] justify-center gap-4 py-6">
+                <h2 className="text-[1.4rem] font-semibold">😞 OOPS! Your cart is empty</h2>
+                <Link to={"/all-products"} className="px-5 py-3 font-semibold tracking-wide text-center text-white bg-green-700 rounded hover:bg-dark">
+                  Continue Shopping
+                </Link>
+              </div> :
+              <div className="bottom-0 flex flex-wrap items-center justify-between w-full gap-4 p-1 mt-4 border rounded-md shadow-md h-fit lg:mt-0 bg-light border-[#d2ceb2] max-w-[40rem] mx-auto">
+
+                <div className="flex flex-wrap items-center justify-center w-full bg-white rounded lg:items-start lg:gap-4 lg:flex-col">
+                  <ul className="mb-4 space-y-6">
+                    {cart.map((item, index) => (
+                      <div className="relative p-4 py-1 space-y-2 overflow-hidden border rounded-md bg-gray-50" key={item?.itemCode}>
+                        <button
+                          onClick={() => removeItem(index)}
+                          className="absolute top-0 right-0 p-[0.4rem] ml-10 font-bold text-red-500 shadow-md bg-gray-200 text-[1.5rem] md:ml-60"
+                        >
+                          <MdDelete />
+                        </button>
+                        <div className="relative flex items-center gap-2 sm:flex-row">
+                          <div className="relative sm:w-[25%] w-full max-w-[25%] md:w-[20%] lg:w-[20%]">
+                            <img className="object-cover rounded-lg " src={item?.previews[0].previewUrl} alt={item?.name} />
+                            <div className="absolute top-[-0.5rem] border border-gray-400 -left-[0.5rem] flex items-center justify-center rounded-full bg-gray-50 font-semibold size-6 text-[0.9rem]  p-1">
+                              {item?.quantity}
+                            </div>
+                          </div>
+                          <div className="space-y-1">
+                            <p className="mr-6 font-normal text-gray-800 sm:font-semibold line-clamp-2 text-md">{item?.name}</p>
+
+                          </div>
+                        </div>
+                        <div className="relative flex flex-wrap items-center justify-between gap-2 p-3 py-1 bg-white border rounded-md shadow-sm" >
+
+                          <p className="flex justify-between w-full text-gray-700 lg:px-1" >Subtotal : <span className="font-semibold text-gray-700 ">₹{price}</span></p>
+
+                        </div>
+                      </div>
+                    ))}
+                  </ul>
+                  <p className="flex justify-between w-full px-4 text-gray-700 " >Total : <span className="font-semibold text-black text-[1.1rem]">₹{price}</span></p>
+                  <button className="w-full p-2 m-1 mt-2 font-semibold text-white bg-blue-500 rounded sm:mt-1 ">Place Order</button>
+                </div>
+                <div className="flex items-center justify-center w-full gap-2 font-semibold text-white sm:flex-row">
+                  <button onClick={clearCart} className=" p-2 font-semibold text-center text-white bg-red-500 rounded w-[12rem] hover:bg-red-600">
+                    Clear Cart
+                  </button>
+                  <Link to={"/all-products"} className="w-full p-2 font-semibold text-center text-white bg-green-600 rounded hover:bg-dark">
+                    Continue Shopping
+                  </Link>
+
+                </div>
+              </div>}
+
+
+
+
+          </div > :
+          <div className="container mb-40 sm:px-10 px-2 lg:flex gap-2 max-w-[88rem] mx-auto pt-8">
+            {/* <h2 className="mt-6 mb-10 text-5xl text-center mf">Your Cart</h2> */}
+            <ul className="space-y-6">
+              {cart.map((item, index) => (
+                <div className="relative p-4 py-1 space-y-4 overflow-hidden border rounded-lg shadow-md bg-gray-50" key={item?.itemCode}>
+                  <button
+                    onClick={() => removeItem(index)}
+                    className="absolute top-0 right-0 p-[0.4rem] ml-10 font-bold text-red-500 shadow-md bg-gray-200 text-[1.5rem] md:ml-60"
+                  >
+                    <MdDelete />
+                  </button>
+                  <div className="flex flex-col items-center gap-6 sm:flex-row">
+                    <img className="object-cover rounded-lg sm:w-[30%] w-full max-w-[20rem] md:w-[25%] lg:w-[20%]" src={item?.imageUrl} alt={item?.name} />
+                    <div className="space-y-2">
+                      <p className="pr-10 text-xl font-semibold text-gray-800">{item?.name}</p>
+                      <p className="text-sm text-gray-600">{item?.description}</p>
+                      <p className="text-sm text-gray-500">Quality: {item?.quality}</p>
+                    </div>
+                  </div>
+                  <div className="relative flex flex-wrap items-center justify-between gap-2 p-3 pr-16 bg-white border rounded-lg shadow-sm" >
+                    {/* <button
+                  onClick={() => removeOptionFromProduct(index, proInd)}
+                  className="absolute top-0 right-0 p-[0.4rem] ml-10 font-bold text-red-500 shadow-md bg-gray-200 text-[1.5rem] md:ml-60"
+                >
+                  <MdDelete />
+                </button> */}
+                    <div className="flex items-center gap-2 mr-6">
+                      <FaBoxOpen className="text-gray-600" />
+                      <p className="text-gray-700"><strong>Dimension:</strong> {item?.dimensions}</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <FaBox className="text-gray-600" />
+                      <p className="text-gray-700"><strong>Ply:</strong> {item?.ply}</p>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <FaIndustry className="text-gray-600" />
+                      <p className="flex items-center gap-2 font-medium text-gray-700"><strong>Quantity </strong> <div className="flex items-center overflow-hidden border border-gray-400 rounded shadow">
+                        <button
+                          onClick={() => decreaseQuantity(index)}
+                          className="text-[1rem] bg-red-500 text-white size-8 flex items-center justify-center"
+                          disabled={item.quantity <= 1}
+                        >
+                          <FaMinus />
+                        </button>
+                        <span className="min-w-[3rem] px-2 text-center">
+                          {item.quantity}
+                        </span>
+                        <button
+                          onClick={() => increaseQuantity(index)}
+                          className="text-[1rem] bg-green-500 text-white flex items-center justify-center   size-8"
+                        >
+                          <FaPlus />
+                        </button>
+                      </div> </p>
+                    </div>
+
+
+
+
+                  </div>
+                </div>
+              ))}
+            </ul>
+
+            {cart.length === 0 ?
+              <div className="flex flex-col items-center h-[50vh] justify-center gap-4 py-6">
+                <h2 className="text-[1.4rem] font-semibold">😞 OOPS! Your cart is empty</h2>
+                <Link to={"/all-products"} className="px-5 py-3 font-semibold tracking-wide text-center text-white bg-green-700 rounded hover:bg-dark">
+                  Continue Shopping
+                </Link>
+              </div> :
+              <div className="sticky mt-4 lg:mt-0 lg:sticky lg:top-0 lg:max-w-[25rem] bottom-0 flex flex-wrap items-center justify-between w-full gap-4 p-1 border rounded-md shadow-md bg-light">
+
+                <div className="flex flex-wrap items-center justify-between w-full px-3 py-2 bg-white rounded lg:p-4 lg:items-start lg:gap-4 lg:flex-col">
+                  <span className="text-[1.05rem] lg:pb-2 lg:border-b lg:w-full">Cart Total</span>
+                  <p className="flex justify-between text-gray-700 lg:px-1 lg:w-full" >Subtotal : <span className="font-semibold text-black text-[1.1rem]">₹{price}</span></p>
+                  <button onClick={() => setCheckoutActive(true)} className="w-full p-2 px-6 m-1 mt-2 font-semibold text-white bg-blue-500 rounded sm:w-fit sm:mt-1 lg:w-full">Checkout</button>
+                </div>
+                <div className="flex items-center justify-center w-full gap-2 font-semibold text-white sm:flex-row">
+                  <button onClick={clearCart} className=" p-2 font-semibold text-center text-white bg-red-500 rounded w-[12rem] hover:bg-red-600">
+                    Clear Cart
+                  </button>
+                  <Link to={"/all-products"} className="w-full p-2 font-semibold text-center text-white bg-green-600 rounded hover:bg-dark">
+                    Continue Shopping
+                  </Link>
+
+                </div>
+              </div>}
+
+            {/* {cart.length !== 0 &&
+          <div className=" px-4 mt-10 mx-auto max-w-[40rem]">
+            <div>
+              <form onSubmit={handleOrder} noValidate className="flex flex-col gap-4">
+                <div className="flex flex-col">
+                  <label className="text-[0.95rem] px-1 text-gray-600 font-semibold">Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-dark"
+
+                    value={userInfo.name}
+                    onChange={handleChange}
+                    placeholder="Enter Name..."
+                    required
+                  />
+                </div>
+
+                <div className="flex flex-col ">
+                  <label className="text-[0.95rem] px-1 text-gray-600 font-semibold">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={userInfo.email}
+                    onChange={handleChange}
+                    placeholder="Email"
+                    required
+                    className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-dark"
+                  />
+                </div>
+
+                <div className="flex flex-col">
+                  <label className="text-[0.95rem] px-1 text-gray-600 font-semibold">Phone</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={userInfo.phone}
+                    onChange={handleChange}
+                    className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-dark"
+                    placeholder="Phone"
+                    required
+                  />
+                </div>
+
+                <div className="flex flex-col">
+                  <label className="text-[0.95rem] px-1 text-gray-600 font-semibold">Address</label>
+                  <textarea
+                    name="address"
+                    value={userInfo.address}
+                    onChange={handleChange}
+                    placeholder="Address"
+                    rows={2}
+                    className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-dark"
+                    required
+                  />
+                </div>
+
+                <button
+                  type='submit'
+                  className="relative flex items-center w-full px-6 py-[0.6rem] overflow-hidden font-medium text-center transition-all rounded-md bg-[#2F8B69] group"
+                >
+                  <span
+                    className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rounded bg-dark group-hover:-mr-4 group-hover:-mt-4"
+                  >
+                    <span
+                      className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"
+                    ></span>
+                  </span>
+                  <span
+                    className="absolute bottom-0 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rotate-180 rounded bg-dark group-hover:-ml-4 group-hover:-mb-4"
+                  >
+                    <span
+                      className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"
+                    ></span>
+                  </span>
+                  <span
+                    className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full rounded-md bg-dark group-hover:translate-x-0"
+                  ></span>
+                  <span
+                    className="relative flex w-full text-center text-white transition-colors duration-200 ease-in-out group-hover:text-white"
+                  > <span className='flex items-center justify-center w-full gap-2'>Submit order <IoMdSend /></span>
+                  </span>
+                </button>
+              </form>
+              <ToastContainer />
+
+            </div>
+          </div>} */}
+
+
+          </div >
       }
 
     </>

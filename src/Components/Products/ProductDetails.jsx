@@ -7,35 +7,15 @@ import PropTypes from "prop-types";
 import { FaPlayCircle } from "react-icons/fa";
 import { FaMinus, FaPlus } from "react-icons/fa6";
 
-const productI = {
-  previews: [
-    {
-      previewUrl:
-        "https://cdn.easyfrontend.com/pictures/ecommerce/headphone2.png",
-      thumbUrl:
-        "https://cdn.easyfrontend.com/pictures/ecommerce/headphone2-1.png",
-    },
-    {
-      previewUrl:
-        "https://cdn.easyfrontend.com/pictures/ecommerce/headphone2-2.png",
-      thumbUrl:
-        "https://cdn.easyfrontend.com/pictures/ecommerce/headphone2-2.png",
-    },
-    {
-      previewUrl:
-        "https://cdn.easyfrontend.com/pictures/ecommerce/headphone2-3.png",
-      thumbUrl:
-        "https://cdn.easyfrontend.com/pictures/ecommerce/headphone2-3.png",
-    },
-  ],
-};
 
 const ProductDetails = ({ cart, setCart }) => {
   const { itemCode } = useParams();
   const [product, setProduct] = useState(null);
   const [mainImage, setMainImage] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [quantity, setQuantity] = useState(1); // Initialize quantity state
+  const [quantity, setQuantity] = useState(0); // Initialize quantity state
+
+  let price = 289
 
   useEffect(() => {
     const foundProduct = Allproducts.find((prod) => prod.itemCode === itemCode);
@@ -88,7 +68,7 @@ const ProductDetails = ({ cart, setCart }) => {
 
   const decreaseQuantity = () => {
     setQuantity((prevQuantity) => {
-      if (prevQuantity > 1) {
+      if (prevQuantity >= 1) {
         const newQuantity = prevQuantity - 1;
         addToCart(newQuantity); // Auto update cart when decreasing
         return newQuantity;
@@ -217,7 +197,7 @@ const ProductDetails = ({ cart, setCart }) => {
               <p className="font-medium text-green-600">Special price</p>
               <div className="flex items-baseline space-x-2">
                 {/* Current price */}
-                <span className="text-2xl font-bold text-gray-900">₹289</span>
+                <span className="text-2xl font-bold text-gray-900">₹{quantity < 1 ? price : price * quantity}</span>
                 {/* Original price */}
                 <span className="text-gray-500 line-through">₹799</span>
                 {/* Discount percentage */}
@@ -226,22 +206,25 @@ const ProductDetails = ({ cart, setCart }) => {
             </div>
 
             <div className="flex items-center justify-start gap-4 mt-2">
-              <div className="w-full actions">
-                <div>
-                  <div onClick={decreaseQuantity}>
-                    <FaMinus />
-                  </div>
-                  {quantity}
-                  <div onClick={increaseQuantity}>
-                    <FaPlus />
-                  </div>
-                </div>
-                <button
-                  // onClick={() => setIsModalOpen(true)}
-                  className="w-full px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-700"
-                >
-                  Add to Cart
-                </button>
+              <div className="min-w-[35%] actions">
+
+                {
+                  quantity < 1 ? <button
+                    onClick={increaseQuantity}
+                    className="w-full px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700"
+                  >
+                    Add to Cart
+                  </button> :
+                    <div className="flex items-center justify-between font-semibold text-white bg-blue-700 rounded-md">
+                      <div onClick={decreaseQuantity} className="p-3 px-5 cursor-pointer">
+                        <FaMinus />
+                      </div>
+                      <span className="text-[1.2rem]">{quantity}</span>
+                      <div onClick={increaseQuantity} className="p-3 px-5 cursor-pointer">
+                        <FaPlus />
+                      </div>
+                    </div>
+                }
               </div>
               <Link to={'/cart'} className="w-full px-4 py-2 text-center text-white rounded bg-dark hover:bg-[#1d8883]"
               >
@@ -292,92 +275,7 @@ const ProductDetails = ({ cart, setCart }) => {
       <div>
         <ExploreProducts cart={cart} setCart={setCart} />
       </div>
-      {
-        isModalOpen && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="p-6 bg-white rounded-lg shadow-lg w-96">
-              <h2 className="mb-4 text-xl font-semibold">Select Options</h2>
 
-              <div className="space-y-4">
-                {/* Raw Material */}
-                <div>
-                  <label className="block font-semibold">Raw Material:</label>
-                  <select
-                    className="w-full p-2 border border-gray-300 rounded"
-                    value={selectedOptions.rawMaterial}
-                    onChange={(e) =>
-                      handleOptionChange("rawMaterial", e.target.value)
-                    }
-                  >
-                    <option value="">Select</option>
-                    <option value="Virgin">Virgin</option>
-                    <option value="Recycle">Recycle</option>
-                    <option value="Bamboo">Bamboo</option>
-                  </select>
-                </div>
-
-                {/* Ply */}
-                <div>
-                  <label className="block font-semibold">Ply:</label>
-                  <select
-                    className="w-full p-2 border border-gray-300 rounded"
-                    value={selectedOptions.ply}
-                    onChange={(e) => handleOptionChange("ply", e.target.value)}
-                  >
-                    <option value="">Select</option>
-                    <option value="1 Ply">1 Ply</option>
-                    <option value="2 Ply">2 Ply</option>
-                    <option value="3 Ply">3 Ply</option>
-                    <option value="4 Ply">4 Ply</option>
-                  </select>
-                </div>
-
-                {/* Packaging */}
-                <div>
-                  <label className="block font-semibold">Packaging:</label>
-                  <select
-                    className="w-full p-2 border border-gray-300 rounded"
-                    value={selectedOptions.packaging}
-                    onChange={(e) =>
-                      handleOptionChange("packaging", e.target.value)
-                    }
-                  >
-                    <option value="">Select</option>
-                    <option value="18 rolls (MOQ: 36000 rolls)">
-                      18 rolls (MOQ: 36000 rolls)
-                    </option>
-                    <option value="24 rolls (MOQ: 48000 rolls)">
-                      24 rolls (MOQ: 48000 rolls)
-                    </option>
-                  </select>
-                </div>
-              </div>
-              <div className="flex items-center justify-center gap-3 mt-4">
-                <label className="block font-semibold">Quantity </label>
-                :
-                <input
-                  className="w-full p-2 border border-gray-300 rounded outline-none"
-
-                  type="text" value={selectedOptions.quantity} onChange={(e) => handleOptionChange("quantity", e.target.value)} />
-              </div>
-              <div className="flex justify-end mt-6 space-x-4">
-                <button
-                  onClick={() => setIsModalOpen(false)}
-                  className="px-4 py-2 border border-gray-300 rounded"
-                >
-                  Cancel
-                </button>
-                <button
-                  onClick={addToCart}
-                  className="px-4 py-2 text-white bg-green-500 rounded hover:bg-green-700"
-                >
-                  Confirm
-                </button>
-              </div>
-            </div>
-          </div>
-        )
-      }
     </>
   );
 };
