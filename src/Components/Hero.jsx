@@ -1,18 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import tisssuevideo from "../assets/tisssuevideo.mp4";
+import tisssuevideo from "../assets/tissuev.mp4";
 import AnimatedText from "./AnimatedText";
 
 const Hero = () => {
   return (
     // <ShineBorder className={"w-full "}>
-    <div className=" flex mx-6 items-center h-[85vh] relative rounded-xl  overflow-hidden bg-center bg-cover ">
+    <div className=" flex  items-center h-[85vh] relative  overflow-hidden bg-center bg-cover ">
       <video
         src={tisssuevideo}
         autoPlay
         loop
         muted
-        className="absolute inset-0 object-cover w-full h-full rounded-xl"
+        className="absolute inset-0 object-cover w-full h-full"
       ></video>
 
       {/* Black Overlay */}

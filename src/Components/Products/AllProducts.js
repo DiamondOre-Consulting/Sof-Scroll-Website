@@ -1,55 +1,58 @@
 const Allproducts = [
-  {
-    name: "Soft Tissue Paper Napkins",
-    itemCode: "STPN10027",
-    pulls: "100 Sheet",
-    ply: 1,
-    gsm: 17,
-    quality: "SUPER SOFT",
-    weight: "110gms",
-    description: "(1 bundle consist of 112 packets)",
-    setOfPackets: "1 Twenty Foot Container",
-    previews: [
-      {
-        previewUrl:
-          "https://rukminim2.flixcart.com/image/1200/1200/l20rma80/facial-tissue/l/9/t/soft-tissue-paper-napkin-tissue-paper-100-pack-of-1-1-100-fliqa-original-imagdgpqyqgfavgp.jpeg",
-        thumbUrl:
-          "https://rukminim2.flixcart.com/image/1200/1200/l20rma80/facial-tissue/l/9/t/soft-tissue-paper-napkin-tissue-paper-100-pack-of-1-1-100-fliqa-original-imagdgpqyqgfavgp.jpeg",
-      },
-      {
-        previewUrl:
-          "https://s3.tebi.io/sof-scroll/napkin-wooden-table.jpg",
-        thumbUrl:
-          "https://s3.tebi.io/sof-scroll/napkin-wooden-table.jpg",
-      },
-      {
-        previewUrl:
-          "https://s3.tebi.io/sof-scroll/person-holding-white-nasal-handkerchief.jpg",
-        thumbUrl:
-          "https://s3.tebi.io/sof-scroll/person-holding-white-nasal-handkerchief.jpg",
-      },
+  // {
+  //   name: "Soft Tissue Paper Napkins",
+  //   itemCode: "STPN10027",
+  //   pulls: "100 Sheet",
+  //   ply: 1,
+  //   gsm: 17,
+  //   quality: "SUPER SOFT",
+  //   weight: "110gms",
+  //   description: "(1 bundle consist of 112 packets)",
+  //   setOfPackets: "1 Twenty Foot Container",
+  //   previews: [
+  //     {
+  //       previewUrl:
+  //         "https://rukminim2.flixcart.com/image/1200/1200/l20rma80/facial-tissue/l/9/t/soft-tissue-paper-napkin-tissue-paper-100-pack-of-1-1-100-fliqa-original-imagdgpqyqgfavgp.jpeg",
+  //       thumbUrl:
+  //         "https://rukminim2.flixcart.com/image/1200/1200/l20rma80/facial-tissue/l/9/t/soft-tissue-paper-napkin-tissue-paper-100-pack-of-1-1-100-fliqa-original-imagdgpqyqgfavgp.jpeg",
+  //     },
+  //     {
+  //       previewUrl:
+  //         "https://s3.tebi.io/sof-scroll/napkin-wooden-table.jpg",
+  //       thumbUrl:
+  //         "https://s3.tebi.io/sof-scroll/napkin-wooden-table.jpg",
+  //     },
+  //     {
+  //       previewUrl:
+  //         "https://s3.tebi.io/sof-scroll/person-holding-white-nasal-handkerchief.jpg",
+  //       thumbUrl:
+  //         "https://s3.tebi.io/sof-scroll/person-holding-white-nasal-handkerchief.jpg",
+  //     },
 
-      {
-        previewUrl:
-          "https://s3.tebi.io/sof-scroll/3873218-hd_1920_1080_25fps.mp4",
-        thumbUrl:
-          "https://s3.tebi.io/sof-scroll/3873218-hd_1920_1080_25fps.mp4",
-      },
+  //     {
+  //       previewUrl:
+  //         "https://s3.tebi.io/sof-scroll/3873218-hd_1920_1080_25fps.mp4",
+  //       thumbUrl:
+  //         "https://s3.tebi.io/sof-scroll/3873218-hd_1920_1080_25fps.mp4",
+  //     },
 
-    ],
-    imageUrl: "https://rukminim2.flixcart.com/image/1200/1200/l20rma80/facial-tissue/l/9/t/soft-tissue-paper-napkin-tissue-paper-100-pack-of-1-1-100-fliqa-original-imagdgpqyqgfavgp.jpeg", // Dummy placeholder image URL
-    fullDesc: "Soft Tissue Paper Napkins (Item Code: STPN10027) offer a premium, ultra-soft touch with 100 single-ply sheets at 17 GSM. Each packet is designed for maximum comfort and absorbency, weighing 110 grams for a lightweight yet durable feel. Delivered in bundles of 112 packets, these napkins are ideal for bulk needs and come packaged in a 20-foot container, ensuring ample supply for any setting. Perfect for those seeking quality and convenience in every sheet."
-  },
+  //   ],
+  //   imageUrl: "https://rukminim2.flixcart.com/image/1200/1200/l20rma80/facial-tissue/l/9/t/soft-tissue-paper-napkin-tissue-paper-100-pack-of-1-1-100-fliqa-original-imagdgpqyqgfavgp.jpeg", // Dummy placeholder image URL
+  //   fullDesc: "Soft Tissue Paper Napkins (Item Code: STPN10027) offer a premium, ultra-soft touch with 100 single-ply sheets at 17 GSM. Each packet is designed for maximum comfort and absorbency, weighing 110 grams for a lightweight yet durable feel. Delivered in bundles of 112 packets, these napkins are ideal for bulk needs and come packaged in a 20-foot container, ensuring ample supply for any setting. Perfect for those seeking quality and convenience in every sheet."
+  // },
   {
     name: "Toilet Tissue Paper Roll",
+    category:"Toilet Rolls",
     itemCode: "TR100100",
-    pulls: "300 Pulls",
-    ply: 2,
-    gsm: 17,
+    pulls: "140 Pulls",
+    dimensions: "10 cm * 12.0 cm",
+    ply: 3,
+    gsm: 15,
     quality: "SOFT & HIGHLY OBSERVANT",
+    material: "Virgin/Wood Pulp",
     weight: "110gms",
-    description: "128 Rolls in 1 Carton",
-    setOfPackets: "1 Twenty Foot Container",
+    description: "24 Rolls in a Packet",
+    JumboPackaging: "6 packets equal to 144 Rolls in 1 Carton",
     previews: [
       {
         previewUrl:
