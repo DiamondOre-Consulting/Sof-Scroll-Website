@@ -146,9 +146,9 @@ const Allproducts = [
     previews: [
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532209/SofScroll/n5nvxel0ecnqrgbkyygt.jpg",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532209/SofScroll/g3icm2qhs2kopr9jzpio.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532209/SofScroll/n5nvxel0ecnqrgbkyygt.jpg",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532209/SofScroll/g3icm2qhs2kopr9jzpio.jpg",
       },
       {
         previewUrl:
@@ -205,7 +205,7 @@ const Allproducts = [
           "https://m.media-amazon.com/images/I/31GYpPjkDOL.AC_UF1000,1000_QL80.jpg",
       },
     ],
-    imageUrl: "https://s3.tebi.io/sof-scroll/pexels-hermaion-191845%20%281%29.jpg", // Dummy placeholder image URL
+    imageUrl: "https://s3.tebi.io/sof-scroll/pexels-arturoaez220-10744480.jpg", // Dummy placeholder image URL
     fullDesc: "The Toilet Tissue Paper Roll (Item Code: TR100100) provides 300 soft, highly absorbent 2-ply sheets per roll at 17 GSM, ensuring optimal comfort and durability. Each roll weighs 110 grams, offering excellent quality in every pull. Packed conveniently with 128 rolls per carton, these tissue rolls are available in bulk within a 20-foot container, making them ideal for high-demand settings that require consistent supply and premium quality."
   },
 
@@ -230,24 +230,24 @@ const Allproducts = [
     previews: [
       {
         previewUrl:
-          "https://s3.tebi.io/sof-scroll/pexels-arturoaez220-10744480.jpg",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1731665988/SofScroll/v8qzklhlakntau1dqyth.jpg",
         thumbUrl:
-          "https://s3.tebi.io/sof-scroll/pexels-arturoaez220-10744480.jpg",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1731665988/SofScroll/v8qzklhlakntau1dqyth.jpg",
       },
       {
         previewUrl:
-          "https://s3.tebi.io/sof-scroll/pexels-hermaion-191845%20%281%29.jpg",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532208/SofScroll/vfj9mgzxe3bujuxaww58.jpg",
         thumbUrl:
-          "https://s3.tebi.io/sof-scroll/pexels-hermaion-191845%20%281%29.jpg",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532208/SofScroll/vfj9mgzxe3bujuxaww58.jpg",
       },
       {
         previewUrl:
-          "https://m.media-amazon.com/images/I/31GYpPjkDOL.AC_UF1000,1000_QL80.jpg",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/btyz4qqfbnhef42ex5qb.jpg",
         thumbUrl:
-          "https://m.media-amazon.com/images/I/31GYpPjkDOL.AC_UF1000,1000_QL80.jpg",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/btyz4qqfbnhef42ex5qb.jpg",
       },
     ],
-    imageUrl: "https://s3.tebi.io/sof-scroll/pexels-hermaion-191845%20%281%29.jpg", // Dummy placeholder image URL
+    imageUrl: "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1731665988/SofScroll/v8qzklhlakntau1dqyth.jpg", // Dummy placeholder image URL
     fullDesc: "The Toilet Tissue Paper Roll (Item Code: TR100100) provides 300 soft, highly absorbent 2-ply sheets per roll at 17 GSM, ensuring optimal comfort and durability. Each roll weighs 110 grams, offering excellent quality in every pull. Packed conveniently with 128 rolls per carton, these tissue rolls are available in bulk within a 20-foot container, making them ideal for high-demand settings that require consistent supply and premium quality."
   },
 
@@ -272,24 +272,24 @@ const Allproducts = [
     previews: [
       {
         previewUrl:
-          "https://s3.tebi.io/sof-scroll/pexels-arturoaez220-10744480.jpg",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/icqztxtjuhk5mneopbhp.jpg",
         thumbUrl:
-          "https://s3.tebi.io/sof-scroll/pexels-arturoaez220-10744480.jpg",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/icqztxtjuhk5mneopbhp.jpg",
       },
       {
         previewUrl:
-          "https://s3.tebi.io/sof-scroll/pexels-hermaion-191845%20%281%29.jpg",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532209/SofScroll/x89wjmkgp9tmkmuaunln.jpg",
         thumbUrl:
-          "https://s3.tebi.io/sof-scroll/pexels-hermaion-191845%20%281%29.jpg",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532209/SofScroll/x89wjmkgp9tmkmuaunln.jpg",
       },
       {
         previewUrl:
-          "https://m.media-amazon.com/images/I/31GYpPjkDOL.AC_UF1000,1000_QL80.jpg",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532209/SofScroll/n5nvxel0ecnqrgbkyygt.jpg",
         thumbUrl:
-          "https://m.media-amazon.com/images/I/31GYpPjkDOL.AC_UF1000,1000_QL80.jpg",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532209/SofScroll/n5nvxel0ecnqrgbkyygt.jpg",
       },
     ],
-    imageUrl: "https://s3.tebi.io/sof-scroll/pexels-hermaion-191845%20%281%29.jpg", // Dummy placeholder image URL
+    imageUrl: "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/icqztxtjuhk5mneopbhp.jpg", // Dummy placeholder image URL
     fullDesc: "The Toilet Tissue Paper Roll (Item Code: TR100100) provides 300 soft, highly absorbent 2-ply sheets per roll at 17 GSM, ensuring optimal comfort and durability. Each roll weighs 110 grams, offering excellent quality in every pull. Packed conveniently with 128 rolls per carton, these tissue rolls are available in bulk within a 20-foot container, making them ideal for high-demand settings that require consistent supply and premium quality."
   },
 
@@ -399,24 +399,24 @@ const Allproducts = [
   previews: [
     {
       previewUrl:
-        "https://s3.tebi.io/sof-scroll/pexels-arturoaez220-10744480.jpg",
+        "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/wdwq60rauj4w5ozrmt44.jpg",
       thumbUrl:
-        "https://s3.tebi.io/sof-scroll/pexels-arturoaez220-10744480.jpg",
+        "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/wdwq60rauj4w5ozrmt44.jpg",
     },
     {
       previewUrl:
-        "https://s3.tebi.io/sof-scroll/pexels-hermaion-191845%20%281%29.jpg",
+        "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/wdwq60rauj4w5ozrmt44.jpg",
       thumbUrl:
-        "https://s3.tebi.io/sof-scroll/pexels-hermaion-191845%20%281%29.jpg",
+        "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/wdwq60rauj4w5ozrmt44.jpg",
     },
     {
       previewUrl:
-        "https://m.media-amazon.com/images/I/31GYpPjkDOL.AC_UF1000,1000_QL80.jpg",
+        "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532211/SofScroll/wvo6dpwb0lctzisdhxlv.jpg",
       thumbUrl:
-        "https://m.media-amazon.com/images/I/31GYpPjkDOL.AC_UF1000,1000_QL80.jpg",
+        "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532211/SofScroll/wvo6dpwb0lctzisdhxlv.jpg",
     },
   ],
-  imageUrl: "https://s3.tebi.io/sof-scroll/pexels-hermaion-191845%20%281%29.jpg", // Dummy placeholder image URL
+  imageUrl: "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/wdwq60rauj4w5ozrmt44.jpg", 
   fullDesc: "The Toilet Tissue Paper Roll (Item Code: TR100100) provides 300 soft, highly absorbent 2-ply sheets per roll at 17 GSM, ensuring optimal comfort and durability. Each roll weighs 110 grams, offering excellent quality in every pull. Packed conveniently with 128 rolls per carton, these tissue rolls are available in bulk within a 20-foot container, making them ideal for high-demand settings that require consistent supply and premium quality."
 },
 
@@ -433,7 +433,7 @@ const Allproducts = [
   dimensions: "20*20 cm)",
   ply: 2,
   gsm: 13.5,
-  quality: "Extra soft Facial Tissuw , absorbbent , Virgin/ Wood Pulp",
+  quality: "Extra soft Facial Tissue , absorbbent , Virgin/ Wood Pulp",
   material: "Virgin/ Wood Pulp",
   description: "Compact Flat facial tissue box for  For sniffles, messy finger foods, makeup smudges or small spills",
   Packaging:"Pack of 6 Boxes",
@@ -499,7 +499,7 @@ const Allproducts = [
         "https://m.media-amazon.com/images/I/31GYpPjkDOL.AC_UF1000,1000_QL80.jpg",
     },
   ],
-  imageUrl: "https://s3.tebi.io/sof-scroll/pexels-hermaion-191845%20%281%29.jpg", // Dummy placeholder image URL
+  imageUrl: "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532212/SofScroll/tqo1wsz5xxxfvu6zqwfv.jpg", // Dummy placeholder image URL
   fullDesc: "The Toilet Tissue Paper Roll (Item Code: TR100100) provides 300 soft, highly absorbent 2-ply sheets per roll at 17 GSM, ensuring optimal comfort and durability. Each roll weighs 110 grams, offering excellent quality in every pull. Packed conveniently with 128 rolls per carton, these tissue rolls are available in bulk within a 20-foot container, making them ideal for high-demand settings that require consistent supply and premium quality."
 },
 
