@@ -30,7 +30,7 @@ const BestSellers = ({ cart, setCart }) => {
 
             return (
               <div key={index}>
-                <div className="w-[24rem] h-full flex flex-col bg-gray-100 border rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-2xl border-gray-200 hover:border-dark">
+                <div className="md:w-[24rem] h-full flex flex-col bg-gray-100 border rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-2xl border-gray-200 hover:border-dark">
                   <div className="relative">
                     <img
                       src={product.imageUrl}

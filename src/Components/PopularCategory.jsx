@@ -8,10 +8,10 @@ import { Link } from "react-router-dom";
 const PopularCategory = () => {
     const images = [
         { category: "Toilet Rolls", src: "https://img.freepik.com/free-photo/front-view-toilet-paper-rolls-stacked-pyramid-shape_23-2148524951.jpg?t=st=1732510677~exp=1732514277~hmac=e028ca397fe548b297c865b3886da073117900551d12368ae6857e3e5aaf0180&w=360", text: "Toilet Tissue Rolls" },
-        { category: "Kitchen Rolls", src: "https://img.freepik.com/free-photo/front-view-toilet-paper-rolls-with-copy-space_23-2148524921.jpg?t=st=1732511719~exp=1732515319~hmac=0bc9136126b7a2d11ebe93e0f1f387b038405c074adcb9602cd7705a35546da5&w=1060", text: "Kitchen Tissue Rolls" },
+        { category: "Kitchen Rolls", src: "https://img.freepik.com/free-photo/high-angle-three-toilet-paper-rolls_23-2148524918.jpg?t=st=1732641142~exp=1732644742~hmac=6d4c7fadc44f715d4fc91e2befc990d04ee37fc56c584f3da4ee42af9f54641d&w=740", text: "Kitchen Tissue Rolls" },
         { category: "Facial Tissue", src: "https://img.freepik.com/free-photo/nasal-white-handkerchief-arrangement_23-2149091410.jpg?t=st=1732511965~exp=1732515565~hmac=564319dbc9df55c0db5d19415ceefa40c3fc81515fcdf5e86b71a335ce2f55bb&w=996", text: "Facial Tissue" },
-        { category: "Hospital Roll", src: "https://img.freepik.com/free-photo/person-using-disinfection-solution_23-2148577782.jpg?t=st=1732512165~exp=1732515765~hmac=89cf7d3814abc67a1be9db5fe61793032f73255e106885d4adfcd4734b882375&w=1380", text: "Hospital Couch Roll" },
-        { category: "Paper Towel", src: "https://img.freepik.com/free-photo/girl-wearing-white-pajamas-holding-rolltissue-paper-hand-blue_1150-18848.jpg?t=st=1732512316~exp=1732515916~hmac=df4878a1b8a552b7fd62d9035ce9b9afe601d248d7b48982409d230296410810&w=996", text: "Dispenser Suit" },
+        { category: "Hospital Roll", src: "https://img.freepik.com/premium-photo/low-angle-view-staircase-against-sky_1048944-20789415.jpg?w=740", text: "Hospital Couch Roll" },
+        { category: "Paper Towel", src: "https://poornarth.in/public/uploads/products/6/aquarius_70220_dispenser_7.jpg", text: "Dispenser Suit" },
     ];
 
     return (

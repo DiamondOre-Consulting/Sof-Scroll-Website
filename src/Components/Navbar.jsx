@@ -20,14 +20,14 @@ const Navbar = ({ cart }) => {
       <div className="relative z-10 flex flex-wrap items-center justify-between px-12 py-2 bg-dark">
         <div className="text-white">
           <span className="text-[0.9rem] w-fit underline">
-            Special offer: Get 50% off.
+            {/* Special offer: Get 50% off. */}
           </span>
         </div>
         <div className="flex justify-end gap-2 items-center text-[0.9rem] text-white">
           <FaWhatsapp className="text-[1.2rem] cursor-pointer" />
           <FaInstagram className="text-[1.2rem] cursor-pointer" />
           <MdMail className="text-[1.2rem] cursor-pointer" />
-          <div className="text-left text-[0.9rem]">9012345678</div>
+          <div className="text-left text-[0.9rem]">+91 9980516449</div>
         </div>
       </div>
 
