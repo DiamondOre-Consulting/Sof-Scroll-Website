@@ -42,7 +42,7 @@ const PopularCategory = () => {
                                 className="object-cover w-full h-64 sm:h-[20rem] md:h-[23rem] rounded-lg"
                             />
                             <div className="absolute inset-0 flex items-start justify-center rounded-lg bg-gradient-to-b via-[#00000031] from-[#0000009c] to-transparent ">
-                                <h2 className="p-4 text-xl font-semibold text-white">{image.text}</h2>
+                                <h2 className="p-4 text-xl font-semibold text-center text-white">{image.text}</h2>
                             </div>
                         </Link>
                     </SwiperSlide>

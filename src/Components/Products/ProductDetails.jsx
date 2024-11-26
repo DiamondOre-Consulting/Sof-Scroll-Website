@@ -4,6 +4,8 @@ import Allproducts from "./AllProducts";
 import ExploreProducts from "./ExploreProducts";
 import BreadCrumbs from "../BreadCrumbs";
 import PropTypes from "prop-types";
+import { FaPlayCircle } from "react-icons/fa";
+import { FaMinus, FaPlus } from "react-icons/fa6";
 
 const productI = {
   previews: [
@@ -32,14 +34,8 @@ const ProductDetails = ({ cart, setCart }) => {
   const { itemCode } = useParams();
   const [product, setProduct] = useState(null);
   const [mainImage, setMainImage] = useState(null);
-  const [quantity, setQuantity] = useState(1); // Initialize quantity state
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedOptions, setSelectedOptions] = useState({
-    rawMaterial: "",
-    ply: "",
-    packaging: "",
-    quantity: 1
-  });
+  const [quantity, setQuantity] = useState(1); // Initialize quantity state
 
   useEffect(() => {
     const foundProduct = Allproducts.find((prod) => prod.itemCode === itemCode);
@@ -53,67 +49,54 @@ const ProductDetails = ({ cart, setCart }) => {
         setQuantity(cartItem.quantity);
       }
     }
-  }, [itemCode, cart]); // Depend on cart to update quantity if product is added/
-
-
-  const addToCart = () => {
-    if (
-      !selectedOptions.rawMaterial ||
-      !selectedOptions.ply ||
-      !selectedOptions.packaging ||
-      !selectedOptions.quantity
-    ) {
-      alert("Please select all options before adding to the cart!");
-      return;
-    }
-
-    const updatedCart = cart?.map((cartItem) => {
-      // Check if the product with the same itemCode already exists in the cart
-      if (cartItem.itemCode === product.itemCode) {
-        return {
-          ...cartItem,
-          options: [...cartItem.options, selectedOptions], // Push another option
-        };
-      }
-
-      setSelectedOptions({
-        rawMaterial: "",
-        ply: "",
-        packaging: "",
-        quantity: 1
-      })
-
-      return cartItem;
-    });
-
-    // Check if the product is new and not already in the cart
-    const isProductInCart = cart.some(
-      (cartItem) => cartItem.itemCode === product.itemCode
-    );
-
-    if (!isProductInCart) {
-      updatedCart.push({ ...product, options: [selectedOptions] }); // Add as a new product with the first option
-    }
-
-    setCart(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-    setIsModalOpen(false); // Close modal after adding to cart
-  };
-
-  const handleOptionChange = (field, value) => {
-    setSelectedOptions((prevOptions) => ({
-      ...prevOptions,
-      [field]: value,
-    }));
-  };
-
-  if (!product) {
-    return <div>Product not found!</div>;
-  }
+  }, [itemCode, cart]); // Depend on cart to update quantity if product is added/removed
 
   const updateCartInLocalStorage = (newCart) => {
     localStorage.setItem("cart", JSON.stringify(newCart));
   };
+
+  const addToCart = (newQuantity) => {
+    const existingItem = cart.find((item) => item.itemCode === itemCode);
+    if (existingItem) {
+      // Update quantity if already in cart
+      const updatedCart = cart.map((item) =>
+        item.itemCode === itemCode ? { ...item, quantity: newQuantity } : item
+      );
+      setCart(updatedCart);
+      updateCartInLocalStorage(updatedCart); // Update local storage
+    } else {
+      // Add new item to cart
+      const updatedCart = [...cart, { ...product, quantity: newQuantity }];
+      setCart(updatedCart);
+      updateCartInLocalStorage(updatedCart); // Update local storage
+    }
+  };
+
+  const removeFromCart = () => {
+    const updatedCart = cart.filter((item) => item.itemCode !== itemCode);
+    setCart(updatedCart);
+    updateCartInLocalStorage(updatedCart); // Update local storage
+  };
+
+  const increaseQuantity = () => {
+    setQuantity((prevQuantity) => {
+      const newQuantity = prevQuantity + 1;
+      addToCart(newQuantity); // Auto update cart when increasing
+      return newQuantity;
+    });
+  };
+
+  const decreaseQuantity = () => {
+    setQuantity((prevQuantity) => {
+      if (prevQuantity > 1) {
+        const newQuantity = prevQuantity - 1;
+        addToCart(newQuantity); // Auto update cart when decreasing
+        return newQuantity;
+      }
+      return prevQuantity; // Prevent going below 1
+    });
+  };
+
 
   if (!product) {
     return <div>Product not found!</div>;
@@ -127,29 +110,69 @@ const ProductDetails = ({ cart, setCart }) => {
     { label: product.name },
   ];
 
-  const ProductPreviews = ({ previews }) => {
-    const [index, setIndex] = useState(0);
+  const ProductPreviews = ({ previews, videoUrl }) => {
+    const [index, setIndex] = useState(0); // For image preview
+    const [isVideoPreview, setIsVideoPreview] = useState(false); // Toggle between image and video preview
+    console.log(previews)
+    const handlePreviewClick = (i) => {
+      setIndex(i); // Change image preview when a thumbnail is clicked
+      setIsVideoPreview(false); // Reset to image if clicked on image thumbnail
+    };
+
+    const handleVideoPreviewClick = () => {
+      setIsVideoPreview(true); // Show the video preview
+    };
 
     return (
-      <div className=" bg-gray-50 dark:bg-slate-800 rounded-xl lg:mr-6">
-        <div className="text-center md:p-6">
-          <img
-            src={previews[index].previewUrl}
-            alt=""
-            className="w-full max-w-full mx-auto h-[50vw] lg:h-[22rem] lg:max-w-[30rem] object-cover rounded-md"
-          />
+      <div className="bg-gray-50 dark:bg-slate-800 rounded-xl lg:mr-6">
+        <div className="text-center md:p-6 md:pb-2">
+          {/* Display Image or Video */}
+          {isVideoPreview ? (
+            <div className="w-full max-w-full mx-auto h-[50vw] lg:h-[22rem] lg:max-w-[30rem] object-cover rounded-md">
+              <video playsInline autoPlay loop className="w-full max-w-full mx-auto h-[50vw] lg:h-[22rem] lg:max-w-[30rem] object-cover rounded-md">
+                <source src={previews[previews.length - 1].previewUrl} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          ) : (
+            <img
+              src={previews[index].previewUrl}
+              alt=""
+              className="w-full max-w-full mx-auto h-[50vw] lg:h-[22rem] lg:max-w-[30rem] object-cover rounded-md"
+            />
+          )}
         </div>
 
-        <ul className="flex items-center justify-center gap-3 pt-2">
-          {previews.map((preview, i) => (
+        {/* Thumbnails for Image and Video */}
+        <ul className="flex items-center justify-center gap-3 pt-2 md:px-8 lg:px-11 md:pt-0">
+          {previews.slice(0, previews.length - 1).map((preview, i) => (
             <li
-              className="flex items-center justify-center w-24 h-24 p-1 overflow-hidden border border-gray-200 rounded-md cursor-pointer dark:border-slate-700"
               key={i}
-              onClick={() => setIndex(i)}
+              className="flex items-center justify-center w-full h-20 p-1 overflow-hidden border border-gray-200 rounded-md cursor-pointer sm:h-24 dark:border-slate-700"
+              onClick={() => handlePreviewClick(i)}
             >
-              <img src={preview.thumbUrl} alt="" className="object-cover w-full h-full rounded-md" />
+              <img
+                src={preview.thumbUrl}
+                alt=""
+                className="object-cover w-full h-full rounded-md"
+              />
             </li>
           ))}
+
+          {/* Video Thumbnail */}
+          {videoUrl && (
+            <li
+              className="relative flex items-center justify-center w-full h-20 p-1 overflow-hidden border border-gray-200 rounded-md cursor-pointer sm:h-24 dark:border-slate-700"
+              onClick={handleVideoPreviewClick}
+            >
+              <video
+                src={previews[previews.length - 1].previewUrl} // You can use any video icon here
+                alt="Video Preview"
+                className="object-cover w-full h-full rounded-md"
+              />
+              <FaPlayCircle className="absolute text-[2.5rem] text-[#575757]" />
+            </li>
+          )}
         </ul>
       </div>
     );
@@ -157,20 +180,21 @@ const ProductDetails = ({ cart, setCart }) => {
 
   ProductPreviews.propTypes = {
     previews: PropTypes.array.isRequired,
+    videoUrl: PropTypes.string, // Video URL for preview
   };
 
   return (
     <>
       <BreadCrumbs headText={product.name} items={breadcrumbItems} />
 
-      <div className="w-full max-w-[80rem] p-4 px-4 sm:px-10 mx-auto pt-6 md:px-20 lg:px-6">
-        <div className="grid items-center grid-cols-1 gap-6 mt-4 lg:grid-cols-2 md:gap-10">
+      <div className="w-full max-w-[80rem] p-4 pt-1 px-4 sm:px-10 mx-auto  md:px-20 lg:px-6">
+        <div className="grid items-start grid-cols-1 gap-6 mt-4 lg:grid-cols-2 md:gap-0">
           <div className="w-full">
-            <ProductPreviews previews={product.previews} />
+            <ProductPreviews previews={product.previews} videoUrl={product.previews[product.previews.length - 1].previewUrl} />
           </div>
 
-          <div className="flex flex-col">
-            <h1 className="text-4xl font-semibold mf">{product.name}</h1>
+          <div className="flex flex-col w-full">
+            <h1 className="text-3xl font-[600] mf">{product.name}</h1>
             <p className="mt-2 font-semibold">{product?.quality}</p>
             <p className="py-3 text-gray-700 ">{product.description}</p>
 
@@ -201,8 +225,17 @@ const ProductDetails = ({ cart, setCart }) => {
               </div>
             </div>
 
-            <div className="flex items-center justify-start gap-4 mt-6">
+            <div className="flex items-center justify-start gap-4 mt-2">
               <div className="w-full actions">
+                <div>
+                  <div onClick={decreaseQuantity}>
+                    <FaMinus />
+                  </div>
+                  {quantity}
+                  <div onClick={increaseQuantity}>
+                    <FaPlus />
+                  </div>
+                </div>
                 <button
                   // onClick={() => setIsModalOpen(true)}
                   className="w-full px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-700"

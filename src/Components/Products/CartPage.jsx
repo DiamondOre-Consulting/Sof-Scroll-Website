@@ -208,50 +208,48 @@ const CartPage = ({ cart, setCart }) => {
                     <p className="text-sm text-gray-500">Quality: {item?.quality}</p>
                   </div>
                 </div>
-                {item.options.map((option, index) => (
-                  <div className="relative flex flex-wrap items-center justify-between gap-2 p-3 pr-16 bg-white border rounded-lg shadow-sm" key={index}>
-                    <button
-                      onClick={() => removeOptionFromProduct(index, proInd)}
-                      className="absolute top-0 right-0 p-[0.4rem] ml-10 font-bold text-red-500 shadow-md bg-gray-200 text-[1.5rem] md:ml-60"
-                    >
-                      <MdDelete />
-                    </button>
-                    <div className="flex items-center gap-2 mr-6">
-                      <FaBoxOpen className="text-gray-600" />
-                      <p className="text-gray-700"><strong>Packaging:</strong> {option?.packaging}</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FaBox className="text-gray-600" />
-                      <p className="text-gray-700"><strong>Ply:</strong> {option?.ply}</p>
-                    </div>
-
-                    <div className="flex items-center gap-2">
-                      <FaIndustry className="text-gray-600" />
-                      <p className="font-medium text-gray-700"><strong>Raw Materials:</strong> {option?.rawMaterial}</p>
-                    </div>
-
-                    <div className="flex items-center overflow-hidden border border-gray-400 rounded shadow">
-                      <button
-                        onClick={() => decreaseQuantity(index, proInd)}
-                        className="text-[1rem] bg-red-500 text-white size-8 flex items-center justify-center"
-                        disabled={option.quantity <= 1}
-                      >
-                        <FaMinus />
-                      </button>
-                      <span className="min-w-[3rem] px-2 text-center">
-                        {option.quantity}
-                      </span>
-                      <button
-                        onClick={() => increaseQuantity(index, proInd)}
-                        className="text-[1rem] bg-green-500 text-white flex items-center justify-center   size-8"
-                      >
-                        <FaPlus />
-                      </button>
-                    </div>
-
-
+                <div className="relative flex flex-wrap items-center justify-between gap-2 p-3 pr-16 bg-white border rounded-lg shadow-sm" >
+                  {/* <button
+                    onClick={() => removeOptionFromProduct(index, proInd)}
+                    className="absolute top-0 right-0 p-[0.4rem] ml-10 font-bold text-red-500 shadow-md bg-gray-200 text-[1.5rem] md:ml-60"
+                  >
+                    <MdDelete />
+                  </button> */}
+                  <div className="flex items-center gap-2 mr-6">
+                    <FaBoxOpen className="text-gray-600" />
+                    <p className="text-gray-700"><strong>Packaging:</strong> {item?.Packaging}</p>
                   </div>
-                ))}
+                  <div className="flex items-center gap-2">
+                    <FaBox className="text-gray-600" />
+                    <p className="text-gray-700"><strong>Ply:</strong> {item?.ply}</p>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <FaIndustry className="text-gray-600" />
+                    <p className="font-medium text-gray-700"><strong>Raw Materials:</strong> {item?.rawMaterial}</p>
+                  </div>
+
+                  {/* <div className="flex items-center overflow-hidden border border-gray-400 rounded shadow">
+                    <button
+                      onClick={() => decreaseQuantity(index, proInd)}
+                      className="text-[1rem] bg-red-500 text-white size-8 flex items-center justify-center"
+                      disabled={cart.quantity <= 1}
+                    >
+                      <FaMinus />
+                    </button>
+                    <span className="min-w-[3rem] px-2 text-center">
+                      {cart.quantity}
+                    </span>
+                    <button
+                      onClick={() => increaseQuantity(index, proInd)}
+                      className="text-[1rem] bg-green-500 text-white flex items-center justify-center   size-8"
+                    >
+                      <FaPlus />
+                    </button>
+                  </div> */}
+
+
+                </div>
               </div>
             ))}
           </ul>
