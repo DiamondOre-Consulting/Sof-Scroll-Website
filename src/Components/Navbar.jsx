@@ -27,7 +27,7 @@ const Navbar = ({ cart }) => {
           <FaWhatsapp className="text-[1.2rem] cursor-pointer" />
           <FaInstagram className="text-[1.2rem] cursor-pointer" />
           <MdMail className="text-[1.2rem] cursor-pointer" />
-          <div className="text-left text-[0.9rem]">+91 9980516449</div>
+          <div className="text-left text-[0.9rem]">+91-9980750049 </div>
         </div>
       </div>
 

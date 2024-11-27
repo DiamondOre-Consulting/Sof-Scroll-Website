@@ -45,7 +45,7 @@ const Footer = () => {
                           <path fill="none" d="M0 0h24v24H0z"></path>
                           <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"></path>
                         </svg>
-                        +91 9565656565
+                        +91-9980750049 
                       </a>
                     </li>
                     <li className="text-gray-800 leading-8 text-[0.9rem] hover:text-dark">
@@ -129,7 +129,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className='flex flex-col gap-4 mt-6 '>
-                <Link to={'/'} className={`${contactStyle} lg:items-center`}><MdOutlineSmartphone />+91 5659556559</Link>
+                <Link to={'/'} className={`${contactStyle} lg:items-center`}><MdOutlineSmartphone />+91-9980750049 </Link>
                 <Link to={'/'} className={`${contactStyle} lg:items-center`}><IoMdMail />info@domain.in</Link>
                 <Link to={'/'} className={`flex items-start  gap-1`}><FaLocationDot className='mt-1' />Noida, <br /> Uttar Pradesh, India</Link>
               </div>

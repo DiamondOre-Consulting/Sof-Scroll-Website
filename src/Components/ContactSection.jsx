@@ -96,7 +96,7 @@ const ContactSection = ({ contact }) => {
                                 <div className='sora-400 text-[1rem] text-[#535760] space-y-1'>
                                     <h2 className="text-dark text-[1.3rem] sora-600 mb-2">Contact</h2>
                                     <a href="mailto:info@domain.com" className="block">sof-scroll@gmail.com</a>
-                                    <a href="tel:6207234759" className="block">+91 8043462000</a>
+                                    <a href="tel:6207234759" className="block">+91-9980750049 </a>
 
                                 </div>
                             </div>

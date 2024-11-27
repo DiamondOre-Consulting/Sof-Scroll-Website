@@ -7,7 +7,10 @@ import patternImage from "../assets/22.png"; // Background pattern image
 import BreadCrumbs from "../Components/BreadCrumbs";
 import yashi from "../assets/yashi.jpeg";
 import { FaRegCalendarAlt } from "react-icons/fa";
-import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
 const timelineData = [
@@ -142,24 +145,25 @@ const AboutUs = () => {
                 iconStyle={{ background: "#2D3748", color: "#fff" }} // Tailwind background and text color for icon
                 icon={item.icon}
                 contentStyle={{
-                  background: "#F1F0E8", color: "#333",
-                  border: "2px solid #E2E8F0" // Light gray border for content card
+                  background: "#F1F0E8",
+                  color: "#333",
+                  border: "2px solid #E2E8F0", // Light gray border for content card
                 }}
                 contentArrowStyle={{ borderRight: "7px solid #F1F0E8" }} // Arrow color to match content background
                 lineStyle={{ border: "2px solid #000000" }} // Set the line (vertical divider) border to black
               >
-                <h3 className="text-xl font-semibold text-gray-800">{item.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-800">
+                  {item.title}
+                </h3>
                 <p className="text-gray-600">{item.description}</p>
               </VerticalTimelineElement>
             ))}
           </VerticalTimeline>
         </div>
-
-
-      </section >
+      </section>
 
       {/* Team Section */}
-      < section className="px-4 py-16 " >
+      <section className="px-4 py-16 ">
         <h2 className="mb-1 text-4xl font-bold text-center text-black md:text-6xl mf">
           Meet Our Team
         </h2>
@@ -168,7 +172,6 @@ const AboutUs = () => {
         <div className="grid grid-cols-1 gap-10 sm:px-20">
           {/* First Section: Text on Left, Image on Right */}
           <div className="flex flex-col items-center justify-between sm:flex-row">
-
             <div className="lg:max-w-[60vw]">
               <p>
                 Harshawardhan Singh is a visionary founder and seasoned business
@@ -212,6 +215,9 @@ const AboutUs = () => {
               <p className="mt-4 text-2xl font-bold text-center">
                 Harshawardhan Singh
               </p>
+              <p className="mt-1 text-sm text-gray-800 uppercase font-bold text-center">
+                Co-Founder & CEO
+              </p>
             </div>
           </div>
 
@@ -246,25 +252,41 @@ const AboutUs = () => {
                 src={teamImage2}
                 alt="Team Member"
               />
-              <p className="mt-4 text-xl font-bold text-center">Alexander Mohandas</p>
+              <p className="mt-4 text-xl font-bold text-center">
+                Alexander Mohandas
+              </p>
+              <p className="mt-1 text-sm text-gray-800 uppercase font-bold text-center">
+              Co-Founder & CMO
+              </p>
             </div>
           </div>
 
-
-
-
           <div className="flex flex-col items-center justify-between sm:flex-row">
-
             <div className="max-w-[60vw]">
               <p>
-                Yashashrri H Singh is a dynamic and results-driven co-founder with 18 years of diverse experience across business development, banking, customer relationships, and strategic marketing. As a seasoned leader, she brings a sharp strategic vision and exceptional communication skills to drive business growth and ensure alignment with the company’s goals.
+                Yashashrri H Singh is a dynamic and results-driven co-founder
+                with 18 years of diverse experience across business development,
+                banking, customer relationships, and strategic marketing. As a
+                seasoned leader, she brings a sharp strategic vision and
+                exceptional communication skills to drive business growth and
+                ensure alignment with the company’s goals.
               </p>
 
               <p>
-                In her role at Kapital Seed 9, Yashashrri has been instrumental in steering the company's growth through innovative marketing and customer-centric strategies. Her background includes significant experience with global brands like TNT, where she handled commercial billing processes for the Middle East, UK, and Nordic regions, as well as leadership roles at Accenture in the UK and Nordic process division.
+                In her role at Kapital Seed 9, Yashashrri has been instrumental
+                in steering the company's growth through innovative marketing
+                and customer-centric strategies. Her background includes
+                significant experience with global brands like TNT, where she
+                handled commercial billing processes for the Middle East, UK,
+                and Nordic regions, as well as leadership roles at Accenture in
+                the UK and Nordic process division.
               </p>
               <p>
-                Yashashrri’s career showcases her deep expertise in strategic thinking, leadership, and relationship management. Her dedication to excellence and proven track record of success make her a key player in building robust business foundations and fostering long-lasting client relationships.
+                Yashashrri’s career showcases her deep expertise in strategic
+                thinking, leadership, and relationship management. Her
+                dedication to excellence and proven track record of success make
+                her a key player in building robust business foundations and
+                fostering long-lasting client relationships.
               </p>
             </div>
             <div className="flex flex-col items-center">
@@ -276,12 +298,14 @@ const AboutUs = () => {
               <p className="mt-4 text-2xl font-bold text-center">
                 Yashashrri H Singh
               </p>
+              <p className="mt-1 text-sm text-gray-800 uppercase font-bold text-center">
+              Founder & COO
+              </p>
             </div>
           </div>
-
         </div>
-      </ section>
-    </div >
+      </section>
+    </div>
   );
 };
 
