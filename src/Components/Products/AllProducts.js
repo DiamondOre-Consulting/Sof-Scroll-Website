@@ -1,3 +1,9 @@
+import ss104 from "../../assets/productAssets/ss104.jpg";
+import toiletJumbo from "../../assets/productAssets/toiletJumbo.mp4";
+import faceTissue from "../../assets/productAssets/faceTissue.mp4";
+import facialTissue from "../../assets/productAssets/facial_tissue.mp4";
+import kitchenPaperRoll from "../../assets/productAssets/kitchenPaperRoll.mp4";
+
 const Allproducts = [
 
 
@@ -208,9 +214,9 @@ const Allproducts = [
       },
       {
         previewUrl:
-          "https://s3.tebi.io/sof-scroll/pexels-hermaion-191845%20%281%29.jpg",
+          ss104,
         thumbUrl:
-          "https://s3.tebi.io/sof-scroll/pexels-hermaion-191845%20%281%29.jpg",
+          ss104,
       },
       {
         previewUrl:
@@ -277,7 +283,6 @@ const Allproducts = [
     itemCode: "SS106",
     recommendation: "Public Washrooms, Malls , Hospitals",
 
-
     pulls: "500 Pulls",
     SheetCount: "500 Sheets",
     dimensions: "10 cm * 12 cm",
@@ -305,18 +310,16 @@ const Allproducts = [
       },
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532209/SofScroll/n5nvxel0ecnqrgbkyygt.jpg",
+          toiletJumbo,
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532209/SofScroll/n5nvxel0ecnqrgbkyygt.jpg",
+          toiletJumbo,
       },
     ],
     imageUrl: "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/icqztxtjuhk5mneopbhp.jpg", // Dummy placeholder image URL
     fullDesc: "The Toilet Tissue Paper Roll (Item Code: TR100100) provides 300 soft, highly absorbent 2-ply sheets per roll at 17 GSM, ensuring optimal comfort and durability. Each roll weighs 110 grams, offering excellent quality in every pull. Packed conveniently with 128 rolls per carton, these tissue rolls are available in bulk within a 20-foot container, making them ideal for high-demand settings that require consistent supply and premium quality."
   },
 
-
   // category 2
-
 
   {
     name: "Tissue paper towel Dispenser suit/ manual",
@@ -441,9 +444,9 @@ const Allproducts = [
       },
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532211/SofScroll/wvo6dpwb0lctzisdhxlv.jpg",
+          kitchenPaperRoll,
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532211/SofScroll/wvo6dpwb0lctzisdhxlv.jpg",
+          kitchenPaperRoll,
       },
     ],
     imageUrl: "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/wdwq60rauj4w5ozrmt44.jpg",
@@ -478,17 +481,18 @@ const Allproducts = [
         thumbUrl:
           "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532211/SofScroll/e7gxhcznohtzow0p5m1s.jpg",
       },
+
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/video/upload/v1732532213/SofScroll/uqlam9xbenbl7jebuhkw.mp4",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/xf9zo2qe60sfflms8ep1.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/video/upload/v1732532213/SofScroll/uqlam9xbenbl7jebuhkw.mp4",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/xf9zo2qe60sfflms8ep1.jpg",
       },
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/xf9zo2qe60sfflms8ep1.jpg",
+          facialTissue,
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/xf9zo2qe60sfflms8ep1.jpg",
+          facialTissue,
       },
     ],
     imageUrl: "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/xf9zo2qe60sfflms8ep1.jpg", // Dummy placeholder image URL
@@ -509,7 +513,7 @@ const Allproducts = [
     ply: 3,
     price: "400",
     gsm: 13.5,
-    quality: "Extra soft Facial Tissuw , absorbbent , Virgin/ Wood Pulp",
+    quality: "Extra soft Facial Tissue , absorbbent , Virgin/ Wood Pulp",
     material: "Virgin/ Wood Pulp",
     description: "Cube Tissue Box for Daily and Commercial Use",
     Packaging: "Pack of 20 Boxes",
@@ -530,9 +534,9 @@ const Allproducts = [
 
       {
         previewUrl:
-          "https://m.media-amazon.com/images/I/31GYpPjkDOL.AC_UF1000,1000_QL80.jpg",
+          faceTissue,
         thumbUrl:
-          "https://m.media-amazon.com/images/I/31GYpPjkDOL.AC_UF1000,1000_QL80.jpg",
+          faceTissue,
       },
     ],
     imageUrl: "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532212/SofScroll/tqo1wsz5xxxfvu6zqwfv.jpg", // Dummy placeholder image URL
