@@ -36,6 +36,11 @@ const ProductDetails = ({ cart, setCart }) => {
     localStorage.setItem("cart", JSON.stringify(newCart));
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   const addToCart = (newQuantity) => {
     const existingItem = cart.find((item) => item.itemCode === itemCode);
     if (existingItem) {
@@ -173,6 +178,7 @@ const ProductDetails = ({ cart, setCart }) => {
     previews: PropTypes.array.isRequired,
     videoUrl: PropTypes.string, // Video URL for preview
   };
+
 
   return (
     <>

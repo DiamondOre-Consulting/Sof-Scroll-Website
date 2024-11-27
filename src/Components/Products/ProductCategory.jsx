@@ -12,6 +12,8 @@ const ProductCategory = ({ cart, setCart }) => {
         (product) => product.category === category
     );
 
+
+
     console.log(filteredProducts)
 
     // Add product to cart
