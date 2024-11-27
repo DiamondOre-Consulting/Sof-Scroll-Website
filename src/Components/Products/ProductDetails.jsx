@@ -6,6 +6,8 @@ import BreadCrumbs from "../BreadCrumbs";
 import PropTypes from "prop-types";
 import { FaPlayCircle } from "react-icons/fa";
 import { FaMinus, FaPlus } from "react-icons/fa6";
+import RelatedProducts from "./RelatedProducts";
+import ChatBot from "../ChatBot";
 
 
 const ProductDetails = ({ cart, setCart }) => {
@@ -205,14 +207,14 @@ const ProductDetails = ({ cart, setCart }) => {
             <div className="my-2 text-left">
               {/* <p className="font-medium text-green-600">Special price</p> */}
               <div className="flex items-baseline space-x-2">
-                <span className="text-2xl font-bold text-gray-900">₹{quantity < 1 ? product.price : product.price * quantity}</span>
+                {/* <span className="text-2xl font-bold text-gray-900">₹{quantity < 1 ? product.price : product.price * quantity}</span> */}
                 {/* <span className="text-gray-500 line-through">₹799</span> */}
                 {/* <span className="font-medium text-green-600">63% off</span> */}
               </div>
             </div>
 
             <div className="flex items-center justify-start gap-4 mt-2">
-              <div className="min-w-[9rem] actions">
+              <div className="min-w-[11rem] actions">
 
                 {
                   quantity < 1 ? <button
@@ -234,7 +236,7 @@ const ProductDetails = ({ cart, setCart }) => {
               </div>
               <div onClick={() => buyButton()} className="w-full px-4 py-2 text-center text-white rounded bg-dark hover:bg-[#1d8883]"
               >
-                Buy Now
+                Quote me
               </div>
             </div>
           </div>
@@ -244,9 +246,12 @@ const ProductDetails = ({ cart, setCart }) => {
             {product.fullDesc}
           </p>
         </div>
-
-
       </div >
+
+      <div>
+        <RelatedProducts cart={cart} setCart={setCart} category={product.category} itemCode={product.itemCode} />
+      </div>
+
       <div className="w-full p-4 pb-10 bg-slate-200">
         <h2 className="mb-6 font-bold text-center mf text-[2.7rem]">Product Features</h2>
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">

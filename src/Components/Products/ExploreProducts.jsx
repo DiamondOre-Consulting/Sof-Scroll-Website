@@ -48,7 +48,7 @@ const ExploreProducts = ({ cart, setCart }) => {
 
             return (
               <div key={index}>
-                <div className="max-w-[19rem] w-full h-[21rem] flex flex-col bg-gray-100 border rounded-lg shadow-md overflow-hidden transition-transform duration-300  hover:shadow-2xl border-gray-200 hover:border-dark">
+                <div className="max-w-[19rem] w-full h-[21.5rem] justify-between pb-2 flex flex-col bg-gray-100 border rounded-lg shadow-md overflow-hidden transition-transform duration-300  hover:shadow-2xl border-gray-200 hover:border-dark">
                   <div className="relative">
                     <img
                       src={product.imageUrl}
@@ -63,15 +63,16 @@ const ExploreProducts = ({ cart, setCart }) => {
                     <h1 className="text-[1.15rem] font-semibold text-gray-800 truncate transition-colors duration-300 hover:text-dark">
                       {product.name}
                     </h1>
-                    <p className="text-sm text-gray-600 truncate">
+                    <p className="text-sm text-gray-600 line-clamp-2">
                       {product.description}
                     </p>
-                    <p className="text-xs italic text-gray-700">
+                    <p className="text-xs italic text-gray-700 line-clamp-1">
                       Quality: <span className='text-gray-500'>{product.quality}</span>
                     </p>
 
                   </div>
                   <Link
+                    onClick={() => setSelectedProduct(product)}
                     to={`/product/${product.itemCode}`}
                     className="w-[93%] p-2 mx-auto text-center text-white transition-transform duration-300 rounded-md bg-dark hover:scale-105 hover:bg-opacity-90"
                   >

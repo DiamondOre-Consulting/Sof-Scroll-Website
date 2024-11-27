@@ -12,6 +12,7 @@ import ContactUsPage from "./Pages/ContactUsPage";
 import { MdWhatsapp } from "react-icons/md";
 import ProductPage from "./Pages/ProductsPage";
 import ProductCategory from "./Components/Products/ProductCategory";
+import ChatBot from "./Components/ChatBot";
 
 function App() {
   // Cart state and useEffect to save/load from localStorage
@@ -48,14 +49,17 @@ function App() {
           element={<ProductCategory cart={cart} setCart={setCart} />}
         />
       </Routes>
-      <Link
-        target="_blank"
-        className="p-[0.65rem] bg-[#02b72c] hover:bg-white fixed bottom-[2.2rem] right-4 shadow-sm shadow-red cursor-pointer hover:text-[#107829] text-white duration-200 flex items-center justify-center rounded-full z-[1000000000] text-[2.1rem]"
-        to="https://wa.me/9980516449?text=Hello%2C%20I'm%20interested%20in%20 SOF%20SSCRROL's%20products.%20Could%20you%20please%20share%20some%20details%3F"
-      >
-        <MdWhatsapp className="" />
-      </Link>
+      <div className="z-[1000000000] fixed bottom-[1.5rem] right-4 flex flex-col items-center justify-center gap-2">
 
+        <ChatBot />
+        <Link
+          target="_blank"
+          className="p-[0.65rem] bg-[#02b72c] hover:bg-white  shadow-sm shadow-red cursor-pointer hover:text-[#107829] text-white duration-200 flex items-center justify-center rounded-full  text-[1.8rem]"
+          to="https://wa.me/9980516449?text=Hello%2C%20I'm%20interested%20in%20 SOF%20SSCRROL's%20products.%20Could%20you%20please%20share%20some%20details%3F"
+        >
+          <MdWhatsapp className="" />
+        </Link>
+      </div>
       <Footer />
     </BrowserRouter>
   );
