@@ -6,6 +6,8 @@ const Allproducts = [
   {
     name: "Toilet Tissue Paper Roll / 24 Rolls in a Packet / Virgin/Wood Pulp",
     category: "Toilet Rolls",
+    recommendation: "Home Use",
+    particulars: "Toilet Tissue Paper Roll LUXURY",
     itemCode: "SS100",
     pulls: "140 Pulls",
     price: "400",
@@ -47,7 +49,10 @@ const Allproducts = [
   {
     name: "Toilet Tissue Paper Roll / Virgin/Wood Pulp / 48 Rolls in a Packet ",
     category: "Toilet Rolls",
+    particulars: "Toilet Tissue Paper Roll LUXURY",
     itemCode: "SS101",
+    recommendation: "Home Use",
+
     pulls: "140 Pulls",
     SheetCount: "140 Sheets",
     dimensions: "10 cm * 12.0 cm",
@@ -88,6 +93,9 @@ const Allproducts = [
   {
     name: "Toilet Tissue Paper Roll / Recycle Material / 24 Rolls in a Packet",
     category: "Toilet Rolls",
+    particulars: "Toilet Tissue Paper Roll Eco Friendly",
+    recommendation: "Home Use",
+
     itemCode: "SS102",
     pulls: "140 Pulls",
     SheetCount: "140 Sheets",
@@ -130,6 +138,9 @@ const Allproducts = [
   {
     name: "Toilet Tissue Paper Roll / Recycle Material / 48 Rolls in a Packet",
     category: "Toilet Rolls",
+    particulars: "Toilet Tissue Paper Roll Eco Friendly",
+    recommendation: "Home Use",
+
     itemCode: "SS103",
     pulls: "140 Pulls",
     SheetCount: "140 Sheets",
@@ -172,7 +183,10 @@ const Allproducts = [
   {
     name: "Toilet Tissue Paper Roll Bamboo Made / Recycle Material / 24 Rolls in a Packet",
     category: "Toilet Rolls",
+    particulars: "Toilet Tissue Paper Roll Bamboo Made",
     itemCode: "SS104",
+    recommendation: "Home Use",
+
     pulls: "140 Pulls",
     SheetCount: "140 Sheets",
     dimensions: "10 cm * 12.0 cm",
@@ -214,7 +228,10 @@ const Allproducts = [
   {
     name: "Toilet Tissue Paper Roll Bamboo Made / Recycle Material / 48 Rolls in a Packet",
     category: "Toilet Rolls",
+    particulars: "Toilet Tissue Paper Roll Bamboo Made",
     itemCode: "SS105",
+    recommendation: "Home Use",
+
     pulls: "140 Pulls",
     SheetCount: "140 Sheets",
     dimensions: "10 cm * 12.0 cm",
@@ -256,7 +273,11 @@ const Allproducts = [
   {
     name: "Toilet Tissue Paper Jumbo / Recycle Material / 6 Rolls in a Packet",
     category: "Toilet Rolls",
+    particulars: "Jumbo Toiler Tissue Paper Roll",
     itemCode: "SS106",
+    recommendation: "Public Washrooms, Malls , Hospitals",
+
+
     pulls: "500 Pulls",
     SheetCount: "500 Sheets",
     dimensions: "10 cm * 12 cm",
@@ -300,7 +321,10 @@ const Allproducts = [
   {
     name: "Tissue paper towel Dispenser suit/ manual",
     category: "Paper Towel",
+    particulars: "Hand Towel - M Fold Paper",
     itemCode: "SS107",
+    recommendation: "Public Washrooms, Kitchen Area",
+
     pulls: "250 Pulls",
     SheetCount: "250 Sheets",
     dimensions: "24 cm*23.1 cm",
@@ -345,7 +369,10 @@ const Allproducts = [
     name: "Kitchen Tissue Roll",
     category: "Kitchen Rolls",
     itemCode: "SS108",
+    particulars: "Jumbo Kitchen Tissue Roll",
     pulls: "600 Pulls",
+    recommendation: "Restaurant , café, Canteen",
+
     SheetCount: "600 Sheets",
     dimensions: "23 cm * 21 cm",
     ply: 2,
@@ -385,6 +412,9 @@ const Allproducts = [
     name: "Kitchen Tissue Roll",
     category: "Kitchen Rolls",
     itemCode: "SS109",
+    recommendation: "Home use",
+
+    particulars: "Kitchen Tissue Roll",
     pulls: "50 Pulls",
     SheetCount: "50 Sheets",
     dimensions: "23 cm * 21 cm",
@@ -426,7 +456,10 @@ const Allproducts = [
   {
     name: "Facial Tissue Box / Pack of 6 Boxes",
     category: "Facial Tissue",
+    particulars: "Facial Tissue box",
     itemCode: "SS110",
+    recommendation: "Living room, Bathroom, Car, Office desk",
+
     pulls: "100 Pulls",
     SheetCount: "100 Sheets",
     price: "400",
@@ -466,7 +499,10 @@ const Allproducts = [
   {
     name: "Cube Facial Tissue / Pack of 20 Boxes",
     category: "Facial Tissue",
+    particulars: "Facial Tissue box",
     itemCode: "SS111",
+    recommendation: "Car, Work Desk top, Travel",
+
     pulls: "50 Pulls",
     SheetCount: "50 Sheets",
     dimensions: "20*20 cm)",
@@ -508,10 +544,15 @@ const Allproducts = [
 
 
   {
-    name: "HospitalCouch Roll",
+    name: "Hospital Couch Roll",
     category: "Hospital Roll",
+    particulars: "Examination Medical Couch Roll",
     itemCode: "SS112",
-    pulls: "100 mtr long",
+    quality: "Paper",
+    SheetCount: "100 Mtr long",
+
+    recommendation: "hospital Bed roll Tissue, Beauty Parlour spa Tissue Papper roll",
+    pulls: "100 Mtr long",
     dimensions: "60 CM Width * 100 Mtr Long, White 100 Mtr long",
     ply: 1,
     gsm: 18 - 19,

@@ -186,14 +186,16 @@ const ProductDetails = ({ cart, setCart }) => {
 
           <div className="flex flex-col w-full mt-4">
             <h1 className="text-3xl font-[600] mf">{product.name}</h1>
-            <p className="mt-2 font-semibold">{product?.quality}</p>
-            <p className="py-3 text-gray-700 ">{product.description}</p>
+            <p className="mt-2 font-semibold text-gray-600">{product?.particulars}</p>
+            <p className="font-semibold ">{product?.quality}</p>
+            <p className="pb-3 text-gray-700 ">{product.description}</p>
+            <p className="pb-3 text-gray-700 ">Recommended for : <span className="text-black capitalize">{product.recommendation}</span></p>
 
             <div className="flex gap-4 my-2 space-y-1 text-left">
               <p className="mt-[0.15rem] font-medium text-[0.95rem] text-gray-500 ">Dimension  <span className="text-dark font-semibold border-2 ml-4 border-dark p-[0.3rem] text-[0.9rem] ">{product?.dimensions}</span></p>
             </div>
 
-            <div className="flex gap-4 pb-3 my-2 space-y-1 text-left border-b-2">
+            <div className="flex gap-4 pb-3 my-2 space-y-1 text-left ">
               <p className="mt-[0.15rem] font-medium text-[0.95rem] text-gray-500">Highlights</p>
               <ul className="text-black font-[400]  text-[0.9rem]">
 
@@ -204,16 +206,9 @@ const ProductDetails = ({ cart, setCart }) => {
               </ul>
             </div>
 
-            <div className="my-2 text-left">
-              {/* <p className="font-medium text-green-600">Special price</p> */}
-              <div className="flex items-baseline space-x-2">
-                {/* <span className="text-2xl font-bold text-gray-900">₹{quantity < 1 ? product.price : product.price * quantity}</span> */}
-                {/* <span className="text-gray-500 line-through">₹799</span> */}
-                {/* <span className="font-medium text-green-600">63% off</span> */}
-              </div>
-            </div>
 
-            <div className="flex items-center justify-start gap-4 mt-2">
+
+            <div className="flex items-center justify-start gap-4 mt-3">
               <div className="min-w-[11rem] actions">
 
                 {
@@ -234,7 +229,7 @@ const ProductDetails = ({ cart, setCart }) => {
                     </div>
                 }
               </div>
-              <div onClick={() => buyButton()} className="w-full px-4 py-2 text-center text-white rounded bg-dark hover:bg-[#1d8883]"
+              <div onClick={() => buyButton()} className="w-full px-4 py-2 text-center text-white rounded bg-dark cursor-pointer hover:bg-[#1d8883]"
               >
                 Quote me
               </div>
