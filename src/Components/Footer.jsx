@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <footer className="relative flex flex-col items-center justify-center overflow-x-hidden">
 
-      <div className="w-full px-4 pt-8 mx-auto bg-light sm:px-28">
+      <div className="w-full px-4 pt-8 mx-auto  sm:px-28">
         <div className="py-8">
           <div className="flex flex-wrap items-center justify-around">
             {/* About Section */}

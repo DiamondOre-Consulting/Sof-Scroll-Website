@@ -2,13 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import tisssuevideo from "../assets/tissuev.mp4";
 import AnimatedText from "./AnimatedText";
+import bg from '../assets/bg.mp4'
 
 const Hero = () => {
   return (
     // <ShineBorder className={"w-full "}>
+    <>
     <div className=" flex  items-center h-[85vh] relative  overflow-hidden bg-center bg-cover ">
       <video
-        src={tisssuevideo}
+        src={bg}
         autoPlay
         loop
         muted
@@ -23,8 +25,11 @@ const Hero = () => {
 
 
       </div>
-
+ 
     </div>
+
+    <img src="https://koshertissue.com/images/paper_borders-ai-min.png"   className=" relative  z-50 -mt-20" alt="" />
+    </>
     // </ShineBorder>
   );
 };

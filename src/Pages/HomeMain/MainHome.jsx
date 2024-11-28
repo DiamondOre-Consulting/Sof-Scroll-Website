@@ -19,7 +19,7 @@ const MainHome = ({ cart, setCart }) => {
 
 
   return (
-    <div className="overflow-x-hidden select-none">
+    <div className="overflow-x-hidden select-none ">
       <Hero />
       <AboutUs />
       <OurStrength />

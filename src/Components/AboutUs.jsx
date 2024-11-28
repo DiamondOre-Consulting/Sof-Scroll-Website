@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import pattern2 from "../assets/pattern2.png";
 import TextRevealByWord from "./ui/text-reveal";
+import img from '../assets/butterfly.png'
 
 const AboutUs = () => {
   return (
@@ -17,6 +18,8 @@ const AboutUs = () => {
             <div className="w-[3.5px] h-[3.5px] bg-dark rounded-full"></div>
             <div className="w-[3.5px] h-[3.5px] bg-dark rounded-full"></div>
           </div>
+
+          <img src={img} alt="" className="w-60 right-40 absolute opacity-70" />
 
           <div className="z-10 w-full mf h-fit">
             <TextRevealByWord text="Our tissue paper conversion process turns large tissue rolls into consumer-ready products such as toilet paper, facial tissues, napkins, and paper towels. Using quality raw materials like wood pulp or recycled paper, the pulp is processed into continuous sheets, which are then slit, embossed, and perforated for convenience. Finally, automated machinery packages the tissue in various formats, ensuring quality and efficiency in a sustainable way to meet consumer needs." />

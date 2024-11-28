@@ -14,7 +14,7 @@ module.exports = {
 		extend: {
 			colors: {
 				dark: '#2bb673',
-				light: '#F1F0E8',
+				light: '#fff4d4',
 				bgMain: '#ECF2FF',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',

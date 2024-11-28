@@ -24,7 +24,7 @@ const Navbar = ({ cart }) => {
             {/* Special offer: Get 50% off. */}
           </span>
         </div>
-        <div className="flex justify-end gap-2 items-center text-[0.9rem] text-white">
+        <div className="flex justify-end gap-2 items-center text-[0.9rem]  text-white ">
           <FaWhatsapp className="text-[1.2rem] cursor-pointer" />
           <FaInstagram className="text-[1.2rem] cursor-pointer" />
           <MdMail className="text-[1.2rem] cursor-pointer" />
@@ -33,7 +33,7 @@ const Navbar = ({ cart }) => {
       </div>
 
       {/* Navbar */}
-      <div className="sticky top-0 h-[5.9rem] flex items-center z-50 w-full shadow-md bg-white">
+      <div className="sticky top-0 h-[5.9rem] flex items-center z-50 w-full  shadow-md bg-white">
         <nav className="container flex items-center justify-between px-4 mx-auto sm:px-8 md:px-12 ">
           {/* Logo */}
           <img src={logo} className="w-[80px]" alt="" />
@@ -190,7 +190,7 @@ const NavLink = ({
       {/* Dropdown */}
       {dropdownItems && (
         <div
-          className={`md:absolute overflow-hidden left-0 top-12 z-50 md:w-40 ml-24 md:ml-0 mt-2 bg-white md:bg-light rounded-md ${isMobile
+          className={`md:absolute overflow-hidden left-0 top-12 z-50 md:w-40 ml-24 md:ml-0 mt-2 bg-white  rounded-md ${isMobile
             ? `transition-all duration-200 ease-in-out ${isActive ? "block" : "hidden"
             }`
             : "group-hover:block hidden"

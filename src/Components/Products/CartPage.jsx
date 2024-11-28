@@ -247,7 +247,7 @@ const CartPage = ({ cart, setCart }) => {
                 Continue Shopping
               </Link>
             </div> :
-            <div className="bottom-0 flex flex-wrap items-center justify-between w-full gap-4 p-1 mt-4 border rounded-md shadow-md h-fit lg:mt-0 bg-light border-[#d2ceb2] max-w-[40rem] lg:max-w-[35rem] mx-auto">
+            <div className="bottom-0 flex flex-wrap items-center justify-between w-full gap-4 p-1 mt-4 border rounded-md shadow-md h-fit lg:mt-0  border-[#d2ceb2] max-w-[40rem] lg:max-w-[35rem] mx-auto">
 
               <div className="flex flex-wrap items-center justify-center w-full bg-white rounded lg:items-start lg:gap-4 lg:flex-col">
                 <ul className="mb-4 space-y-6">

@@ -196,7 +196,7 @@ const ChatBot = () => {
     return (
         <div>
 
-            <div className={`fixed bottom-12 rounded border border-gray-300 z-10 right-[4.5rem] w-48 bg-light shadow-lg p-3 ${welcomeopen ? 'block' : 'hidden'}`}>
+            <div className={`fixed bottom-12 rounded border border-gray-300 z-10 right-[4.5rem] w-48  shadow-lg p-3 ${welcomeopen ? 'block' : 'hidden'}`}>
                 <div className='flex items-center justify-center'>
 
                     <button className="absolute flex text-[1.5rem] items-center justify-center top-0 right-0 text-sm text-gray-100 bg-red-400 rounded size-[1.45rem] hover:bg-red-500" onClick={closeWelcomeBox}>
