@@ -1,28 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaBolt, FaShieldAlt, FaCheckCircle, FaRocket, FaHandsHelping, FaHeadset } from "react-icons/fa";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const OurStrength = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      offset: 100,
+    });
+  }, []);
   const strengths = [
-    { icon: <FaBolt size={40} />, label: "High productivity" },
-    { icon: <FaShieldAlt size={40} />, label: "Strict quality inspection" },
-    { icon: <FaCheckCircle size={40} />, label: "Professional service" },
-    { icon: <FaRocket size={40} />, label: "Quick reply" },
-    { icon: <FaHandsHelping size={40} />, label: "OEM & ODM" },
-    { icon: <FaHeadset size={40} />, label: "Customer service 24 hours online" },
+    { icon: <FaBolt size={40} />, label: "High productivity", time: 1000 },
+    { icon: <FaShieldAlt size={40} />, label: "Strict quality inspection", time: 1300 },
+    { icon: <FaCheckCircle size={40} />, label: "Professional service", time: 1600 },
+    { icon: <FaRocket size={40} />, label: "Quick reply", time: 1900 },
+    { icon: <FaHandsHelping size={40} />, label: "OEM & ODM", time: 2200 },
+    { icon: <FaHeadset size={40} />, label: "Customer service 24 hours online", time: 2500 },
   ];
 
   return (
     <div>
-      <div className="bg-gray-100 pt-10">
-        <h1 className="text-gray-700 text-6xl font-bold text-center mb-10 mf">Our Strengths</h1>
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-8 text-center pb-20">
+      <div className="pt-10 bg-gray-100">
+        <h1 className="mb-10 text-6xl font-bold text-center text-gray-700 mf">Our Strengths</h1>
+        <div className="container px-4 mx-auto">
+          <div className="flex flex-wrap justify-center gap-8 pb-20 text-center">
             {strengths.map((strength, index) => (
               <div
                 key={index}
+                data-aos="fade-up"
+                data-aos-duration={strength.time}
                 className="flex flex-col items-center justify-around w-40 transition-transform duration-300 hover:scale-110"
               >
-                <div className="mb-2 text-dark p-2 rounded-full  transition-transform duration-300 transform hover:scale-125">
+                <div className="p-2 mb-2 transition-transform duration-300 transform rounded-full text-dark hover:scale-125">
                   {strength.icon}
                 </div>
                 <p className="text-lg font-semibold text-gray-700 transition-colors duration-300 hover:text-dark">

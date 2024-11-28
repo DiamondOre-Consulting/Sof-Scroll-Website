@@ -2,9 +2,16 @@ import React, { useEffect, useState } from "react";
 import Allproducts from "./AllProducts.js";
 import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const RelatedProducts = ({ cart, setCart, category, itemCode }) => {
-    console.log("all products", Allproducts);
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            offset: 100, // Adjust this value to change when the animation triggers
+        });
+    }, []);
 
     const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -38,13 +45,13 @@ const RelatedProducts = ({ cart, setCart, category, itemCode }) => {
     console.log(Allproducts)
 
     return (
-        <div className="relative py-10">
-            <h1 className="relative mx-auto mb-2 text-4xl text-center md:text-6xl mf">
+        <div className="relative py-10" data-aos="fade-up">
+            <h1 className="relative mx-auto mb-2 text-4xl text-center md:text-6xl mf" data-aos="fade-left">
                 <span className="text-dark mf">Related </span> products
             </h1>
-            <div className="w-20 h-1 mx-auto mb-10 bg-dark md:w-60"></div>
-            <Marquee pauseOnHover={true}>
-                <div className="flex mx-3 space-x-6">
+            <div className="w-20 h-1 mx-auto mb-10 bg-dark md:w-60" data-aos="fade-up"></div>
+            <Marquee pauseOnHover={true} data-aos="fade-up">
+                <div className="flex mx-3 space-x-6" data-aos="fade-up">
                     {filteredProducts.slice(1, 10).map((product, index) => {
                         const isInCart = cart.find(
                             (item) => item.itemCode === product.itemCode
