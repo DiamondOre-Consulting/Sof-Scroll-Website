@@ -190,11 +190,11 @@ const ProductDetails = ({ cart, setCart }) => {
 
 
   return (
-    <>
+    <div className="overflow-x-hidden overflow-hidden">
       <BreadCrumbs headText={product.name} items={breadcrumbItems} />
 
-      <div className="w-full select-none max-w-[80rem] p-4 pt-1 px-4 sm:px-10 mx-auto  md:px-20 lg:px-6" data-aos="fade-up">
-        <div className="grid items-center grid-cols-1 gap-6 mt-4 lg:grid-cols-2 md:gap-0">
+      <div className="w-full select-none max-w-[80rem] overflow-x-hidden p-4 pt-1 px-4 sm:px-10 mx-auto  md:px-20 lg:px-6" data-aos="fade-up">
+        <div className="grid items-start grid-cols-1 gap-6 mt-4 lg:grid-cols-2 md:gap-0">
           <div data-aos="zoom-in" className="w-full">
             <ProductPreviews previews={product.previews} videoUrl={product.previews[product.previews.length - 1].previewUrl} />
           </div>
@@ -204,14 +204,14 @@ const ProductDetails = ({ cart, setCart }) => {
             <p data-aos="fade-left" className="mt-2 font-semibold text-gray-600">{product?.particulars}</p>
             <p data-aos="fade-right" className="font-semibold ">{product?.quality}</p>
             <p data-aos="fade-left" className="pb-3 text-gray-700 ">{product.description}</p>
-            <p data-aos="fade-up" className="pb-3 text-gray-700 ">Recommended for : <span className="text-black capitalize">{product.recommendation}</span></p>
+            <p data-aos="fade-up" className="pb-3 text-gray-700 font-bold">Recommended for : <span className="font-medium text-black capitalize">{product.recommendation}</span></p>
 
             <div data-aos="fade-up" className="flex gap-4 my-2 space-y-1 text-left">
-              <p className="mt-[0.15rem] font-medium text-[0.95rem] text-gray-500 ">Dimension  <span className="text-dark font-semibold border-2 ml-4 border-dark p-[0.3rem] text-[0.9rem] ">{product?.dimensions}</span></p>
+              <p className="mt-[0.15rem] font-bold text-[0.95rem] text-gray-700 ">Dimension  <span className="text-dark font-semibold border-2 ml-4 border-dark p-[0.3rem] text-[0.9rem] ">{product?.dimensions}</span></p>
             </div>
 
             <div data-aos="fade-up" className="flex gap-4 pb-3 my-2 space-y-1 text-left ">
-              <p className="mt-[0.15rem] font-medium text-[0.95rem] text-gray-500">Highlights</p>
+              <p className="mt-[0.15rem] font-bold text-[0.95rem] text-gray-700">Highlights</p>
               <ul className="text-black font-[400]  text-[0.9rem]">
 
                 <li className="tracking-wide">- Pulls : {product?.pulls}</li>
@@ -221,6 +221,18 @@ const ProductDetails = ({ cart, setCart }) => {
               </ul>
             </div>
 
+            <div className="my-8 px-2">
+              <p className="font-bold mb-1 text-xl">About  Items</p>
+              <p className="text-xs text-gray-700">
+                <ul className="text-black font-[400] list-disc space-y-1 text-[0.9rem]" >
+                  {product?.fullDesc?.map((dis, index) => (
+                    <li key={index} className="tracking-wide">
+                      {dis}
+                    </li>
+                  ))}
+                </ul>
+              </p>
+            </div>
 
 
             <div className="flex items-center justify-start gap-4 mt-3" data-aos="fade-up" data-aos-offset="10">
@@ -251,11 +263,11 @@ const ProductDetails = ({ cart, setCart }) => {
             </div>
           </div>
         </div>
-        <div className="my-8" data-aos="fade-up">
+        {/* <div className="my-8" data-aos="fade-up">
           <p className="text-center text-gray-700 ">
             {product.fullDesc}
           </p>
-        </div>
+        </div> */}
       </div >
 
       <div>
@@ -297,7 +309,7 @@ const ProductDetails = ({ cart, setCart }) => {
         <ExploreProducts cart={cart} setCart={setCart} />
       </div>
 
-    </>
+    </div>
   );
 };
 
