@@ -13,7 +13,7 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				dark: '#1CA39D',
+				dark: '#2bb673',
 				light: '#F1F0E8',
 				bgMain: '#ECF2FF',
 				background: 'hsl(var(--background))',
