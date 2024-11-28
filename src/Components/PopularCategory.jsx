@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const PopularCategory = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 800, // Default duration for all animations (in milliseconds)
+            offset: 100,
+        });
+    }, []);
+
     const images = [
         { category: "Toilet Rolls", src: "https://img.freepik.com/free-photo/front-view-toilet-paper-rolls-stacked-pyramid-shape_23-2148524951.jpg?t=st=1732510677~exp=1732514277~hmac=e028ca397fe548b297c865b3886da073117900551d12368ae6857e3e5aaf0180&w=360", text: "Toilet Tissue Rolls" },
         { category: "Kitchen Rolls", src: "https://img.freepik.com/free-photo/high-angle-three-toilet-paper-rolls_23-2148524918.jpg?t=st=1732641142~exp=1732644742~hmac=6d4c7fadc44f715d4fc91e2befc990d04ee37fc56c584f3da4ee42af9f54641d&w=740", text: "Kitchen Tissue Rolls" },
@@ -15,8 +24,8 @@ const PopularCategory = () => {
     ];
 
     return (
-        <div className="p-4 bg-[#F5F5F5] py-6">
-            <h2 className="mb-8 text-5xl font-semibold text-center mf">Popular <span className="text-dark">Categories</span></h2>
+        <div className="p-4 bg-[#F5F5F5] py-6" >
+            <h2 className="mb-8 text-5xl font-semibold text-center mf" data-aos="fade-left">Popular <span className="text-dark">Categories</span></h2>
             <Swiper
                 modules={[Pagination, Autoplay]}
                 autoplay={{
@@ -35,7 +44,7 @@ const PopularCategory = () => {
             >
                 {images.map((image, index) => (
                     <SwiperSlide key={index}>
-                        <Link to={`/products/category/${image.category}`} className="relative">
+                        <Link to={`/products/category/${image.category}`} className="relative" data-aos="fade-down">
                             <img
                                 src={image.src}
                                 alt={`Slide ${index + 1}`}
