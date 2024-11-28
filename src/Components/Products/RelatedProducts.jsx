@@ -45,12 +45,12 @@ const RelatedProducts = ({ cart, setCart, category, itemCode }) => {
     console.log(Allproducts)
 
     return (
-        <div className="relative py-10 overflow-hidden" data-aos="fade-up">
+        <div className="relative py-10 overflow-hidden h-fit" data-aos="fade-up">
             <h1 className="relative mx-auto mb-2 text-4xl text-center md:text-6xl mf" data-aos="fade-left">
                 <span className="text-dark mf">Related </span> products
             </h1>
             <div className="w-20 h-1 mx-auto mb-10 bg-dark md:w-60" data-aos="fade-up"></div>
-            <Marquee pauseOnHover={true} data-aos="fade-up">
+            <Marquee className="overflow-hidden h-fit" pauseOnHover={true} data-aos="fade-up">
                 <div className="flex mx-3 space-x-6 overflow-hidden" data-aos="fade-up">
                     {filteredProducts.slice(1, 10).map((product, index) => {
                         const isInCart = cart.find(

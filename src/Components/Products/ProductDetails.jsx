@@ -193,7 +193,7 @@ const ProductDetails = ({ cart, setCart }) => {
     <div className="overflow-hidden overflow-x-hidden">
       <BreadCrumbs headText={product.name} items={breadcrumbItems} />
 
-      <div className="w-full select-none max-w-[80rem]  p-4 pt-1 px-4 overflow-hidden sm:px-10 mx-auto  md:px-20 lg:px-6" data-aos="fade-up">
+      <div className="w-full select-none max-w-[80rem] p-4 pt-1 px-4 sm:px-10 mx-auto  md:px-20 lg:px-6" data-aos="fade-up">
         <div className="grid items-center grid-cols-1 gap-6 mt-4 lg:grid-cols-2 md:gap-0">
           <div data-aos="zoom-in" className="w-full">
             <ProductPreviews previews={product.previews} videoUrl={product.previews[product.previews.length - 1].previewUrl} />
@@ -207,11 +207,11 @@ const ProductDetails = ({ cart, setCart }) => {
             <p data-aos="fade-up" className="pb-3 text-gray-700 ">Recommended for : <span className="text-black capitalize">{product.recommendation}</span></p>
 
             <div data-aos="fade-up" className="flex gap-4 my-2 space-y-1 text-left">
-              <p className="mt-[0.15rem] font-medium text-[0.95rem] text-gray-500 ">Dimension  <span className="text-dark font-semibold border-2 ml-4 border-dark p-[0.3rem] text-[0.9rem] ">{product?.dimensions}</span></p>
+              <p className="mt-[0.15rem] font-bold text-[0.95rem] text-gray-700 ">Dimension  <span className="text-dark font-semibold border-2 ml-4 border-dark p-[0.3rem] text-[0.9rem] ">{product?.dimensions}</span></p>
             </div>
 
             <div data-aos="fade-up" className="flex gap-4 pb-3 my-2 space-y-1 text-left ">
-              <p className="mt-[0.15rem] font-medium text-[0.95rem] text-gray-500">Highlights</p>
+              <p className="mt-[0.15rem] font-bold text-[0.95rem] text-gray-700">Highlights</p>
               <ul className="text-black font-[400]  text-[0.9rem]">
 
                 <li className="tracking-wide">- Pulls : {product?.pulls}</li>
@@ -249,13 +249,25 @@ const ProductDetails = ({ cart, setCart }) => {
                 Quote me
               </div>
             </div>
+            <div className="px-2 my-8">
+              <p className="mb-1 text-xl font-bold">About  Items</p>
+              <p className="text-xs text-gray-700">
+                <ul className="text-black font-[400] list-disc space-y-1 text-[0.9rem]" >
+                  {product?.fullDesc?.map((dis, index) => (
+                    <li key={index} className="tracking-wide">
+                      {dis}
+                    </li>
+                  ))}
+                </ul>
+              </p>
+            </div>
           </div>
         </div>
-        <div className="my-8" data-aos="fade-up">
+        {/* <div className="my-8" data-aos="fade-up">
           <p className="text-center text-gray-700 ">
             {product.fullDesc}
           </p>
-        </div>
+        </div> */}
       </div >
 
       <div>

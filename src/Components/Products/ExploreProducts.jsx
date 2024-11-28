@@ -46,8 +46,8 @@ const ExploreProducts = ({ cart, setCart }) => {
         <span className="text-dark mf">Explore </span>more products
       </h1>
       <div className="w-20 h-1 mx-auto mb-10 bg-dark md:w-60" data-aos="fade-left"></div>
-      <Marquee pauseOnHover={true}>
-        <div className="flex mx-3 space-x-6" data-aos="fade-up overflow-hidden">
+      <Marquee className="overflow-hidden h-fit" pauseOnHover={true}>
+        <div className="flex mx-3 space-x-6 overflow-hidden" data-aos="fade-up">
           {Allproducts.slice(1, 10).map((product, index) => {
             const isInCart = cart.find(
               (item) => item.itemCode === product.itemCode
