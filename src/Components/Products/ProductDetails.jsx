@@ -190,16 +190,16 @@ const ProductDetails = ({ cart, setCart }) => {
 
 
   return (
-    <>
+    <div className="overflow-hidden overflow-x-hidden">
       <BreadCrumbs headText={product.name} items={breadcrumbItems} />
 
-      <div className="w-full select-none max-w-[80rem] p-4 pt-1 px-4 sm:px-10 mx-auto  md:px-20 lg:px-6" data-aos="fade-up">
+      <div className="w-full select-none max-w-[80rem]  p-4 pt-1 px-4 overflow-hidden sm:px-10 mx-auto  md:px-20 lg:px-6" data-aos="fade-up">
         <div className="grid items-center grid-cols-1 gap-6 mt-4 lg:grid-cols-2 md:gap-0">
           <div data-aos="zoom-in" className="w-full">
             <ProductPreviews previews={product.previews} videoUrl={product.previews[product.previews.length - 1].previewUrl} />
           </div>
 
-          <div className="flex flex-col w-full mt-4">
+          <div className="flex flex-col w-full mt-4 overflow-hidden">
             <h1 data-aos="fade-right" className="text-3xl font-[600] mf">{product.name}</h1>
             <p data-aos="fade-left" className="mt-2 font-semibold text-gray-600">{product?.particulars}</p>
             <p data-aos="fade-right" className="font-semibold ">{product?.quality}</p>
@@ -297,7 +297,7 @@ const ProductDetails = ({ cart, setCart }) => {
         <ExploreProducts cart={cart} setCart={setCart} />
       </div>
 
-    </>
+    </div>
   );
 };
 

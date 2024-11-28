@@ -41,13 +41,13 @@ const ExploreProducts = ({ cart, setCart }) => {
   console.log(Allproducts)
 
   return (
-    <div className="relative py-10" data-aos="fade-up">
+    <div className="relative py-10 overflow-hidden" data-aos="fade-up">
       <h1 className="relative mx-auto mb-2 text-4xl text-center md:text-6xl mf" data-aos="fade-left">
         <span className="text-dark mf">Explore </span>more products
       </h1>
       <div className="w-20 h-1 mx-auto mb-10 bg-dark md:w-60" data-aos="fade-left"></div>
       <Marquee pauseOnHover={true}>
-        <div className="flex mx-3 space-x-6" data-aos="fade-up">
+        <div className="flex mx-3 space-x-6" data-aos="fade-up overflow-hidden">
           {Allproducts.slice(1, 10).map((product, index) => {
             const isInCart = cart.find(
               (item) => item.itemCode === product.itemCode
