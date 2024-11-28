@@ -29,15 +29,15 @@ const Allproducts = [
     previews: [
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532208/SofScroll/ggyrga0as5yltfeyyzhq.jpg",
+          "https://m.media-amazon.com/images/I/61gAWx8qoUL._SX679_.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532208/SofScroll/ggyrga0as5yltfeyyzhq.jpg",
+          "https://m.media-amazon.com/images/I/61gAWx8qoUL._SX679_.jpg",
       },
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532208/SofScroll/vfj9mgzxe3bujuxaww58.jpg",
+          "https://m.media-amazon.com/images/I/71dAs-PDmNL._SX679_.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532208/SofScroll/vfj9mgzxe3bujuxaww58.jpg",
+          "https://m.media-amazon.com/images/I/71dAs-PDmNL._SX679_.jpg",
       },
       {
         previewUrl:
@@ -47,7 +47,7 @@ const Allproducts = [
       },
     ],
     imageUrl:
-      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532208/SofScroll/ggyrga0as5yltfeyyzhq.jpg", // Dummy placeholder image URL
+      "https://m.media-amazon.com/images/I/61gAWx8qoUL._SX679_.jpg", // Dummy placeholder image URL
     fullDesc: [
       "Unparalleled softness and reliability.",
       "3-ply sheets for superior absorbency.",
@@ -77,23 +77,23 @@ const Allproducts = [
     previews: [
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532208/SofScroll/nrnfwmcqnm7hdcalwpo6.jpg",
+          "https://m.media-amazon.com/images/I/51tfKhptLxL._SX679_.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532208/SofScroll/nrnfwmcqnm7hdcalwpo6.jpg",
+          "https://m.media-amazon.com/images/I/51tfKhptLxL._SX679_.jpg",
       },
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532209/SofScroll/irlzvcssp9bohfnxjmll.jpg",
+          "https://m.media-amazon.com/images/I/6102rtxvmQL._SX342_.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532209/SofScroll/irlzvcssp9bohfnxjmll.jpg",
+          "https://m.media-amazon.com/images/I/6102rtxvmQL._SX342_.jpg",
       },
       {
-        previewUrl: "https://s3.tebi.io/sof-scrool/VID-20241127-WA0004.mp4",
-        thumbUrl: "https://s3.tebi.io/sof-scrool/VID-20241127-WA0004.mp4",
+        previewUrl: "https://m.media-amazon.com/images/I/61DecADKkNL._SX342_.jpg",
+        thumbUrl: "https://m.media-amazon.com/images/I/61DecADKkNL._SX342_.jpg",
       },
     ],
     imageUrl:
-      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532208/SofScroll/nrnfwmcqnm7hdcalwpo6.jpg", // Dummy placeholder image URL
+      "https://m.media-amazon.com/images/I/51tfKhptLxL._SX679_.jpg", // Dummy placeholder image URL
     fullDesc: [
       "Experience ultimate softness and durability with our Toilet Tissue Paper Rolls, designed for everyday home use.",
       "Each roll features 3-ply sheets made from high-quality virgin wood pulp, ensuring superior absorbency and strength.",
@@ -127,15 +127,15 @@ const Allproducts = [
     previews: [
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532209/SofScroll/y4s7bne7q1efe7cpvpzy.jpg",
+          "https://m.media-amazon.com/images/I/61PNZyYTrEL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532209/SofScroll/y4s7bne7q1efe7cpvpzy.jpg",
+          "https://m.media-amazon.com/images/I/61PNZyYTrEL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg",
       },
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532209/SofScroll/x89wjmkgp9tmkmuaunln.jpg",
+          "https://m.media-amazon.com/images/I/61Ro+lEgkOL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532209/SofScroll/x89wjmkgp9tmkmuaunln.jpg",
+          "https://m.media-amazon.com/images/I/61Ro+lEgkOL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg",
       },
       {
         previewUrl:
@@ -145,7 +145,7 @@ const Allproducts = [
       },
     ],
     imageUrl:
-      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532209/SofScroll/mbmotgwnufmtpv6oq4vt.jpg", // Dummy placeholder image URL
+      "https://m.media-amazon.com/images/I/61PNZyYTrEL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg", // Dummy placeholder image URL
     fullDesc: [
       "Ultimate softness and durability.",
       "3-ply sheets made from high-quality virgin wood pulp.",
