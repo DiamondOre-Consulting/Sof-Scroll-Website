@@ -7,11 +7,8 @@ import PropTypes from "prop-types";
 import { FaPlayCircle } from "react-icons/fa";
 import { FaMinus, FaPlus } from "react-icons/fa6";
 import RelatedProducts from "./RelatedProducts";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // Import AOS styles
-
-
-
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 const ProductDetails = ({ cart, setCart }) => {
   const { itemCode } = useParams();
@@ -19,7 +16,7 @@ const ProductDetails = ({ cart, setCart }) => {
   const [mainImage, setMainImage] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [quantity, setQuantity] = useState(0); // Initialize quantity state
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     AOS.init({
@@ -49,7 +46,6 @@ const ProductDetails = ({ cart, setCart }) => {
     window.scrollTo(0, 0);
   }, []);
 
-
   const addToCart = (newQuantity) => {
     const existingItem = cart.find((item) => item.itemCode === itemCode);
     if (existingItem) {
@@ -69,7 +65,7 @@ const ProductDetails = ({ cart, setCart }) => {
 
   const removeFromCart = () => {
     const updatedCart = cart.filter((item) => item.itemCode !== itemCode);
-    setQuantity(quantity - 1)
+    setQuantity(quantity - 1);
     setCart(updatedCart);
     updateCartInLocalStorage(updatedCart); // Update local storage
   };
@@ -93,7 +89,6 @@ const ProductDetails = ({ cart, setCart }) => {
     });
   };
 
-
   if (!product) {
     return <div>Product not found!</div>;
   }
@@ -102,23 +97,23 @@ const ProductDetails = ({ cart, setCart }) => {
 
   const buyButton = () => {
     if (isInCart) {
-      navigate('/cart')
+      navigate("/cart");
     } else {
-      addToCart(1)
-      navigate('/cart')
+      addToCart(1);
+      navigate("/cart");
     }
-  }
+  };
 
   const breadcrumbItems = [
-    { label: 'Home', href: '/' },
-    { label: 'All Products', href: '/all-products' },
+    { label: "Home", href: "/" },
+    { label: "All Products", href: "/all-products" },
     { label: product.name },
   ];
 
   const ProductPreviews = ({ previews, videoUrl }) => {
     const [index, setIndex] = useState(0); // For image preview
     const [isVideoPreview, setIsVideoPreview] = useState(false); // Toggle between image and video preview
-    console.log(previews)
+    console.log(previews);
     const handlePreviewClick = (i) => {
       setIndex(i); // Change image preview when a thumbnail is clicked
       setIsVideoPreview(false); // Reset to image if clicked on image thumbnail
@@ -134,8 +129,16 @@ const ProductDetails = ({ cart, setCart }) => {
           {/* Display Image or Video */}
           {isVideoPreview ? (
             <div className="w-full max-w-full mx-auto h-[50vw] lg:h-[22rem] lg:max-w-[30rem] object-cover rounded-md">
-              <video playsInline autoPlay loop className="w-full max-w-full mx-auto h-[50vw] lg:h-[22rem] lg:max-w-[30rem] object-cover rounded-md">
-                <source src={previews[previews.length - 1].previewUrl} type="video/mp4" />
+              <video
+                playsInline
+                autoPlay
+                loop
+                className="w-full max-w-full mx-auto h-[50vw] lg:h-[22rem] lg:max-w-[30rem] object-cover rounded-md"
+              >
+                <source
+                  src={previews[previews.length - 1].previewUrl}
+                  type="video/mp4"
+                />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -188,127 +191,236 @@ const ProductDetails = ({ cart, setCart }) => {
     videoUrl: PropTypes.string, // Video URL for preview
   };
 
-
   return (
     <div className="overflow-hidden overflow-x-hidden">
       <BreadCrumbs headText={product.name} items={breadcrumbItems} />
 
-      <div className="w-full  select-none max-w-[80rem] p-4 pt-1 px-4 sm:px-10 mx-auto  md:px-20 lg:px-6" data-aos="fade-up">
+      <div className="w-full  select-none max-w-[80rem] p-4 pt-1 px-4 sm:px-10 mx-auto  md:px-20 lg:px-6">
         <div className="grid items-start grid-cols-1 gap-6 mt-4 lg:grid-cols-2 md:gap-0">
           <div data-aos="zoom-in" className="sticky top-0 w-full">
-            <ProductPreviews previews={product.previews} videoUrl={product.previews[product.previews.length - 1].previewUrl} />
+            <ProductPreviews
+              previews={product.previews}
+              videoUrl={
+                product.previews[product.previews.length - 1].previewUrl
+              }
+            />
           </div>
 
           <div className="flex flex-col w-full mt-4 overflow-hidden">
-            <h1 data-aos="fade-right" className="text-3xl font-[600] mf">{product.name}</h1>
-            <p data-aos="fade-left" className="mt-2 font-semibold text-gray-600">{product?.particulars}</p>
-            <p data-aos="fade-right" className="font-semibold ">{product?.quality}</p>
-            <p data-aos="fade-left" className="pb-3 text-gray-700 ">{product.description}</p>
-            <p data-aos="fade-up" className="pb-3 text-gray-700 ">Recommended for : <span className="text-black capitalize">{product.recommendation}</span></p>
+            <h1 className="text-3xl font-[600] mf">{product.name}</h1>
+            {/* <p  className="mt-2 font-semibold text-gray-600">{product?.particulars}</p> */}
+            {/* <p  className="font-semibold ">{product?.quality}</p> */}
 
-            <div data-aos="fade-up" className="flex gap-4 my-2 space-y-1 text-left">
-              <p className="mt-[0.15rem] font-bold text-[0.95rem] text-gray-700 ">Dimension  <span className="text-dark font-semibold border-2 ml-4 border-dark p-[0.3rem] text-[0.9rem] ">{product?.dimensions}</span></p>
+            <p className="pb-3 text-gray-700 mb-2 mt-2">
+              {product.description}
+            </p>
+
+            <div className="grid grid-cols-2 gap-y-2">
+              <>
+                <p className="font-bold">Brand</p>
+                <p>Sof SScrrol</p>
+              </>
+
+              {product?.quality && (
+                <>
+                  <p className="font-bold">Special Feature</p>
+                  <p>{product.quality}</p>
+                </>
+              )}
+
+              {product?.material && (
+                <>
+                  <p className="font-bold">Material</p>
+                  <p>{product.material}</p>
+                </>
+              )}
+
+              {product?.SheetCount && (
+                <>
+                  <p className="font-bold">Sheet Count</p>
+                  <p>{product.SheetCount}</p>
+                </>
+              )}
+
+              {product?.ply && (
+                <>
+                  <p className="font-bold">Ply Rating</p>
+                  <p>{product.ply}</p>
+                </>
+              )}
+
+              {product?.recommendation && (
+                <>
+                  <p className="font-bold">Recommended Uses</p>
+                  <p>{product.recommendation}</p>
+                </>
+              )}
+
+              {product?.pulls && (
+                <>
+                  <p className="font-bold">Pulls</p>
+                  <p>{product.pulls}</p>
+                </>
+              )}
+
+              {product?.dimensions && (
+                <>
+                  <p className="font-bold">Dimension</p>
+                  <p>{product.dimensions}</p>
+                </>
+              )}
+
+              {product?.weight && (
+                <>
+                  <p className="font-bold">Weight</p>
+                  <p>{product.weight}</p>
+                </>
+              )}
+
+              {product?.Packaging && (
+                <>
+                  <p className="font-bold">Packaging</p>
+                  <p>{product.Packaging}</p>
+                </>
+              )}
             </div>
 
-            <div data-aos="fade-up" className="flex gap-4 pb-3 my-2 space-y-1 text-left ">
-              <p className="mt-[0.15rem] font-bold text-[0.95rem] text-gray-700">Highlights</p>
-              <ul className="text-black font-[400]  text-[0.9rem]">
+            <hr className="mt-2"></hr>
 
-                <li className="tracking-wide">- Pulls : {product?.pulls}</li>
-                <li className="tracking-wide">- Sheets : {product?.SheetCount}</li>
-                <li className="tracking-wide">- Weight : {product?.weight}</li>
-                <li className="tracking-wide">- Ply : {product?.ply} Ply</li>
-              </ul>
-            </div>
-
-
-
-            <div className="flex items-center justify-start gap-4 mt-3" data-aos="fade-up" data-aos-offset="10">
-              <div className="min-w-[11rem] actions" data-aos="fade-left" data-aos-offset="10">
-
-                {
-                  quantity < 1 ? <button
-                    onClick={increaseQuantity}
-                    className="w-full px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700"
-                  >
-                    Add to Cart
-                  </button> :
-                    <div className="flex items-center justify-between font-semibold text-white bg-blue-700 rounded-md">
-                      <div onClick={quantity === 1 ? removeFromCart : decreaseQuantity} className="p-3 px-5 cursor-pointer">
-                        <FaMinus />
-                      </div>
-                      <span className="text-[1.2rem]">{quantity}</span>
-                      <div onClick={increaseQuantity} className="p-3 px-5 cursor-pointer">
-                        <FaPlus />
-                      </div>
-                    </div>
-                }
-              </div>
-              <div data-aos="fade-right" data-aos-offset="10" onClick={() => buyButton()} className="w-full px-4 py-2 text-center text-white rounded bg-dark cursor-pointer hover:bg-[#1d8883]"
-              >
-                Quote me
-              </div>
-            </div>
-            <div className="px-2 my-8">
-              <p className="mb-1 text-xl font-bold">About  Items</p>
-              <p className="text-xs text-gray-700">
-                <ul className="text-black font-[400] list-disc space-y-1 text-[0.9rem]" >
-                  {product?.fullDesc?.map((dis, index) => (
+            <div className="px-2 my-4">
+              <p className="mb-1 text-xl font-bold">About this Item</p>
+              {product?.fullDesc && Array.isArray(product.fullDesc) && (
+                <ul className="text-black font-[400] list-disc space-y-1 text-[0.9rem] pl-5">
+                  {product.fullDesc.map((dis, index) => (
                     <li key={index} className="tracking-wide">
                       {dis}
                     </li>
                   ))}
                 </ul>
-              </p>
+              )}
+            </div>
+
+            <div
+              className="flex items-center justify-start gap-4 mt-6"
+              data-aos-offset="10"
+            >
+              <div className="min-w-[11rem] actions" data-aos-offset="10">
+                {quantity < 1 ? (
+                  <button
+                    onClick={increaseQuantity}
+                    className="w-full px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700"
+                  >
+                    Add to Cart
+                  </button>
+                ) : (
+                  <div className="flex items-center justify-between font-semibold text-white bg-blue-700 rounded-md">
+                    <div
+                      onClick={
+                        quantity === 1 ? removeFromCart : decreaseQuantity
+                      }
+                      className="p-3 px-5 cursor-pointer"
+                    >
+                      <FaMinus />
+                    </div>
+                    <span className="text-[1.2rem]">{quantity}</span>
+                    <div
+                      onClick={increaseQuantity}
+                      className="p-3 px-5 cursor-pointer"
+                    >
+                      <FaPlus />
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div
+                data-aos-offset="10"
+                onClick={() => buyButton()}
+                className="w-full px-4 py-2 text-center text-white rounded bg-dark cursor-pointer hover:bg-[#1d8883]"
+              >
+                Quote me
+              </div>
             </div>
           </div>
         </div>
-        {/* <div className="my-8" data-aos="fade-up">
+        {/* <div className="my-8" >
           <p className="text-center text-gray-700 ">
             {product.fullDesc}
           </p>
         </div> */}
-      </div >
+      </div>
 
       <div>
-        <RelatedProducts cart={cart} setCart={setCart} category={product.category} itemCode={product.itemCode} />
+        <RelatedProducts
+          cart={cart}
+          setCart={setCart}
+          category={product.category}
+          itemCode={product.itemCode}
+        />
       </div>
 
       <div className="w-full p-4 pb-10 bg-slate-200" data-aos="fade-down">
-        <h2 className="mb-6 font-bold text-center mf text-[2.7rem]" data-aos="fade-left">Product Features</h2>
+        <h2 className="mb-6 font-bold text-center mf text-[2.7rem]">
+          Product Features
+        </h2>
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
-          <div className="flex flex-col items-center justify-center gap-1" data-aos="fade-right" data-aos-duration="1800">
-            <img className="object-cover rounded-full size-24 sm:size-28 md:size-32" src="https://img.freepik.com/free-photo/healthy-beautiful-manicure-with-cotton-pads_23-2148766541.jpg?semt=ais_hybrid" alt="" />
+          <div
+            className="flex flex-col items-center justify-center gap-1"
+            data-aos-duration="1800"
+          >
+            <img
+              className="object-cover rounded-full size-24 sm:size-28 md:size-32"
+              src="https://img.freepik.com/free-photo/healthy-beautiful-manicure-with-cotton-pads_23-2148766541.jpg?semt=ais_hybrid"
+              alt=""
+            />
             <h1 className="text-[0.9rem] font-semibold">Soft Tissue</h1>
           </div>
-          <div className="flex flex-col items-center justify-center gap-1" data-aos="fade-right" data-aos-duration="1400">
-            <img className="object-cover rounded-full size-24 sm:size-28 md:size-32" src="https://img.freepik.com/free-photo/top-view-hand-book_23-2147624852.jpg?semt=ais_hybrid" alt="" />
+          <div
+            className="flex flex-col items-center justify-center gap-1"
+            data-aos-duration="1400"
+          >
+            <img
+              className="object-cover rounded-full size-24 sm:size-28 md:size-32"
+              src="https://img.freepik.com/free-photo/top-view-hand-book_23-2147624852.jpg?semt=ais_hybrid"
+              alt=""
+            />
             <h1 className="text-[0.9rem] font-semibold">Soft Comforty</h1>
           </div>
-          <div className="flex flex-col items-center justify-center gap-1" data-aos="fade-up">
-            <img className="object-cover rounded-full size-24 sm:size-28 md:size-32" src="https://img.freepik.com/free-photo/eco-friendly-recycling-concept_23-2148737656.jpg?semt=ais_hybrid" alt="" />
+          <div className="flex flex-col items-center justify-center gap-1">
+            <img
+              className="object-cover rounded-full size-24 sm:size-28 md:size-32"
+              src="https://img.freepik.com/free-photo/eco-friendly-recycling-concept_23-2148737656.jpg?semt=ais_hybrid"
+              alt=""
+            />
             <h1 className="text-[0.9rem] font-semibold">Eco Friendly</h1>
-
           </div>
-          <div className="flex flex-col items-center justify-center gap-1" data-aos="fade-left" data-aos-duration="1400">
-            <img className="object-cover rounded-full size-24 sm:size-28 md:size-32" src="https://img.freepik.com/free-photo/napkin-wooden-table_1339-5587.jpg?ga=GA1.1.1044272893.1732183300&semt=ais_hybrid" alt="" />
+          <div
+            className="flex flex-col items-center justify-center gap-1"
+            data-aos-duration="1400"
+          >
+            <img
+              className="object-cover rounded-full size-24 sm:size-28 md:size-32"
+              src="https://img.freepik.com/free-photo/napkin-wooden-table_1339-5587.jpg?ga=GA1.1.1044272893.1732183300&semt=ais_hybrid"
+              alt=""
+            />
             <h1 className="text-[0.9rem] font-semibold">Quick Dry</h1>
-
           </div>
-          <div className="flex flex-col items-center justify-center gap-1" data-aos="fade-left" data-aos-duration="1800">
-            <img className="object-cover rounded-full size-24 sm:size-28 md:size-32" src="https://img.freepik.com/free-vector/toilet-tissue-roll-element-vector_53876-169051.jpg?ga=GA1.1.1044272893.1732183300&semt=ais_hybrid" alt="" />
+          <div
+            className="flex flex-col items-center justify-center gap-1"
+            data-aos-duration="1800"
+          >
+            <img
+              className="object-cover rounded-full size-24 sm:size-28 md:size-32"
+              src="https://img.freepik.com/free-vector/toilet-tissue-roll-element-vector_53876-169051.jpg?ga=GA1.1.1044272893.1732183300&semt=ais_hybrid"
+              alt=""
+            />
             <h1 className="text-[0.9rem] font-semibold">Disposable</h1>
-
           </div>
-
-
         </div>
       </div>
 
       <div>
         <ExploreProducts cart={cart} setCart={setCart} />
       </div>
-
     </div>
   );
 };
