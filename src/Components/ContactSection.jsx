@@ -198,12 +198,15 @@ const ContactSection = ({ contact }) => {
                     <ToastContainer />
                 </div>
             </div>
-            {contact &&
+        
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1944.136995893629!2d77.59456241595167!3d13.03480809226761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDAyJzA1LjMiTiA3N8KwMzUnNDkuNiJF!5e0!3m2!1sen!2sin!4v1679294189473"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.9950802906064!2d77.6834844!3d12.908037499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13004569d5db%3A0x10c63413a4dac9d5!2sKapital%20Seed%209!5e0!3m2!1sen!2sin!4v1732870981044!5m2!1sen!2sin"
 
                     height="400" allowfullscreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className='w-full'></iframe>
-            }
+            
+
+
+
         </div>
     )
 }

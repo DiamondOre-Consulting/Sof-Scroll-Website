@@ -30,7 +30,7 @@ const AboutUs = () => {
 
           <Link
             to={"/about-us"}
-            className="inline-grid px-4 py-2 overflow-hidden text-xl text-center  bg-gradient-to-r from-color3 to-dark text-white transition-all duration-300 border rounded-full w-52 button border-dark hover:bg-dark hover:text-white"
+            className="inline-grid px-4 py-2 mt-10 overflow-hidden text-xl text-center  bg-gradient-to-r from-color3 to-dark text-white transition-all duration-300 border rounded-full w-52 button border-dark hover:bg-dark hover:text-white"
           >
             <span>About US</span>
           </Link>

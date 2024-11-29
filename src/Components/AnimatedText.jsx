@@ -88,11 +88,11 @@ const AnimatedText = ({ text1, text2, text3, text4 }) => {
 
     const textStyle = {
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: 'left',
+        alignItems: 'left',
         flexWrap: 'wrap',
         marginBottom: '20px',
-        textAlign: 'center',
+        textAlign: 'left',
     };
 
     return (

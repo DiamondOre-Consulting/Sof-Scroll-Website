@@ -69,7 +69,7 @@ const Testimonials = () => {
   return (
     <div className=" flex flex-col items-center justify-center py-16 h-[100vh] ">
       <h2 className="mx-auto mb-10 text-4xl font-semibold text-gray-700 md:text-5xl mf ">
-        Our Clients’ Feedback
+        Our Client’s Feedback
       </h2>
 
       {/* <Marquee pauseOnHover gradient={false} speed={50} className="mb-8">

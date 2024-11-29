@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { FaBolt, FaShieldAlt, FaCheckCircle, FaRocket, FaHandsHelping, FaHeadset } from "react-icons/fa";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { FaGlobeAmericas } from "react-icons/fa";
 
 const OurStrength = () => {
   useEffect(() => {
@@ -17,6 +18,9 @@ const OurStrength = () => {
     { icon: <FaRocket size={40} />, label: "Quick reply", time: 1900 },
     { icon: <FaHandsHelping size={40} />, label: "OEM & ODM", time: 2200 },
     { icon: <FaHeadset size={40} />, label: "Customer service 24 hours online", time: 2500 },
+    { icon: <FaGlobeAmericas size={40} />, label: "Globally Available", time: 2500 },
+  
+
   ];
 
   return (
@@ -24,7 +28,7 @@ const OurStrength = () => {
       <div className="pt-10 ">
         <h1 className="mb-10   text-2xl md:text-5xl font-bold text-center text-gray-800 mf">Our Strengths</h1>
         <div className="container px-4 mx-auto">
-          <div className="flex flex-wrap justify-center gap-8 pb-20 text-center">
+          <div className="flex flex-wrap justify-center gap-2 pb-20 text-center">
             {strengths.map((strength, index) => (
               <div
                 key={index}

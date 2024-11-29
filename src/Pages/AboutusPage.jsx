@@ -6,6 +6,10 @@ import teamImage3 from "../assets/yashashrri.jpeg"; // Team member image 3
 import patternImage from "../assets/22.png"; // Background pattern image
 import BreadCrumbs from "../Components/BreadCrumbs";
 import yashi from "../assets/yashi.jpeg";
+import logo from "../assets/logo.png";
+import TextRevealByWord from "../Components/ui/text-reveal";
+import AnimatedText from "../Components/AnimatedText";
+
 import { FaRegCalendarAlt } from "react-icons/fa";
 import {
   VerticalTimeline,
@@ -92,9 +96,53 @@ const AboutUs = () => {
   return (
     <div className="">
       {/* <BreadCrumbs items={breadcrumbItems} /> */}
+      <div
+        className="relative bg-cover w-full h-[60vh] md:h-screen -top-24"
+        style={{
+          backgroundImage:
+            "url('https://img.freepik.com/premium-photo/coils-white-cotton-threads-metal-racks-close-up_508835-2434.jpg?w=740')",
+        }}
+      >
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-dark via- to-black opacity-60"></div>
+
+        {/* Text content */}
+        <div className="absolute left-10 top-1/2 transform -translate-y-1/2 text-white">
+          <p
+            className="text-2xl md:text-5xl mf max-w-3xl font-semibold  md:leading-[100px] "
+           
+          >
+            <AnimatedText
+              text2={
+                "Shaping comfort for every experience – dive into the story of our tissue mastery."
+              }
+            />
+            {/* <AnimatedText text2={"Shaping comfort for every experience – dive into the story of our tissue mastery."}  /> */}
+          </p>
+        </div>
+      </div>
+
+      <div className="flex flex-col md:flex-row justify-between  items-center px-4 md:px-10">
+        <div className="md:max-w-[65vw]">
+          <p className="text-dark text-4xl  mf font-semibold mb-4">
+            SOF SSCRROL
+          </p>
+          <p className="mb-4 text-gray-700 text-2xl ">
+            <TextRevealByWord text="Our company specializes in tissue paper conversion, turning large rolls into essential products like toilet paper, facial tissue, napkins, and paper towels. Using advanced machinery and techniques, we ensure each product meets high standards for softness, strength, and absorbency. Starting with premium raw materials—wood pulp or recycled paper—our process involves refining, papermaking, slitting, embossing, perforating, and packaging for consumer convenience." />
+          </p>
+        </div>
+
+        <div>
+          <img
+            src={logo}
+            alt=""
+            className="w-60  animate-bounce duration-[0.01s] md:mt-0 mt-20 "
+          />
+        </div>
+      </div>
 
       {/* About Us Content */}
-      <section className="grid items-center grid-cols-1 gap-10 mt-6 sm:px-10 md:grid-cols-2">
+      {/* <section className="grid items-center grid-cols-1 gap-10 mt-6 sm:px-10 md:grid-cols-2 mt-28">
         <div className="p-4 text-justify text-start">
           <h1 className="mb-3 text-4xl font-bold text-gray-800">
             Know More About Me
@@ -130,10 +178,10 @@ const AboutUs = () => {
         <div>
           <img src={yashi} alt="Company Image" className="rounded-md " />
         </div>
-      </section>
+      </section> */}
 
       {/* Manufacturing Process Section */}
-      <section className="px-4 py-16 -top-36 md:-top-60 bg-gray-50">
+      {/* <section className="px-4 py-16 -top-36 md:-top-60 bg-gray-50">
         <h2 className="mb-10 text-4xl font-bold text-center text-gray-800 md:text-5xl mf">
           Our Manufacturing Process
         </h2>
@@ -160,57 +208,30 @@ const AboutUs = () => {
             ))}
           </VerticalTimeline>
         </div>
-      </section>
+      </section> */}
 
       {/* Team Section */}
-      <section className="px-4 py-16 ">
-        <h2 className="mb-1 text-4xl font-bold text-center text-black md:text-6xl mf">
+      <section className="py-16">
+        <h2 className="mb-1 text-4xl font-semibold text-center text-black md:text-5xl mf">
           Meet Our Team
         </h2>
         <div className="w-40 h-1 mx-auto mb-8 bg-dark"></div>
 
-        <div className="grid grid-cols-1 gap-10 sm:px-20">
+        <div className="grid grid-cols-1 gap-10 px-4 md:px-10">
           {/* First Section: Text on Left, Image on Right */}
           <div className="flex flex-col items-center justify-between sm:flex-row">
-            <div className="lg:max-w-[60vw]">
-              <p>
-                Harshawardhan Singh is a visionary founder and seasoned business
-                leader with over 21 years of extensive experience in the FMCG,
-                Retail, Credit Rating, Banking, and Financial sectors. With a
-                strong track record in launching and scaling businesses,
-                Harshawardhan brings an exceptional blend of strategic thinking,
-                market insight, and operational excellence. His expertise lies
-                in building brands, orchestrating successful product launches,
-                and driving sustainable growth across various industries.
-              </p>
+            <div className="lg:max-w-[60vw] ">
 
-              <p>
-                As the founder of Kapital Seed 9, Harshawardhan is at the helm
-                of his latest venture, where he leverages his deep understanding
-                of market dynamics to create innovative solutions that cater to
-                evolving consumer needs. His career highlights include
-                leadership roles such as Associate Director at OliveMoney, Zonal
-                Head for South India at SMERA Ratings Limited, and Associate
-                Vice President at PropEquity Analytics, among others.
-                Harshawardhan has also held influential positions at industry
-                leaders like CRISIL Limited, ICRA, Brickwork Ratings, and
-                Colgate Palmolive, contributing to each with his skills in brand
-                building, business management, and market expansion.
-              </p>
-              <p>
-                A respected figure in his field, Harshawardhan has consistently
-                driven impact through his ability to lead teams, manage
-                large-scale projects, and develop growth strategies that are
-                both innovative and effective. His dedication to excellence and
-                commitment to results make him a trusted partner and leader in
-                every venture he undertakes.
-              </p>
+
+            <TextRevealByWord text=" Harshawardhan Singh is a visionary founder with over 21 years of experience in FMCG, Retail, Banking, and Finance. He has led businesses to scale and driven successful product launches. As the founder of Kapital Seed 9, Harshawardhan brings deep market insight and operational excellence, having held leadership roles at OliveMoney, SMERA Ratings, and CRISIL." />
+           
+            
             </div>
             <div className="flex flex-col items-center">
               <img
                 className="object-cover border-2 border-gray-300 rounded-full min-w-80 h-80"
                 src={teamImage1}
-                alt="Team Member"
+                alt="Harshawardhan Singh"
               />
               <p className="mt-4 text-2xl font-bold text-center">
                 Harshawardhan Singh
@@ -223,83 +244,45 @@ const AboutUs = () => {
 
           {/* Second Section: Text on Right, Image on Left */}
           <div className="flex flex-col items-center justify-between sm:flex-row-reverse">
-            <div className="max-w-[60vw]">
-              <p>
-                Alexander Mohandas is a seasoned business leader and commerce
-                graduate from St. Joseph’s, bringing over 20 years of expertise
-                across customer experience, sales, and marketing. His career
-                spans some of the world’s most respected multinational
-                companies, including the Yum! Brands chain (KFC & Pizza Hut),
-                HSBC, 24/7, and most recently, Probe Information, where he
-                served as Assistant Vice President.
-              </p>
-              <p>
-                Known for his deep understanding of customer needs and his
-                commitment to exceptional service, Alexander has been
-                instrumental in driving growth and enhancing customer
-                satisfaction. His passion for fostering innovation and aligning
-                business strategies with customer demands has enabled him to
-                build and expand businesses with a forward-thinking approach.
-                Alexander’s leadership style is rooted in a pursuit of
-                excellence and a strong grasp of the market landscape, allowing
-                him to adeptly steer through complex challenges and deliver
-                sustainable success.
-              </p>
+            <div className="md:max-w-[60vw]">
+
+            <TextRevealByWord text=" Alexander Mohandas is an experienced business leader with over 20 years in customer experience, sales, and marketing. He has worked with global brands like KFC, HSBC, and Probe Information. Known for his strategic approach, Alexander has driven growth and customer satisfaction, using his deep understanding of market needs to expand businesses successfully." />
+             
+                 
             </div>
             <div className="flex flex-col items-center">
               <img
                 className="object-cover border-2 border-gray-300 rounded-full min-w-80 h-80"
                 src={teamImage2}
-                alt="Team Member"
+                alt="Alexander Mohandas"
               />
               <p className="mt-4 text-xl font-bold text-center">
                 Alexander Mohandas
               </p>
               <p className="mt-1 text-sm text-gray-800 uppercase font-bold text-center">
-              Co-Founder & CMO
+                Co-Founder & CMO
               </p>
             </div>
           </div>
 
+          {/* Third Section: Text on Left, Image on Right */}
           <div className="flex flex-col items-center justify-between sm:flex-row">
-            <div className="max-w-[60vw]">
-              <p>
-                Yashashrri H Singh is a dynamic and results-driven co-founder
-                with 18 years of diverse experience across business development,
-                banking, customer relationships, and strategic marketing. As a
-                seasoned leader, she brings a sharp strategic vision and
-                exceptional communication skills to drive business growth and
-                ensure alignment with the company’s goals.
-              </p>
+            <div className="md:max-w-[60vw]">
 
-              <p>
-                In her role at Kapital Seed 9, Yashashrri has been instrumental
-                in steering the company's growth through innovative marketing
-                and customer-centric strategies. Her background includes
-                significant experience with global brands like TNT, where she
-                handled commercial billing processes for the Middle East, UK,
-                and Nordic regions, as well as leadership roles at Accenture in
-                the UK and Nordic process division.
-              </p>
-              <p>
-                Yashashrri’s career showcases her deep expertise in strategic
-                thinking, leadership, and relationship management. Her
-                dedication to excellence and proven track record of success make
-                her a key player in building robust business foundations and
-                fostering long-lasting client relationships.
-              </p>
+            <TextRevealByWord text=" Yashashrri H Singh is a dynamic leader with 18 years of experience in business development, banking, and marketing. She specializes in driving business growth and aligning strategies with company goals.  At Kapital Seed 9, Yashashrri plays a key role in shaping marketing and customer strategies, with a strong background at global companies like TNT and Accenture." />
+           
             </div>
             <div className="flex flex-col items-center">
               <img
                 className="object-cover border-2 border-gray-300 rounded-full min-w-80 h-80"
                 src={teamImage3}
-                alt="Team Member"
+                alt="Yashashrri H Singh"
               />
               <p className="mt-4 text-2xl font-bold text-center">
                 Yashashrri H Singh
               </p>
               <p className="mt-1 text-sm text-gray-800 uppercase font-bold text-center">
-              Founder & COO
+                Founder & COO
               </p>
             </div>
           </div>
