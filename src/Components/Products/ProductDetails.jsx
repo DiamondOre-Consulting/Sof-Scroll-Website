@@ -123,7 +123,7 @@ const ProductDetails = ({ cart, setCart }) => {
     console.log(images)
     return (
       <div className="flex flex-col items-center gap-4">
-        <div className="flex space-x-2 top-10">
+        <div className="flex w-full space-x-2 top-10">
           {
             videoActive ?
               <video src={productVideo} playsInline autoPlay muted loop
@@ -143,7 +143,7 @@ const ProductDetails = ({ cart, setCart }) => {
                 <img
                   src={images[selectedImage].previewUrl}
                   alt={`Preview ${selectedImage + 1}`}
-                  className={`w-full h-full object-cover rounded-md transition-transform duration-200 ${isZoomed ? 'scale-[2]' : 'scale-100'
+                  className={` w-full mx-auto h-[50vw] lg:h-[24rem] lg:w-[34rem] object-cover rounded-md transition-transform duration-200 ${isZoomed ? 'scale-[2]' : 'scale-100'
                     }`}
                   style={{
                     transformOrigin: `${mousePosition.x}% ${mousePosition.y}%`
