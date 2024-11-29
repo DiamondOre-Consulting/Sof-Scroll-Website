@@ -5,6 +5,7 @@ import { FaWhatsapp, FaInstagram, FaChevronDown } from "react-icons/fa6";
 import { MdMail } from "react-icons/md";
 import logo from '../assets/logo.png'
 
+
 const Navbar = ({ cart }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // For mobile menu
   const [activeDropdown, setActiveDropdown] = useState(null); // For mobile dropdown
@@ -18,10 +19,10 @@ const Navbar = ({ cart }) => {
   return (
     <>
       {/* Top Bar */}
-      <div className="relative z-10 flex flex-wrap items-center justify-between px-12 py-2 bg-dark">
+      {/* <div className="relative z-10 flex flex-wrap items-center justify-between px-12 py-2 bg-dark">
         <div className="text-white">
           <span className="text-[0.9rem] w-fit underline">
-            {/* Special offer: Get 50% off. */}
+        
           </span>
         </div>
         <div className="flex justify-end gap-2 items-center text-[0.9rem]  text-white ">
@@ -30,10 +31,10 @@ const Navbar = ({ cart }) => {
           <MdMail className="text-[1.2rem] cursor-pointer" />
           <div className="text-left text-[0.9rem]">+91-9980750049 </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Navbar */}
-      <div className="sticky top-0 h-[5.9rem] flex items-center z-50 w-full  shadow-md bg-white">
+      <div className="sticky top-0 pt-2 flex items-center z-50 w-full z-50  backdrop-blur shadow-xs ">
         <nav className="container flex items-center justify-between px-4 mx-auto sm:px-8 md:px-12 ">
           {/* Logo */}
           <img src={logo} className="w-[80px]" alt="" />
@@ -55,7 +56,7 @@ const Navbar = ({ cart }) => {
             />
             <NavLink to="/contact-us" label="Contact Us" location={location.pathname} />
             <Link to="/cart" className="relative">
-              <FiShoppingCart className="w-6 h-6 text-gray-800 hover:text-dark" />
+              <FiShoppingCart className="w-6 h-6 text-gray-100 hover:text-dark" />
               {cart.length > 0 && (
                 <div className="absolute w-5 h-5 text-xs text-center text-white bg-red-600 rounded-full -top-2 -right-2">
                   {cart.length}
@@ -166,7 +167,7 @@ const NavLink = ({
       onClick={isMobile && dropdownItems ? handleDropdownToggle : null}
     >
       <div
-        className={`flex items-center justify-center cursor-pointer text-gray-900 hover:text-dark ${location === to ? "font-semibold text-dark" : ""
+        className={`flex items-center justify-center cursor-pointer text-gray-100 hover:text-dark ${location === to ? "font-semibold text-dark" : ""
           }`}
       >
         <Link
@@ -208,6 +209,7 @@ const NavLink = ({
           ))}
         </div>
       )}
+
     </div>
   );
 };

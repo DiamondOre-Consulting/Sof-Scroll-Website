@@ -87,7 +87,7 @@ const Testimonials = () => {
       {/* <div className="absolute inset-y-0 left-0 z-20 w-1/4 pointer-events-none bg-gradient-to-r from-gray-100"></div> */}
       {/* <div className="absolute inset-y-0 right-0 z-20 w-1/4 pointer-events-none bg-gradient-to-l from-gray-100"></div> */}
 
-      <iframe  className="w-full px-10 h-full" src="https://widget.tagembed.com/2139465" ></iframe>
+      <iframe src="https://widget.tagembed.com/2140363" className="w-full h-full bg-gray-50"></iframe>
     </div>
   );
 };

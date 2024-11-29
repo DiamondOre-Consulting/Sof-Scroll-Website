@@ -16,16 +16,16 @@ const PopularCategory = () => {
     }, []);
 
     const images = [
-        { category: "Toilet Rolls", src: "https://img.freepik.com/free-photo/front-view-toilet-paper-rolls-stacked-pyramid-shape_23-2148524951.jpg?t=st=1732510677~exp=1732514277~hmac=e028ca397fe548b297c865b3886da073117900551d12368ae6857e3e5aaf0180&w=360", text: "Toilet Tissue Rolls" },
-        { category: "Kitchen Rolls", src: "https://img.freepik.com/free-photo/high-angle-three-toilet-paper-rolls_23-2148524918.jpg?t=st=1732641142~exp=1732644742~hmac=6d4c7fadc44f715d4fc91e2befc990d04ee37fc56c584f3da4ee42af9f54641d&w=740", text: "Kitchen Tissue Rolls" },
-        { category: "Facial Tissue", src: "https://img.freepik.com/free-photo/nasal-white-handkerchief-arrangement_23-2149091410.jpg?t=st=1732511965~exp=1732515565~hmac=564319dbc9df55c0db5d19415ceefa40c3fc81515fcdf5e86b71a335ce2f55bb&w=996", text: "Facial Tissue" },
-        { category: "Hospital Roll", src: "https://img.freepik.com/premium-photo/low-angle-view-staircase-against-sky_1048944-20789415.jpg?w=740", text: "Hospital Couch Roll" },
-        { category: "Paper Towel", src: "https://poornarth.in/public/uploads/products/6/aquarius_70220_dispenser_7.jpg", text: "Dispenser Suit" },
+        { category: "Toilet Rolls", src: "https://m.media-amazon.com/images/I/61gAWx8qoUL._SY450_.jpg", text: "Toilet Tissue Rolls" },
+        { category: "Kitchen Rolls", src: "https://m.media-amazon.com/images/I/71pLrJb--mL._SX522_.jpg", text: "Kitchen Tissue Rolls" },
+        { category: "Facial Tissue", src: "https://img.freepik.com/free-vector/realistic-tissue-box-mockup_52683-87334.jpg?t=st=1732854132~exp=1732857732~hmac=6206598c7b2d41d117418427cb5a5b6bc007f45d34ddb160a052f1a3fa1679fd&w=740", text: "Facial Tissue" },
+        { category: "Hospital Roll", src: "https://m.media-amazon.com/images/I/31lyTISOoDL.jpg", text: "Hospital Couch Roll" },
+        // { category: "Paper Towel", src: "https://poornarth.in/public/uploads/products/6/aquarius_70220_dispenser_7.jpg", text: "Dispenser Suit" },
     ];
 
     return (
         <div className="p-4  py-6" >
-            <h2 className="mb-8 text-5xl font-semibold text-center mf" data-aos="fade-left">Popular <span className="text-dark">Categories</span></h2>
+            <h2 className="mb-8 text-5xl font-semibold text-center mf" data-aos="fade-left">Popular Categories</h2>
             <Swiper
                 modules={[Pagination, Autoplay]}
                 autoplay={{

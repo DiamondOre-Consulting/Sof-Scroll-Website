@@ -32,7 +32,7 @@ const OurStrength = () => {
                 data-aos-duration={strength.time}
                 className="flex flex-col items-center justify-around w-40 transition-transform duration-300 hover:scale-110"
               >
-                <div className="p-2 mb-2 transition-transform duration-300 transform rounded-full text-dark hover:scale-125">
+                <div className="p-2 mb-2 transition-transform duration-300 transform rounded-full text-white  bg-gradient-to-r from-color3 to-dark hover:scale-125">
                   {strength.icon}
                 </div>
                 <p className="text-lg font-semibold text-gray-700 transition-colors duration-300 hover:text-dark">

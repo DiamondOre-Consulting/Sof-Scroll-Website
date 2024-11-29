@@ -9,14 +9,14 @@ const AboutUs = () => {
     <>
       <div className="relative ">
         <div className="flex flex-col items-center justify-center py-10 mx-auto text-start xl md:py-10 md:px-0">
-          <h1 className="mb-1 text-5xl md:text-6xl mf">
-            <span className="text-dark">About </span>Us
+          <h1 className="mb-1 text-5xl  text-gray-800 md:text-6xl mf font-bold">
+            About US
           </h1>
-          <div className="flex gap-1 mb-8">
-            <div className="w-[2.5rem] h-[3.5px] bg-dark rounded-full"></div>
-            <div className="w-[7rem] h-[3.5px] bg-dark rounded-full"></div>
-            <div className="w-[3.5px] h-[3.5px] bg-dark rounded-full"></div>
-            <div className="w-[3.5px] h-[3.5px] bg-dark rounded-full"></div>
+          <div className="flex gap-1 mb-8 ">
+            <div className="w-[2.5rem] h-[3.5px] bg-gradient-to-r from-color3 to-dark rounded-full"></div>
+            <div className="w-[7rem] h-[3.5px] bg-gradient-to-r from-color3 to-dark rounded-full"></div>
+            <div className="w-[3.5px] h-[3.5px] bg-gradient-to-r from-color3 to-darkrounded-full"></div>
+            <div className="w-[3.5px] h-[3.5px] bg-gradient-to-r from-color3 to-dark rounded-full"></div>
           </div>
 
           <img src={img} alt="" className="w-60 right-40 absolute opacity-70" />
@@ -30,7 +30,7 @@ const AboutUs = () => {
 
           <Link
             to={"/about-us"}
-            className="inline-grid px-4 py-2 overflow-hidden text-xl text-center text-black transition-all duration-300 border rounded-full w-52 button border-dark hover:bg-dark hover:text-white"
+            className="inline-grid px-4 py-2 overflow-hidden text-xl text-center  bg-gradient-to-r from-color3 to-dark text-white transition-all duration-300 border rounded-full w-52 button border-dark hover:bg-dark hover:text-white"
           >
             <span>About US</span>
           </Link>

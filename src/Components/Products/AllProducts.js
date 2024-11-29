@@ -516,9 +516,9 @@ const Allproducts = [
     previews: [
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532211/SofScroll/e7gxhcznohtzow0p5m1s.jpg",
+          "https://m.media-amazon.com/images/I/51FEi4JtgnL._SX522_.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532211/SofScroll/e7gxhcznohtzow0p5m1s.jpg",
+          "https://m.media-amazon.com/images/I/51FEi4JtgnL._SX522_.jpg",
       },
 
       {
@@ -533,7 +533,7 @@ const Allproducts = [
       },
     ],
     imageUrl:
-      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/xf9zo2qe60sfflms8ep1.jpg", // Dummy placeholder image URL
+      "https://m.media-amazon.com/images/I/51FEi4JtgnL._SX522_.jpg", // Dummy placeholder image URL
     fullDesc:[
       "Extra soft, absorbent 2-ply facial tissue.",
       "Made from virgin wood pulp for superior quality.",
@@ -569,9 +569,9 @@ const Allproducts = [
       },
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/pejtaziyg0k6op2tvimo.jpg",
+          "https://m.media-amazon.com/images/I/71VtfXGvR3L._SX522_.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/pejtaziyg0k6op2tvimo.jpg",
+          "https://m.media-amazon.com/images/I/71VtfXGvR3L._SX522_.jpg",
       },
 
       {
@@ -615,15 +615,15 @@ const Allproducts = [
     previews: [
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732605293/SofScroll/ujzjnsmehyinvvx8z1bx.jpg",
+          "https://m.media-amazon.com/images/I/31+CSqwVEGL._SX522_.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732605293/SofScroll/l6q0ckhbbh0gsh92nkeo.jpg",
+          "https://m.media-amazon.com/images/I/31+CSqwVEGL._SX522_.jpg",
       },
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732605293/SofScroll/elbvy3ragexkvpnrbgqq.jpg",
+          "https://m.media-amazon.com/images/I/51yq6QLp1AL._SX522_.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732605293/SofScroll/elbvy3ragexkvpnrbgqq.jpg",
+          "https://m.media-amazon.com/images/I/51yq6QLp1AL._SX522_.jpg",
       },
       {
         previewUrl:
@@ -633,7 +633,7 @@ const Allproducts = [
       },
     ],
     imageUrl:
-      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732605293/SofScroll/l6q0ckhbbh0gsh92nkeo.jpg", // Dummy placeholder image URL
+      "https://m.media-amazon.com/images/I/31+CSqwVEGL._SX522_.jpg", // Dummy placeholder image URL
     fullDesc: [
       "Durable 1-ply paper roll made from virgin wood pulp.",
       "Soft and comfortable for medical and beauty treatments.",
