@@ -7,9 +7,10 @@ import {
 } from 'react-icons/bs'
 import { CiClock1 } from "react-icons/ci";
 import { IoMdMail } from "react-icons/io";
-import logo from '../assets/Sof-Scroll.png'
+
 import { MdOutlineSmartphone } from 'react-icons/md';
 import { FaLocationDot } from 'react-icons/fa6';
+import logo from '../assets/logo.png'
 
 const contactStyle = "text-[0.95rem] flex items-start sm:items-center lg:items-start gap-1 hover:text-dark font-semibold  text-gray-800 "
 
@@ -25,7 +26,7 @@ const Footer = () => {
             <div className="w-full mb-8 lg:w-1/3 md:w-full xl:mb-0">
               <div className="text-gray-800">
                 <Link to="/">
-                  <img src={logo} alt="Logo" className="mb-4 w-[10rem] drop-shadow-[0px_0px_1px_#fff]" />
+                  <img src={logo} alt="Logo" className="mb-4 w-[6rem] drop-shadow-[0px_0px_1px_#fff]" />
                 </Link>
 
                 <div>

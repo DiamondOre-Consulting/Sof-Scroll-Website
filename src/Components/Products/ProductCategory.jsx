@@ -56,24 +56,24 @@ const ProductCategory = ({ cart, setCart }) => {
 
                         return (
                             <div key={index}>
-                                <div className="w-[24rem] h-full flex flex-col bg-gray-100 border rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-2xl border-gray-200 hover:border-dark">
+                                <div className="w-[24rem] h-full flex flex-col border  overflow-hidden transition-transform duration-300 hover:scale-105">
                                     <div className="relative">
                                         <img
                                             src={product.imageUrl}
                                             alt={product.name}
                                             className="h-[14rem] w-full object-cover transition-opacity duration-300 hover:opacity-90"
                                         />
-                                        <div className="absolute px-2 py-1 text-xs font-medium text-white bg-black rounded top-2 left-2 bg-opacity-60">
+                                        {/* <div className="absolute px-2 py-1 text-xs font-medium text-white bg-black rounded top-2 left-2 bg-opacity-60">
                                             New Arrival
-                                        </div>
+                                        </div> */}
                                     </div>
                                     <div className="flex flex-col px-4 pb-3 mt-2 space-y">
                                         <h1 className="text-[1.15rem] text-wrap font-semibold text-gray-800 truncate transition-colors duration-300 hover:text-dark">
                                             {product.name}
                                         </h1>
-                                        <p className="text-sm text-gray-600 truncate">
+                                        {/* <p className="text-sm text-gray-600 truncate">
                                             {product.description}
-                                        </p>
+                                        </p> */}
                                         <p className="text-xs italic text-gray-700">
                                             Quality: <span className='text-gray-500'>{product.quality}</span>
                                         </p>
