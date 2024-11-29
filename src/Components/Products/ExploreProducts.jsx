@@ -42,8 +42,8 @@ const ExploreProducts = ({ cart, setCart }) => {
 
   return (
     <div className="relative py-10 overflow-hidden" data-aos="fade-up">
-      <h1 className="relative mx-auto mb-2 text-4xl text-center md:text-6xl mf" data-aos="fade-left">
-        <span className="text-dark mf">Explore </span>more products
+      <h1 className="relative mx-auto mb-2 text-4xl text-center md:text-5xl mf font-semibold" data-aos="fade-left">
+       Explore more products
       </h1>
       <div className="w-20 h-1 mx-auto mb-10 bg-dark md:w-60" data-aos="fade-left"></div>
       <Marquee className="overflow-hidden h-fit" pauseOnHover={true}>
@@ -55,24 +55,24 @@ const ExploreProducts = ({ cart, setCart }) => {
 
             return (
               <div key={index}>
-                <div className="max-w-[19rem] w-full h-[21.5rem] justify-between pb-2 flex flex-col bg-gray-100 border rounded-lg shadow-md overflow-hidden transition-transform duration-300  hover:shadow-2xl border-gray-200 hover:border-dark">
+                <div className="max-w-[19rem] w-full h-[21.5rem] border justify-between pb-2 flex flex-col border rounded-lg shadow-md overflow-hidden transition-transform duration-300   ">
                   <div className="relative">
                     <img
                       src={product.imageUrl}
                       alt={product.name}
                       className="h-[12rem] w-full object-cover transition-opacity duration-300 hover:opacity-90"
                     />
-                    <div className="absolute px-2 py-1 text-xs font-medium text-white bg-black rounded top-2 left-2 bg-opacity-60">
+                    {/* <div className="absolute px-2 py-1 text-xs font-medium text-white bg-black rounded top-2 left-2 bg-opacity-60">
                       New Arrival
-                    </div>
+                    </div> */}
                   </div>
                   <div className="flex flex-col px-4 pb-3 mt-2 space-y">
                     <h1 className="text-[1.15rem] font-semibold text-gray-800 truncate transition-colors duration-300 hover:text-dark">
                       {product.name}
                     </h1>
-                    <p className="text-sm text-gray-600 line-clamp-2">
+                    {/* <p className="text-sm text-gray-600 line-clamp-2">
                       {product.description}
-                    </p>
+                    </p> */}
                     <p className="text-xs italic text-gray-700 line-clamp-1">
                       Quality: <span className='text-gray-500'>{product.quality}</span>
                     </p>

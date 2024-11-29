@@ -46,8 +46,8 @@ const RelatedProducts = ({ cart, setCart, category, itemCode }) => {
 
     return (
         <div className="relative py-10 overflow-hidden h-fit" data-aos="fade-up">
-            <h1 className="relative mx-auto mb-2 text-4xl text-center md:text-6xl mf" data-aos="fade-left">
-                <span className="text-dark mf">Related </span> products
+            <h1 className="relative mx-auto mb-2 text-4xl text-center font-semibold md:text-5xl mf" data-aos="fade-left">
+                Related products
             </h1>
             <div className="w-20 h-1 mx-auto mb-10 bg-dark md:w-60" data-aos="fade-up"></div>
             <Marquee className="overflow-hidden h-fit" pauseOnHover={true} data-aos="fade-up">
@@ -59,7 +59,7 @@ const RelatedProducts = ({ cart, setCart, category, itemCode }) => {
 
                         return (
                             <div key={index}>
-                                <div className="max-w-[19rem] justify-between w-full pb-2 h-[21.5rem] flex flex-col bg-gray-100 border rounded-lg shadow-md overflow-hidden transition-transform duration-300  hover:shadow-2xl border-gray-200 hover:border-dark">
+                                <div className="max-w-[19rem] justify-between w-full pb-2 h-[21.5rem] flex flex-col border rounded-lg shadow-md overflow-hidden transition-transform duration-300  ">
                                     <div className="relative">
                                         <img
                                             src={product.imageUrl}
