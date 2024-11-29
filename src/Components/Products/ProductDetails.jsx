@@ -18,6 +18,8 @@ const ProductDetails = ({ cart, setCart }) => {
   const [quantity, setQuantity] = useState(0); // Initialize quantity state
   const navigate = useNavigate();
 
+  const productVideo = product?.videoUrl;
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -110,79 +112,79 @@ const ProductDetails = ({ cart, setCart }) => {
     { label: product.name },
   ];
 
-  const ProductPreviews = ({ previews, videoUrl }) => {
-    const [index, setIndex] = useState(0); // For image preview
-    const [isVideoPreview, setIsVideoPreview] = useState(false); // Toggle between image and video preview
-    console.log(previews);
-    const handlePreviewClick = (i) => {
-      setIndex(i); // Change image preview when a thumbnail is clicked
-      setIsVideoPreview(false); // Reset to image if clicked on image thumbnail
-    };
+  const ProductPreviews = ({ images }) => {
 
-    const handleVideoPreviewClick = () => {
-      setIsVideoPreview(true); // Show the video preview
-    };
+    const [selectedImage, setSelectedImage] = useState(0);
+    const [videoActive, setVideoActive] = useState(false)
+    const [isZoomed, setIsZoomed] = useState(false);
 
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+    console.log(images)
     return (
-      <div className="bg-gray-50 dark:bg-slate-800 rounded-xl lg:mr-6">
-        <div className="text-center md:p-6 md:pb-2">
-          {/* Display Image or Video */}
-          {isVideoPreview ? (
-            <div className="w-full max-w-full mx-auto h-[50vw] lg:h-[22rem] lg:max-w-[30rem] object-cover rounded-md">
-              <video
-                playsInline
-                autoPlay
-                loop
-                className="w-full max-w-full mx-auto h-[50vw] lg:h-[22rem] lg:max-w-[30rem] object-cover rounded-md"
+      <div className="flex flex-col items-center gap-4">
+        <div className="flex space-x-2 top-10">
+          {
+            videoActive ?
+              <video src={productVideo} playsInline autoPlay muted loop
+                className="w-full max-w-full mx-auto h-[50vw] lg:h-[24rem] lg:max-w-[36rem] object-cover rounded-md"></video>
+              :
+              <div
+                className="relative overflow-hidden w-full h-[50vw] lg:h-[24rem]"
+                onMouseEnter={() => setIsZoomed(true)}
+                onMouseLeave={() => setIsZoomed(false)}
+                onMouseMove={(e) => {
+                  const { left, top, width, height } = e.target.getBoundingClientRect();
+                  const x = ((e.clientX - left) / width) * 100;
+                  const y = ((e.clientY - top) / height) * 100;
+                  setMousePosition({ x, y });
+                }}
               >
-                <source
-                  src={previews[previews.length - 1].previewUrl}
-                  type="video/mp4"
+                <img
+                  src={images[selectedImage].previewUrl}
+                  alt={`Preview ${selectedImage + 1}`}
+                  className={`w-full h-full object-cover rounded-md transition-transform duration-200 ${isZoomed ? 'scale-[2]' : 'scale-100'
+                    }`}
+                  style={{
+                    transformOrigin: `${mousePosition.x}% ${mousePosition.y}%`
+                  }}
                 />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          ) : (
-            <img
-              src={previews[index].previewUrl}
-              alt=""
-              className="w-full max-w-full mx-auto h-[50vw] lg:h-[22rem] lg:max-w-[30rem] object-cover rounded-md"
-            />
-          )}
-        </div>
+              </div>
+          }
 
-        {/* Thumbnails for Image and Video */}
-        <ul className="flex items-center justify-center gap-3 pt-2 md:px-8 lg:px-11 md:pt-0">
-          {previews.slice(0, previews.length - 1).map((preview, i) => (
-            <li
-              key={i}
-              className="flex items-center justify-center w-full h-20 p-1 overflow-hidden border border-gray-200 rounded-md cursor-pointer sm:h-24 dark:border-slate-700"
-              onClick={() => handlePreviewClick(i)}
+
+        </div>
+        <div className="flex space-x-2 top-10">
+          {images.map((image, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                setSelectedImage(index)
+                setVideoActive(false)
+              }}
+              className={`w-20 h-20  ${selectedImage === index ? 'border-2 rounded border-blue-500' : ''
+                }`}
             >
               <img
-                src={preview.thumbUrl}
-                alt=""
-                className="object-cover w-full h-full rounded-md"
+                src={image.previewUrl}
+                alt={`Thumbnail ${index + 1}`}
+                className="rounded"
               />
-            </li>
+            </button>
           ))}
+          {productVideo &&
+            <div className="relative" onClick={() => {
+              setVideoActive(true)
+              setSelectedImage(null)
+            }
+            }>
+              <video src={productVideo} controls={false} className={`w-20 h-20  ${videoActive ? 'border-2 rounded border-blue-500' : ''
+                }`}></video>
+              <FaPlayCircle className="absolute text-gray-500 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" size={40} />
+            </div>}
+        </div>
+      </div >
 
-          {/* Video Thumbnail */}
-          {videoUrl && (
-            <li
-              className="relative flex items-center justify-center w-full h-20 p-1 overflow-hidden border border-gray-200 rounded-md cursor-pointer sm:h-24 dark:border-slate-700"
-              onClick={handleVideoPreviewClick}
-            >
-              <video
-                src={previews[previews.length - 1].previewUrl} // You can use any video icon here
-                alt="Video Preview"
-                className="object-cover w-full h-full rounded-md"
-              />
-              <FaPlayCircle className="absolute text-[2.5rem] text-[#575757]" />
-            </li>
-          )}
-        </ul>
-      </div>
     );
   };
 
@@ -197,13 +199,8 @@ const ProductDetails = ({ cart, setCart }) => {
 
       <div className="w-full  select-none max-w-[80rem] p-4 pt-1 px-4 sm:px-10 mx-auto  md:px-20 lg:px-6">
         <div className="grid items-start grid-cols-1 gap-6 mt-4 lg:grid-cols-2 md:gap-0">
-          <div data-aos="zoom-in" className="sticky top-0 w-full">
-            <ProductPreviews
-              previews={product.previews}
-              videoUrl={
-                product.previews[product.previews.length - 1].previewUrl
-              }
-            />
+          <div data-aos="zoom-in" className="top-0 w-full ">
+            <ProductPreviews images={product.previews} />
           </div>
 
           <div className="flex flex-col w-full mt-4 overflow-hidden">
@@ -211,7 +208,7 @@ const ProductDetails = ({ cart, setCart }) => {
             {/* <p  className="mt-2 font-semibold text-gray-600">{product?.particulars}</p> */}
             {/* <p  className="font-semibold ">{product?.quality}</p> */}
 
-            <p className="pb-3 text-gray-700 mb-2 mt-2">
+            <p className="pb-3 mt-2 mb-2 text-gray-700">
               {product.description}
             </p>
 

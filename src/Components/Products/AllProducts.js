@@ -39,13 +39,10 @@ const Allproducts = [
         thumbUrl:
           "https://m.media-amazon.com/images/I/71dAs-PDmNL._SX679_.jpg",
       },
-      {
-        previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/video/upload/v1732532214/SofScroll/mpwjfwtiapgkgjgl2sm3.mp4",
-        thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/video/upload/v1732532214/SofScroll/mpwjfwtiapgkgjgl2sm3.mp4",
-      },
+
     ],
+    videoUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/video/upload/v1732532214/SofScroll/mpwjfwtiapgkgjgl2sm3.mp4",
     imageUrl:
       "https://m.media-amazon.com/images/I/61gAWx8qoUL._SX679_.jpg", // Dummy placeholder image URL
     fullDesc: [
@@ -92,6 +89,7 @@ const Allproducts = [
         thumbUrl: "https://m.media-amazon.com/images/I/61DecADKkNL._SX342_.jpg",
       },
     ],
+    videoUrl: "",
     imageUrl:
       "https://m.media-amazon.com/images/I/51tfKhptLxL._SX679_.jpg", // Dummy placeholder image URL
     fullDesc: [
@@ -137,13 +135,9 @@ const Allproducts = [
         thumbUrl:
           "https://m.media-amazon.com/images/I/61Ro+lEgkOL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg",
       },
-      {
-        previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/video/upload/v1732532213/SofScroll/hszouxvj9uoxvoax9eih.mp4",
-        thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/video/upload/v1732532213/SofScroll/hszouxvj9uoxvoax9eih.mp4",
-      },
+
     ],
+    videoUrl: "https://res.cloudinary.com/dmpkp9ux2/video/upload/v1732532213/SofScroll/hszouxvj9uoxvoax9eih.mp4",
     imageUrl:
       "https://m.media-amazon.com/images/I/61PNZyYTrEL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg", // Dummy placeholder image URL
     fullDesc: [
@@ -151,8 +145,8 @@ const Allproducts = [
       "3-ply sheets made from high-quality virgin wood pulp.",
       "Luxurious texture for a comfortable and hygienic experience."
     ]
-    
-      
+
+
   },
 
   {
@@ -188,13 +182,9 @@ const Allproducts = [
         thumbUrl:
           "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/icqztxtjuhk5mneopbhp.jpg",
       },
-      {
-        previewUrl:
-          "https://s3.tebi.io/sof-scrool/WhatsApp%20Video%202024-11-27%20at%2011.19.27_e305fa0f.mp4",
-        thumbUrl:
-          "https://s3.tebi.io/sof-scrool/WhatsApp%20Video%202024-11-27%20at%2011.19.27_e305fa0f.mp4",
-      },
+
     ],
+    videoUrl: "https://s3.tebi.io/sof-scrool/WhatsApp%20Video%202024-11-27%20at%2011.19.27_e305fa0f.mp4",
     imageUrl:
       "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532209/SofScroll/g3icm2qhs2kopr9jzpio.jpg", // Dummy placeholder image URL
     fullDesc: [
@@ -240,6 +230,7 @@ const Allproducts = [
         thumbUrl: "https://m.media-amazon.com/images/I/61Lsd4SKukL._SX679_.jpg",
       },
     ],
+    videoUrl: "",
     imageUrl:
       "https://m.media-amazon.com/images/I/71bNNQmNuwL._SX679_PIbundle-12,TopRight,0,0_AA679SH20_.jpg", // Dummy placeholder image URL
     fullDesc: [
@@ -247,7 +238,7 @@ const Allproducts = [
       "Dye-free, tree-free, BPA-free, and plastic-free.",
       "Soft, strong, and absorbent 3-ply sheets."
     ]
-    
+
   },
 
   {
@@ -285,14 +276,15 @@ const Allproducts = [
         thumbUrl: "https://m.media-amazon.com/images/I/71x-vWqFNEL._SX679_.jpg  ",
       },
     ],
+    videoUrl: "",
     imageUrl:
       "https://image.made-in-china.com/318f0j00BtlYEaJyaikI/Unbleached-bamboo-toilet-roll-mp4.webp", // Dummy placeholder image URL
-    fullDesc:[
+    fullDesc: [
       "Made from 100% natural bamboo, renewable and eco-friendly.",
       "Dye-free, tree-free, BPA-free, and plastic-free.",
       "Soft, strong, and absorbent 3-ply sheets."
     ]
-    
+
   },
 
   {
@@ -328,11 +320,9 @@ const Allproducts = [
         thumbUrl:
           "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532209/SofScroll/x89wjmkgp9tmkmuaunln.jpg",
       },
-      {
-        previewUrl: toiletJumbo,
-        thumbUrl: toiletJumbo,
-      },
+
     ],
+    videoUrl: toiletJumbo,
     imageUrl:
       "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/icqztxtjuhk5mneopbhp.jpg", // Dummy placeholder image URL
     fullDesc: [
@@ -340,7 +330,6 @@ const Allproducts = [
       "Highly absorbent and eco-friendly.",
       "Perfect for high-traffic areas, offering long-lasting performance."
     ]
-    
   },
 
   // category 2
@@ -385,6 +374,7 @@ const Allproducts = [
           "https://m.media-amazon.com/images/I/817a2AvPRQL._SX679_.jpg",
       },
     ],
+    videoUrl: "",
     imageUrl:
       "https://m.media-amazon.com/images/I/41LxQGimGZL._SX679_.jpg", // Dummy placeholder image URL
     fullDesc: [
@@ -392,7 +382,7 @@ const Allproducts = [
       "Made from virgin wood pulp for strength and durability.",
       "Exclusive Absorbency Pockets for quick water absorption."
     ]
-    
+
   },
 
   // category 3
@@ -436,6 +426,7 @@ const Allproducts = [
   //         "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532211/SofScroll/lprin7mnytxthgegzwbq.jpg",
   //     },
   //   ],
+  // videoUrl:'',
   //   imageUrl:
   //     "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532212/SofScroll/fftz2nxqzpy5dzc5cxna.jpg", // Dummy placeholder image URL
   //   fullDesc: [
@@ -443,7 +434,7 @@ const Allproducts = [
   //     "Food safe, ideal for spills and absorbing excess oil.",
   //     "Strong when wet, made from virgin wood pulp."
   //   ]
-    
+
   // },
 
   {
@@ -478,11 +469,9 @@ const Allproducts = [
         thumbUrl:
           "https://m.media-amazon.com/images/I/71nN0udP4BL._SX522_.jpg",
       },
-      {
-        previewUrl: kitchenPaperRoll,
-        thumbUrl: kitchenPaperRoll,
-      },
+
     ],
+    videoUrl: kitchenPaperRoll,
     imageUrl:
       "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/wdwq60rauj4w5ozrmt44.jpg",
     fullDesc: [
@@ -490,7 +479,7 @@ const Allproducts = [
       "Food safe, ideal for spills and absorbing excess oil.",
       "Strong when wet, made from virgin wood pulp."
     ]
-    
+
   },
 
   // category 4
@@ -528,19 +517,17 @@ const Allproducts = [
         thumbUrl:
           "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/xf9zo2qe60sfflms8ep1.jpg",
       },
-      {
-        previewUrl: facialTissue,
-        thumbUrl: facialTissue,
-      },
+
     ],
+    videoUrl: facialTissue,
     imageUrl:
       "https://m.media-amazon.com/images/I/51FEi4JtgnL._SX522_.jpg", // Dummy placeholder image URL
-    fullDesc:[
+    fullDesc: [
       "Extra soft, absorbent 2-ply facial tissue.",
       "Made from virgin wood pulp for superior quality.",
       "Ideal for personal hygiene, makeup removal, and small spills."
     ]
-    
+
   },
 
   {
@@ -575,19 +562,17 @@ const Allproducts = [
           "https://m.media-amazon.com/images/I/71VtfXGvR3L._SX522_.jpg",
       },
 
-      {
-        previewUrl: faceTissue,
-        thumbUrl: faceTissue,
-      },
+
     ],
+    videoUrl: faceTissue,
     imageUrl:
       "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532212/SofScroll/tqo1wsz5xxxfvu6zqwfv.jpg", // Dummy placeholder image URL
-    fullDesc:[
+    fullDesc: [
       "Extra soft, absorbent 3-ply facial tissue.",
       "Made from virgin wood pulp for superior softness.",
       "Perfect for daily and commercial use, ideal for desks, cars, and travel."
     ]
-    
+
   },
 
   // category 5
@@ -633,6 +618,7 @@ const Allproducts = [
           "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732605292/SofScroll/thclilhhgkpevtcb4dvm.avif",
       },
     ],
+    videoUrl: "",
     imageUrl:
       "https://m.media-amazon.com/images/I/31+CSqwVEGL._SX522_.jpg", // Dummy placeholder image URL
     fullDesc: [
@@ -640,7 +626,7 @@ const Allproducts = [
       "Soft and comfortable for medical and beauty treatments.",
       "60 cm wide and 100 meters long, perfect for covering examination tables."
     ]
-    
+
   },
 ];
 
