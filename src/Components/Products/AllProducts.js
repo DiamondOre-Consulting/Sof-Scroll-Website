@@ -204,6 +204,7 @@ const Allproducts = [
     ]
   },
 
+
   {
     name: "Toilet Tissue Paper Roll Bamboo Made / Recycle Material / 24 Rolls in a Packet",
     category: "Toilet Rolls",
@@ -226,21 +227,21 @@ const Allproducts = [
     previews: [
       {
         previewUrl:
-          "https://s3.tebi.io/sof-scrool/WhatsApp%20Image%202024-11-27%20at%2010.21.24_f2b1789c.jpg",
+          "https://m.media-amazon.com/images/I/71bNNQmNuwL._SX679_PIbundle-12,TopRight,0,0_AA679SH20_.jpg",
         thumbUrl:
-          "https://s3.tebi.io/sof-scrool/WhatsApp%20Image%202024-11-27%20at%2010.21.24_f2b1789c.jpg",
+          "https://m.media-amazon.com/images/I/71bNNQmNuwL._SX679_PIbundle-12,TopRight,0,0_AA679SH20_.jpg",
       },
       {
-        previewUrl: ss104,
-        thumbUrl: ss104,
+        previewUrl: "https://m.media-amazon.com/images/I/61gyR546opL._SX679_.jpg",
+        thumbUrl: "https://m.media-amazon.com/images/I/61gyR546opL._SX679_.jpg",
       },
       {
-        previewUrl: "https://s3.tebi.io/sof-scrool/VID-20241127-WA0007.mp4",
-        thumbUrl: "https://s3.tebi.io/sof-scrool/VID-20241127-WA0007.mp4",
+        previewUrl: "https://m.media-amazon.com/images/I/61Lsd4SKukL._SX679_.jpg",
+        thumbUrl: "https://m.media-amazon.com/images/I/61Lsd4SKukL._SX679_.jpg",
       },
     ],
     imageUrl:
-      "https://s3.tebi.io/sof-scrool/WhatsApp%20Image%202024-11-27%20at%2010.21.24_f2b1789c.jpg", // Dummy placeholder image URL
+      "https://m.media-amazon.com/images/I/71bNNQmNuwL._SX679_PIbundle-12,TopRight,0,0_AA679SH20_.jpg", // Dummy placeholder image URL
     fullDesc: [
       "Made from 100% natural bamboo, renewable and eco-friendly.",
       "Dye-free, tree-free, BPA-free, and plastic-free.",
@@ -276,12 +277,12 @@ const Allproducts = [
           "https://image.made-in-china.com/318f0j00BtlYEaJyaikI/Unbleached-bamboo-toilet-roll-mp4.webp",
       },
       {
-        previewUrl: "https://img.muji.net/img/item/4550002526245_1260.jpg",
-        thumbUrl: "https://img.muji.net/img/item/4550002526245_1260.jpg",
+        previewUrl: "https://m.media-amazon.com/images/I/71QZwoT6F-L._SX679_.jpg",
+        thumbUrl: "https://m.media-amazon.com/images/I/71QZwoT6F-L._SX679_.jpg",
       },
       {
-        previewUrl: "https://s3.tebi.io/sof-scrool/VID-20241127-WA0004.mp4",
-        thumbUrl: "https://s3.tebi.io/sof-scrool/VID-20241127-WA0004.mp4",
+        previewUrl: "https://m.media-amazon.com/images/I/71x-vWqFNEL._SX679_.jpg",
+        thumbUrl: "https://m.media-amazon.com/images/I/71x-vWqFNEL._SX679_.jpg  ",
       },
     ],
     imageUrl:
@@ -367,25 +368,25 @@ const Allproducts = [
     previews: [
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/fw4szjj6x84r9gdleppr.jpg",
+          "https://m.media-amazon.com/images/I/41LxQGimGZL._SX679_.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/fw4szjj6x84r9gdleppr.jpg",
+          "https://m.media-amazon.com/images/I/41LxQGimGZL._SX679_.jpg",
       },
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532211/SofScroll/igyqb8fjp3kanygegz9l.jpg",
+          "https://m.media-amazon.com/images/I/51jczhMDW1L._SX679_.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532211/SofScroll/igyqb8fjp3kanygegz9l.jpg",
+          "https://m.media-amazon.com/images/I/51jczhMDW1L._SX679_.jpg",
       },
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/video/upload/v1732532215/SofScroll/hl7w1ndiho90vwps81zy.mp4",
+          "https://m.media-amazon.com/images/I/817a2AvPRQL._SX679_.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/video/upload/v1732532215/SofScroll/hl7w1ndiho90vwps81zy.mp4",
+          "https://m.media-amazon.com/images/I/817a2AvPRQL._SX679_.jpg",
       },
     ],
     imageUrl:
-      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/wdwq60rauj4w5ozrmt44.jpg", // Dummy placeholder image URL
+      "https://m.media-amazon.com/images/I/41LxQGimGZL._SX679_.jpg", // Dummy placeholder image URL
     fullDesc: [
       "Highly absorbent, with a single sheet for effective hand drying.",
       "Made from virgin wood pulp for strength and durability.",
@@ -396,54 +397,54 @@ const Allproducts = [
 
   // category 3
 
-  {
-    name: "Kitchen Tissue Roll",
-    category: "Kitchen Rolls",
-    itemCode: "SS108",
-    particulars: "Jumbo Kitchen Tissue Roll",
-    pulls: "600 Pulls",
-    recommendation: "Restaurant , café, Canteen",
+  // {
+  //   name: "Kitchen Tissue Roll",
+  //   category: "Kitchen Rolls",
+  //   itemCode: "SS108",
+  //   particulars: "Jumbo Kitchen Tissue Roll",
+  //   pulls: "600 Pulls",
+  //   recommendation: "Restaurant , café, Canteen",
 
-    SheetCount: "600 Sheets",
-    dimensions: "23 cm * 21 cm",
-    ply: 2,
-    gsm: 18,
-    price: "400",
-    quality: "Hygine Multipurpose paper Tissue Roll",
-    material: "Virgin/ Wood Pulp",
-    description:
-      "Food Safe, Best for spills, Absorbs excess oil, strong when wet",
-    Packaging: "Pack of 2 Rolls",
-    JumboPackaging: "24 packets equals to 48 rolls in Carton",
-    previews: [
-      {
-        previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/wdwq60rauj4w5ozrmt44.jpg",
-        thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/wdwq60rauj4w5ozrmt44.jpg",
-      },
-      {
-        previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532211/SofScroll/wvo6dpwb0lctzisdhxlv.jpg",
-        thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532211/SofScroll/wvo6dpwb0lctzisdhxlv.jpg",
-      },
-      {
-        previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532211/SofScroll/lprin7mnytxthgegzwbq.jpg",
-        thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532211/SofScroll/lprin7mnytxthgegzwbq.jpg",
-      },
-    ],
-    imageUrl:
-      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532212/SofScroll/fftz2nxqzpy5dzc5cxna.jpg", // Dummy placeholder image URL
-    fullDesc: [
-      "Hygienic, multipurpose tissue roll for kitchen tasks.",
-      "Food safe, ideal for spills and absorbing excess oil.",
-      "Strong when wet, made from virgin wood pulp."
-    ]
+  //   SheetCount: "600 Sheets",
+  //   dimensions: "23 cm * 21 cm",
+  //   ply: 2,
+  //   gsm: 18,
+  //   price: "400",
+  //   quality: "Hygine Multipurpose paper Tissue Roll",
+  //   material: "Virgin/ Wood Pulp",
+  //   description:
+  //     "Food Safe, Best for spills, Absorbs excess oil, strong when wet",
+  //   Packaging: "Pack of 2 Rolls",
+  //   JumboPackaging: "24 packets equals to 48 rolls in Carton",
+  //   previews: [
+  //     {
+  //       previewUrl:
+  //         "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/wdwq60rauj4w5ozrmt44.jpg",
+  //       thumbUrl:
+  //         "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/wdwq60rauj4w5ozrmt44.jpg",
+  //     },
+  //     {
+  //       previewUrl:
+  //         "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532211/SofScroll/wvo6dpwb0lctzisdhxlv.jpg",
+  //       thumbUrl:
+  //         "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532211/SofScroll/wvo6dpwb0lctzisdhxlv.jpg",
+  //     },
+  //     {
+  //       previewUrl:
+  //         "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532211/SofScroll/lprin7mnytxthgegzwbq.jpg",
+  //       thumbUrl:
+  //         "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532211/SofScroll/lprin7mnytxthgegzwbq.jpg",
+  //     },
+  //   ],
+  //   imageUrl:
+  //     "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532212/SofScroll/fftz2nxqzpy5dzc5cxna.jpg", // Dummy placeholder image URL
+  //   fullDesc: [
+  //     "Hygienic, multipurpose tissue roll for kitchen tasks.",
+  //     "Food safe, ideal for spills and absorbing excess oil.",
+  //     "Strong when wet, made from virgin wood pulp."
+  //   ]
     
-  },
+  // },
 
   {
     name: "Kitchen Tissue Roll",
@@ -473,9 +474,9 @@ const Allproducts = [
       },
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/wdwq60rauj4w5ozrmt44.jpg",
+          "https://m.media-amazon.com/images/I/71nN0udP4BL._SX522_.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/wdwq60rauj4w5ozrmt44.jpg",
+          "https://m.media-amazon.com/images/I/71nN0udP4BL._SX522_.jpg",
       },
       {
         previewUrl: kitchenPaperRoll,
