@@ -20,7 +20,7 @@ const BestSellers = ({ cart, setCart }) => {
   return (
     <div>
       <div className="relative py-10">
-        <h1 className="relative mx-auto mb-1 text-6xl text-center mf"><span className="text-dark">Our Best </span>Sellers</h1>
+        <h1 className="relative mx-auto mb-1 text-3xl md:text-5xl text-center font-bold  text-gray-800 mf">Our Best Sellers</h1>
         <div className="w-40 h-1 mx-auto bg-dark"></div>
         {/* <img src={pattern1} alt="" className="absolute right-0 -top-20 " /> */}
         <div className="grid items-center justify-center grid-cols-1 gap-6 px-6 mx-auto mt-20 w-fit sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">

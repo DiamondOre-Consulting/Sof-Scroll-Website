@@ -1,45 +1,49 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { FaWhatsapp, FaInstagram, FaChevronDown } from "react-icons/fa6";
 import { MdMail } from "react-icons/md";
-import logo from '../assets/logo.png'
-
+import logo from '../assets/logo.png';
 
 const Navbar = ({ cart }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // For mobile menu
   const [activeDropdown, setActiveDropdown] = useState(null); // For mobile dropdown
+  const [scrolled, setScrolled] = useState(false); // To track if scrolled
   const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true); // When scrolled down more than 50px, set scrolled to true
+      } else {
+        setScrolled(false); // Reset when back at the top
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const closeMobileMenu = () => {
     setIsMenuOpen(false);
     setActiveDropdown(null); // Close dropdown too
   };
 
+
+  const isHomePage = location.pathname === "/"; 
+
   return (
     <>
-      {/* Top Bar */}
-      {/* <div className="relative z-10 flex flex-wrap items-center justify-between px-12 py-2 bg-dark">
-        <div className="text-white">
-          <span className="text-[0.9rem] w-fit underline">
-        
-          </span>
-        </div>
-        <div className="flex justify-end gap-2 items-center text-[0.9rem]  text-white ">
-          <FaWhatsapp className="text-[1.2rem] cursor-pointer" />
-          <FaInstagram className="text-[1.2rem] cursor-pointer" />
-          <MdMail className="text-[1.2rem] cursor-pointer" />
-          <div className="text-left text-[0.9rem]">+91-9980750049 </div>
-        </div>
-      </div> */}
-
       {/* Navbar */}
-      <div className="sticky top-0 pt-2 flex items-center z-50 w-full z-50  backdrop-blur shadow-xs ">
-        <nav className="container flex items-center justify-between px-4 mx-auto sm:px-8 md:px-12 ">
+      <div className={`sticky top-0 pt-4 flex items-center z-50 w-full backdrop-blur shadow-xs z-70 ${scrolled || !isHomePage ? "bg-black bg-opacity-40" : "bg-transparent"}`}>
+        <nav className="container flex items-center justify-between px-4 mx-auto sm:px-8 md:px-12">
           {/* Logo */}
-          <img src={logo} className="w-[80px]" alt="" />
+          <img src={logo} className="w-[80px]" alt="Logo" />
+          
           {/* Desktop Menu */}
-          <div className="items-center hidden h-[4.5rem] space-x-8 uppercase  md:flex justify-center">
+          <div className="items-center hidden h-[4.5rem] space-x-8 uppercase md:flex justify-center">
             <NavLink to="/" label="Home" location={location.pathname} />
             <NavLink to="/about-us" label="About Us" location={location.pathname} />
             <NavLink
@@ -167,8 +171,7 @@ const NavLink = ({
       onClick={isMobile && dropdownItems ? handleDropdownToggle : null}
     >
       <div
-        className={`flex items-center justify-center cursor-pointer text-gray-100 hover:text-dark ${location === to ? "font-semibold text-dark" : ""
-          }`}
+        className={`flex items-center justify-center cursor-pointer text-gray-100 hover:text-dark ${location === to ? "font-semibold text-dark" : ""}`}
       >
         <Link
           to={to || "#"}
@@ -177,26 +180,14 @@ const NavLink = ({
         >
           {label}
         </Link>
-        {/* Arrow icon */}
         {dropdownItems && (
           <FaChevronDown
-            className={`ml-2 transition-transform duration-300 ${isMobile && isActive
-              ? "rotate-180"
-              : "rotate-0"
-              }`}
+            className={`ml-2 transition-transform duration-300 ${isMobile && isActive ? "rotate-180" : "rotate-0"}`}
           />
         )}
       </div>
-
-      {/* Dropdown */}
       {dropdownItems && (
-        <div
-          className={`md:absolute overflow-hidden left-0 top-12 z-50 md:w-40 ml-24 md:ml-0 mt-2 bg-white  rounded-md ${isMobile
-            ? `transition-all duration-200 ease-in-out ${isActive ? "block" : "hidden"
-            }`
-            : "group-hover:block hidden"
-            }`}
-        >
+        <div className={`md:absolute overflow-hidden left-0 top-12 z-50 md:w-40 ml-24 md:ml-0 mt-2 bg-white rounded-md ${isMobile ? `transition-all duration-200 ease-in-out ${isActive ? "block" : "hidden"}` : "group-hover:block hidden"}`}>
           {dropdownItems.map((item, index) => (
             <Link
               key={index}
@@ -209,7 +200,6 @@ const NavLink = ({
           ))}
         </div>
       )}
-
     </div>
   );
 };
