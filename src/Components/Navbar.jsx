@@ -13,7 +13,7 @@ const Navbar = ({ cart }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 600) {
         setScrolled(true); // When scrolled down more than 50px, set scrolled to true
       } else {
         setScrolled(false); // Reset when back at the top
