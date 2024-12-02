@@ -11,6 +11,8 @@ const Navbar = ({ cart }) => {
   const [scrolled, setScrolled] = useState(false); // To track if scrolled
   const location = useLocation();
 
+  console.log(isMenuOpen)
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 600) {
@@ -29,7 +31,7 @@ const Navbar = ({ cart }) => {
   const closeMobileMenu = () => {
     setIsMenuOpen(false);
     setActiveDropdown(null); // Close dropdown too
-  };
+  }
 
 
   const isHomePage = location.pathname === "/"; 
@@ -37,14 +39,14 @@ const Navbar = ({ cart }) => {
   return (
     <>
       {/* Navbar */}
-      <div className={`sticky top-0 pt-4 flex items-center z-50 w-full backdrop-blur shadow-xs z-70 ${scrolled || !isHomePage ? "bg-black bg-opacity-40" : "bg-transparent"}`}>
+      <div className={`sticky top-0 py-2 flex items-center z-50 w-full backdrop-blur shadow-xs z-70 ${scrolled || !isHomePage ? "bg-black bg-opacity-10" : "bg-transparent"}`}>
         <nav className="container flex items-center justify-between px-4 mx-auto sm:px-8 md:px-12">
           {/* Logo */}
-          <img src={logo} className="w-[80px]" alt="Logo" />
+          <img src={logo} className="w-[120px]" alt="Logo" />
           
           {/* Desktop Menu */}
           <div className="items-center hidden h-[4.5rem] space-x-8 uppercase md:flex justify-center">
-            <NavLink to="/" label="Home" location={location.pathname} />
+            <NavLink to="/"  label="Home" location={location.pathname} />
             <NavLink to="/about-us" label="About Us" location={location.pathname} />
             <NavLink
               label="Products"
@@ -103,18 +105,20 @@ const Navbar = ({ cart }) => {
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="absolute left-0 w-full h-screen bg-[#2f2f2f53] backdrop-blur-sm shadow-lg top-full md:hidden">
-              <div className="flex flex-col items-center py-10 space-y-4 bg-white shadow-md">
+              <div className="flex flex-col  items-center py-10 space-y-4 bg-white shadow-md">
                 <NavLink
                   to="/"
                   label="Home"
                   location={location.pathname}
                   onClick={closeMobileMenu}
+                  isMobile={true}
                 />
                 <NavLink
                   to="/about-us"
                   label="About"
                   location={location.pathname}
                   onClick={closeMobileMenu}
+                  isMobile={true}
                 />
                 <NavLink
                   label="Products"
@@ -131,12 +135,14 @@ const Navbar = ({ cart }) => {
                   activeDropdown={activeDropdown}
                   setActiveDropdown={setActiveDropdown}
                   onClick={closeMobileMenu}
+                  
                 />
                 <NavLink
                   to="/contact-us"
                   label="Contact Us"
                   location={location.pathname}
                   onClick={closeMobileMenu}
+                  isMobile={true}
                 />
               </div>
             </div>
@@ -167,16 +173,16 @@ const NavLink = ({
 
   return (
     <div
-      className={`relative item-center flex-col  justify-center h-full flex group ${isMobile && "w-full  text-center"}`}
+      className={`z-50 relative item-center flex-col  justify-center h-full flex group ${isMobile && "w-full  text-center"}`}
       onClick={isMobile && dropdownItems ? handleDropdownToggle : null}
     >
       <div
-        className={`flex items-center justify-center cursor-pointer text-gray-100 hover:text-dark ${location === to ? "font-semibold text-dark" : ""}`}
+        className={`flex items-center justify-center cursor-pointer  hover:text-red-500 ${location === to ? "font-semibold  underline" : "text-gray-100"}`}
       >
         <Link
           to={to || "#"}
           onClick={!dropdownItems ? onClick : undefined}
-          className="nav-item"
+          className={`nav-item hover:text-red-500 ${isMobile ?"text-black":"text-white"}`}
         >
           {label}
         </Link>

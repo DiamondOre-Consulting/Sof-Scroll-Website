@@ -14,6 +14,7 @@ import ProductPage from "./Pages/ProductsPage";
 import ProductCategory from "./Components/Products/ProductCategory";
 import ChatBot from "./Components/ChatBot";
 
+
 function App() {
   // Cart state and useEffect to save/load from localStorage
   const [cart, setCart] = useState(() => {
@@ -49,6 +50,8 @@ function App() {
           element={<ProductCategory cart={cart} setCart={setCart} />}
         />
       </Routes>
+     
+     
       <div className="z-[1000000000] fixed bottom-[1.5rem] right-4 flex flex-col items-center justify-center gap-2">
 
         <ChatBot />

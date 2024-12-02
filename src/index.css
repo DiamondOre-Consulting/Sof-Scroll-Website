@@ -201,3 +201,21 @@
     @apply bg-background text-foreground;
     }
 }
+
+select::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar in Webkit browsers (Chrome, Safari) */
+  }
+  
+select {
+    -ms-overflow-style: none;  /* Hides the scrollbar in Internet Explorer 10+ */
+    scrollbar-width: none; /* Hides the scrollbar in Firefox */
+}
+
+.enquiryForm::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar in Webkit browsers (Chrome, Safari) */
+  }
+  
+.enquiryForm {
+    -ms-overflow-style: none;  /* Hides the scrollbar in Internet Explorer 10+ */
+    scrollbar-width: none; /* Hides the scrollbar in Firefox */
+}

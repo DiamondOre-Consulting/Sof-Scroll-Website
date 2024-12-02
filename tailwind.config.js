@@ -83,8 +83,9 @@ module.exports = {
 		}
 	},
 	plugins: [
-		require("tailwindcss-animate"), // Animations plugin for Tailwind
-		addVariablesForColors, // Custom plugin to generate color variables
+		require("tailwindcss-animate",'tailwind-scrollbar'), // Animations plugin for Tailwind
+		addVariablesForColors,
+		
 	],
 };
 
