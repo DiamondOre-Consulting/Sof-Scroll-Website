@@ -67,7 +67,7 @@ function App() {
           element={<ProductCategory cart={cart} setCart={setCart} />}
         />
       </Routes>
-      <div className="bottom-32 fixed right-5  z-50">
+      <div className="bottom-32 md:bottom-36 fixed right-5  z-50">
 
       <EnquireButton />
       </div>
