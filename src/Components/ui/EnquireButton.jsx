@@ -129,7 +129,7 @@ function EnquireButton() {
             <FaXmark onClick={()=>{setEnquire(prev=>!prev)}}  className=" text-3xl md:text-6xl cursor-pointer text-white" />
             </div>
 
-              <div className='md:mx-40 mx-10 z-50 rounded-tr-lg rounded-tl-lg  relative top-8 md:top-10 flex justify-center w-fit md:max-w-96   bg-white shadow h-full'>
+              <div className='md:mx-40 mx-10 z-50 rounded-tr-lg rounded-tl-lg  relative top-8 md:top-10 flex justify-center w-fit md:w-1/2   bg-white shadow h-full'>
 
               <div className="w-full sm:p-12 z-50 px-6  bg-white shadow-sm rounded-xl enquiryForm md:min-w-[37rem] mt-2 md:mt-10 lg:mt-0" data-aos="fade-up" data-aos-duration="600">
                     <h3 className="mb-4  text-dark underline text-center text-4xl mx-auto sora-600">Enquire!</h3>
