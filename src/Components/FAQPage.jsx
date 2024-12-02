@@ -98,7 +98,7 @@ FaqItem.propTypes = {
 const FAQPage = () => {
     return (
         <section className="bg-transparent ezy__faq2 light py-14 md:py-24 text-zinc-900 ">
-            <div className="container px-16 md:px-8 lg:px-28">
+            <div className="container px-4 md:px-8 lg:px-28 mx-auto">
                 <div className="grid justify-center grid-cols-12 md:mb-6">
                     <div className="col-span-12 text-center lg:col-span-8 lg:col-start-3 xl:px-12">
                         <h2 className="font-bold text-[25px] md:text-[45px] leading-none mb-4">
