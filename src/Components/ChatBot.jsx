@@ -53,7 +53,7 @@ const ChatBot = ({ toggleChat }) => {
         type: "received",
       },
       {
-        text: "1)How are you ? How may we can help you?",
+        text: "How are you ? How may we can help you?",
         type: "received",
       },
     ];
@@ -96,13 +96,13 @@ const ChatBot = ({ toggleChat }) => {
       setMessages([
         { text: "Hi!", type: "received" },
         {
-          text: "Welcome to Council of Architecture Website, we are available 24/7 to answer your queries.",
-          type: "received",
-        },
-        {
-          text: "You can enquire, provide feedback and ask for support. Please select an option to continue:",
-          type: "received",
-        },
+            text: "Hii Welcome to SOF SSCRROL. We're here to provide you with the highest quality tissue for all your needs. To get started, please share a bit more about what you're looking for",
+            type: "received",
+          },
+          {
+            text: "How are you ? How may we can help you?",
+            type: "received",
+          },
         // { text: options, type: "options" },
       ]);
     }, 2000);
