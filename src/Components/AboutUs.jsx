@@ -21,7 +21,7 @@ const AboutUs = () => {
 
           <img src={img} alt="" className="w-60 right-40 absolute opacity-70" />
 
-          <div className="z-10 w-full  h-fit">
+          <div className="z-10 w-full px-4 h-fit">
             <TextRevealByWord text="Our tissue paper conversion process turns large tissue rolls into consumer-ready products such as toilet paper, facial tissues, napkins, and paper towels. Using quality raw materials like wood pulp or recycled paper, the pulp is processed into continuous sheets, which are then slit, embossed, and perforated for convenience. Finally, automated machinery packages the tissue in various formats, ensuring quality and efficiency in a sustainable way to meet consumer needs." />
           </div>
           {/* <p className="mt-10 mb-4 md:text-5xl">
