@@ -35,7 +35,7 @@ const ChatbotButton = ({ toggleChat }) => {
         </div>
 
         <button
-          className="bg-dark z-20 bg-opacity-75 text-white rounded-full px-2 py-2 shadow-lg space-x-2 transition-all duration-300 flex"
+          className="bg-dark z-30 bg-opacity-75 text-white rounded-full px-2 py-2 shadow-lg space-x-2 transition-all duration-300 flex"
           onClick={toggleChat}
         >
           <span className="text-white">Chat With Us!</span>

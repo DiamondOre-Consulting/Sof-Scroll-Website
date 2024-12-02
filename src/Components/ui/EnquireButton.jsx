@@ -129,9 +129,9 @@ function EnquireButton() {
             <FaXmark onClick={()=>{setEnquire(prev=>!prev)}}  className=" text-3xl md:text-6xl cursor-pointer text-white" />
             </div>
 
-              <div className='md:mx-40 mx-10 z-50 rounded-tr-lg rounded-tl-lg  relative top-8 md:top-10 flex justify-center w-fit  bg-white h-full'>
+              <div className='md:mx-40 mx-10 z-50 rounded-tr-lg rounded-tl-lg  relative top-8 md:top-10 flex justify-center w-fit md:max-w-96   bg-white shadow h-full'>
 
-              <div className="w-full sm:p-12 z-50 px-6 overflow-auto bg-white shadow-sm rounded-xl enquiryForm md:min-w-[37rem] mt-2 md:mt-10 lg:mt-0" data-aos="fade-up" data-aos-duration="600">
+              <div className="w-full sm:p-12 z-50 px-6  bg-white shadow-sm rounded-xl enquiryForm md:min-w-[37rem] mt-2 md:mt-10 lg:mt-0" data-aos="fade-up" data-aos-duration="600">
                     <h3 className="mb-4  text-dark underline text-center text-4xl mx-auto sora-600">Enquire!</h3>
                     
                     <form onSubmit={handleSubmit} noValidate>
@@ -188,10 +188,10 @@ function EnquireButton() {
 
                             {formData?.products?.length===0?<div className='border  border-gray-200 p-2'>
                                Select products
-                            </div>:<div className='border overflow-y-auto h-28 enquiryForm gap-3 flex flex-wrap  border-gray-200 p-2'>
+                            </div>:<div className='border overflow-y-auto  h-28 enquiryForm gap-3 flex flex-wrap  border-gray-200 p-2'>
                                 {formData?.products?.map((product,ind)=>{
                                     return (
-                                       <div key={ind} className='border flex gap-2 justify-center items-center '> {product} <span onClick={()=>{handleSelectedProductCrossClick(ind)}}  className='text-black text-2xl '><HiMiniXMark />
+                                       <div key={ind} className='border flex gap-2 justify-center items-center '> {product} <span onClick={()=>{handleSelectedProductCrossClick(ind)}}  className='text-black text-2xl '><HiMiniXMark className='cursor-pointer' />
                                    </span></div>
                                     )
                                 })}

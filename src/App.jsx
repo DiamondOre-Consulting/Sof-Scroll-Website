@@ -72,7 +72,7 @@ function App() {
       <EnquireButton />
       </div>
      
-      <div className="z-20 fixed bottom-[1.5rem] right-4 flex flex-col items-center justify-center gap-2">
+      <div className="z-30 fixed bottom-[1.5rem] right-4 flex flex-col items-center justify-center gap-2">
 
       <ChatbotButton toggleChat={toggleChat} />
       {isChatOpen && <ChatBot toggleChat={toggleChat} />}
