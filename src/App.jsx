@@ -13,6 +13,7 @@ import { MdWhatsapp } from "react-icons/md";
 import ProductPage from "./Pages/ProductsPage";
 import ProductCategory from "./Components/Products/ProductCategory";
 import ChatBot from "./Components/ChatBot";
+import ChatbotButton from "./Components/ChatbotButton";
 
 function App() {
   // Cart state and useEffect to save/load from localStorage
@@ -24,6 +25,20 @@ function App() {
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
+
+
+
+
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
+  const toggleChat = () => {
+    setIsChatOpen((prev) => !prev);
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
 
   return (
     <BrowserRouter>
@@ -51,7 +66,9 @@ function App() {
       </Routes>
       <div className="z-[1000000000] fixed bottom-[1.5rem] right-4 flex flex-col items-center justify-center gap-2">
 
-        <ChatBot />
+      <ChatbotButton toggleChat={toggleChat} />
+      {isChatOpen && <ChatBot toggleChat={toggleChat} />}
+
         <Link
           target="_blank"
           className="p-[0.65rem] bg-[#02b72c] hover:bg-white  shadow-sm shadow-red cursor-pointer hover:text-[#107829] text-white duration-200 flex items-center justify-center rounded-full  text-[1.8rem]"

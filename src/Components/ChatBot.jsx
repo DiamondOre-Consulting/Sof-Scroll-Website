@@ -1,278 +1,536 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { FaMessage } from 'react-icons/fa6';
-import emailjs from "emailjs-com";
-import { toast, ToastContainer } from "react-toastify";
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import BeatLoader from "react-spinners/BeatLoader";
+import IconButton from "@mui/material/IconButton";
+import { Send as SendIcon } from "@mui/icons-material";
+// import aboutus from "../assets/aboutus.png";
+import Fuse from "fuse.js";
+import logo from '../assets/logo.png'
 
-const ChatBot = () => {
+const ChatBot = ({ toggleChat }) => {
+  const [loading, setLoading] = useState(true);
+  const [messages, setMessages] = useState([]);
+  const [currentFAQSection, setCurrentFAQSection] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [options, setOptions] = useState([
+    "About Us",
+    "E-Services",
+    "List of Architectural Institutions",
+    "Forms Download",
+    "Generate Fee Dues",
+    "Publications",
+    "Help Desk",
+    "FAQ's",
+  ]);
+  const handleChange = (e) => {
+    console.log("Search Query:", e.target.value); // Debugging line
+    setSearchQuery(e.target.value);
+  };
 
-    const [isOpen, setIsOpen] = useState(false);
-    const [welcomeopen, setWelcomeOpen] = useState(false);
-    const [messages, setMessages] = useState([]);
-    const [inputValue, setInputValue] = useState('');
-    const [loadingToastId, setLoadingToastId] = useState(null);
+  const homeIcon = (
+    <svg
+      className="w-7 h-7 mr-2 cursor-pointer"
+      style={{ color: "#ffa800" }}
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        fillRule="evenodd"
+        d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
 
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [userDetails, setUserDetails] = useState({
-        name: null,
-        email: null,
-        phone: null,
-        address: null,
-        tissue: null,
-        quantity: null,
-    });
-    const [scrollEnabled, setScrollEnabled] = useState(true);
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const chatboxBodyRef = useRef(null);
-
-    const questions = [
-        'What is your Name?',
-        'What is your Email ID?',
-        'What is your Phone Number?',
-        'What is your Address?',
-        'What type of tissues are you looking for?',
-        'What is your preferred quantity of tissues?',
+  const handleHomeClick = () => {
+    const initialMessages = [
+      { text: "Hi!", type: "received" },
+      {
+        text: "Hii Welcome to SOF SSCRROL. We're here to provide you with the highest quality tissue for all your needs. To get started, please share a bit more about what you're looking for",
+        type: "received",
+      },
+      {
+        text: "1)How are you ? How may we can help you?",
+        type: "received",
+      },
     ];
 
+    const initialOptions = [
+      "About Us",
+      "E-Services",
+      "List of Architectural Institutions",
+      "Forms Download",
+      "Generate Fee Dues",
+      "Publications",
+      "Help Desk",
+      "FAQ's",
+    ];
 
-    const introMessage =
-        `Hi! Welcome to SOF SSCRROL. We’re here to provide you with the highest quality tissues for all your needs. To get started, please share a bit more about what you're looking for.`;
+    // Set the welcome messages
+    setMessages([
+      ...initialMessages,
+      { text: initialOptions, type: "options" },
+    ]);
 
-    const endingMessage = 'Thank you for providing your information. We will contact you soon';
+    // Set the options for future interaction
+    setOptions(initialOptions);
+  };
 
-    const toggleChatbox = () => {
-        setIsOpen(!isOpen);
-        setCurrentQuestionIndex(0);
-        setMessages([]);
+  const chatContainerRef = useRef(null);
 
-        if (!isOpen) {
-            setMessages([{ sender: 'chatbot', text: introMessage }]);
-            setTimeout(() => {
-                if (!isOpen) {
-                    setMessages((prevMessages) => [...prevMessages, { sender: 'chatbot', text: questions[currentQuestionIndex] }]);
-                }
-            }, 1000);
-        }
-    };
+  useEffect(() => {
+    // Scroll to bottom whenever messages change
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop =
+        chatContainerRef.current.scrollHeight;
+    }
+  }, [messages]);
 
-    const closeChatbox = () => {
-        setIsOpen(false);
-        setCurrentQuestionIndex(0);
-        setMessages([]);
-    };
+  useEffect(() => {
+    // Show initial message and options after 2 seconds
+    const timer = setTimeout(() => {
+      setLoading(false);
+      setMessages([
+        { text: "Hi!", type: "received" },
+        {
+          text: "Welcome to Council of Architecture Website, we are available 24/7 to answer your queries.",
+          type: "received",
+        },
+        {
+          text: "You can enquire, provide feedback and ask for support. Please select an option to continue:",
+          type: "received",
+        },
+        // { text: options, type: "options" },
+      ]);
+    }, 2000);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (scrollEnabled && !welcomeopen) { // Check if scroll is enabled and welcome box is open
-                const scrollPosition = window.scrollY;
-                // Open the welcome box if the user scrolls down even a little bit
-                if (scrollPosition > 50) {
-                    setWelcomeOpen(true);
-                }
-            }
-        };
+    return () => clearTimeout(timer);
+  }, []);
 
-        window.addEventListener('scroll', handleScroll);
+  const handleOptionClick = (option) => {
+    setHistory((prevHistory) => [...prevHistory, { messages, options }]);
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [scrollEnabled, welcomeopen]);
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      { text: `${option}`, type: "sent" },
+    ]);
 
-    const closeWelcomeBox = () => {
-        setWelcomeOpen(false);
-        setScrollEnabled(false); // Disable scroll after closing welcome box
-    };
+    setLoading(true);
 
-    const sendMessage = async (userDetails) => {
-        console.log(userDetails)
+    // Simulate processing the request
+    setTimeout(() => {
+      setLoading(false);
+      let newMessage = "";
+      let newOptions = [];
+      switch (option) {
+        case "How can I place order?":
+          newMessage = (
+            <>
+              <div className="flex flex-col rounded-lg">
+                <div className="mb-2">{/* <img src={aboutus} alt="" /> */}</div>
+                <div>
+                  <p className="text-sm">
+                  Sir/ Madam, you may need fill in the enquiry form
 
-        const toastId = toast.loading('Submitting order...');
-        setLoadingToastId(toastId);
-
-        const chatData = {
-            to_name: "Owner",
-            from_name: userDetails.name,
-            name: userDetails.name,
-            email: userDetails.email,
-            phone: userDetails.phone,
-            address: userDetails.address,
-            tissue: userDetails.tissue,
-            quantity: userDetails.quantity
-        }
-
-
-
-        emailjs
-            .send(
-                "service_uwuijxf", // Your EmailJS service ID
-                "template_je04x6n", // Your EmailJS template ID
-                chatData,
-                "iz6s-w2-bkXxSr9fL" // Your EmailJS user ID
-            )
-            .then((response) => {
-                toast.update(toastId, {
-                    render: 'Order placed successfully!',
-                    type: 'success',
-                    isLoading: false,
-                    autoClose: 3000,
-                });
-                setMessages((prevMessages) => [
-                    ...prevMessages,
-                    { sender: 'chatbot', text: endingMessage },
-                ]);
-            })
-            .catch((err) => {
-                console.error(err);
-                toast.error("Failed to place order!");
-            });
-
-
-
-    };
-
-    const updateUserDetails = (key, value) => {
-        setUserDetails(prevUserDetails => {
-            const updatedDetails = {
-                ...prevUserDetails,
-                [key]: value
-            };
-
-            return updatedDetails;
-        });
-    };
-
-    useEffect(() => {
-        if (chatboxBodyRef.current) {
-            chatboxBodyRef.current.scrollTop = chatboxBodyRef.current.scrollHeight;
-        }
-    }, [messages]);
-
-    const handleInputChange = (e) => {
-        setInputValue(e.target.value);
-    };
-
-
-    const handleKeyDown = (e) => {
-        if (e.key === 'Enter') {
-            handleSendMessage();
-        }
-    };
-
-
-    const handleSendMessage = () => {
-        if (inputValue.trim() !== '') {
-            const key = Object.keys(userDetails)[currentQuestionIndex];
-            const updatedUserDetails = { ...userDetails, [key]: inputValue };
-
-            setUserDetails(updatedUserDetails);
-            setMessages(prevMessages => [
-                ...prevMessages,
-                { sender: 'user', text: inputValue },
-            ]);
-            setInputValue('');
-
-            if (currentQuestionIndex < questions.length - 1) {
-                setCurrentQuestionIndex(currentQuestionIndex + 1);
-                setMessages(prevMessages => [
-                    ...prevMessages,
-                    { sender: 'chatbot', text: questions[currentQuestionIndex + 1] },
-                ]);
-            } else {
-                sendMessage(updatedUserDetails);
-            }
-        }
-    };
-
-    const isSendButtonDisabled = messages[messages.length - 1]?.text === endingMessage;
-
-    const openModal = () => {
-        setIsModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setIsModalOpen(false);
-    };
-
-    return (
-        <div>
-
-            <div className={`fixed bottom-12 rounded border border-gray-300 z-10 right-[4.5rem] w-48  shadow-lg p-3 ${welcomeopen ? 'block' : 'hidden'}`}>
-                <div className='flex items-center justify-center'>
-
-                    <button className="absolute flex text-[1.5rem] items-center justify-center top-0 right-0 text-sm text-gray-100 bg-red-400 rounded size-[1.45rem] hover:bg-red-500" onClick={closeWelcomeBox}>
-                        X
-                    </button>
+                  </p>
                 </div>
-                <p className="pb-2 mt-2 text-xs font-bold">Hi I'm Robo Recruiter How may I Help You Today?</p>
-            </div>
+              </div>
+            </>
+          );
+     
+          break;
+      
+        case "What are the different types of tissue paper?":
+          const serviceMessages = [
+            "Tissue paper comes in a variety of forms, including toilet paper, wipes, kitchen towels, handkerchiefs, facial tissue, house hold towels, and napkins",
 
-            <div className="">
-                <div className="float-right cursor-pointer chat-icon" onClick={toggleChatbox}>
-                    {!isOpen && <div className='flex items-center justify-center bg-black text-light size-[3.1rem] rounded-full text-[1.4rem]'>
-                        <FaMessage />
-                    </div>}
-                </div>
-                {isOpen && (
-                    <div className="p-4 fixed border border-gray-300 z-[100000000] bottom-12 sm:bottom-8 right-4 bg-white rounded-lg shadow-lg chatbox shadow-gray-400 w-72">
-                        <div className="flex items-center justify-between pb-2 mb-2 border-b-2 border-gray-200 chatbox-header">
-                            <span className="text-lg font-bold text-dark">Welcome</span>
-                            <button className="text-red-500 hover:text-red-700" onClick={closeChatbox}>
-                                Close
-                            </button>
-                        </div>
-                        <div
-                            className="h-64 mb-4 overflow-y-auto chatbox-body scrollbar-none"
-                            style={{ scrollbarWidth: 'none' }}
-                            ref={chatboxBodyRef}
-                        >
-                            {messages.map((message, index) => (
-                                <div
-                                    key={index}
-                                    className={`chat-message ${message.sender === 'user' ? 'text-right mb-2 text-xs' : 'text-left mb-2 text-xs'}`}
-                                >
-                                    {message.sender === 'chatbot' && questions.includes(message.text) ? (
-                                        <span className="italic font-bold text-blue-950">{message.text}</span>
-                                    ) : (
-                                        <span className='font-semibold text-gray-700'>{message.text}</span>
-                                    )}
-                                </div>
-                            ))}
-                        </div>
-                        <div className="flex items-center chatbox-input">
-                            <input
-                                type="text"
-                                value={inputValue}
-                                onChange={handleInputChange}
-                                onKeyDown={handleKeyDown}
-                                className="flex-grow w-1/2 px-2 py-[0.45rem] border rounded-l-lg border-dark focus:outline-none"
-                                placeholder="Type your message..."
-                            />
-                            <button
-                                onClick={handleSendMessage}
-                                className={`bg-dark text-white px-2 py-2 rounded-r-lg ${isSendButtonDisabled ? 'opapreferredCity-50 cursor-not-allowed' : ''
-                                    }`}
-                                disabled={isSendButtonDisabled}
-                            >
-                                Send
-                            </button>
-                        </div>
-                    </div>
-                )}
-            </div>
+          ];
 
-            {isModalOpen && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 ">
-                    <div className="w-full max-w-lg p-6 mx-4 transition-transform duration-500 transform bg-gray-200 rounded-md">
-                        <svg onClick={closeModal} className="float-right w-6 h-6 mb-2 -mt-5 -mr-4 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                        {/* <img src={certificate} alt="Certificate" className="max-w-full max-h-full" /> */}
+          setMessages((prevMessages) => [
+            ...prevMessages,
+            { text: serviceMessages[0], type: "received" },
+            // { text: serviceMessages[1], type: "received" },
+          ]);
+      
+       
+          return;
+     
+        case "When and where will the conference take place?":
+          newMessage =
+            " Under product category, Product description are mentioned accordingly you may make your choice";
+        
+          break;
 
-                    </div>
-                </div>
-            )}
+        case " What is the usefulness of Tissue Paper? ":
+       
+          newMessage = (
+            <>
+              <p>
+              Bathroom tissue, paper towels, facial tissue, paper handkerchiefs and table napkins all play a critical role in hygiene, cleanliness and comfort. Tissue paper products function marvelously to promote hygiene by helping to prevent the spread of germs, bacteria, viruses and disease.
+              </p>
+            </>
+          );
+        //   newOptions = ["Go back to main menu", "Exit"];
+          break;
+
+        case "What are the key properties of tissue paper?":
+         
+          newMessage = (
+            <>
+              <p>
+              The key properties of tissue paper are soft , strength, absorbency, basis weight, thickness, 
+            brightness,  stretch, appearance, and comfort.
+              </p>
+            </>
+          );
+        //   newOptions = ["Go back to main menu", "Exit"];
+          break;
+
+
+          case "How do I choose tissue paper?":
+         
+          newMessage = (
+            <>
+              <p>
+              Under product category, Product description are mentioned accordingly you may make your choice
+              </p>
+            </>
+          );
+        //   newOptions = ["Go back to main menu", "Exit"];
+          break;
+
+
+
+          case "What is the usefulness of Tissue Paper? ":
+         
+          newMessage = (
+            <>
+              <p>
+              Bathroom tissue, paper towels, facial tissue, paper handkerchiefs and table napkins all play a critical role in hygiene, cleanliness and comfort. Tissue paper products function marvelously to promote hygiene by helping to prevent the spread of germs, bacteria, viruses and disease.
+              </p>
+            </>
+          );
+        //   newOptions = ["Go back to main menu", "Exit"];
+          break;
+
+       
+
+      
+       
+     
+   
+
+        // case 'Go back to previous menu':
+        //     if (history.length > 0) {
+        //         const previousState = history.pop();
+        //         setMessages(previousState.messages);
+        //         setOptions(previousState.options);
+        //         setHistory([...history]); // Update history
+        //     } else {
+        //         setMessages(prevMessages => [
+        //             ...prevMessages,
+        //             { text: "No previous menu available.", type: "received" }
+        //         ]);
+        //     }
+        //     return;
+
+        default:
+          newMessage = "Please select an option.";
+          newOptions = [
+            "About Us",
+            "E-Services",
+            "List of Architectural Institutions",
+            "Forms Download",
+            "Generate Fee Dues",
+            "Publications",
+            "Help Desk",
+            "FAQ's",
+          ];
+      }
+
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { text: newMessage, type: "received" },
+        { text: newOptions, type: "options" },
+      ]);
+      setOptions(newOptions);
+    }, 2000);
+  };
+
+  const handleGoBack = () => {
+    if (history.length > 0) {
+      const previousState = history.pop();
+
+      // Append previous messages instead of replacing them
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        ...previousState.messages,
+      ]);
+
+      // Restore options
+      setOptions(previousState.options);
+
+      // Update history state
+      setHistory([...history]);
+    } else {
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { text: "No previous menu available.", type: "received" },
+      ]);
+    }
+  };
+
+  const renderFAQList = (faqMessages) => (
+    <div className="w-full py-2">
+      <input
+        type="text"
+        placeholder="Search"
+        // value={searchQuery}
+        // onChange={handleChange}
+        className="w-full px-2 py-2 rounded-lg border border-amber-500"
+      />
+      <div className="flex flex-col mt-1">
+        {faqMessages
+          .filter((m) => m.toLowerCase().includes(searchQuery.toLowerCase()))
+          .map((m) => (
+            <p
+              className="py-2 hover:bg-amber-500 cursor-pointer hover:rounded-lg px-2 hover:text-white"
+              key={m}
+              onClick={() => handleOptionClick(m)}
+            >
+              {m}
+            </p>
+          ))}
+      </div>
+    </div>
+  );
+
+  const studentFAQMessages = [
+    "What is the eligibility criteria for admission to 1st year of 5-year B.Arch. degree course?",
+    "Is qualifying an Aptitude test in Architecture mandatory for admission to B.Arch. degree course?",
+    "Which Aptitude test is valid for admission to B.Arch. degree course?",
+    "How can a student apply for enrolment number at COA portal?",
+    "How can a student find enrolment number at COA portal?",
+    "How can a student correct the details of enrollment submitted by my institution?",
+    "How can a student seek NOC from the Council for Transfer/ Migration to other Institutions?",
+    "Is the Enrollment number issued by the Council changed after taking a Transfer/ Migration to another Institution?",
+    "How can a student file a complaint/ grievance against an Institution?",
+  ];
+
+  const facultyFAQMessages = [
+    "How can I know I am eligible for a teaching post in Architecture?",
+    "What is the procedure for appointment/promotion of faculty of Architecture at an institution?",
+    "Has the Council prescribed a Career Advancement Scheme for promotion of faculty of Architecture?",
+    "How can a faculty confirm his/her appointment in the application filled by an Institution?",
+    "How can a faculty remove his/her name from the application submitted by the previous employer institution where he/she had been working?",
+    "How can a faculty apply for an Equivalence Certificate for a Postgraduate Degree to M.Arch. degree awarded by Indian Universities?",
+    "How can a faculty apply for recognition of his/her Post Graduate Degree awarded by Foreign Authority under the Architects Act, 1972?",
+    "How the experience of a faculty is to be counted for determining eligibility for teaching post?",
+    "Is the duration of a Regular/ Executive PG course counted in the period of experience of a Faculty?",
+    "What should a faculty do if his/her name is misused by any institution as a faculty?",
+    "How can a faculty file a complaint/ grievance against his/her Institution regarding its failure in maintaining Minimum Standards of Architectural Education?",
+  ];
+
+  const institutionFAQMessages = [
+    "Which Norms of the Council are to be followed by institutions for imparting B.Arch. and M.Arch. degree courses in the country?",
+    "How does an existing institution apply for extension of approval for imparting B.Arch./M.Arch. degree course, introduction of PG course or additional intake?",
+    "How can an institution apply for enrolment numbers of students admitted by it during an academic session?",
+    "How does a Trust/Society/University apply for introduction of B.Arch. course at its proposed new institution?",
+    "How does an institution apply for change in name/site?",
+  ];
+
+  const registrationmessages = [
+    "How to Apply for registration as an architect?",
+    "How to find enrolment number?",
+    "Forget your password?",
+    "Whether Application for registration can be sumbitted on the basis of provision certificate",
+    "In case of change of name, what documents are to be sent to Council?",
+    "At which address hardcopy of the Application Form/ documents should be sent?",
+    "Whether the hard copy of Application is received at CoA’s Office?",
+    "How much time does it take to grant Registration?",
+    "What is the status of my application?",
+    "How many days will it take to receive the Original Certificate of Registration?",
+    "Within how many days a hard copy of the application should be submitted to Council?",
+  ];
+
+  const accountmessages = [
+    "Procedure for reimbursement of TA Expenses for COA Meetings/Inspections.",
+    "Eligibility (eligible Class) for journey performed for COA Meetings/Inspections by Air, Train and Road for experts/members of COA.",
+    "Charges per Kilometer, if journey performed by own Car",
+    "Purpose for which one can claim Local Conveyance",
+    "How can I get accommodation, if required, for overnight stay for COA Meetings/Inspections",
+    "What is amount of sitting fee/ honorarium for meeting/Inspection.",
+    "Mode of reimbursement of TA Expenses and sitting fee/ Honorarium to members/experts of COA.",
+    "Procedure to claim bills in respect of services provided to office of COA",
+  ];
+
+  const renewalmessages = [
+    "How can I renew my registration?",
+    "How can I renew my registration through online mode?",
+    "How can I update my new email id?",
+    "How can I renew my registration through offline mode?",
+    "Is there any provision for waiver of renewal/restoration fee/ fine?",
+    "How can I get refund for my double/ extra payment.",
+    "How can I submit my Bachelor of Architecture Degree?",
+    "I have paid one-time payment and endorsement is due. How can I get endorsement on my certificate?",
+    "I have lost my certificate of registration. What should I do?",
+    "How can I apply for Duplicate certificate of registration through offline/online?",
+    "How can I apply for change of Name?",
+    "I am residing out of India. How can I renew my registration?",
+    "How can I apply for Digital certificate of registration?",
+    "How can I get my name removed in COA records as an Architect, if I do not wish to use certificate of registration due to some reasons.",
+    "Applicability of Registration as an Architect and How to apply for NCARB.",
+    "When will I get my renewed certificate?",
+    "In case my certificate is undelivered or returned back to COA?",
+    "How can I add my Additional Qualification on Certificate of Registration?",
+  ];
+
+  const fusyoptions = [
+    // "How are you ? How may we can help you?",
+    "How can I place order?",
+    "What are the different types of tissue paper?",
+    "How do I choose tissue paper?",
+    "What is the usefulness of Tissue Paper? ",
+    "What are the key properties of tissue paper?",
+   
+  ];
+
+  const [history, setHistory] = useState([]);
+  const fuseRef = useRef(null);
+
+  useEffect(() => {
+    // Initialize Fuse.js with options whenever options change
+    fuseRef.current = new Fuse(fusyoptions, {
+      includeScore: true,
+      threshold: 0.3, // 70% fuzzy match (lower value = stricter match)
+    });
+  }, [fusyoptions]);
+
+  const handleSearch = (query) => {
+    const fuse = fuseRef.current; // Access the current Fuse instance
+    if (fuse) {
+      const results = fuse.search(query);
+      if (results.length > 0) {
+        const bestMatch = results[0].item;
+        handleOptionClick(bestMatch);
+        setSearchQuery("");
+      } else {
+        setMessages((prevMessages) => [
+          ...prevMessages,
+          {
+            text: "I'm sorry, I'm not able to find the information you're looking for at this moment.",
+            type: "received",
+          },
+        ]);
+      }
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      handleSearch(searchQuery);
+    }
+  };
+
+  const handleSendClick = () => {
+    handleSearch(searchQuery);
+  };
+
+  return (
+    <div>
+      <div className="fixed bottom-4 right-10 w-2/3 md:w-1/4 bg-gray-200 rounded-lg  shadow-lg z-50">
+        <div className="bg-white py-2 px-3 rounded-t-lg flex justify-between items-center">
+          <img src={logo} alt="" className="w-20 md:w-10" />
+          <div className="flex">
+            <button
+              onClick={toggleChat}
+              className="ml-4 text-c1 font-bold hover:text-dark"
+            >
+              ✕
+            </button>
+          </div>
         </div>
-    );
-}
+        <div
+          ref={chatContainerRef}
+          className="p-2 overflow-y-auto h-[300px] custom-scrollbar"
+        >
+          {messages.map((message, index) => (
+            <div
+              key={index}
+              className={`flex  justify-${
+                message.type === "received" || message.type === "options"
+                  ? "start"
+                  : "end"
+              }`}
+            >
+              <div
+                className={` rounded-t-md rounded-br-md  px-2 py-1 max-w-[85%] `}
+              >
+                {message.type === "options" ? (
+                  <div className="flex text-start flex-wrap  gap-2 ">
+                    {message.text.map((option) => (
+                      <button
+                        key={option}
+                        onClick={() => handleOptionClick(option)}
+                        className={`hover:bg-c1 border border-1 border-c1 text-black text-start py-2 px-2 rounded-lg hover:text-gray-100  text-sm ${
+                          message.type === "received"
+                            ? "text-gray-900"
+                            : "  bg-orange"
+                        }`}
+                      >
+                        {option}
+                      </button>
+                    ))}
+                  </div>
+                ) : (
+                  <p
+                    className={`text-sm  px-4 py-2 rounded-t-lg max-h-96 overflow-y-auto custom-scrollbar rounded-br-lg  ${
+                      message.type === "received"
+                        ? "text-gray-900 bg-white"
+                        : "bg-dark text-gray-100 py-2 px-2 justify-end"
+                    }`}
+                  >
+                    {message.text}
+                  </p>
+                )}
+              </div>
+            </div>
+          ))}
+
+          {loading && (
+            <div className="flex justify-start items-center h-3 mb-2 mt-2">
+              <span className="bg-white py-1 px-2 rounded-t-md rounded-br-md">
+                <BeatLoader color={"#2bb673"} loading={loading} size={10} />
+              </span>
+            </div>
+          )}
+        </div>
+        <div className="p-3 bg-white flex items-center">
+          {/* <button onClick={handleHomeClick}>
+                    {homeIcon}
+                </button> */}
+          <input
+            type="text"
+            placeholder="Enter your message!"
+            className="w-full border border-gray-300 rounded py-2 px-3"
+            value={searchQuery}
+            onChange={handleChange}
+            onKeyDown={handleKeyDown}
+          />
+          <IconButton
+            onClick={handleSendClick}
+            className="ml-2 px-4 py-2 bg-blue-500 text-white rounded"
+          >
+            <SendIcon style={{ color: "#2bb673" }} />
+          </IconButton>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default ChatBot;
