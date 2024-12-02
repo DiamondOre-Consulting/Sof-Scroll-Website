@@ -111,7 +111,7 @@ function EnquireButton() {
                 });
                 setLoading(false);
             });
-            
+
     };
 
   return (
@@ -186,9 +186,9 @@ function EnquireButton() {
                             </select>
 
 
-                            {formData?.products?.length===0?<div className='border text-gray-400 border-gray-200 p-2'>
+                            {formData?.products?.length===0?<div className='border  border-gray-200 p-2'>
                                Select products
-                            </div>:<div className='border overflow-y-auto h-28 enquiryForm gap-3 flex flex-wrap text-gray-400 border-gray-200 p-2'>
+                            </div>:<div className='border overflow-y-auto h-28 enquiryForm gap-3 flex flex-wrap  border-gray-200 p-2'>
                                 {formData?.products?.map((product,ind)=>{
                                     return (
                                        <div key={ind} className='border flex gap-2 justify-center items-center '> {product} <span onClick={()=>{handleSelectedProductCrossClick(ind)}}  className='text-black text-2xl '><HiMiniXMark />
