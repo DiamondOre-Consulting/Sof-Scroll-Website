@@ -219,6 +219,28 @@ const AboutUs = () => {
 
         <div className="grid grid-cols-1 gap-10 px-4 md:px-10">
           {/* First Section: Text on Left, Image on Right */}
+
+
+          <div className="flex flex-col items-center justify-between sm:flex-row">
+            <div className="md:max-w-[60vw]">
+
+            <TextRevealByWord text=" Yashashrri H Singh is a dynamic leader with 18 years of experience in business development, banking, and marketing. She specializes in driving business growth and aligning strategies with company goals.  At Kapital Seed 9, Yashashrri plays a key role in shaping marketing and customer strategies, with a strong background at global companies like TNT and Accenture." />
+           
+            </div>
+            <div className="flex flex-col items-center">
+              <img
+                className="object-cover border-2 border-gray-300 rounded-full min-w-80 h-80"
+                src={teamImage3}
+                alt="Yashashrri H Singh"
+              />
+              <p className="mt-4 text-2xl font-bold text-center">
+                Yashashrri H Singh
+              </p>
+              <p className="mt-1 text-sm text-gray-800 uppercase font-bold text-center">
+                Founder & COO
+              </p>
+            </div>
+          </div>
           <div className="flex flex-col items-center justify-between sm:flex-row">
             <div className="lg:max-w-[60vw] ">
 
@@ -266,26 +288,7 @@ const AboutUs = () => {
           </div>
 
           {/* Third Section: Text on Left, Image on Right */}
-          <div className="flex flex-col items-center justify-between sm:flex-row">
-            <div className="md:max-w-[60vw]">
-
-            <TextRevealByWord text=" Yashashrri H Singh is a dynamic leader with 18 years of experience in business development, banking, and marketing. She specializes in driving business growth and aligning strategies with company goals.  At Kapital Seed 9, Yashashrri plays a key role in shaping marketing and customer strategies, with a strong background at global companies like TNT and Accenture." />
-           
-            </div>
-            <div className="flex flex-col items-center">
-              <img
-                className="object-cover border-2 border-gray-300 rounded-full min-w-80 h-80"
-                src={teamImage3}
-                alt="Yashashrri H Singh"
-              />
-              <p className="mt-4 text-2xl font-bold text-center">
-                Yashashrri H Singh
-              </p>
-              <p className="mt-1 text-sm text-gray-800 uppercase font-bold text-center">
-                Founder & COO
-              </p>
-            </div>
-          </div>
+      
         </div>
       </section>
     </div>
