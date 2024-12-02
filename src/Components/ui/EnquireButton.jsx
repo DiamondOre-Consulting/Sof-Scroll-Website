@@ -134,7 +134,7 @@ function EnquireButton() {
                     <h3 className="mb-4  text-dark underline text-center text-4xl mx-auto sora-600">Enquire!</h3>
                     
                     <form onSubmit={handleSubmit} noValidate>
-                        <div className="mb-4 mx-auto">
+                        <div className="mb-4 ">
                             <input
                                 type="text"
                                 name="name"
@@ -146,7 +146,7 @@ function EnquireButton() {
                             />
                         </div>
                         <div className="flex flex-wrap mb-4 -mx-2">
-                            <div className="w-full mx-auto px-2 mb-4 lg:w-[60%] lg:mb-0">
+                            <div className="w-full  px-2 mb-4 lg:w-[60%] lg:mb-0">
                                 <input
                                     type="email"
                                     name="email"
@@ -157,7 +157,7 @@ function EnquireButton() {
                                     required
                                 />
                             </div>
-                            <div className="w-full px-2 lg:w-[40%] mx-auto">
+                            <div className="w-full px-2 lg:w-[40%] ">
                                 <input
                                     type="number"
                                     name="phone"
@@ -171,7 +171,7 @@ function EnquireButton() {
                         </div>
                         <div className="mb-4">
                             
-                            <select className=' h-[6rem] mx-auto  w-full mb-3  border border-gray-200 focus:outline-none' 
+                            <select className=' h-[6rem]  w-full mb-3  border border-gray-200 focus:outline-none' 
                             name=""
                             multiple 
                             id=""
@@ -196,7 +196,7 @@ function EnquireButton() {
                                 })}
                             </div>}
                         </div>
-                        <div className="mb-4 mx-auto">
+                        <div className="mb-4 ">
                             <textarea
                                 name="description"
                                 value={formData.description}
@@ -209,7 +209,7 @@ function EnquireButton() {
                         </div>
                         <button
                             type='submit'
-                            className="relative mx-auto flex items-center w-full px-6 py-[0.6rem] overflow-hidden font-medium text-center transition-all rounded-md bg-[#2F8B69] group"
+                            className="relative  flex items-center w-full px-6 py-[0.6rem] overflow-hidden font-medium text-center transition-all rounded-md bg-[#2F8B69] group"
                         >
                             <span
                                 className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rounded bg-dark group-hover:-mr-4 group-hover:-mt-4"
