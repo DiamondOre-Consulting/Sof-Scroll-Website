@@ -14,6 +14,8 @@ import ProductPage from "./Pages/ProductsPage";
 import ProductCategory from "./Components/Products/ProductCategory";
 import ChatBot from "./Components/ChatBot";
 import ChatbotButton from "./Components/ChatbotButton";
+import EnquireButton from './Components/ui/EnquireButton'
+
 
 
 function App() {
@@ -65,9 +67,12 @@ function App() {
           element={<ProductCategory cart={cart} setCart={setCart} />}
         />
       </Routes>
+      <div className="bottom-36 fixed right-5  z-50">
+
+      <EnquireButton />
+      </div>
      
-     
-      <div className="z-[1000000000] fixed bottom-[1.5rem] right-4 flex flex-col items-center justify-center gap-2">
+      <div className="z-20 fixed bottom-[1.5rem] right-4 flex flex-col items-center justify-center gap-2">
 
       <ChatbotButton toggleChat={toggleChat} />
       {isChatOpen && <ChatBot toggleChat={toggleChat} />}

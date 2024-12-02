@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { IoMdSend } from "react-icons/io";
 import AllProducts from '../../Components/Products/AllProducts'
 import { HiMiniXMark } from "react-icons/hi2";
+import { RxQuestionMarkCircled } from "react-icons/rx";
 
 function EnquireButton() {
     const [enquire, setEnquire] = useState(true)
@@ -117,40 +118,21 @@ function EnquireButton() {
 <>
 {enquire ? 
     <button onClick={handleEnquireButton}
-          class="relative  inline-flex h-12 active:scale-95 transistion overflow-hidden rounded-lg p-[1px] focus:outline-none"
+          class="bg-dark py-2 px-2 rounded-full text-white flex justify-center items-center gap-1 "
         >
-          <span
-            class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)]"
-          >
-          </span>
-          <span
-            class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-dark px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2 undefined"
-          >
-            Enquire?
-            <svg
-              stroke="currentColor"
-              fill="currentColor"
-              stroke-width="0"
-              viewBox="0 0 448 512"
-              height="1em"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"
-              ></path>
-            </svg>
-          </span>
-        </button>  :  <div className='w-screen flex items-center justify-center fixed top-0 bg-opacity-60 right-0  h-screen bg-black'>
-            <div className='absolute top-0 left-10 '>
+        <span className='text-xl '>Enquire</span> <RxQuestionMarkCircled className='text-white mt-1 text-2xl' />
+        </button>  : 
+        
+         <div className='w-screen z-50 flex items-center justify-center fixed top-0 bg-opacity-60 right-0  h-screen bg-black' >
+            <div className='absolute top-0 left-10'>
             <FaXmark onClick={()=>{setEnquire(prev=>!prev)}}  className="text-6xl cursor-pointer text-white" />
             </div>
 
-              <div className='mx-40 relative top-10 flex justify-center w-fit  bg-white h-full'>
+              <div className='md:mx-40 mx-10 z-50 rounded-tr-lg rounded-tl-lg  relative top-16 md:top-10 flex justify-center w-fit  bg-white h-full'>
 
-              <div className="max-w-[34rem] sm:p-12 p-6 overflow-auto bg-white shadow-sm rounded-xl enquiryForm md:min-w-[37rem] mt-10 lg:mt-0" data-aos="fade-up" data-aos-duration="600">
-                    <h3 className="mb-4 text-2xl text-dark sora-600">Enquire</h3>
-                    {/* <p className="mb-6 sora-400 text-[#535760]">Feel free to contact with us, guaranteed response within 24 hours</p> */}
+              <div className="w-full sm:p-12 z-50 p-6 overflow-auto bg-white shadow-sm rounded-xl enquiryForm md:min-w-[37rem] mt-10 lg:mt-0" data-aos="fade-up" data-aos-duration="600">
+                    <h3 className="mb-4  text-dark underline text-center text-4xl mx-auto sora-600">Enquire!</h3>
+                    
                     <form onSubmit={handleSubmit} noValidate>
                         <div className="mb-4">
                             <input
@@ -189,7 +171,7 @@ function EnquireButton() {
                         </div>
                         <div className="mb-4">
                             
-                            <select className=' h-[5rem] w-full mb-3  border border-gray-200 focus:outline-none' 
+                            <select className=' h-[6rem]  w-full mb-3  border border-gray-200 focus:outline-none' 
                             name=""
                             multiple 
                             id=""
@@ -197,7 +179,7 @@ function EnquireButton() {
                               >
                                 {allProducts.map((product,index)=>{
                                     return (
-                                    <option key={index} value={product.name}>{product.name}</option>
+                                    <option className='text-wrap ' key={index} value={product.name}><span className='text-2xl'>{index+1}</span>. {product.name}</option>
                                     )
                                 })}
                             </select>

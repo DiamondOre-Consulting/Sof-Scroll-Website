@@ -24,7 +24,7 @@ const ChatbotButton = ({ toggleChat }) => {
           <FaInstagram size={32} />
         </a>
       </div> */}
-      <div className="fixed bottom-20 md:bottom-24 space-y-2 flex flex-col right-4 z-50">
+      <div className="fixed bottom-20 md:bottom-24 space-y-2 flex flex-col right-4 z-20">
         <div className="bg-dark px-6   text-center hidden md:hidden flex justify-center  items-center rounded-full shadow-lg mr-6 transition-all duration-300">
           <p>
             Chat with us!{" "}
@@ -35,7 +35,7 @@ const ChatbotButton = ({ toggleChat }) => {
         </div>
 
         <button
-          className="bg-dark z-40 bg-opacity-75 text-white rounded-full px-2 py-2 shadow-lg space-x-2 transition-all duration-300 flex"
+          className="bg-dark z-20 bg-opacity-75 text-white rounded-full px-2 py-2 shadow-lg space-x-2 transition-all duration-300 flex"
           onClick={toggleChat}
         >
           <span className="text-white">Chat With Us!</span>
