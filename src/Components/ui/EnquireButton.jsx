@@ -120,15 +120,15 @@ function EnquireButton() {
     <button onClick={handleEnquireButton}
           class="bg-dark py-2 px-2 rounded-full text-white flex justify-center items-center gap-1 "
         >
-        <span className='text-xl '>Enquire</span> <RxQuestionMarkCircled className='text-white mt-1 text-2xl' />
+        <span className='text-xl '>Enquire</span> <RxQuestionMarkCircled className='text-white mt-1 text-xl' />
         </button>  : 
         
          <div className='w-screen z-50 flex items-center justify-center fixed top-0 bg-opacity-60 right-0  h-screen bg-black' >
             <div className='absolute top-0 left-10'>
-            <FaXmark onClick={()=>{setEnquire(prev=>!prev)}}  className="text-6xl cursor-pointer text-white" />
+            <FaXmark onClick={()=>{setEnquire(prev=>!prev)}}  className=" text-3xl md:text-6xl cursor-pointer text-white" />
             </div>
 
-              <div className='md:mx-40 mx-10 z-50 rounded-tr-lg rounded-tl-lg  relative top-16 md:top-10 flex justify-center w-fit  bg-white h-full'>
+              <div className='md:mx-40 mx-10 z-50 rounded-tr-lg rounded-tl-lg  relative top-8 md:top-10 flex justify-center w-fit  bg-white h-full'>
 
               <div className="w-full sm:p-12 z-50 px-6 overflow-auto bg-white shadow-sm rounded-xl enquiryForm md:min-w-[37rem] mt-2 md:mt-10 lg:mt-0" data-aos="fade-up" data-aos-duration="600">
                     <h3 className="mb-4  text-dark underline text-center text-4xl mx-auto sora-600">Enquire!</h3>
