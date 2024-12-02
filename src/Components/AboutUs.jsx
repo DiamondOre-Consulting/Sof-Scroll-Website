@@ -8,8 +8,8 @@ const AboutUs = () => {
   return (
     <>
       <div className="relative ">
-        <div className="flex flex-col items-center justify-center py-10 mx-auto text-start xl md:py-10 md:px-0">
-          <h1 className="mb-1 text-5xl  text-gray-800 md:text-6xl mf font-bold">
+        <div className="flex flex-col items-center justify-center md:py-10 mx-auto text-start xl md:py-10 md:px-0">
+          <h1 className="mb-1 text-5xl  text-gray-800 md:text-6xl mf ">
             About US
           </h1>
           <div className="flex gap-1 mb-8 ">

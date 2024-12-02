@@ -67,8 +67,8 @@ const Testimonials = () => {
   const secondRow = testimonials.slice(testimonials.length / 2);
 
   return (
-    <div className=" flex flex-col items-center justify-center py-16 h-[100vh] ">
-      <h2 className="mx-auto mb-10 text-4xl font-semibold text-gray-700 md:text-5xl mf ">
+    <div className=" flex flex-col items-center justify-center pt-16">
+      <h2 className="mx-auto mb-10 text-2xl md:text-4xl font-semibold text-gray-700 md:text-5xl mf ">
         Our Client’s Feedback
       </h2>
 
@@ -87,7 +87,7 @@ const Testimonials = () => {
       {/* <div className="absolute inset-y-0 left-0 z-20 w-1/4 pointer-events-none bg-gradient-to-r from-gray-100"></div> */}
       {/* <div className="absolute inset-y-0 right-0 z-20 w-1/4 pointer-events-none bg-gradient-to-l from-gray-100"></div> */}
 
-      <iframe src="https://widget.tagembed.com/2140363" className="w-full h-full bg-gray-50"></iframe>
+      <iframe src="https://widget.tagembed.com/2140363" className="w-full h-80 md:h-96 bg-gray-50"></iframe>
     </div>
   );
 };

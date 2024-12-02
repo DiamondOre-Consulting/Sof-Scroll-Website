@@ -26,7 +26,7 @@ const OurStrength = () => {
   return (
     <div>
       <div className="pt-10 ">
-        <h1 className="mb-10   text-2xl md:text-5xl font-bold text-center text-gray-800 mf">Our Strengths</h1>
+        <h1 className="mb-10   text-3xl md:text-5xl font-bold text-center text-gray-800 mf">Our Strengths</h1>
         <div className="container px-4 mx-auto">
           <div className="flex flex-wrap justify-center gap-2 pb-20 text-center">
             {strengths.map((strength, index) => (

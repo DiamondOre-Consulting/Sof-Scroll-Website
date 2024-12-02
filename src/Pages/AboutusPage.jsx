@@ -229,7 +229,7 @@ const AboutUs = () => {
             </div>
             <div className="flex flex-col items-center">
               <img
-                className="object-cover border-2 border-gray-300 rounded-full min-w-80 h-80"
+                className="object-cover border-2 border-gray-300 rounded-full w-80 h-80 md:mt-0 mt-4"
                 src={teamImage3}
                 alt="Yashashrri H Singh"
               />
@@ -274,7 +274,7 @@ const AboutUs = () => {
             </div>
             <div className="flex flex-col items-center">
               <img
-                className="object-cover border-2 border-gray-300 rounded-full min-w-80 h-80"
+                className="object-cover md:mt-0 mt-4 border-2 border-gray-300 rounded-full min-w-80 h-80"
                 src={teamImage2}
                 alt="Alexander Mohandas"
               />

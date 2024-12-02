@@ -19,14 +19,14 @@ const Footer = () => {
   return (
     <footer className="relative flex flex-col items-center justify-center overflow-x-hidden">
 
-      <div className="w-full px-4 pt-8 mx-auto  sm:px-28">
+      <div className="w-full px-4 pt-8 mx-auto  sm:px-4">
         <div className="py-8">
           <div className="flex flex-wrap items-center justify-around">
             {/* About Section */}
             <div className="w-full mb-8 lg:w-1/3 md:w-full xl:mb-0">
               <div className="text-gray-800">
                 <Link to="/">
-                  <img src={logo} alt="Logo" className="mb-4 w-[6rem] drop-shadow-[0px_0px_1px_#fff]" />
+                  <img src={logo} alt="Logo" className="mb-4 w-[4rem] md:w-[6rem] drop-shadow-[0px_0px_1px_#fff]" />
                 </Link>
 
                 <div>
