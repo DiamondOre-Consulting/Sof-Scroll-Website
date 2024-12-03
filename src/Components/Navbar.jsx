@@ -177,12 +177,12 @@ const NavLink = ({
       onClick={isMobile && dropdownItems ? handleDropdownToggle : null}
     >
       <div
-        className={`flex items-center justify-center cursor-pointer  hover:text-red-500 ${location === to ? "font-semibold  underline" : "text-gray-100"}`}
+        className={`flex items-center justify-center cursor-pointer  hover:text-dark ${location === to ? "font-semibold  underline" : "text-gray-100"}`}
       >
         <Link
           to={to || "#"}
           onClick={!dropdownItems ? onClick : undefined}
-          className={`nav-item hover:text-red-500 ${isMobile ?"text-black":"text-white"}`}
+          className={`nav-item hover:text-dark ${isMobile ?"text-black":"text-white"}`}
         >
           {label}
         </Link>

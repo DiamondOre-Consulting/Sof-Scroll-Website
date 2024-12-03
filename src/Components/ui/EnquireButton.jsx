@@ -124,9 +124,9 @@ function EnquireButton() {
         <span className='text-xl '>Enquire</span> <RxQuestionMarkCircled className='text-white mt-1 text-xl' />
         </button>  : 
         
-         <div className='w-full z-50 flex items-center justify-center fixed top-0 bg-opacity-60 right-0  h-screen bg-black' >
+         <div className='w-full z-50 flex items-start justify-center fixed top-0 bg-opacity-60 right-0  h-screen bg-black' >
            
-              <div className='md:mx-40 mx-10 z-50  rounded-tr-lg rounded-tl-lg  relative top-0 md:top-0 flex justify-center w-fit md:w-1/2   bg-white shadow md:h-[80vh] h-[80%]'>
+              <div className='md:mx-40 mx-10 z-50  rounded-tr-lg rounded-tl-lg mt-12 md:mt-16  relative  flex justify-center w-fit md:w-1/2   bg-white shadow h-fit pb-10'>
 
               <div className="w-full sm:p-12 z-50 px-6  bg-white shadow-sm rounded-xl enquiryForm  mt-2  lg:mt-0" data-aos="fade-up" data-aos-duration="600">
                     <h3 className="mb-4  text-dark underline text-center text-2xl md:text-4xl mx-auto sora-600">Enquire!</h3>
