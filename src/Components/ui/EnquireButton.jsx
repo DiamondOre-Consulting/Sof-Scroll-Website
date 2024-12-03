@@ -129,10 +129,10 @@ function EnquireButton() {
             <FaXmark onClick={()=>{setEnquire(prev=>!prev)}}  className=" text-3xl md:text-6xl cursor-pointer text-white" />
             </div>
 
-              <div className='md:mx-40 mx-10 z-50 rounded-tr-lg rounded-tl-lg  relative top-8 md:top-10 flex justify-center w-fit md:w-1/2   bg-white shadow h-full'>
+              <div className='md:mx-40 mx-10 z-50 rounded-tr-lg rounded-tl-lg  relative top-0 md:top-10 flex justify-center w-fit md:w-1/2   bg-white shadow h-[90%]'>
 
               <div className="w-full sm:p-12 z-50 px-6  bg-white shadow-sm rounded-xl enquiryForm md:min-w-[37rem] mt-2 md:mt-10 lg:mt-0" data-aos="fade-up" data-aos-duration="600">
-                    <h3 className="mb-4  text-dark underline text-center text-4xl mx-auto sora-600">Enquire!</h3>
+                    <h3 className="mb-4  text-dark underline text-center text-2xl md:text-4xl mx-auto sora-600">Enquire!</h3>
                     
                     <form onSubmit={handleSubmit} noValidate>
                         <div className="mb-4 ">
@@ -172,13 +172,15 @@ function EnquireButton() {
                         </div>
                         <div className="mb-4">
                             
-                            <select className=' h-[6rem]  w-full mb-3  border border-gray-200 focus:outline-none' 
+                            <select className=' h-6 md:h-[6rem]  w-full mb-3  border border-gray-200 focus:outline-none' 
                             name=""
                             multiple 
                             id=""
                             onChange={handleSelectedProductsChange}
                               >
+                                <option disabled value="">Select products</option>
                                 {allProducts.map((product,index)=>{
+                                    
                                     return (
                                     <option className='text-wrap ' key={index} value={product.name}><span className='text-2xl'>{index+1}</span>. {product.name}</option>
                                     )
