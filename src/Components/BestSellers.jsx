@@ -226,7 +226,6 @@ const BestSellers = ({ cart, setCart }) => {
 
           {allproducts?.map((product, index) => {
             const isInCart = cart.find((item) => item.itemCode === product.itemCode);
-
             return (
               <div key={index}>
                 <div className="md:w-[24rem] h-full flex flex-col  border overflow-hidden transition-transform duration-300 hover:scale-105   ">

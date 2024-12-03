@@ -365,8 +365,8 @@ const ProductDetails = ({ cart, setCart }) => {
             data-aos-duration="1800"
           >
             <img
-              className="object-cover rounded-full size-24 sm:size-28 md:size-32"
-              src="https://img.freepik.com/free-photo/healthy-beautiful-manicure-with-cotton-pads_23-2148766541.jpg?semt=ais_hybrid"
+              className="object-cover rounded-full size-24 sm:size-28 md:size-60"
+              src="https://rukminim2.flixcart.com/image/850/1000/xif0q/facial-tissue/m/s/d/2-ply-ultra-soft-tissue-facial-tissue-100-pulls-200-sheets-per-original-imah4jyjbdtatmkj.jpeg?q=90&crop=false"
               alt=""
             />
             <h1 className="text-[0.9rem] font-semibold">Soft Tissue</h1>
@@ -376,37 +376,27 @@ const ProductDetails = ({ cart, setCart }) => {
             data-aos-duration="1400"
           >
             <img
-              className="object-cover rounded-full size-24 sm:size-28 md:size-32"
-              src="https://img.freepik.com/free-photo/top-view-hand-book_23-2147624852.jpg?semt=ais_hybrid"
+              className="object-cover rounded-full size-24 sm:size-28 md:size-60"
+              src="https://opil.riteknowledgelabs.in/wp-content/assets/img/product/solution/Facial-Tissue.png"
               alt=""
             />
             <h1 className="text-[0.9rem] font-semibold">Soft Comforty</h1>
           </div>
           <div className="flex flex-col items-center justify-center gap-1">
             <img
-              className="object-cover rounded-full size-24 sm:size-28 md:size-32"
+              className="object-cover rounded-full size-24 sm:size-28 md:size-60"
               src="https://img.freepik.com/free-photo/eco-friendly-recycling-concept_23-2148737656.jpg?semt=ais_hybrid"
               alt=""
             />
             <h1 className="text-[0.9rem] font-semibold">Eco Friendly</h1>
           </div>
-          <div
-            className="flex flex-col items-center justify-center gap-1"
-            data-aos-duration="1400"
-          >
-            <img
-              className="object-cover rounded-full size-24 sm:size-28 md:size-32"
-              src="https://img.freepik.com/free-photo/napkin-wooden-table_1339-5587.jpg?ga=GA1.1.1044272893.1732183300&semt=ais_hybrid"
-              alt=""
-            />
-            <h1 className="text-[0.9rem] font-semibold">Quick Dry</h1>
-          </div>
+       
           <div
             className="flex flex-col items-center justify-center gap-1"
             data-aos-duration="1800"
           >
             <img
-              className="object-cover rounded-full size-24 sm:size-28 md:size-32"
+              className="object-cover rounded-full size-24 sm:size-28 md:size-60"
               src="https://img.freepik.com/free-vector/toilet-tissue-roll-element-vector_53876-169051.jpg?ga=GA1.1.1044272893.1732183300&semt=ais_hybrid"
               alt=""
             />
