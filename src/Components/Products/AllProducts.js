@@ -217,9 +217,9 @@ const Allproducts = [
     previews: [
       {
         previewUrl:
-          "https://m.media-amazon.com/images/I/71bNNQmNuwL._SX679_PIbundle-12,TopRight,0,0_AA679SH20_.jpg",
+          "https://m.media-amazon.com/images/I/71x-vWqFNEL._SX679_.jpg",
         thumbUrl:
-          "https://m.media-amazon.com/images/I/71bNNQmNuwL._SX679_PIbundle-12,TopRight,0,0_AA679SH20_.jpg",
+          "https://m.media-amazon.com/images/I/71x-vWqFNEL._SX679_.jpg",
       },
       {
         previewUrl: "https://m.media-amazon.com/images/I/61gyR546opL._SX679_.jpg",
@@ -232,7 +232,7 @@ const Allproducts = [
     ],
     videoUrl: "",
     imageUrl:
-      "https://m.media-amazon.com/images/I/71bNNQmNuwL._SX679_PIbundle-12,TopRight,0,0_AA679SH20_.jpg", // Dummy placeholder image URL
+      "https://m.media-amazon.com/images/I/71x-vWqFNEL._SX679_.jpg", // Dummy placeholder image URL
     fullDesc: [
       "Made from 100% natural bamboo, renewable and eco-friendly.",
       "Dye-free, tree-free, BPA-free, and plastic-free.",

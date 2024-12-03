@@ -4,66 +4,37 @@ import { FaMinus, FaPlus } from "react-icons/fa6";
 
 const faqList = [
     {
-        isActive: true,
-        question: "What types of tissues do you offer?",
+        isActive: false,
+        question: "How can I place an order?",
         answer:
-            "We offer a variety of tissues including facial tissues, pocket tissues, toilet tissues, and paper towels designed for different needs and preferences.",
+            "Placing an order is a straightforward process designed to provide you with a seamless experience. Begin by navigating to the enquiry form on our website. In the form, you’ll be required to fill in key details such as the specific product you’re interested in, the quantity required, and any custom requirements you might have, like packaging preferences or delivery instructions. Once submitted, our dedicated customer service team will promptly review your enquiry and reach out to confirm the details. They will also guide you through the next steps, which may include providing a quotation, discussing timelines, and arranging payment options. Whether you’re placing a bulk order or a single request, we ensure the process is hassle-free and tailored to your needs.",
     },
     {
         isActive: false,
-        question: "Are your tissues eco-friendly?",
+        question: "What are the different types of tissue paper?",
         answer:
-            "Yes, many of our tissues are made from sustainable and recycled materials. Check product descriptions for details on eco-friendly options.",
+            "Tissue paper is a versatile product available in various forms, each designed for specific uses. Common types include: \n\n- **Toilet Paper**: Essential for maintaining personal hygiene in bathrooms, often designed to be soft yet durable. \n- **Wipes**: Pre-moistened or dry sheets ideal for quick cleaning tasks, including skincare and surface cleaning. \n- **Kitchen Towels**: Highly absorbent sheets used for wiping spills and cleaning surfaces in the kitchen. \n- **Handkerchiefs**: Compact and portable tissues, perfect for personal use when on the go. \n- **Facial Tissue**: Soft and gentle tissues for skincare, often used for wiping the face or removing makeup. \n- **Household Towels**: Multipurpose cleaning towels that are durable and suitable for various household tasks. \n- **Napkins**: Designed for use during meals to maintain cleanliness and enhance dining etiquette. \n\nEach type of tissue paper is crafted with unique properties to suit its purpose, ensuring convenience and hygiene for users.",
     },
     {
         isActive: false,
-        question: "Do you offer bulk purchasing for businesses?",
+        question: "How do I choose tissue paper?",
         answer:
-            "Absolutely! We provide bulk purchasing options for businesses, offices, and events at discounted rates. Please contact us for more details.",
+            "Selecting the right tissue paper can be simplified by considering your specific needs and preferences. Our product categories include detailed descriptions, making it easier for you to identify the best option. For example:\n\n- **Softness**: If you have sensitive skin, opt for facial tissues labeled as hypoallergenic or ultra-soft.\n- **Absorbency**: For cleaning spills, kitchen towels with high absorbency are the ideal choice.\n- **Durability**: For tasks requiring strength, such as wiping tough stains, choose thicker or multi-ply tissue papers.\n- **Eco-Friendly Options**: If sustainability is a priority, look for recycled or biodegradable tissues.\n\nEach product is accompanied by a comprehensive description outlining its features, materials used, and intended use, allowing you to make an informed decision. Feel free to contact our support team for personalized recommendations.",
     },
     {
         isActive: false,
-        question: "What are the delivery charges?",
+        question: "What is the usefulness of tissue paper?",
         answer:
-            "Delivery charges vary based on your location and order size. Free shipping is available for orders above a certain amount. Check our shipping policy for more details.",
+            "Tissue paper serves as an indispensable tool in everyday life, offering a range of benefits that promote hygiene, convenience, and comfort. Its primary uses include:\n\n- **Hygiene**: Bathroom tissues ensure cleanliness and personal sanitation, while facial tissues provide a gentle option for managing colds or allergies.\n- **Cleaning**: Paper towels and wipes are excellent for cleaning spills, wiping surfaces, and maintaining a tidy environment.\n- **Dining**: Napkins enhance the dining experience by keeping hands and mouths clean during meals.\n- **Health and Safety**: Tissue products help prevent the spread of germs, bacteria, and viruses by encouraging proper hygiene practices.\n\nBeyond their practical applications, tissue products are designed to be disposable, ensuring that they contribute to cleanliness and reduce the risk of cross-contamination in both personal and shared spaces.",
     },
     {
         isActive: false,
-        question: "How can I track my order?",
+        question: "What are the key properties of tissue paper?",
         answer:
-            "Once your order is shipped, we will send you a tracking number via email or SMS. You can use this number to track your order on our website.",
-    },
-    {
-        isActive: false,
-        question: "What payment methods do you accept?",
-        answer:
-            "We accept major credit cards, debit cards, digital wallets, and bank transfers for your convenience.",
-    },
-    {
-        isActive: false,
-        question: "Can I return or exchange my purchase?",
-        answer:
-            "Yes, we have a hassle-free return and exchange policy. Returns are accepted within 30 days of purchase, provided the product is unused and in its original packaging.",
-    },
-    {
-        isActive: false,
-        question: "Are your tissues suitable for sensitive skin?",
-        answer:
-            "Yes, we offer tissues made with hypoallergenic and fragrance-free materials that are gentle on sensitive skin.",
-    },
-    {
-        isActive: false,
-        question: "Do you offer subscription services for regular deliveries?",
-        answer:
-            "Yes, we offer subscription plans to ensure you never run out of tissues. Choose your frequency and preferred products, and we'll handle the rest.",
-    },
-    {
-        isActive: false,
-        question: "Do you provide custom packaging or branding for businesses?",
-        answer:
-            "Yes, we offer custom packaging and branding options for businesses. Please reach out to our support team for more details.",
+            "The quality and effectiveness of tissue paper are determined by several critical properties, including:\n\n- **Softness**: This ensures comfort, particularly for products like facial tissues and toilet paper, where gentleness on the skin is important.\n- **Absorbency**: Highly absorbent tissues are ideal for quickly soaking up liquids, making them suitable for kitchen towels and wipes.\n- **Strength**: Durability ensures that the tissue does not tear easily, even when wet, which is crucial for cleaning tasks.\n- **Thickness**: Multi-ply tissues offer better performance and absorbency compared to single-ply options.\n- **Brightness and Appearance**: Bright white or decorative tissues enhance visual appeal, especially for napkins used in dining.\n- **Eco-Friendliness**: Recycled or biodegradable options cater to environmentally conscious users.\n\nThese properties vary across different types of tissues, making each suitable for specific applications while ensuring a balance between functionality and comfort.",
     },
 ];
+
 
 
 const FaqItem = ({ faq }) => {
@@ -111,13 +82,13 @@ const FAQPage = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-12 gap-0 md:gap-6">
-                    <div className="col-span-12 md:col-span-6">
+                <div className="grid ">
+                    <div className="col-span-12 text-xl md:col-span-6 ">
                         {faqList.slice(0, Math.floor(faqList.length / 2)).map((faq, i) => (
                             <FaqItem faq={faq} key={i} />
                         ))}
                     </div>
-                    <div className="col-span-12 md:col-span-6">
+                    <div className="col-span-12 text-xl md:col-span-6">
                         {faqList
                             .slice(Math.floor(faqList.length / 2), faqList.length)
                             .map((faq, i) => (
