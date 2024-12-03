@@ -124,15 +124,15 @@ function EnquireButton() {
         <span className='text-xl '>Enquire</span> <RxQuestionMarkCircled className='text-white mt-1 text-xl' />
         </button>  : 
         
-         <div className='w-screen z-50 flex items-center justify-center fixed top-0 bg-opacity-60 right-0  h-screen bg-black' >
-            <div className='absolute top-0 left-10'>
-            <FaXmark onClick={()=>{setEnquire(prev=>!prev)}}  className=" text-3xl md:text-6xl cursor-pointer text-white" />
-            </div>
+         <div className='w-full z-50 flex items-center justify-center fixed top-0 bg-opacity-60 right-0  h-screen bg-black' >
+           
+              <div className='md:mx-40 mx-10 z-50  rounded-tr-lg rounded-tl-lg  relative top-0 md:top-0 flex justify-center w-fit md:w-1/2   bg-white shadow md:h-[80vh] h-[80%]'>
 
-              <div className='md:mx-40 mx-10 z-50 rounded-tr-lg rounded-tl-lg  relative top-0 md:top-10 flex justify-center w-fit md:w-1/2   bg-white shadow h-[90%]'>
-
-              <div className="w-full sm:p-12 z-50 px-6  bg-white shadow-sm rounded-xl enquiryForm md:min-w-[37rem] mt-2 md:mt-10 lg:mt-0" data-aos="fade-up" data-aos-duration="600">
+              <div className="w-full sm:p-12 z-50 px-6  bg-white shadow-sm rounded-xl enquiryForm  mt-2  lg:mt-0" data-aos="fade-up" data-aos-duration="600">
                     <h3 className="mb-4  text-dark underline text-center text-2xl md:text-4xl mx-auto sora-600">Enquire!</h3>
+                    <div className='absolute top-3 right-5 inline'>
+                    <FaXmark onClick={()=>{setEnquire(prev=>!prev)}}  className=" text-3xl md:text-6xl cursor-pointer text-red-500" />
+                     </div>
                     
                     <form onSubmit={handleSubmit} noValidate>
                         <div className="mb-4 ">
@@ -146,7 +146,7 @@ function EnquireButton() {
                                 required
                             />
                         </div>
-                        <div className="flex flex-wrap mb-4 -mx-2">
+                        <div className="flex flex-wrap mb-2 -mx-2">
                             <div className="w-full  px-2 mb-4 lg:w-[60%] lg:mb-0">
                                 <input
                                     type="email"
@@ -171,14 +171,14 @@ function EnquireButton() {
                             </div>
                         </div>
                         <div className="mb-4">
-                            
-                            <select className=' h-6 md:h-[6rem]  w-full mb-3  border border-gray-200 focus:outline-none' 
+                            <label className='text-gray-400 p-1 ' htmlFor="">Select Products</label>
+                            <select className=' px-1 h-12 md:h-[6rem]  w-full mb-3  border border-gray-200 focus:outline-none' 
                             name=""
                             multiple 
                             id=""
                             onChange={handleSelectedProductsChange}
                               >
-                                <option disabled value="">Select products</option>
+                               
                                 {allProducts.map((product,index)=>{
                                     
                                     return (
@@ -190,7 +190,7 @@ function EnquireButton() {
 
                             {formData?.products?.length===0?<div className='border  border-gray-200 p-2'>
                                Select products
-                            </div>:<div className='border overflow-y-auto  h-28 enquiryForm gap-3 flex flex-wrap  border-gray-200 p-2'>
+                            </div>:<div className='border overflow-y-auto   max-h-20  enquiryForm gap-3 flex flex-wrap  border-gray-200 p-2'>
                                 {formData?.products?.map((product,ind)=>{
                                     return (
                                        <div key={ind} className='border flex gap-2 justify-center items-center '> {product} <span onClick={()=>{handleSelectedProductCrossClick(ind)}}  className='text-black text-2xl '><HiMiniXMark className='cursor-pointer' />
@@ -206,7 +206,7 @@ function EnquireButton() {
                                 onChange={handleChange}
                                 placeholder="Add Description"
                                 className="w-full p-2 border rounded resize-none focus:outline-none focus:ring-1 focus:ring-dark"
-                                rows="5"
+                                rows="2"
                                 required
                             ></textarea>
                         </div>
