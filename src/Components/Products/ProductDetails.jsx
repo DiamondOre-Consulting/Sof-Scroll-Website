@@ -366,12 +366,12 @@ const ProductDetails = ({ cart, setCart }) => {
           >
             <img
               className="object-cover rounded-full size-24 sm:size-28 md:size-60"
-              src="https://rukminim2.flixcart.com/image/850/1000/xif0q/facial-tissue/m/s/d/2-ply-ultra-soft-tissue-facial-tissue-100-pulls-200-sheets-per-original-imah4jyjbdtatmkj.jpeg?q=90&crop=false"
+              src="https://img.freepik.com/premium-vector/realistic-toilete-paper-paper-towels-with-feathers_80590-7437.jpg?w=740"
               alt=""
             />
             <h1 className="text-[0.9rem] font-semibold">Soft Tissue</h1>
           </div>
-          <div
+          {/* <div
             className="flex flex-col items-center justify-center gap-1"
             data-aos-duration="1400"
           >
@@ -381,7 +381,7 @@ const ProductDetails = ({ cart, setCart }) => {
               alt=""
             />
             <h1 className="text-[0.9rem] font-semibold">Soft Comforty</h1>
-          </div>
+          </div> */}
           <div className="flex flex-col items-center justify-center gap-1">
             <img
               className="object-cover rounded-full size-24 sm:size-28 md:size-60"
@@ -397,7 +397,7 @@ const ProductDetails = ({ cart, setCart }) => {
           >
             <img
               className="object-cover rounded-full size-24 sm:size-28 md:size-60"
-              src="https://img.freepik.com/free-vector/toilet-tissue-roll-element-vector_53876-169051.jpg?ga=GA1.1.1044272893.1732183300&semt=ais_hybrid"
+              src="https://media.istockphoto.com/id/1263872609/vector/hand-throwing-away-tissue-into-a-trash-bin-coronavirus-prevention.jpg?s=612x612&w=0&k=20&c=VgqIF7fhivLTBuSCVntvFlc_cUfG0_4SClJVHJeEeeQ="
               alt=""
             />
             <h1 className="text-[0.9rem] font-semibold">Disposable</h1>

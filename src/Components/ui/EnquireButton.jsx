@@ -131,7 +131,7 @@ function EnquireButton() {
               <div className="w-full sm:p-12 z-50 px-6  bg-white shadow-sm rounded-xl enquiryForm  mt-2  lg:mt-0" data-aos="fade-up" data-aos-duration="600">
                     <h3 className="mb-4  text-dark underline text-center text-2xl md:text-4xl mx-auto sora-600">Enquire!</h3>
                     <div className='absolute top-3 right-5 inline'>
-                    <FaXmark onClick={()=>{setEnquire(prev=>!prev)}}  className=" text-3xl md:text-6xl cursor-pointer text-red-500" />
+                    <FaXmark onClick={()=>{setEnquire(prev=>!prev)}}  className=" text-3xl md:text-4xl cursor-pointer text-red-500" />
                      </div>
                     
                     <form onSubmit={handleSubmit} noValidate>

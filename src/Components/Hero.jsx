@@ -24,7 +24,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black opacity-10"></div>
       {/* <img src={myimg} alt="" className="absolute inset-0 w-full" /> */}
 
-      <div className="container px-4 md:w-[60rem] flex justify-center flex-col items-center mx-auto font-bold text-white text-[2rem] -mt-20 head sm:text-[4rem]  md:text-[4rem] mf sm:px-2 ">
+      <div className="container px-4 md:w-[60rem] flex justify-center flex-col items-center mx-auto font-bold text-white text-[2rem] -mt-40 head sm:text-[4rem]  md:text-[4rem] mf sm:px-2 ">
         <AnimatedText text2={"Luxury  You  Can  Trust"}  />
         <AnimatedText text2={"Softness  You  Can  Feel"}  />
 

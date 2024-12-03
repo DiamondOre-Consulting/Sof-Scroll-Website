@@ -52,7 +52,7 @@ const PopularCategories = () => {
 
   return (
     <div className="w-full px-6 py-12">
-      <h2 className="md:text-4xl font-bold text-center mf mb-8">Our Categories</h2>
+      <h2 className="md:text-4xl font-bold text-center head mb-8">Our Categories</h2>
       <Slider {...settings}>
         {categories.map((category, index) => (
           <div key={index} className="p-4">

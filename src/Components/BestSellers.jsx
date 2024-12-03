@@ -2,7 +2,7 @@ import React from "react";
 import tissue1 from "../assets/tissue1.png";
 
 import { Link } from "react-router-dom";
-import pattern1 from '../assets/pattern1.png'
+import pattern1 from "../assets/pattern1.png";
 import facialTissue from "../assets/productAssets/facial_tissue.mp4";
 
 const BestSellers = ({ cart, setCart }) => {
@@ -15,10 +15,10 @@ const BestSellers = ({ cart, setCart }) => {
 
   // Remove product from cart
   const removeFromCart = (product) => {
-    setCart((prevCart) => prevCart.filter((item) => item.itemCode !== product.itemCode));
+    setCart((prevCart) =>
+      prevCart.filter((item) => item.itemCode !== product.itemCode)
+    );
   };
-
-
 
   const allproducts = [
     {
@@ -53,19 +53,16 @@ const BestSellers = ({ cart, setCart }) => {
           thumbUrl:
             "https://m.media-amazon.com/images/I/71dAs-PDmNL._SX679_.jpg",
         },
-  
       ],
       videoUrl:
         "https://res.cloudinary.com/dmpkp9ux2/video/upload/v1732532214/SofScroll/mpwjfwtiapgkgjgl2sm3.mp4",
-      imageUrl:
-        "https://m.media-amazon.com/images/I/61gAWx8qoUL._SX679_.jpg", // Dummy placeholder image URL
+      imageUrl: "https://m.media-amazon.com/images/I/61gAWx8qoUL._SX679_.jpg", // Dummy placeholder image URL
       fullDesc: [
         "Unparalleled softness and reliability.",
         "3-ply sheets for superior absorbency.",
-        "Made from high-quality virgin wood pulp."
-      ]
+        "Made from high-quality virgin wood pulp.",
+      ],
     },
-
 
     {
       name: "Toilet Tissue Paper Roll / Virgin/Wood Pulp / 48 Rolls in a Packet ",
@@ -100,13 +97,14 @@ const BestSellers = ({ cart, setCart }) => {
             "https://m.media-amazon.com/images/I/6102rtxvmQL._SX342_.jpg",
         },
         {
-          previewUrl: "https://m.media-amazon.com/images/I/61DecADKkNL._SX342_.jpg",
-          thumbUrl: "https://m.media-amazon.com/images/I/61DecADKkNL._SX342_.jpg",
+          previewUrl:
+            "https://m.media-amazon.com/images/I/61DecADKkNL._SX342_.jpg",
+          thumbUrl:
+            "https://m.media-amazon.com/images/I/61DecADKkNL._SX342_.jpg",
         },
       ],
       videoUrl: "",
-      imageUrl:
-        "https://m.media-amazon.com/images/I/51tfKhptLxL._SX679_.jpg", // Dummy placeholder image URL
+      imageUrl: "https://m.media-amazon.com/images/I/51tfKhptLxL._SX679_.jpg", // Dummy placeholder image URL
       fullDesc: [
         "Experience ultimate softness and durability with our Toilet Tissue Paper Rolls, designed for everyday home use.",
         "Each roll features 3-ply sheets made from high-quality virgin wood pulp, ensuring superior absorbency and strength.",
@@ -118,13 +116,56 @@ const BestSellers = ({ cart, setCart }) => {
     },
 
     {
+      name: "Facial Tissue Box / Pack of 6 Boxes",
+      category: "Facial Tissue",
+      particulars: "Facial Tissue box",
+      itemCode: "SS110",
+      recommendation: "Living room, Bathroom, Car, Office desk",
+
+      pulls: "100 Pulls",
+      SheetCount: "100 Sheets",
+      price: "400",
+      dimensions: "20 * 20 cm",
+      ply: 2,
+      gsm: 13.5,
+      quality: "Extra soft Facial Tissue , absorbbent , Virgin/ Wood Pulp",
+      material: "Virgin/ Wood Pulp",
+      description:
+        "Compact Flat facial tissue box for  For sniffles, messy finger foods, makeup smudges or small spills",
+      Packaging: "Pack of 6 Boxes",
+      JumboPackaging: "24 packets equals to 144 Boxes",
+      previews: [
+        {
+          previewUrl:
+            "https://m.media-amazon.com/images/I/51FEi4JtgnL._SX522_.jpg",
+          thumbUrl:
+            "https://m.media-amazon.com/images/I/51FEi4JtgnL._SX522_.jpg",
+        },
+
+        {
+          previewUrl:
+            "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/xf9zo2qe60sfflms8ep1.jpg",
+          thumbUrl:
+            "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/xf9zo2qe60sfflms8ep1.jpg",
+        },
+      ],
+      videoUrl: facialTissue,
+      imageUrl: "https://m.media-amazon.com/images/I/51FEi4JtgnL._SX522_.jpg", // Dummy placeholder image URL
+      fullDesc: [
+        "Extra soft, absorbent 2-ply facial tissue.",
+        "Made from virgin wood pulp for superior quality.",
+        "Ideal for personal hygiene, makeup removal, and small spills.",
+      ],
+    },
+
+    {
       name: "Hospital Couch Roll",
       category: "Hospital Roll",
       particulars: "Examination Medical Couch Roll",
       itemCode: "SS112",
       quality: "Paper",
       SheetCount: "100 Mtr long",
-  
+
       recommendation:
         "hospital Bed roll Tissue, Beauty Parlour spa Tissue Papper roll",
       pulls: "100 Mtr long",
@@ -159,97 +200,53 @@ const BestSellers = ({ cart, setCart }) => {
         },
       ],
       videoUrl: "",
-      imageUrl:
-        "https://m.media-amazon.com/images/I/31+CSqwVEGL._SX522_.jpg", // Dummy placeholder image URL
+      imageUrl: "https://m.media-amazon.com/images/I/31+CSqwVEGL._SX522_.jpg", // Dummy placeholder image URL
       fullDesc: [
         "Durable 1-ply paper roll made from virgin wood pulp.",
         "Soft and comfortable for medical and beauty treatments.",
-        "60 cm wide and 100 meters long, perfect for covering examination tables."
-      ]
-  
-    },
-
-    {
-      name: "Facial Tissue Box / Pack of 6 Boxes",
-      category: "Facial Tissue",
-      particulars: "Facial Tissue box",
-      itemCode: "SS110",
-      recommendation: "Living room, Bathroom, Car, Office desk",
-  
-      pulls: "100 Pulls",
-      SheetCount: "100 Sheets",
-      price: "400",
-      dimensions: "20 * 20 cm",
-      ply: 2,
-      gsm: 13.5,
-      quality: "Extra soft Facial Tissue , absorbbent , Virgin/ Wood Pulp",
-      material: "Virgin/ Wood Pulp",
-      description:
-        "Compact Flat facial tissue box for  For sniffles, messy finger foods, makeup smudges or small spills",
-      Packaging: "Pack of 6 Boxes",
-      JumboPackaging: "24 packets equals to 144 Boxes",
-      previews: [
-        {
-          previewUrl:
-            "https://m.media-amazon.com/images/I/51FEi4JtgnL._SX522_.jpg",
-          thumbUrl:
-            "https://m.media-amazon.com/images/I/51FEi4JtgnL._SX522_.jpg",
-        },
-  
-        {
-          previewUrl:
-            "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/xf9zo2qe60sfflms8ep1.jpg",
-          thumbUrl:
-            "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/xf9zo2qe60sfflms8ep1.jpg",
-        },
-  
+        "60 cm wide and 100 meters long, perfect for covering examination tables.",
       ],
-      videoUrl: facialTissue,
-      imageUrl:
-        "https://m.media-amazon.com/images/I/51FEi4JtgnL._SX522_.jpg", // Dummy placeholder image URL
-      fullDesc: [
-        "Extra soft, absorbent 2-ply facial tissue.",
-        "Made from virgin wood pulp for superior quality.",
-        "Ideal for personal hygiene, makeup removal, and small spills."
-      ]
-  
     },
-  ]
+  ];
 
   return (
     <div>
       <div className="relative py-10">
-        <h1 className="relative mx-auto mb-1 text-3xl md:text-5xl text-center font-bold  text-gray-800 mf">Our Best Sellers</h1>
-        <div className="w-40 h-1 mx-auto bg-dark"></div>
+        <h1 className="relative mx-auto mb-1 text-3xl md:text-5xl text-center font-bold  text-gray-800 head">
+          Our Best Sellers
+        </h1>
+        {/* <div className="w-40 h-1 mx-auto bg-dark"></div> */}
         {/* <img src={pattern1} alt="" className="absolute right-0 -top-20 " /> */}
         <div className="grid items-center justify-center grid-cols-1 gap-6 px-6 mx-auto mt-20 w-fit sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-
           {allproducts?.map((product, index) => {
-            const isInCart = cart.find((item) => item.itemCode === product.itemCode);
+            const isInCart = cart.find(
+              (item) => item.itemCode === product.itemCode
+            );
+
+            // Conditional class for centering the last item in the grid
+            const isLastProduct = index === allproducts.length - 1;
+            const gridItemClass = isLastProduct
+              ? "sm:col-span-2 lg:col-span-3 flex justify-center" // Adjust the span to center based on breakpoints
+              : "";
+
             return (
-              <div key={index}>
-                <div className="md:w-[24rem] h-full flex flex-col  border overflow-hidden transition-transform duration-300 hover:scale-105   ">
+              <div key={index} className={gridItemClass}>
+                <div className="md:w-[24rem] h-full flex flex-col border overflow-hidden transition-transform duration-300 hover:scale-105">
                   <div className="relative">
                     <img
                       src={product.imageUrl}
                       alt={product.name}
                       className="h-[14rem] w-full object-cover transition-opacity duration-300 hover:opacity-90"
                     />
-                    {/* <div className="absolute px-2 py-1 text-xs font-medium text-white bg-black rounded top-2 left-2 bg-opacity-60">
-                      New Arrival
-                    </div> */}
                   </div>
                   <div className="flex flex-col px-4 pb-3 mt-2 space-y">
-                    <h1 className="text-[1.15rem] text-wrap font-semibold text-gray-800 truncate transition-colors duration-300 hover:text-dark">
+                    <h1 className="text-[1.15rem] font-semibold text-gray-800 truncate transition-colors duration-300 hover:text-dark">
                       {product.name}
                     </h1>
-                    {/* <p className="text-sm text-gray-600 truncate">
-                      {product.description}
-                    </p> */}
                     <p className="text-xs italic text-gray-700">
-                      Quality: <span className='text-gray-500'>{product.quality}</span>
+                      Quality:{" "}
+                      <span className="text-gray-500">{product.quality}</span>
                     </p>
-
                   </div>
                   <Link
                     to={`/product/${product.itemCode}`}
@@ -259,8 +256,6 @@ const BestSellers = ({ cart, setCart }) => {
                   </Link>
                 </div>
               </div>
-
-
             );
           })}
         </div>

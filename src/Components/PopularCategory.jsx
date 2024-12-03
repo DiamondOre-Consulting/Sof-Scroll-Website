@@ -25,7 +25,7 @@ const PopularCategory = () => {
 
     return (
         <div className="p-4  py-6" >
-            <h2 className="mb-8 text-5xl font-semibold text-center mf" data-aos="fade-left">Popular Categories</h2>
+            <h2 className="mb-8 text-5xl font-semibold text-center head" data-aos="fade-left">Popular Categories</h2>
             <Swiper
                 modules={[Pagination, Autoplay]}
                 autoplay={{
