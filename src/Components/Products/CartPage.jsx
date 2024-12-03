@@ -176,7 +176,7 @@ const CartPage = ({ cart, setCart }) => {
           {/* <h2 className="mt-6 mb-10 text-5xl text-center mf">Your Cart</h2> */}
           {cart.length !== 0 &&
             <div className="border border-gray-300 h-fit mx-auto bg-slate-50 lg:sticky top-20  rounded-md  max-w-[40rem] w-full">
-              <div className="p-4 rounded-md border-[0.3rem] border-light">
+              <div className="p-4 rounded-md border-[0.3rem] ">
                 <form onSubmit={handleOrder} noValidate className="flex flex-col gap-3 m-2 ">
                   <div className="flex flex-col">
                     <label className="text-[0.95rem] px-1 text-gray-600 font-semibold ">Name <span className="text-red-500 text-[1.3rem] relative top-[0.2rem] right-[0.2rem]">*</span></label>
