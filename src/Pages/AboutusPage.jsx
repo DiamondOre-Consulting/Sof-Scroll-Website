@@ -241,7 +241,7 @@ const AboutUs = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-between sm:flex-row">
+          <div className="flex flex-col items-center justify-between sm:flex-row-reverse">
             <div className="lg:max-w-[60vw] ">
 
 
@@ -265,7 +265,7 @@ const AboutUs = () => {
           </div>
 
           {/* Second Section: Text on Right, Image on Left */}
-          <div className="flex flex-col items-center justify-between sm:flex-row-reverse">
+          <div className="flex flex-col items-center justify-between sm:flex-row">
             <div className="md:max-w-[60vw]">
 
             <TextRevealByWord text=" Alexander Mohandas is an experienced business leader with over 20 years in customer experience, sales, and marketing. He has worked with global brands like KFC, HSBC, and Probe Information. Known for his strategic approach, Alexander has driven growth and customer satisfaction, using his deep understanding of market needs to expand businesses successfully." />
