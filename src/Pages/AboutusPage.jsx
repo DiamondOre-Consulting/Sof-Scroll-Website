@@ -9,6 +9,8 @@ import yashi from "../assets/yashi.jpeg";
 import logo from "../assets/logo.png";
 import TextRevealByWord from "../Components/ui/text-reveal";
 import AnimatedText from "../Components/AnimatedText";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { FaRegCalendarAlt } from "react-icons/fa";
 import {
@@ -81,6 +83,14 @@ const AboutUs = () => {
   const images = [teamImage1, teamImage2, teamImage3]; // Array of team images
 
   useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: true,
+    });
+  }, []);
+
+  useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000); // Change image every 3 seconds
@@ -94,7 +104,7 @@ const AboutUs = () => {
   const breadcrumbItems = [{ label: "Home", href: "/" }, { label: "About Us" }];
 
   return (
-    <div className="">
+    <div className="overflow-x-hidden ">
       {/* <BreadCrumbs items={breadcrumbItems} /> */}
       <div
         className="relative bg-cover w-full h-[60vh] md:h-screen -top-24"
@@ -107,10 +117,10 @@ const AboutUs = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-dark via- to-black opacity-60"></div>
 
         {/* Text content */}
-        <div className="absolute left-10 top-1/2 transform -translate-y-1/2 text-white">
+        <div className="absolute text-white transform -translate-y-1/2 left-10 top-1/2">
           <p
             className="text-2xl md:text-5xl mf max-w-3xl font-semibold  md:leading-[100px] "
-           
+
           >
             <AnimatedText
               text2={
@@ -122,17 +132,21 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-between  items-center px-4 md:px-10">
+      <div className="flex flex-col items-center justify-between px-4 md:flex-row md:px-10">
         <div className="md:max-w-[65vw]">
-          <p className="text-dark text-4xl  mf font-semibold mb-4">
+          <p className="mb-4 text-4xl font-semibold text-dark mf" data-aos="fade-up">
             SOF SSCRROL
           </p>
-          <p className="mb-4 text-gray-700 text-2xl ">
-            <TextRevealByWord text="Our company specializes in tissue paper conversion, turning large rolls into essential products like toilet paper, facial tissue, napkins, and paper towels. Using advanced machinery and techniques, we ensure each product meets high standards for softness, strength, and absorbency. Starting with premium raw materials—wood pulp or recycled paper—our process involves refining, papermaking, slitting, embossing, perforating, and packaging for consumer convenience." />
+
+
+          <p data-aos="fade-left" className="text-xl lg:text-4xl xl:text-3xl">
+
+            Our company specializes in tissue paper conversion, turning large rolls into essential products like toilet paper, facial tissue, napkins, and paper towels. Using advanced machinery and techniques, we ensure each product meets high standards for softness, strength, and absorbency. Starting with premium raw materials—wood pulp or recycled paper—our process involves refining, papermaking, slitting, embossing, perforating, and packaging for consumer convenience.
           </p>
+
         </div>
 
-        <div>
+        <div data-aos="fade-right">
           <img
             src={logo}
             alt=""
@@ -212,7 +226,7 @@ const AboutUs = () => {
 
       {/* Team Section */}
       <section className="py-16">
-        <h2 className="mb-1 text-4xl font-semibold text-center text-black md:text-5xl mf">
+        <h2 className="mb-1 text-4xl font-semibold text-center text-black md:text-5xl mf" data-aos="fade-down">
           Meet Our Team
         </h2>
         <div className="w-40 h-1 mx-auto mb-8 bg-dark"></div>
@@ -224,32 +238,37 @@ const AboutUs = () => {
           <div className="flex flex-col items-center justify-between sm:flex-row">
             <div className="md:max-w-[60vw]">
 
-            <TextRevealByWord text=" Yashashrri H Singh is a dynamic leader with 18 years of experience in business development, banking, and marketing. She specializes in driving business growth and aligning strategies with company goals.  At Kapital Seed 9, Yashashrri plays a key role in shaping marketing and customer strategies, with a strong background at global companies like TNT and Accenture." />
-           
+              <p className="text-xl lg:text-4xl xl:text-3xl" data-aos="fade-right">
+                Yashashrri H Singh is a dynamic leader with 18 years of experience in business development, banking, and marketing. She specializes in driving business growth and aligning strategies with company goals.  At Kapital Seed 9, Yashashrri plays a key role in shaping marketing and customer strategies, with a strong background at global companies like TNT and Accenture.
+              </p>
+
             </div>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center" data-aos="fade-left">
               <img
-                className="object-cover border-2 border-gray-300 rounded-full w-80 h-80 md:mt-0 mt-4"
+                className="object-cover mt-4 border-2 border-gray-300 rounded-full min-w-80 max-w-80 h-80 md:mt-0"
                 src={teamImage3}
                 alt="Yashashrri H Singh"
               />
               <p className="mt-4 text-2xl font-bold text-center">
                 Yashashrri H Singh
               </p>
-              <p className="mt-1 text-sm text-gray-800 uppercase font-bold text-center">
+              <p className="mt-1 text-sm font-bold text-center text-gray-800 uppercase">
                 Founder & COO
               </p>
             </div>
           </div>
           <div className="flex flex-col items-center justify-between sm:flex-row-reverse">
             <div className="lg:max-w-[60vw] ">
+              <p className="text-xl lg:text-4xl xl:text-3xl" data-aos="fade-right">
+
+                Harshawardhan Singh is a visionary founder with over 21 years of experience in FMCG, Retail, Banking, and Finance. He has led businesses to scale and driven successful product launches. As the founder of Kapital Seed 9, Harshawardhan brings deep market insight and operational excellence, having held leadership roles at OliveMoney, SMERA Ratings, and CRISIL.
+              </p>
 
 
-            <TextRevealByWord text=" Harshawardhan Singh is a visionary founder with over 21 years of experience in FMCG, Retail, Banking, and Finance. He has led businesses to scale and driven successful product launches. As the founder of Kapital Seed 9, Harshawardhan brings deep market insight and operational excellence, having held leadership roles at OliveMoney, SMERA Ratings, and CRISIL." />
-           
-            
+
+
             </div>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center" data-aos="fade-left">
               <img
                 className="object-cover border-2 border-gray-300 rounded-full min-w-80 h-80"
                 src={teamImage1}
@@ -258,7 +277,7 @@ const AboutUs = () => {
               <p className="mt-4 text-2xl font-bold text-center">
                 Harshawardhan Singh
               </p>
-              <p className="mt-1 text-sm text-gray-800 uppercase font-bold text-center">
+              <p className="mt-1 text-sm font-bold text-center text-gray-800 uppercase">
                 Co-Founder & CEO
               </p>
             </div>
@@ -268,27 +287,33 @@ const AboutUs = () => {
           <div className="flex flex-col items-center justify-between sm:flex-row">
             <div className="md:max-w-[60vw]">
 
-            <TextRevealByWord text=" Alexander Mohandas is an experienced business leader with over 20 years in customer experience, sales, and marketing. He has worked with global brands like KFC, HSBC, and Probe Information. Known for his strategic approach, Alexander has driven growth and customer satisfaction, using his deep understanding of market needs to expand businesses successfully." />
-             
-                 
+              <p className="text-xl lg:text-4xl xl:text-3xl" data-aos="fade-right">
+
+                Alexander Mohandas is an experienced business leader with over 20 years in customer experience, sales, and marketing. He has worked with global brands like KFC, HSBC, and Probe Information. Known for his strategic approach, Alexander has driven growth and customer satisfaction, using his deep understanding of market needs to expand businesses successfully.
+              </p>
+
+
+
+
+
             </div>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center" data-aos="fade-left">
               <img
-                className="object-cover md:mt-0 mt-4 border-2 border-gray-300 rounded-full min-w-80 h-80"
+                className="object-cover mt-4 border-2 border-gray-300 rounded-full md:mt-0 min-w-80 h-80"
                 src={teamImage2}
                 alt="Alexander Mohandas"
               />
               <p className="mt-4 text-xl font-bold text-center">
                 Alexander Mohandas
               </p>
-              <p className="mt-1 text-sm text-gray-800 uppercase font-bold text-center">
+              <p className="mt-1 text-sm font-bold text-center text-gray-800 uppercase">
                 Co-Founder & CMO
               </p>
             </div>
           </div>
 
           {/* Third Section: Text on Left, Image on Right */}
-      
+
         </div>
       </section>
     </div>

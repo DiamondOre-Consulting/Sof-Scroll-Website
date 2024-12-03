@@ -19,9 +19,9 @@ const Footer = () => {
   return (
     <footer className="relative flex flex-col items-center justify-center overflow-x-hidden">
 
-      <div className="w-full px-4 pt-8 mx-auto  sm:px-4">
+      <div className="w-full px-4 pt-8 mx-auto bg-gray-200 sm:px-4">
         <div className="py-8">
-          <div className="flex flex-wrap items-center justify-around">
+          <div className="flex flex-wrap items-start justify-around">
             {/* About Section */}
             <div className="w-full mb-8 lg:w-1/3 md:w-full xl:mb-0">
               <div className="text-gray-800">
@@ -46,7 +46,7 @@ const Footer = () => {
                           <path fill="none" d="M0 0h24v24H0z"></path>
                           <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"></path>
                         </svg>
-                        +91-9980750049 
+                        +91-9980750049
                       </a>
                     </li>
                     <li className="text-gray-800 leading-8 text-[0.9rem] hover:text-dark">
