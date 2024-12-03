@@ -16,8 +16,8 @@ module.exports = {
 				dark: '#2bb673',
 				light: '#fff4d4',
 				color3: '#f79422',
-				color4:'#ea2920',
-				bgMain: '#ECF2FF',
+				color4: '#ea2920',
+				bgMain: '#FAEBD7',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				card: {
@@ -83,9 +83,9 @@ module.exports = {
 		}
 	},
 	plugins: [
-		require("tailwindcss-animate",'tailwind-scrollbar'), // Animations plugin for Tailwind
+		require("tailwindcss-animate", 'tailwind-scrollbar'), // Animations plugin for Tailwind
 		addVariablesForColors,
-		
+
 	],
 };
 

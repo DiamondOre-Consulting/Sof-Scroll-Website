@@ -19,14 +19,14 @@ const OurStrength = () => {
     { icon: <FaHandsHelping size={40} />, label: "OEM & ODM", time: 2200 },
     { icon: <FaHeadset size={40} />, label: "Customer service 24 hours online", time: 2500 },
     { icon: <FaGlobeAmericas size={40} />, label: "Globally Available", time: 2500 },
-  
+
 
   ];
 
   return (
     <div>
       <div className="pt-10 ">
-        <h1 className="mb-10   text-3xl md:text-5xl font-bold text-center text-gray-800 mf">Our Strengths</h1>
+        <h1 className="mb-10 text-3xl font-bold text-center text-gray-800 md:text-5xl mf">Our Strengths</h1>
         <div className="container px-4 mx-auto">
           <div className="flex flex-wrap justify-center gap-2 pb-20 text-center">
             {strengths.map((strength, index) => (
@@ -36,7 +36,7 @@ const OurStrength = () => {
                 data-aos-duration={strength.time}
                 className="flex flex-col items-center justify-around w-40 transition-transform duration-300 hover:scale-110"
               >
-                <div className="p-2 mb-2 transition-transform duration-300 transform rounded-full text-white  bg-gradient-to-r from-color3 to-dark hover:scale-125">
+                <div className="p-2 mb-2 text-white transition-transform duration-300 transform rounded-full bg-dark hover:scale-125">
                   {strength.icon}
                 </div>
                 <p className="text-lg font-semibold text-gray-700 transition-colors duration-300 hover:text-dark">
