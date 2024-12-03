@@ -121,7 +121,7 @@ function EnquireButton() {
     <button onClick={handleEnquireButton}
           class="bg-dark py-2 px-2 rounded-full text-white flex justify-center items-center gap-1 "
         >
-        <span className='text-xl '>Enquire</span> <RxQuestionMarkCircled className='text-white mt-1 text-xl' />
+        <span className='text-xl '>Enquire</span> <RxQuestionMarkCircled className='text-white  mt-1 text-xl' />
         </button>  : 
         
          <div className='w-full z-50 flex items-start justify-center fixed top-0 bg-opacity-60 right-0  h-screen bg-black' >
