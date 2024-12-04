@@ -231,7 +231,7 @@ const BestSellers = ({ cart, setCart }) => {
 
             return (
               <div key={index} className={gridItemClass}>
-                <div className="md:w-[24rem] h-full flex flex-col border overflow-hidden transition-transform duration-300 hover:scale-105">
+                <div className="md:w-[24rem]  h-full flex flex-col border overflow-hidden transition-transform duration-300 hover:scale-105">
                   <div className="relative">
                     <img
                       src={product.imageUrl}

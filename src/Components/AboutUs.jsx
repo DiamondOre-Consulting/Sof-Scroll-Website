@@ -21,7 +21,7 @@ const AboutUs = () => {
 
           <img src={img} alt="" className="absolute w-60 right-40 opacity-70" />
 
-          <div className="z-10 w-full px-10 h-fit">
+          <div className="z-10 w-full px-4 text-justify md:px-10 h-fit">
             <p className="text-xl lg:text-4xl xl:text-3xl " data-aos="fade-right">
               Our tissue paper conversion process turns large tissue rolls into consumer-ready products such as toilet paper, facial tissues, napkins, and paper towels. Using quality raw materials like wood pulp or recycled paper, the pulp is processed into continuous sheets, which are then slit, embossed, and perforated for convenience. Finally, automated machinery packages the tissue in various formats, ensuring quality and efficiency in a sustainable way to meet consumer needs.
             </p>
