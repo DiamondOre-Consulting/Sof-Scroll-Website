@@ -107,7 +107,7 @@ const AboutUs = () => {
     <div className="overflow-x-hidden ">
       {/* <BreadCrumbs items={breadcrumbItems} /> */}
       <div
-        className="relative bg-cover w-full h-[60vh] md:h-screen -top-24"
+        className=" relative bg-cover w-full h-[60vh] md:h-screen -top-24"
         style={{
           backgroundImage:
             "url('https://img.freepik.com/premium-photo/coils-white-cotton-threads-metal-racks-close-up_508835-2434.jpg?w=740')",
@@ -139,7 +139,7 @@ const AboutUs = () => {
           </p>
 
 
-          <p data-aos="fade-left" className="text-xl  text-justify lg:text-4xl xl:text-3xl">
+          <p data-aos="fade-left" className="text-xl mf text-justify lg:text-4xl xl:text-2xl">
 
             Our company specializes in tissue paper conversion, turning large rolls into essential products like toilet paper, facial tissue, napkins, and paper towels. Using advanced machinery and techniques, we ensure each product meets high standards for softness, strength, and absorbency. Starting with premium raw materials—wood pulp or recycled paper—our process involves refining, papermaking, slitting, embossing, perforating, and packaging for consumer convenience.
           </p>
@@ -238,7 +238,7 @@ const AboutUs = () => {
           <div className="flex flex-col items-center justify-between sm:flex-row">
             <div className="md:max-w-[60vw]">
 
-              <p className="text-xl lg:text-4xl text-justify xl:text-3xl" data-aos="fade-right">
+              <p className="text-xl lg:text-4xl text-justify xl:text-2xl mf" data-aos="fade-right">
                 Yashashrri H Singh is a dynamic leader with 18 years of experience in business development, banking, and marketing. She specializes in driving business growth and aligning strategies with company goals.  At Kapital Seed 9, Yashashrri plays a key role in shaping marketing and customer strategies, with a strong background at global companies like TNT and Accenture.
               </p>
 
@@ -259,7 +259,7 @@ const AboutUs = () => {
           </div>
           <div className="flex flex-col items-center justify-between sm:flex-row-reverse">
             <div className="lg:max-w-[60vw] ">
-              <p className="text-xl lg:text-4xl text-justify xl:text-3xl" data-aos="fade-right">
+              <p className="text-xl lg:text-4xl text-justify mf xl:text-2xl" data-aos="fade-right">
 
                 Harshawardhan Singh is a visionary founder with over 21 years of experience in FMCG, Retail, Banking, and Finance. He has led businesses to scale and driven successful product launches. As the founder of Kapital Seed 9, Harshawardhan brings deep market insight and operational excellence, having held leadership roles at OliveMoney, SMERA Ratings, and CRISIL.
               </p>
@@ -287,7 +287,7 @@ const AboutUs = () => {
           <div className="flex flex-col items-center justify-between sm:flex-row">
             <div className="md:max-w-[60vw]">
 
-              <p className="text-xl lg:text-4xl text-justify xl:text-3xl" data-aos="fade-right">
+              <p className="text-xl lg:text-4xl text-justify mf xl:text-2xl" data-aos="fade-right">
 
                 Alexander Mohandas is an experienced business leader with over 20 years in customer experience, sales, and marketing. He has worked with global brands like KFC, HSBC, and Probe Information. Known for his strategic approach, Alexander has driven growth and customer satisfaction, using his deep understanding of market needs to expand businesses successfully.
               </p>

@@ -39,13 +39,13 @@ const Navbar = ({ cart }) => {
   return (
     <>
       {/* Navbar */}
-      <div className={`sticky top-0 py-2 flex items-center z-50 w-full backdrop-blur shadow-xs z-70 ${scrolled || !isHomePage ? "bg-black bg-opacity-10" : "bg-transparent"}`}>
+      <div className={`sticky top-0 py-2 flex items-center z-50 w-full backdrop-blur  shadow-xs z-70 ${scrolled || !isHomePage ? "bg-black bg-opacity-10" : "bg-transparent"}`}>
         <nav className="container flex items-center justify-between px-4 mx-auto sm:px-8 md:px-12">
           {/* Logo */}
           <img src={logo} className="w-[60px] md:w-[120px]" alt="Logo" />
           
           {/* Desktop Menu */}
-          <div className="items-center hidden h-[4.5rem] space-x-8 uppercase md:flex justify-center">
+          <div className="items-center hidden h-[4.5rem] space-x-8 uppercase mf md:flex justify-center">
             <NavLink to="/"  label="Home" location={location.pathname} />
             <NavLink to="/about-us" label="About Us" location={location.pathname} />
             <NavLink
