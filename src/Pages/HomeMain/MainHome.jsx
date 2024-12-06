@@ -11,6 +11,7 @@ import OurStrength from "@/Components/OurStrength";
 import GoogleReviews from "@/Components/GoogleReviews";
 import PopularCategory from "@/Components/PopularCategory";
 
+
 const MainHome = ({ cart, setCart }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -22,6 +23,7 @@ const MainHome = ({ cart, setCart }) => {
     <div className="overflow-x-hidden ">
       <Hero />
       <AboutUs />
+    
       <OurStrength />
       <PopularCategory />
       <BestSellers cart={cart} setCart={setCart} />

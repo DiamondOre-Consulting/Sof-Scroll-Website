@@ -15,6 +15,7 @@ import ProductCategory from "./Components/Products/ProductCategory";
 import ChatBot from "./Components/ChatBot";
 import ChatbotButton from "./Components/ChatbotButton";
 import EnquireButton from './Components/ui/EnquireButton'
+import mybg from '../src/assets/mybg.png'
 
 
 
@@ -48,6 +49,7 @@ function App() {
       <Navbar cart={cart} />
       <Routes>
         <Route path="/" element={<MainHome cart={cart} setCart={setCart} />} />
+        
         <Route path="/about-us" element={<AboutusPage />} />
         <Route
           path="/all-products"
