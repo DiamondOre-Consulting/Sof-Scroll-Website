@@ -106,7 +106,7 @@ import { Link } from "react-router-dom";
                 <div key={index} className="card-wrapper relative">
                   <div className="card relative text-white  flex flex-row-reverse items-start  h-[30vh] md:h-[70vh] w-[80vw] mx-auto rounded-lg shadow-lg overflow-hidden">
                     {/* Gradient Overlay */}
-                    <div className="absolute inset-0  bg-gradient-to-r from-dark via-transparent to-transparent  opacity-100 md:bg-gradient-to-r from-dark via-dark to-transparent  md:opacity-100 z-10"></div>
+                    <div className="absolute inset-0  bg-gradient-to-r from-dark via-transparent to-transparent  opacity-100 md:bg-gradient-to-r from-dark md:via-dark to-transparent  md:opacity-100 z-10"></div>
 
                     {/* Image */}
                     <img
