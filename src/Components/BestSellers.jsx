@@ -213,6 +213,8 @@ const BestSellers = ({ cart, setCart }) => {
         "60 cm wide and 100 meters long, perfect for covering examination tables.",
       ],
     },
+
+    
   ];
 
 
@@ -222,26 +224,28 @@ const BestSellers = ({ cart, setCart }) => {
   useEffect(() => {
     const MyJourney = MyJourneyRef.current;
     const scrollContainer = scrollContainerRef.current;
-
+  
+    const totalScrollDistance = MyJourney.scrollWidth - scrollContainer.offsetWidth;
+  
     const tl = gsap.to(MyJourney, {
-      x: () => `-${MyJourney.scrollWidth - scrollContainer.offsetWidth - 870}px`,
+      x: () => `-${totalScrollDistance}px`, // Adjusted calculation
       ease: "none",
       scrollTrigger: {
         trigger: scrollContainer,
         start: "top top",
-        end: `+=${MyJourney.scrollWidth - scrollContainer.offsetWidth - 870}px`,
+        end: `+=${totalScrollDistance}`, // Dynamically calculated end
         scrub: 1,
         pin: true,
         anticipatePin: 1,
       },
     });
-
+  
     return () => {
       tl.kill();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
-
+  
   return (
     <div>
     <div
@@ -251,7 +255,7 @@ const BestSellers = ({ cart, setCart }) => {
     >
       <div
         ref={MyJourneyRef}
-        className="flex space-x-10 overflow-hidden items-center justify-center bg-dark horizontal-scroll w-max"
+        className="flex space-x-10 overflow-hidden items-center justify-center  horizontal-scroll w-max"
       >
         {allproducts?.map((product, index) => {
           const isInCart = cart.find(
@@ -260,22 +264,22 @@ const BestSellers = ({ cart, setCart }) => {
   
           return (
             <div
-              className="w-[70vw] h-[100vh] mx-40 flex  items-center justify-center"
+              className="md:w-[70vw] h-[100vh] mx-40 flex  items-center justify-center"
               key={index}
             >
-              <div className="flex flex-col w-full h-[70vh] mt-20 border border-white lg:flex-row">
+              <div className="flex flex-col w-full h-[70vh] bg-dark mt-20 border border-dark border-2  lg:flex-row">
                 {/* Left side with image */}
                 <img
-                  className="object-cover object-top h-[55%] w-fit lg:max-w-[60vw] xl:max-w-[50vw] mx-auto lg:h-full bg-cover no-repeat"
+                  className="object-cover  object-top h-[55%] w-full lg:max-w-[60vw] xl:max-w-[50vw] mx-auto lg:h-full bg-cover no-repeat"
                   src={product.imageUrl} // Remove curly braces around `product.imageUrl`
                   alt="Journey image"
                 />
                 {/* Right side with description */}
                 <div className="w-[100vw] lg:w-[70vw] h-full text-white flex flex-col justify-center items-center p-4 lg:p-10">
-                  <p className="mb-10 text-2xl text-center text-maincolor lg:text-4xl mf">
+                  <p className="mb-10 text-2xl text-center text-maincolor lg:text-4xl head">
                   {product.name}
                   </p>
-                  <span className="text-gray-500">{product.quality}</span>
+                  <span className="text-gray-200">{product.quality}</span>
                   <p
                     className="text-sm font-thin text-center lg:text-xl"
                     style={{ letterSpacing: "2px" }}
@@ -284,7 +288,7 @@ const BestSellers = ({ cart, setCart }) => {
                   </p>
                   <Link
                     to={`/product/${product.itemCode}`}
-                    className="w-[93%] p-2 mb-4 mx-auto text-center text-white transition-transform duration-300 rounded-md bg-dark hover:scale-105 hover:bg-opacity-90"
+                    className="w-[93%] p-2 mb-4 mx-auto mt-8 un text-center hover:underline text-white transition-transform duration-300 rounded-md  hover:scale-105 hover:bg-opacity-90"
                   >
                     View Product
                   </Link>
