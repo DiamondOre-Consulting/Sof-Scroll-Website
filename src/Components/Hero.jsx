@@ -34,7 +34,7 @@ const Hero = () => {
  
     </div>
 
-    <img src="https://koshertissue.com/images/paper_borders-ai-min.png"   className=" relative  md:-mt-52   z-30 md:block hidden  -mt-44"  alt="" />
+    {/* <img src="https://koshertissue.com/images/paper_borders-ai-min.png"   className=" relative  md:-mt-52   z-30 md:block hidden  -mt-44"  alt="" /> */}
    
 
     </>

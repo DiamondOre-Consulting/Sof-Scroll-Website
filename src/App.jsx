@@ -45,6 +45,9 @@ function App() {
 
 
   return (
+    <div className="bg-cover bg-fixed bg-center min-h-screen" style={{ backgroundImage: `url(${mybg})` }}>
+
+   
     <BrowserRouter>
       <Navbar cart={cart} />
       <Routes>
@@ -89,6 +92,7 @@ function App() {
       </div>
       <Footer />
     </BrowserRouter>
+    </div>
   );
 }
 

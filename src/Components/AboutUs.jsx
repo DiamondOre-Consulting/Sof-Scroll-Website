@@ -19,7 +19,7 @@ const AboutUs = () => {
             <div className="w-[3.5px] h-[3.5px] bg-gradient-to-r from-color3 to-dark rounded-full"></div>
           </div> */}
 
-          <img src={img} alt="" className="absolute w-60 right-40 opacity-70" />
+          {/* <img src={img} alt="" className="absolute w-60 right-40 opacity-70" /> */}
 
           <div className="z-10 w-full px-4 text-justify md:px-10 h-fit">
             <p className="text-xl lg:text-4xl xl:text-2xl mf  md:max-w-5xl mx-auto " data-aos="fade-right">

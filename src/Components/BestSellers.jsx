@@ -245,6 +245,10 @@ const BestSellers = ({ cart, setCart }) => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
+
+
+  const bgColors = ["bg-orange-200", "bg-blue-200", "bg-green-200", "bg-red-300"];
+
   
   return (
     <div>
@@ -267,7 +271,7 @@ const BestSellers = ({ cart, setCart }) => {
               className="md:w-[70vw] h-[100vh] mx-40 flex  items-center justify-center"
               key={index}
             >
-              <div className="flex flex-col w-full h-[70vh] bg-dark mt-20 border border-dark border-2  lg:flex-row">
+              <div className={`flex flex-col w-full h-[70vh]  mt-20 border border-dark border-2   ${bgColors[index % bgColors.length]} lg:flex-row`}>
                 {/* Left side with image */}
                 <img
                   className="object-cover  object-top h-[55%] w-full lg:max-w-[60vw] xl:max-w-[50vw] mx-auto lg:h-full bg-cover no-repeat"
