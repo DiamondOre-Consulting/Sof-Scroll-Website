@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import tissue1 from "../assets/tissue1.png";
 
 import { Link } from "react-router-dom";
 import pattern1 from "../assets/pattern1.png";
 import facialTissue from "../assets/productAssets/facial_tissue.mp4";
+
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 
 const BestSellers = ({ cart, setCart }) => {
   // console.log("all products", Allproducts);
@@ -209,58 +215,89 @@ const BestSellers = ({ cart, setCart }) => {
     },
   ];
 
+
+  const scrollContainerRef = useRef(null);
+  const MyJourneyRef = useRef(null);
+
+  useEffect(() => {
+    const MyJourney = MyJourneyRef.current;
+    const scrollContainer = scrollContainerRef.current;
+
+    const tl = gsap.to(MyJourney, {
+      x: () => `-${MyJourney.scrollWidth - scrollContainer.offsetWidth - 870}px`,
+      ease: "none",
+      scrollTrigger: {
+        trigger: scrollContainer,
+        start: "top top",
+        end: `+=${MyJourney.scrollWidth - scrollContainer.offsetWidth - 870}px`,
+        scrub: 1,
+        pin: true,
+        anticipatePin: 1,
+      },
+    });
+
+    return () => {
+      tl.kill();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
   return (
     <div>
-      <div className="relative py-10">
-        <h1 className="relative mx-auto mb-1 text-3xl md:text-5xl text-center font-bold  text-gray-800 head">
-          Our Best Sellers
-        </h1>
-        {/* <div className="w-40 h-1 mx-auto bg-dark"></div> */}
-        {/* <img src={pattern1} alt="" className="absolute right-0 -top-20 " /> */}
-        <div className="grid items-center justify-center grid-cols-1 gap-6 px-6 mx-auto mt-20 w-fit sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-          {allproducts?.map((product, index) => {
-            const isInCart = cart.find(
-              (item) => item.itemCode === product.itemCode
-            );
-
-            // Conditional class for centering the last item in the grid
-            const isLastProduct = index === allproducts.length - 1;
-            const gridItemClass = isLastProduct
-              ? "sm:col-span-2 lg:col-span-3 flex justify-center" // Adjust the span to center based on breakpoints
-              : "";
-
-            return (
-              <div key={index} className={gridItemClass}>
-                <div className="md:w-[24rem]  h-full flex flex-col border overflow-hidden transition-transform duration-300 hover:scale-105">
-                  <div className="relative">
-                    <img
-                      src={product.imageUrl}
-                      alt={product.name}
-                      className="h-[14rem] w-full object-cover transition-opacity duration-300 hover:opacity-90"
-                    />
-                  </div>
-                  <div className="flex flex-col px-4 pb-3 mt-2 space-y">
-                    <h1 className="text-[1.15rem] font-semibold text-gray-800 truncate transition-colors duration-300 hover:text-dark">
-                      {product.name}
-                    </h1>
-                    <p className="text-xs italic text-gray-700">
-                      Quality:{" "}
-                      <span className="text-gray-500">{product.quality}</span>
-                    </p>
-                  </div>
+    <div
+      ref={scrollContainerRef}
+      className="w-full h-screen overflow-x-hidden  scroll-container"
+      aria-label="Horizontal Scroll Container"
+    >
+      <div
+        ref={MyJourneyRef}
+        className="flex space-x-10 overflow-hidden items-center justify-center bg-dark horizontal-scroll w-max"
+      >
+        {allproducts?.map((product, index) => {
+          const isInCart = cart.find(
+            (item) => item.itemCode === product.itemCode
+          );
+  
+          return (
+            <div
+              className="w-[70vw] h-[100vh] mx-40 flex  items-center justify-center"
+              key={index}
+            >
+              <div className="flex flex-col w-full h-[70vh] mt-20 border border-white lg:flex-row">
+                {/* Left side with image */}
+                <img
+                  className="object-cover object-top h-[55%] w-fit lg:max-w-[60vw] xl:max-w-[50vw] mx-auto lg:h-full bg-cover no-repeat"
+                  src={product.imageUrl} // Remove curly braces around `product.imageUrl`
+                  alt="Journey image"
+                />
+                {/* Right side with description */}
+                <div className="w-[100vw] lg:w-[70vw] h-full text-white flex flex-col justify-center items-center p-4 lg:p-10">
+                  <p className="mb-10 text-2xl text-center text-maincolor lg:text-4xl mf">
+                  {product.name}
+                  </p>
+                  <span className="text-gray-500">{product.quality}</span>
+                  <p
+                    className="text-sm font-thin text-center lg:text-xl"
+                    style={{ letterSpacing: "2px" }}
+                  >
+                    {product.description}
+                  </p>
                   <Link
                     to={`/product/${product.itemCode}`}
                     className="w-[93%] p-2 mb-4 mx-auto text-center text-white transition-transform duration-300 rounded-md bg-dark hover:scale-105 hover:bg-opacity-90"
                   >
                     View Product
                   </Link>
+
                 </div>
               </div>
-            );
-          })}
-        </div>
+            </div>
+          );
+        })}
       </div>
     </div>
+  </div>
+  
   );
 };
 
