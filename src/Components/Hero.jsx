@@ -12,7 +12,7 @@ const Hero = () => {
     <>
     <div className=" flex  items-center h-[100vh]  overflow-hidden bg-center bg-cover ">
       <video
-        src={bg}
+        src="https://s3.tebi.io/sof-scroll/socscrollvideo.mp4"
         autoPlay
         loop
         muted
