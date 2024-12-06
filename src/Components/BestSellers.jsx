@@ -247,7 +247,7 @@ const BestSellers = ({ cart, setCart }) => {
   }, []);
 
 
-  const bgColors = ["bg-orange-200", "bg-blue-200", "bg-green-200", "bg-red-300"];
+  const bgColors = ["bg-orange-300", "bg-blue-300", "bg-green-300", "bg-red-300"];
 
   
   return (
@@ -280,10 +280,10 @@ const BestSellers = ({ cart, setCart }) => {
                 />
                 {/* Right side with description */}
                 <div className="w-[100vw] lg:w-[70vw] h-full text-white flex flex-col justify-center items-center p-4 lg:p-10">
-                  <p className="mb-10 text-2xl text-center text-maincolor lg:text-4xl head">
+                  <p className="mb-10 text-2xl text-center text-maincolor lg:text-3xl head">
                   {product.name}
                   </p>
-                  <span className="text-gray-200">{product.quality}</span>
+                  <span className="text-gray-100">{product.quality}</span>
                   <p
                     className="text-sm font-thin text-center lg:text-xl"
                     style={{ letterSpacing: "2px" }}
