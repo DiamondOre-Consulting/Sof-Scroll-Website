@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import tisssuevideo from "../assets/tissuev.mp4";
 import AnimatedText from "./AnimatedText";
 import myimg from '../assets/2.png'
-import bg from '../assets/bg.mp4'
+import bg from '../assets/4.mp4'
 import fly from '../assets/fly.gif'
 
 const Hero = () => {
