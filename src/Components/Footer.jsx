@@ -64,7 +64,7 @@ const Footer = () => {
                           <path fill="none" d="M0 0h24v24H0z"></path>
                           <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"></path>
                         </svg>
-                        contact@domain.com
+                        harshw1@sofsscrrol.com
                       </a>
                     </li>
                   </ul>
@@ -131,8 +131,8 @@ const Footer = () => {
               </div>
               <div className='flex flex-col gap-4 mt-6 '>
                 <Link to={'/'} className={`${contactStyle} lg:items-center`}><MdOutlineSmartphone />+91-9980750049 </Link>
-                <Link to={'/'} className={`${contactStyle} lg:items-center`}><IoMdMail />info@domain.in</Link>
-                <Link to={'/'} className={`flex items-start  gap-1`}><FaLocationDot className='mt-1' />Noida, <br /> Uttar Pradesh, India</Link>
+                <Link to={'/'} className={`${contactStyle} lg:items-center`}><IoMdMail />harshw1@sofsscrrol.com</Link>
+                <Link to={'/'} className={`flex items-start  gap-1`}><FaLocationDot className='mt-1' />WM5M+699, Bengaluru, <br /> Karnataka 560035 </Link>
               </div>
             </div>
           </div>

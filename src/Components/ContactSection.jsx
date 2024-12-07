@@ -85,7 +85,7 @@ const ContactSection = ({ contact }) => {
                                 </div>
                                 <div>
                                     <h2 className="text-dark text-[1.3rem] sora-600">Address</h2>
-                                    <p className='sora-400 text-[1rem] text-[#535760] mt-2'><br />Noida, Uttar Pradesh <br /> 221003</p>
+                                    <p className='sora-400 text-[1rem] text-[#535760] mt-2'><br />WM5M+699, Bengaluru,<br /> Karnataka 560035 </p>
                                 </div>
                             </div>
                             {/* Contact Info */}
@@ -95,7 +95,7 @@ const ContactSection = ({ contact }) => {
                                 </div>
                                 <div className='sora-400 text-[1rem] text-[#535760] space-y-1'>
                                     <h2 className="text-dark text-[1.3rem] sora-600 mb-2">Contact</h2>
-                                    <a href="mailto:info@domain.com" className="block">sof-scroll@gmail.com</a>
+                                    <a href="mailto:info@domain.com" className="block">harshw1@sofsscrrol.com</a>
                                     <a href="tel:6207234759" className="block">+91-9980750049 </a>
 
                                 </div>
