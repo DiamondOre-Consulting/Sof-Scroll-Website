@@ -59,7 +59,7 @@ const RelatedProducts = ({ cart, setCart, category, itemCode }) => {
 
                         return (
                             <div key={index}>
-                                <div className="max-w-[19rem] justify-between w-full pb-2 h-[21.5rem] flex flex-col border rounded-lg shadow-md overflow-hidden transition-transform duration-300  ">
+                                <div className="max-w-[19rem] justify-between backdrop-blur w-full pb-2 h-[21.5rem] flex flex-col border rounded-lg shadow-md overflow-hidden transition-transform duration-300  ">
                                     <div className="relative">
                                         <img
                                             src={product.imageUrl}

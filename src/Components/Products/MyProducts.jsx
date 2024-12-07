@@ -45,7 +45,7 @@ const MyProducts = ({ cart, setCart }) => {
 
             return (
               <div key={index}>
-                <div className="max-w-[24rem] w-full  h-full flex flex-col  border  overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-sm   border-gray-200 hover:border-dark">
+                <div className="max-w-[24rem] w-full  h-full flex flex-col  backdrop-blur border  overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-sm   border-gray-200 hover:border-dark">
                   <div className="relative">
                     <img
                       src={product.imageUrl}
