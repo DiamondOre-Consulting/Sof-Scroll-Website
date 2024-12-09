@@ -26,7 +26,7 @@ const Footer = () => {
             <div className="w-full mb-8 lg:w-1/3 md:w-full xl:mb-0">
               <div className="text-gray-800">
                 <Link to="/">
-                  <img src={logo} alt="Logo" className="mb-4 w-[4rem] md:w-[6rem] drop-shadow-[0px_0px_1px_#fff]" />
+                  <img src={logo} alt="Logo" className="mb-4 w-[4rem]  animate-bounce duration-[0.01s] md:w-[6rem] drop-shadow-[0px_0px_1px_#fff]" />
                 </Link>
 
                 <div>
