@@ -6,7 +6,7 @@ import teamImage3 from "../assets/yashashrri.jpeg"; // Team member image 3
 import patternImage from "../assets/22.png"; // Background pattern image
 import BreadCrumbs from "../Components/BreadCrumbs";
 import yashi from "../assets/yashi.jpeg";
-import logo from "../assets/logo.png";
+import logo from "../assets/newlogo.webp";
 import TextRevealByWord from "../Components/ui/text-reveal";
 import AnimatedText from "../Components/AnimatedText";
 import AOS from "aos";

@@ -10,7 +10,7 @@ import { IoMdMail } from "react-icons/io";
 
 import { MdOutlineSmartphone } from 'react-icons/md';
 import { FaLocationDot } from 'react-icons/fa6';
-import logo from '../assets/logo.png'
+import logo from '../assets/newlogo.webp'
 
 const contactStyle = "text-[0.95rem] flex items-start sm:items-center lg:items-start gap-1 hover:text-dark font-semibold  text-gray-800 "
 
