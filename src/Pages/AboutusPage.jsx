@@ -9,8 +9,8 @@ import yashi from "../assets/yashi.jpeg";
 import logo from "../assets/logo.png";
 import TextRevealByWord from "../Components/ui/text-reveal";
 import AnimatedText from "../Components/AnimatedText";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import { FaRegCalendarAlt } from "react-icons/fa";
 import {
@@ -118,10 +118,7 @@ const AboutUs = () => {
 
         {/* Text content */}
         <div className="absolute text-white transform -translate-y-1/2 left-10 top-1/2">
-          <p
-            className="text-2xl md:text-5xl mf max-w-3xl font-semibold  md:leading-[100px] "
-
-          >
+          <p className="text-2xl md:text-5xl mf max-w-3xl font-semibold  md:leading-[100px] ">
             <AnimatedText
               text2={
                 "Shaping comfort for every experience – dive into the story of our tissue mastery."
@@ -134,16 +131,25 @@ const AboutUs = () => {
 
       <div className="flex flex-col items-center justify-between px-4 md:flex-row md:px-10">
         <div className="md:max-w-[65vw]">
-          <p className="mb-4 text-4xl font-semibold text-dark mf" data-aos="fade-up">
+          <p
+            className="mb-4 text-4xl font-semibold text-dark mf"
+            data-aos="fade-up"
+          >
             SOF SSCRROL
           </p>
 
-
-          <p data-aos="fade-left" className="text-xl mf text-justify lg:text-4xl xl:text-2xl">
-
-            Our company specializes in tissue paper conversion, turning large rolls into essential products like toilet paper, facial tissue, napkins, and paper towels. Using advanced machinery and techniques, we ensure each product meets high standards for softness, strength, and absorbency. Starting with premium raw materials—wood pulp or recycled paper—our process involves refining, papermaking, slitting, embossing, perforating, and packaging for consumer convenience.
+          <p
+            data-aos="fade-left"
+            className="text-xl mf text-justify lg:text-4xl xl:text-2xl"
+          >
+            Our company specializes in tissue paper conversion, turning large
+            rolls into essential products like toilet paper, facial tissue,
+            napkins, and paper towels. Using advanced machinery and techniques,
+            we ensure each product meets high standards for softness, strength,
+            and absorbency. Starting with premium raw materials—wood pulp or
+            recycled paper—our process involves refining, papermaking, slitting,
+            embossing, perforating, and packaging for consumer convenience.
           </p>
-
         </div>
 
         <div data-aos="fade-right">
@@ -226,7 +232,10 @@ const AboutUs = () => {
 
       {/* Team Section */}
       <section className="py-16">
-        <h2 className="mb-1 text-4xl font-semibold text-center text-black md:text-5xl mf" data-aos="fade-down">
+        <h2
+          className="mb-1 text-4xl font-semibold text-center text-black md:text-5xl mf"
+          data-aos="fade-down"
+        >
           Meet Our Team
         </h2>
         <div className="w-40 h-1 mx-auto mb-8 bg-dark"></div>
@@ -234,14 +243,19 @@ const AboutUs = () => {
         <div className="grid grid-cols-1 gap-10 px-4 md:px-10">
           {/* First Section: Text on Left, Image on Right */}
 
-
           <div className="flex flex-col items-center justify-between sm:flex-row">
             <div className="md:max-w-[60vw]">
-
-              <p className="text-xl lg:text-4xl text-justify xl:text-2xl mf" data-aos="fade-right">
-                Yashashrri H Singh is a dynamic leader with 18 years of experience in business development, banking, and marketing. She specializes in driving business growth and aligning strategies with company goals.  At Kapital Seed 9, Yashashrri plays a key role in shaping marketing and customer strategies, with a strong background at global companies like TNT and Accenture.
+              <p
+                className="text-xl lg:text-4xl text-justify xl:text-2xl mf"
+                data-aos="fade-right"
+              >
+                Yashashrri H Singh is a dynamic leader with 18 years of
+                experience in business development, banking, and marketing. She
+                specializes in driving business growth and aligning strategies
+                with company goals. At Kapital Seed 9, Yashashrri plays a key
+                role in shaping marketing and customer strategies, with a strong
+                background at global companies like TNT and Accenture.
               </p>
-
             </div>
             <div className="flex flex-col items-center" data-aos="fade-left">
               <img
@@ -259,18 +273,22 @@ const AboutUs = () => {
           </div>
           <div className="flex flex-col items-center justify-between sm:flex-row-reverse">
             <div className="lg:max-w-[60vw] ">
-              <p className="text-xl lg:text-4xl text-justify mf xl:text-2xl" data-aos="fade-right">
-
-                Harshawardhan Singh is a visionary founder with over 21 years of experience in FMCG, Retail, Banking, and Finance. He has led businesses to scale and driven successful product launches. As the founder of Kapital Seed 9, Harshawardhan brings deep market insight and operational excellence, having held leadership roles at OliveMoney, SMERA Ratings, and CRISIL.
+              <p
+                className="text-xl lg:text-4xl text-justify mf xl:text-2xl"
+                data-aos="fade-right"
+              >
+                Harshawardhan Singh is a visionary founder with over 21 years of
+                experience in FMCG, Retail, Banking, and Finance. He has led
+                businesses to scale and driven successful product launches. As
+                the founder of Kapital Seed 9, Harshawardhan brings deep market
+                insight and operational excellence, having held leadership roles
+                at HLL, Colgate, ICRA Ltd, SMERA Rating, CRISIL Ltd, and Probe
+                Information.
               </p>
-
-
-
-
             </div>
             <div className="flex flex-col items-center" data-aos="fade-left">
               <img
-                className="object-cover border-2 border-gray-300 rounded-full min-w-80 h-80"
+                className="object-cover object-top  border-2 border-gray-300 rounded-full min-w-80 h-80"
                 src={teamImage1}
                 alt="Harshawardhan Singh"
               />
@@ -286,20 +304,21 @@ const AboutUs = () => {
           {/* Second Section: Text on Right, Image on Left */}
           <div className="flex flex-col items-center justify-between sm:flex-row">
             <div className="md:max-w-[60vw]">
-
-              <p className="text-xl lg:text-4xl text-justify mf xl:text-2xl" data-aos="fade-right">
-
-                Alexander Mohandas is an experienced business leader with over 20 years in customer experience, sales, and marketing. He has worked with global brands like KFC, HSBC, and Probe Information. Known for his strategic approach, Alexander has driven growth and customer satisfaction, using his deep understanding of market needs to expand businesses successfully.
+              <p
+                className="text-xl lg:text-4xl text-justify mf xl:text-2xl"
+                data-aos="fade-right"
+              >
+                Alexander Mohandas is an experienced business leader with over
+                20 years in customer experience, sales, and marketing. He has
+                worked with global brands like KFC, HSBC, and Probe Information.
+                Known for his strategic approach, Alexander has driven growth
+                and customer satisfaction, using his deep understanding of
+                market needs to expand businesses successfully.
               </p>
-
-
-
-
-
             </div>
             <div className="flex flex-col items-center" data-aos="fade-left">
               <img
-                className="object-cover mt-4 border-2 border-gray-300 rounded-full md:mt-0 min-w-80 h-80"
+                className="object-cover object-top mt-4 border-2 border-gray-300 rounded-full md:mt-0 min-w-80 h-80"
                 src={teamImage2}
                 alt="Alexander Mohandas"
               />
@@ -313,7 +332,6 @@ const AboutUs = () => {
           </div>
 
           {/* Third Section: Text on Left, Image on Right */}
-
         </div>
       </section>
     </div>

@@ -506,9 +506,9 @@ const Allproducts = [
     previews: [
       {
         previewUrl:
-          "https://m.media-amazon.com/images/I/51FEi4JtgnL._SX522_.jpg",
+          "https://img.freepik.com/free-vector/paper-tissue-realistic-package-poster-mockup-with-branding-template-vector-illustration_1284-80142.jpg?t=st=1733738759~exp=1733742359~hmac=ad6d8ddd7d10fc79a62817ed5d7df7937c8836f611979e83eff596ff443ec698&w=996",
         thumbUrl:
-          "https://m.media-amazon.com/images/I/51FEi4JtgnL._SX522_.jpg",
+          "https://img.freepik.com/free-vector/paper-tissue-realistic-package-poster-mockup-with-branding-template-vector-illustration_1284-80142.jpg?t=st=1733738759~exp=1733742359~hmac=ad6d8ddd7d10fc79a62817ed5d7df7937c8836f611979e83eff596ff443ec698&w=996",
       },
 
       {
@@ -521,7 +521,7 @@ const Allproducts = [
     ],
     videoUrl: facialTissue,
     imageUrl:
-      "https://m.media-amazon.com/images/I/51FEi4JtgnL._SX522_.jpg", // Dummy placeholder image URL
+      "https://img.freepik.com/free-vector/paper-tissue-realistic-package-poster-mockup-with-branding-template-vector-illustration_1284-80142.jpg?t=st=1733738759~exp=1733742359~hmac=ad6d8ddd7d10fc79a62817ed5d7df7937c8836f611979e83eff596ff443ec698&w=996", // Dummy placeholder image URL
     fullDesc: [
       "Extra soft, absorbent 2-ply facial tissue.",
       "Made from virgin wood pulp for superior quality.",
@@ -551,9 +551,9 @@ const Allproducts = [
     previews: [
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532212/SofScroll/tqo1wsz5xxxfvu6zqwfv.jpg",
+          "https://aaronjosephworkshop.uk/cdn/shop/files/20210624_170734_363.jpg?v=1687035704&width=533",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532212/SofScroll/tqo1wsz5xxxfvu6zqwfv.jpg",
+          "https://aaronjosephworkshop.uk/cdn/shop/files/20210624_170734_363.jpg?v=1687035704&width=533",
       },
       {
         previewUrl:
@@ -566,7 +566,7 @@ const Allproducts = [
     ],
     videoUrl: faceTissue,
     imageUrl:
-      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532212/SofScroll/tqo1wsz5xxxfvu6zqwfv.jpg", // Dummy placeholder image URL
+      "https://aaronjosephworkshop.uk/cdn/shop/files/20210624_170734_363.jpg?v=1687035704&width=533", // Dummy placeholder image URL
     fullDesc: [
       "Extra soft, absorbent 3-ply facial tissue.",
       "Made from virgin wood pulp for superior softness.",
