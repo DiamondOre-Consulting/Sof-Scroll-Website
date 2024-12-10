@@ -10,6 +10,7 @@ import FAQPage from "@/Components/FAQPage";
 import OurStrength from "@/Components/OurStrength";
 import GoogleReviews from "@/Components/GoogleReviews";
 import PopularCategory from "@/Components/PopularCategory";
+import MakhanaSection from "@/Components/MakhanaSection";
 
 
 const MainHome = ({ cart, setCart }) => {
@@ -27,6 +28,7 @@ const MainHome = ({ cart, setCart }) => {
       <OurStrength />
       <PopularCategory />
       <BestSellers cart={cart} setCart={setCart} />
+      <MakhanaSection/>
       {/* <PopularCategories/> */}
       <WhyUs />
       <Testimonials />

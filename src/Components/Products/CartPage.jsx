@@ -80,19 +80,19 @@ const CartPage = ({ cart, setCart }) => {
     <tr>
       <td colspan="2" style="padding-top: 10px; text-align: center;">
         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 10px;">
-          ${cart.map(item => `
+          ${cart?.map(item => `
             <div style="border: 1px solid #ddd; padding: 10px; text-align: center;">
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
                 <tr>
                   <td style="padding-bottom: 10px;">
-                    <img src="${item.imageUrl}" alt="${item.name}" style="width: 100%; height: auto; object-fit: cover; max-width: 150px;" />
+                    <img src="${item?.imageUrl}" alt="${item?.name}" style="width: 100%; height: auto; object-fit: cover; max-width: 150px;" />
                   </td>
                 </tr>
                 <tr>
                   <td style="font-size: 14px; line-height: 1.5;">
-                    <p><strong>Item code:</strong> ${item.itemCode}</p>
-                    <p>${item.name}</p>
-                    <p><strong>Quantity:</strong> ${item.quantity} | <strong>Weight:</strong> ${item.weight}</p>
+                    <p><strong>Item code:</strong> ${item?.itemCode}</p>
+                    <p>${item?.name}</p>
+                    <p><strong>Quantity:</strong> ${item?.quantity} | <strong>Weight:</strong> ${item?.weight}</p>
                   
                   </td>
                 </tr>
@@ -251,12 +251,13 @@ const CartPage = ({ cart, setCart }) => {
 
               <div className="flex flex-wrap items-center justify-center w-full bg-white rounded lg:items-start lg:gap-4 lg:flex-col">
                 <ul className="mb-4 space-y-6">
-                  {cart.map((item, index) => (
+                  
+                  {cart?.map((item, index) => (
                     <div className="relative p-4 py-1 pt-3 space-y-2 overflow-hidden border rounded-md bg-gray-50" key={item?.itemCode}>
 
                       <div className="relative flex items-center gap-2 sm:flex-row">
                         <div className="relative sm:w-[25%] w-full max-w-[25%] md:w-[20%] lg:w-[20%]">
-                          <img className="object-cover rounded-lg " src={item?.previews[0].previewUrl} alt={item?.name} />
+                          <img className="object-cover rounded-lg " src={item?.previews[0]?.previewUrl} alt={item?.name} />
                           <div className="absolute top-[-0.5rem] border border-gray-400 -left-[0.5rem] flex items-center justify-center rounded-full bg-gray-50 font-semibold size-6 text-[0.9rem]  p-1">
                             {item?.quantity}
                           </div>

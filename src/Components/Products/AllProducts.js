@@ -628,6 +628,57 @@ const Allproducts = [
     ]
 
   },
+
+
+
+
+
+  {
+    name: "Fox Nuts",
+    category: "Fox Nuts",
+    // particulars: "Examination Medical Couch Roll",
+    itemCode: "SS114",
+    // quality: "Paper",
+    // SheetCount: "100 Mtr long",
+
+    // recommendation:
+      // "hospital Bed roll Tissue, Beauty Parlour spa Tissue Papper roll",
+    // pulls: "100 Mtr long",
+    // dimensions: "60 CM Width * 100 Mtr Long, White 100 Mtr long",
+    // ply: 1,
+    // gsm: 18 - 19,
+    // price: "400",
+    // weight: "2kg",
+    // material: "Virgin/ Wood Pulp",
+    // description:
+      // "Designed specifically for Medical examination of Hospital bed ,  massage Centres and beauty therapists",
+    // Packaging: "Pack of 6 Rolls",
+    // JumboPackaging: "12 packets equal to 72 Rolls in a Carton",
+    previews: [
+      {
+        previewUrl:
+          "https://media.post.rvohealth.io/wp-content/uploads/2021/05/makhana-1200x628-facebook.jpg",
+        thumbUrl:
+          "https://media.post.rvohealth.io/wp-content/uploads/2021/05/makhana-1200x628-facebook.jpg",
+      },
+      {
+        previewUrl:
+          "https://m.media-amazon.com/images/I/51yq6QLp1AL._SX522_.jpg",
+        thumbUrl:
+          "https://m.media-amazon.com/images/I/51yq6QLp1AL._SX522_.jpg",
+      },
+  
+    ],
+    // videoUrl: "",
+    // imageUrl:
+      // "https://m.media-amazon.com/images/I/31+CSqwVEGL._SX522_.jpg", // Dummy placeholder image URL
+    // fullDesc: [
+      // "Durable 1-ply paper roll made from virgin wood pulp.",
+      // "Soft and comfortable for medical and beauty treatments.",
+      // "60 cm wide and 100 meters long, perfect for covering examination tables."
+    // ]
+
+  },
 ];
 
 export default Allproducts;

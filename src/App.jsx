@@ -16,6 +16,7 @@ import ChatBot from "./Components/ChatBot";
 import ChatbotButton from "./Components/ChatbotButton";
 import EnquireButton from './Components/ui/EnquireButton'
 import mybg from '../src/assets/mybg.png'
+import FoxNutsPage from "./Pages/FoxNutsPage";
 
 
 
@@ -71,6 +72,8 @@ function App() {
           path="/products/category/:category"
           element={<ProductCategory cart={cart} setCart={setCart} />}
         />
+
+        <Route path="/Nuts-Megic/SS114" element={<FoxNutsPage   cart={cart} setCart={setCart}  />}/>
       </Routes>
       <div className="bottom-32 md:bottom-36 fixed right-5  z-50">
 
