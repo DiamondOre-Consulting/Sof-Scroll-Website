@@ -57,8 +57,8 @@ import { Link } from "react-router-dom";
 
       ScrollTrigger.create({
         trigger: ".extra-trigger",
-        start: "top top",
-        end: () => tl.scrollTrigger.end,
+        start: "top 10vh", // Pin starts when the card-container reaches 10vh from the top
+    end: `${blockHeight * 5} 10vh`, 
         pin: true,
     
         markers: false
@@ -69,6 +69,9 @@ import { Link } from "react-router-dom";
       };
     }, []);
 
+
+    // start: "top top",
+    // end: () => tl.scrollTrigger.end,
     const images = [
       {
         category: "Toilet Rolls",
