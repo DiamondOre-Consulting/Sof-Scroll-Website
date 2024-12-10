@@ -142,13 +142,19 @@ const AboutUs = () => {
             data-aos="fade-left"
             className="text-xl mf text-justify lg:text-4xl xl:text-2xl"
           >
-            Our company specializes in tissue paper conversion, turning large
-            rolls into essential products like toilet paper, facial tissue,
-            napkins, and paper towels. Using advanced machinery and techniques,
-            we ensure each product meets high standards for softness, strength,
-            and absorbency. Starting with premium raw materials—wood pulp or
-            recycled paper—our process involves refining, papermaking, slitting,
-            embossing, perforating, and packaging for consumer convenience.
+            <p>
+              SOF SSCRROL is a global leader in premium tissue paper products
+              and institutional solutions. With a focus on innovation and
+              quality, our range combines softness, strength, and absorbency,
+              catering to diverse needs across households, hospitality, and
+              public spaces.
+            </p>
+            <p>
+              Crafted from pure, recycled, and bamboo fibers, our products
+              embody luxury and sustainability, offering a perfect balance of
+              elegance and practicality. At SOF SSCRROL, hygiene and comfort are
+              at the heart of everything we create.
+            </p>
           </p>
         </div>
 

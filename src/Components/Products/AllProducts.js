@@ -254,7 +254,7 @@ const Allproducts = [
     ply: 3,
     gsm: 16,
     price: "400",
-    quality: "Made From 100% natural bamboo , renewable and Bamboo",
+    quality: "Made From 100% natural Bamboo , renewable and Bamboo",
     material: "Recycle Material",
     weight: "100 gms",
     description: "Dye Free , Tree Free BPA Free , Plastic Free",

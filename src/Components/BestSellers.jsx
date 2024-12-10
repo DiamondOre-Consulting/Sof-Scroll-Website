@@ -254,12 +254,12 @@ const BestSellers = ({ cart, setCart }) => {
     <div>
     <div
       ref={scrollContainerRef}
-      className="w-full h-screen overflow-x-hidden  scroll-container"
+      className="w-full h-screen overflow-x-hidden overflow-y-hidden  scroll-container"
       aria-label="Horizontal Scroll Container"
     >
       <div
         ref={MyJourneyRef}
-        className="flex space-x-10 overflow-hidden items-center justify-center  horizontal-scroll w-max"
+        className="flex space-x-10 md:mt-10  overflow-hidden items-center justify-center  horizontal-scroll w-max"
       >
         {allproducts?.map((product, index) => {
           const isInCart = cart.find(

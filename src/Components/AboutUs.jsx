@@ -23,7 +23,7 @@ const AboutUs = () => {
 
           <div className="z-10 w-full px-4 text-justify md:px-10 h-fit">
             <p className="text-xl lg:text-4xl xl:text-2xl mf  md:max-w-5xl mx-auto " data-aos="fade-right">
-              Our tissue paper conversion process turns large tissue rolls into consumer-ready products such as toilet paper, facial tissues, napkins, and paper towels. Using quality raw materials like wood pulp or recycled paper, the pulp is processed into continuous sheets, which are then slit, embossed, and perforated for convenience. Finally, automated machinery packages the tissue in various formats, ensuring quality and efficiency in a sustainable way to meet consumer needs.
+            SOF SSCRROL is a premium brand renowned for its world-class tissue paper products and institutional commodities, designed to meet global needs. Engineered with cutting-edge technology, our tissue variants offer unmatched strength, softness, and absorbency, catering to both luxury and practicality. From toilet paper rolls and facial tissues to jumbo tissues and hospital couch rolls, our products are ultra-hygienic and tailored for HORECA, hospitality, and household use—prioritizing hygiene and comfort in every space.
             </p>
 
           </div>
