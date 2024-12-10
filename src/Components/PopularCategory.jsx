@@ -25,7 +25,7 @@ import { Link } from "react-router-dom";
         },
         scrollTrigger: {
           trigger: ".trigger",
-          start: "center center",
+          start: "top top",
           end: `${blockHeight * 5} top`,
           scrub: true,
           markers: false,
