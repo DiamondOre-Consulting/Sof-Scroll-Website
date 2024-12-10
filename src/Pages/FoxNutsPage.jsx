@@ -136,7 +136,7 @@ const FoxNutsPage = ({ cart, setCart }) => {
       <section className="w-full h-full px-6 md:px-12 lg:px-16 py-10">
         <div className="container mx-auto text-center">
           <h1 className="text-5xl font-extrabold text-gray-900 dark:text-white mb-6">
-            Discover the Power of Makhana (Fox Nuts)
+            Discover the Power of Nuttz Magic
           </h1>
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
             Makhana, also known as Fox Nut or Gorgon Nut, is a powerhouse of nutrients with a variety of health benefits. Explore how this amazing seed can enhance your well-being.
@@ -207,7 +207,7 @@ const FoxNutsPage = ({ cart, setCart }) => {
                onClick={() => buyButton()}
               className="text-xl font-semibold text-white bg-dark px-4 py-2 rounded-md dark:text-blue-400 hover:underline cursor-pointer transition-colors duration-200"
             >
-              Shop Makhana Now
+              Shop Now
             </a>
           </div>
         </div>
