@@ -57,8 +57,8 @@ import { Link } from "react-router-dom";
 
       ScrollTrigger.create({
         trigger: ".extra-trigger",
-        start: "top 10vh", // Pin starts when the card-container reaches 10vh from the top
-    end: `${blockHeight * 5} 10vh`, 
+        start: "top 40vh", // Pin starts when the card-container reaches 10vh from the top
+    end: `${blockHeight * 5} 40vh`, 
         pin: true,
     
         markers: false
