@@ -25,7 +25,7 @@ import { Link } from "react-router-dom";
         },
         scrollTrigger: {
           trigger: ".trigger",
-          start: "top top",
+          start: "center center",
           end: `${blockHeight * 5} top`,
           scrub: true,
           markers: false,
@@ -101,6 +101,7 @@ import { Link } from "react-router-dom";
         <div className="trigger relative h-screen">
           <div className="hero "></div>
           <div className="extra-trigger">
+            <h1 className="text-3xl md:text-5xl head text-center">Popular Categories</h1>
             <div className="card-container relative">
               {images.map((item, index) => (
                 <div key={index} className="card-wrapper relative">
