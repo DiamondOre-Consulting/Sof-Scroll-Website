@@ -24,10 +24,10 @@ const PopularCategory = () => {
       },
       scrollTrigger: {
         trigger: ".trigger",
-        start: "top top",
+        start: "center center",
         end: `${blockHeight * 5} top`,
         scrub: true,
-        markers: false,
+        markers: true,
       },
     });
 
