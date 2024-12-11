@@ -14,7 +14,7 @@ const MakhanaSection = () => {
       <div className="relative h-full flex items-center">
         <div className="container mx-auto px-8">
           <div className="max-w-md text-left">
-            <h2 className="text-5xl font-bold text-white mb-4">Nuts Magic</h2>
+            <h2 className="text-5xl font-bold text-white mb-4">Nutzz Magic</h2>
             <p className="text-lg text-gray-50 mb-6">
               Discover the magic of Makhana—nature's superfood. A crunchy, wholesome treat bursting with flavor, health, and versatility. Perfect for every snack moment!
             </p>
