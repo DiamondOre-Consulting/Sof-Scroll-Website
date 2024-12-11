@@ -299,7 +299,7 @@ const AboutUs = () => {
                 alt="Harshawardhan Singh"
               />
               <p className="mt-4 text-2xl font-bold text-center">
-                Harshawardhan Singh
+              Mr. Harshawardhan Singh
               </p>
               <p className="mt-1 text-sm font-bold text-center text-gray-800 uppercase">
                 Co-Founder & CEO
@@ -329,7 +329,7 @@ const AboutUs = () => {
                 alt="Alexander Mohandas"
               />
               <p className="mt-4 text-xl font-bold text-center">
-                Alexander Mohandas
+              Mr. Alexander Aruldass
               </p>
               <p className="mt-1 text-sm font-bold text-center text-gray-800 uppercase">
                 Co-Founder & CMO
