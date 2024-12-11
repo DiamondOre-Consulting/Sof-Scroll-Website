@@ -69,13 +69,13 @@ const Footer = () => {
                     </li>
                   </ul>
                 </div>
-                <div className='flex gap-4 mt-4'>
+                {/* <div className='flex gap-4 mt-4'>
                   <a href={''} className='text-[18px]'><BsLinkedin /></a>
                   <Link to={''} target='_blank' className='text-[18px]'><BsFacebook /></Link>
                   <Link to={`https://wa.me/${''}?text=Hello`} target='_blank' className='text-[18px]'><BsWhatsapp /></Link>
                   <Link to={''} target='_blank' className='text-[18px]'><BsInstagram /></Link>
-                  {/* <a href="" className='text-[18px]'><BsTwitter /></a> */}
-                </div>
+              
+                </div> */}
               </div>
             </div>
 

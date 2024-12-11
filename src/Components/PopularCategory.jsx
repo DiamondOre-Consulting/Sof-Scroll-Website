@@ -27,9 +27,11 @@ const PopularCategory = () => {
         start: "center center",
         end: `${blockHeight * 5} top`,
         scrub: true,
-        markers: true,
+        markers: false,
       },
     });
+
+    console.log("fixed")
 
     tl.from(".card-container", {
       y: () => blockHeight / 2,
