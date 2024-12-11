@@ -108,7 +108,7 @@ const PopularCategory = () => {
       <div className="trigger relative h-screen">
         <div className="hero "></div>
         <div className="extra-trigger">
-          <h1 className="text-3xl md:text-5xl head mb-20 text-center">
+          <h1 className="text-3xl md:text-5xl head md:mb-20 text-center">
             Popular Categories
           </h1>
           <div className="card-container relative">
