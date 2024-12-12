@@ -82,7 +82,7 @@ const ContactSection = ({ contact }) => {
               Partner with Us for Premium Tissue Products
             </h1>
 
-            <p className="sora-400 leading-[1.85rem] text-[#535760] mb-8">
+            <p className="sora-400 leading-[1.85rem] text-justify text-[#535760] mb-8">
               We are committed to delivering the highest quality tissue
               products, with a focus on customer satisfaction through innovation
               and excellence at every stage of our manufacturing process. Our
@@ -91,7 +91,7 @@ const ContactSection = ({ contact }) => {
               environment.
             </p>
 
-            <div className="flex flex-col justify-between sm:flex-row">
+            <div className="flex flex-col justify-between  sm:flex-row">
               {/* Address Info */}
               <div className="flex flex-col items-start space-y-3">
                 <div className="p-3 rounded-md bg-dark">
@@ -99,8 +99,8 @@ const ContactSection = ({ contact }) => {
                 </div>
                 <div>
                   <h2 className="text-dark text-[1.3rem] sora-600">Address</h2>
-                  <p className="sora-400 text-[1rem] text-[#535760] mt-2">
-                    <br />
+                  <p className="sora-400 text-[1rem] text-[#535760] ">
+                  
                     #301,302, 1st floor, Junnasandra, ,
                     <br />
                     Sarjapur Main road
