@@ -113,57 +113,64 @@ const ProductDetails = ({ cart, setCart }) => {
   ];
 
   const ProductPreviews = ({ images }) => {
-
     const [selectedImage, setSelectedImage] = useState(0);
-    const [videoActive, setVideoActive] = useState(false)
+    const [videoActive, setVideoActive] = useState(false);
     const [isZoomed, setIsZoomed] = useState(false);
 
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-    console.log(images)
+    console.log(images);
     return (
       <div className="flex flex-col items-center gap-4">
         <div className="flex w-full space-x-2 top-10">
-          {
-            videoActive ?
-              <video src={productVideo} playsInline autoPlay muted loop
-                className="w-full max-w-full mx-auto h-[50vw] lg:h-[24rem] lg:max-w-[36rem] object-cover rounded-md"></video>
-              :
-              <div
-                className="relative overflow-hidden w-full h-[50vw] lg:h-[24rem]"
-                onMouseEnter={() => setIsZoomed(true)}
-                onMouseLeave={() => setIsZoomed(false)}
-                onMouseMove={(e) => {
-                  const { left, top, width, height } = e.target.getBoundingClientRect();
-                  const x = ((e.clientX - left) / width) * 100;
-                  const y = ((e.clientY - top) / height) * 100;
-                  setMousePosition({ x, y });
+          {videoActive ? (
+            <video
+              src={productVideo}
+              playsInline
+              autoPlay
+              muted
+              loop
+              className="w-full max-w-full mx-auto h-[50vw] lg:h-[24rem] lg:max-w-[36rem] object-cover rounded-md"
+            ></video>
+          ) : (
+            <div
+              className="relative overflow-hidden w-full h-[50vw] lg:h-[24rem]"
+              onMouseEnter={() => setIsZoomed(true)}
+              onMouseLeave={() => setIsZoomed(false)}
+              onMouseMove={(e) => {
+                const { left, top, width, height } =
+                  e.target.getBoundingClientRect();
+                const x = ((e.clientX - left) / width) * 100;
+                const y = ((e.clientY - top) / height) * 100;
+                setMousePosition({ x, y });
+              }}
+            >
+              <img
+                src={images[selectedImage].previewUrl}
+                alt={`Preview ${selectedImage + 1}`}
+                className={` w-full mx-auto h-[50vw] lg:h-[24rem] lg:w-[34rem] object-cover rounded-md transition-transform duration-200 ${
+                  isZoomed ? "scale-[2]" : "scale-100"
+                }`}
+                style={{
+                  transformOrigin: `${mousePosition.x}% ${mousePosition.y}%`,
                 }}
-              >
-                <img
-                  src={images[selectedImage].previewUrl}
-                  alt={`Preview ${selectedImage + 1}`}
-                  className={` w-full mx-auto h-[50vw] lg:h-[24rem] lg:w-[34rem] object-cover rounded-md transition-transform duration-200 ${isZoomed ? 'scale-[2]' : 'scale-100'
-                    }`}
-                  style={{
-                    transformOrigin: `${mousePosition.x}% ${mousePosition.y}%`
-                  }}
-                />
-              </div>
-          }
-
-
+              />
+            </div>
+          )}
         </div>
         <div className="flex space-x-2 top-10">
           {images.map((image, index) => (
             <button
               key={index}
               onClick={() => {
-                setSelectedImage(index)
-                setVideoActive(false)
+                setSelectedImage(index);
+                setVideoActive(false);
               }}
-              className={`w-20 h-20  ${selectedImage === index ? 'border-2 rounded border-blue-500' : ''
-                }`}
+              className={`w-20 h-20  ${
+                selectedImage === index
+                  ? "border-2 rounded border-blue-500"
+                  : ""
+              }`}
             >
               <img
                 src={image.previewUrl}
@@ -172,19 +179,29 @@ const ProductDetails = ({ cart, setCart }) => {
               />
             </button>
           ))}
-          {productVideo &&
-            <div className="relative" onClick={() => {
-              setVideoActive(true)
-              setSelectedImage(null)
-            }
-            }>
-              <video src={productVideo} controls={false} className={`w-20 h-20  ${videoActive ? 'border-2 rounded border-blue-500' : ''
-                }`}></video>
-              <FaPlayCircle className="absolute text-gray-500 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" size={40} />
-            </div>}
+          {productVideo && (
+            <div
+              className="relative"
+              onClick={() => {
+                setVideoActive(true);
+                setSelectedImage(null);
+              }}
+            >
+              <video
+                src={productVideo}
+                controls={false}
+                className={`w-20 h-20  ${
+                  videoActive ? "border-2 rounded border-blue-500" : ""
+                }`}
+              ></video>
+              <FaPlayCircle
+                className="absolute text-gray-500 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                size={40}
+              />
+            </div>
+          )}
         </div>
-      </div >
-
+      </div>
     );
   };
 
@@ -215,7 +232,7 @@ const ProductDetails = ({ cart, setCart }) => {
             <div className="grid grid-cols-2 gap-y-2">
               <>
                 <p className="font-bold">Brand</p>
-                <p>Sof SScrrol</p>
+                <p>{product?.brand}</p>
               </>
 
               {product?.quality && (
@@ -278,6 +295,75 @@ const ProductDetails = ({ cart, setCart }) => {
                 <>
                   <p className="font-bold">Packaging</p>
                   <p>{product.Packaging}</p>
+                </>
+              )}
+              {product?.Proteins && (
+                <>
+                  <p className="font-bold">Proteins</p>
+                  <p>{product.Proteins}</p>
+                </>
+              )}
+
+              {product?.Carbohydrates && (
+                <>
+                  <p className="font-bold">Carbohydrates</p>
+                  <p>{product.Carbohydrates}</p>
+                </>
+              )}
+
+              {product?.TotalFats && (
+                <>
+                  <p className="font-bold">Total Fats</p>
+                  <p>{product.TotalFats}</p>
+                </>
+              )}
+
+              {product?.SaturatedFats && (
+                <>
+                  <p className="font-bold">Saturated Fats</p>
+                  <p>{product.SaturatedFats}</p>
+                </>
+              )}
+
+              {product?.MonosaturatedFats && (
+                <>
+                  <p className="font-bold">Monosaturated Fats</p>
+                  <p>{product.MonosaturatedFats}</p>
+                </>
+              )}
+
+              {product?.PolyunsaturatedFats && (
+                <>
+                  <p className="font-bold">Polyunsaturated Fats</p>
+                  <p>{product.PolyunsaturatedFats}</p>
+                </>
+              )}
+
+              {product?.TransFats && (
+                <>
+                  <p className="font-bold">Trans Fats</p>
+                  <p>{product.TransFats}</p>
+                </>
+              )}
+
+              {product?.Cholesterol && (
+                <>
+                  <p className="font-bold">Cholesterol</p>
+                  <p>{product.Cholesterol}</p>
+                </>
+              )}
+
+              {product?.Sugar && (
+                <>
+                  <p className="font-bold">Sugar</p>
+                  <p>{product.Sugar}</p>
+                </>
+              )}
+
+              {product?.Iron && (
+                <>
+                  <p className="font-bold">Iron</p>
+                  <p>{product.Iron}</p>
                 </>
               )}
             </div>
@@ -355,7 +441,7 @@ const ProductDetails = ({ cart, setCart }) => {
         />
       </div>
 
-      <div className="w-full p-4 pb-10 bg-slate-200" data-aos="fade-down">
+      <div className="w-full p-4 pb-10 bg-slate-200 mt-10" data-aos="fade-down">
         <h2 className="mb-6 font-bold text-center mf text-[2.7rem]">
           Product Features
         </h2>
@@ -390,7 +476,7 @@ const ProductDetails = ({ cart, setCart }) => {
             />
             <h1 className="text-[0.9rem] font-semibold">Eco Friendly</h1>
           </div>
-       
+
           <div
             className="flex flex-col items-center justify-center gap-1"
             data-aos-duration="1800"

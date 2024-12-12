@@ -45,6 +45,8 @@ const RelatedProducts = ({ cart, setCart, category, itemCode }) => {
     console.log(Allproducts)
 
     return (
+        <>
+        {filteredProducts.length >= 3 && (
         <div className="relative py-10 overflow-hidden h-fit" data-aos="fade-up">
             <h1 className="relative mx-auto mb-2 text-4xl text-center font-semibold md:text-5xl mf" data-aos="fade-left">
                 Related products
@@ -96,6 +98,10 @@ const RelatedProducts = ({ cart, setCart, category, itemCode }) => {
                 </div>
             </Marquee>
         </div>
+
+                )}
+
+                </>
     );
 };
 

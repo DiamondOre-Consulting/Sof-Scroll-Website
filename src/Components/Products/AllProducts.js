@@ -10,6 +10,7 @@ const Allproducts = [
   {
     name: "Toilet Tissue Paper Roll / 24 Rolls in a Packet / Virgin/Wood Pulp",
     category: "Toilet Rolls",
+    brand :"Sof SScrrol",
     recommendation: "Home Use",
     particulars: "Toilet Tissue Paper Roll LUXURY",
     itemCode: "SS100",
@@ -55,6 +56,7 @@ const Allproducts = [
   {
     name: "Toilet Tissue Paper Roll / Virgin/Wood Pulp / 48 Rolls in a Packet ",
     category: "Toilet Rolls",
+    brand :"Sof SScrrol",
     particulars: "Toilet Tissue Paper Roll LUXURY",
     itemCode: "SS101",
     recommendation: "Home Use",
@@ -105,6 +107,7 @@ const Allproducts = [
   {
     name: "Toilet Tissue Paper Roll / Recycle Material / 24 Rolls in a Packet",
     category: "Toilet Rolls",
+    brand :"Sof SScrrol",
     particulars: "Toilet Tissue Paper Roll Eco Friendly",
     recommendation: "Home Use",
 
@@ -154,7 +157,7 @@ const Allproducts = [
     category: "Toilet Rolls",
     particulars: "Toilet Tissue Paper Roll Eco Friendly",
     recommendation: "Home Use",
-
+    brand :"Sof SScrrol",
     itemCode: "SS103",
     pulls: "140 Pulls",
     SheetCount: "140 Sheets",
@@ -198,6 +201,7 @@ const Allproducts = [
   {
     name: "Toilet Tissue Paper Roll Bamboo Made / Recycle Material / 24 Rolls in a Packet",
     category: "Toilet Rolls",
+    brand :"Sof SScrrol",
     particulars: "Toilet Tissue Paper Roll Bamboo Made",
     itemCode: "SS104",
     recommendation: "Home Use",
@@ -244,6 +248,7 @@ const Allproducts = [
   {
     name: "Toilet Tissue Paper Roll Bamboo Made / Recycle Material / 48 Rolls in a Packet",
     category: "Toilet Rolls",
+    brand :"Sof SScrrol",
     particulars: "Toilet Tissue Paper Roll Bamboo Made",
     itemCode: "SS105",
     recommendation: "Home Use",
@@ -290,6 +295,7 @@ const Allproducts = [
   {
     name: "Toilet Tissue Paper Jumbo / Recycle Material / 6 Rolls in a Packet",
     category: "Toilet Rolls",
+    brand :"Sof SScrrol",
     particulars: "Jumbo Toiler Tissue Paper Roll",
     itemCode: "SS106",
     recommendation: "Public Washrooms, Malls , Hospitals",
@@ -337,6 +343,7 @@ const Allproducts = [
   {
     name: "Tissue paper towel Dispenser suit/ manual",
     category: "Paper Towel",
+    brand :"Sof SScrrol",
     particulars: "Hand Towel - M Fold Paper",
     itemCode: "SS107",
     recommendation: "Public Washrooms, Kitchen Area",
@@ -441,6 +448,7 @@ const Allproducts = [
     name: "Kitchen Tissue Roll",
     category: "Kitchen Rolls",
     itemCode: "SS109",
+    brand :"Sof SScrrol",
     recommendation: "Home use",
 
     particulars: "Kitchen Tissue Roll",
@@ -487,6 +495,7 @@ const Allproducts = [
   {
     name: "Facial Tissue Box / Pack of 6 Boxes",
     category: "Facial Tissue",
+    brand :"Sof SScrrol",
     particulars: "Facial Tissue box",
     itemCode: "SS110",
     recommendation: "Living room, Bathroom, Car, Office desk",
@@ -533,6 +542,7 @@ const Allproducts = [
   {
     name: "Cube Facial Tissue / Pack of 20 Boxes",
     category: "Facial Tissue",
+    brand :"Sof SScrrol",
     particulars: "Facial Tissue box",
     itemCode: "SS111",
     recommendation: "Car, Work Desk top, Travel",
@@ -580,6 +590,7 @@ const Allproducts = [
   {
     name: "Hospital Couch Roll",
     category: "Hospital Roll",
+    brand :"Sof SScrrol",
     particulars: "Examination Medical Couch Roll",
     itemCode: "SS112",
     quality: "Paper",
@@ -631,54 +642,300 @@ const Allproducts = [
 
 
 
+// makhana
 
 
   {
-    name: "Fox Nuts",
-    category: "Fox Nuts",
-    // particulars: "Examination Medical Couch Roll",
-    itemCode: "SS114",
-    // quality: "Paper",
-    // SheetCount: "100 Mtr long",
+    "name": "Makhana 4 Suta",
+    "category": "Row Makhana",
+    "itemCode": "Mk400",
+    brand :"Nutzz Magic",
+    "Energy": "233 Kcal",
+    "Proteins": "4.2 g",
+    "Carbohydrates": "34.1 g",
+    "TotalFats": "9.0 g",
+    "SaturatedFats": "4.0 g",
+    "MonosaturatedFats": "3.8 g",
+    "PolyunsaturatedFats": "1.2 g",
+    "TransFats": "0 g",
+    "Cholesterol": "0 mg",
+    "Sugar": "<0.2 g",
+    "Iron": "10.5 mg",
+    "previews": [
+      {
+        "previewUrl": "https://5.imimg.com/data5/UU/TJ/LZ/SELLER-31224417/makhana-super-250x250.jpg",
+        "thumbUrl": "https://5.imimg.com/data5/UU/TJ/LZ/SELLER-31224417/makhana-super-250x250.jpg"
+      },
+      {
+        "previewUrl": "https://5.imimg.com/data5/UU/TJ/LZ/SELLER-31224417/makhana-super-250x250.jpg",
+        "thumbUrl": "https://5.imimg.com/data5/UU/TJ/LZ/SELLER-31224417/makhana-super-250x250.jpg"
+      }
+      ,
+      {
+        "previewUrl": "https://5.imimg.com/data5/UU/TJ/LZ/SELLER-31224417/makhana-super-250x250.jpg",
+        "thumbUrl": "https://5.imimg.com/data5/UU/TJ/LZ/SELLER-31224417/makhana-super-250x250.jpg"
+      }
 
-    // recommendation:
-      // "hospital Bed roll Tissue, Beauty Parlour spa Tissue Papper roll",
-    // pulls: "100 Mtr long",
-    // dimensions: "60 CM Width * 100 Mtr Long, White 100 Mtr long",
-    // ply: 1,
-    // gsm: 18 - 19,
-    // price: "400",
-    // weight: "2kg",
-    // material: "Virgin/ Wood Pulp",
-    // description:
-      // "Designed specifically for Medical examination of Hospital bed ,  massage Centres and beauty therapists",
-    // Packaging: "Pack of 6 Rolls",
-    // JumboPackaging: "12 packets equal to 72 Rolls in a Carton",
-    previews: [
-      {
-        previewUrl:
-          "https://media.post.rvohealth.io/wp-content/uploads/2021/05/makhana-1200x628-facebook.jpg",
-        thumbUrl:
-          "https://media.post.rvohealth.io/wp-content/uploads/2021/05/makhana-1200x628-facebook.jpg",
-      },
-      {
-        previewUrl:
-          "https://m.media-amazon.com/images/I/51yq6QLp1AL._SX522_.jpg",
-        thumbUrl:
-          "https://m.media-amazon.com/images/I/51yq6QLp1AL._SX522_.jpg",
-      },
-  
+
     ],
-    // videoUrl: "",
-    // imageUrl:
-      // "https://m.media-amazon.com/images/I/31+CSqwVEGL._SX522_.jpg", // Dummy placeholder image URL
-    // fullDesc: [
-      // "Durable 1-ply paper roll made from virgin wood pulp.",
-      // "Soft and comfortable for medical and beauty treatments.",
-      // "60 cm wide and 100 meters long, perfect for covering examination tables."
-    // ]
-
+    "imageUrl": "https://5.imimg.com/data5/UU/TJ/LZ/SELLER-31224417/makhana-super-250x250.jpg",
+    "fullDesc": [
+      "Makhana 4 Suta offers premium-quality roasted lotus seeds.",
+      "Light, crunchy, and rich in nutrients, perfect for a healthy snack.",
+      "Packed with antioxidants and low in cholesterol for guilt-free enjoyment.",
+      "A versatile ingredient for snacking or adding to dishes."
+    ]
   },
+  {
+    "name": "Makhana 5 Suta",
+    "category": "Row Makhana",
+    brand :"Nutzz Magic",
+    "itemCode": "Mk500",
+    "Energy": "234 Kcal",
+    "Proteins": "4.3 g",
+    "Carbohydrates": "34.3 g",
+    "TotalFats": "8.8 g",
+    "SaturatedFats": "3.9 g",
+    "MonosaturatedFats": "3.9 g",
+    "PolyunsaturatedFats": "1.0 g",
+    "TransFats": "0 g",
+    "Cholesterol": "0 mg",
+    "Sugar": "<0.3 g",
+    "Iron": "11 mg",
+    "previews": [
+      {
+        "previewUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/RX/ZA/TX/63235023/5-suta-phool-makhana-flake-500x500.jpg",
+        "thumbUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/RX/ZA/TX/63235023/5-suta-phool-makhana-flake-500x500.jpg"
+      },
+      {
+        "previewUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/RX/ZA/TX/63235023/5-suta-phool-makhana-flake-500x500.jpg",
+        "thumbUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/RX/ZA/TX/63235023/5-suta-phool-makhana-flake-500x500.jpg"
+      }
+      ,
+      {
+        "previewUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/RX/ZA/TX/63235023/5-suta-phool-makhana-flake-500x500.jpg",
+        "thumbUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/RX/ZA/TX/63235023/5-suta-phool-makhana-flake-500x500.jpg"
+      }
+    ],
+    "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/RX/ZA/TX/63235023/5-suta-phool-makhana-flake-500x500.jpg",
+    "fullDesc": [
+      "Makhana 5 Suta is a premium-grade roasted lotus seed.",
+      "Known for its smooth texture, high protein content, and crispy bite.",
+      "A healthy alternative for snacks, gluten-free and naturally low in calories.",
+      "Perfect for adding crunch to salads, soups, or enjoying on its own."
+    ]
+  },
+  {
+    "name": "Makhana 6 Suta",
+    "category": "Row Makhana",
+    brand :"Nutzz Magic",
+    "itemCode": "Mk600",
+    "Energy": "235 Kcal",
+    "Proteins": "4.5 g",
+    "Carbohydrates": "34.5 g",
+    "TotalFats": "9.2 g",
+    "SaturatedFats": "4.1 g",
+    "MonosaturatedFats": "3.7 g",
+    "PolyunsaturatedFats": "1.4 g",
+    "TransFats": "0 g",
+    "Cholesterol": "0 mg",
+    "Sugar": "<0.2 g",
+    "Iron": "11.2 mg",
+    "previews": [
+      {
+        "previewUrl": "https://5.imimg.com/data5/ANDROID/Default/2022/7/SW/CG/SO/77491818/product-jpeg.jpg",
+        "thumbUrl": "https://5.imimg.com/data5/ANDROID/Default/2022/7/SW/CG/SO/77491818/product-jpeg.jpg"
+      },
+      {
+        "previewUrl": "https://5.imimg.com/data5/ANDROID/Default/2022/7/SW/CG/SO/77491818/product-jpeg.jpg",
+        "thumbUrl": "https://5.imimg.com/data5/ANDROID/Default/2022/7/SW/CG/SO/77491818/product-jpeg.jpg"
+      }
+      ,
+      {
+        "previewUrl": "https://5.imimg.com/data5/ANDROID/Default/2022/7/SW/CG/SO/77491818/product-jpeg.jpg",
+        "thumbUrl": "https://5.imimg.com/data5/ANDROID/Default/2022/7/SW/CG/SO/77491818/product-jpeg.jpg"
+      }
+    ],
+    "imageUrl": "https://5.imimg.com/data5/ANDROID/Default/2022/7/SW/CG/SO/77491818/product-jpeg.jpg",
+    "fullDesc": [
+      "Makhana 6 Suta is known for its superior quality and rich taste.",
+      "Carefully roasted to enhance flavor and retain nutrients.",
+      "A wholesome and satisfying snack with a delightful crunch.",
+      "Great for tea-time snacking, mid-day hunger pangs, or evening treats."
+    ]
+  }
+
+
+
+
+
+,
+{
+  "name": "Peri Peri Flavored Makhana",
+  "category": "Flavored Makhana",
+  "itemCode": "Mk200",
+  brand :"Nutzz Magic",
+  "Energy": "237 Kcal",
+  "Proteins": "5.2 g",
+  "Carbohydrates": "33.0 g",
+  "TotalFats": "9.5 g",
+  "SaturatedFats": "4.1 g",
+  "MonosaturatedFats": "3.9 g",
+  "PolyunsaturatedFats": "1.5 g",
+  "TransFats": "0 g",
+  "Cholesterol": "0 mg",
+  "Sugar": "<0.5 g",
+  "Iron": "12 mg",
+  "previews": [
+    {
+      "previewUrl": "https://morbiwalasweets.com/cdn/shop/files/9_fc6a5795-b762-4923-9911-3dcaeadb2efa.png?v=1690317654",
+      "thumbUrl": "https://morbiwalasweets.com/cdn/shop/files/9_fc6a5795-b762-4923-9911-3dcaeadb2efa.png?v=1690317654"
+    },
+    {
+      "previewUrl": "https://morbiwalasweets.com/cdn/shop/files/9_fc6a5795-b762-4923-9911-3dcaeadb2efa.png?v=1690317654",
+      "thumbUrl": "https://morbiwalasweets.com/cdn/shop/files/9_fc6a5795-b762-4923-9911-3dcaeadb2efa.png?v=1690317654"
+    },
+    {
+      "previewUrl": "https://morbiwalasweets.com/cdn/shop/files/9_fc6a5795-b762-4923-9911-3dcaeadb2efa.png?v=1690317654",
+      "thumbUrl": "https://morbiwalasweets.com/cdn/shop/files/9_fc6a5795-b762-4923-9911-3dcaeadb2efa.png?v=1690317654"
+    }
+  ],
+  "imageUrl": "https://morbiwalasweets.com/cdn/shop/files/9_fc6a5795-b762-4923-9911-3dcaeadb2efa.png?v=1690317654",
+  "fullDesc": [
+    "Spice up your snack time with our Peri Peri Flavored Makhana.",
+    "Made with roasted lotus seeds and a bold Peri Peri seasoning.",
+    "Low in calories, cholesterol-free, and high in antioxidants.",
+    "Perfect for guilt-free snacking with a spicy kick!"
+  ]
+},
+
+{
+  "name": "Cream & Onion Flavored Makhana",
+  "category": "Flavored Makhana",
+  "itemCode": "Mk201",
+  brand :"Nutzz Magic",
+  "Energy": "235 Kcal",
+  "Proteins": "5.0 g",
+  "Carbohydrates": "34.0 g",
+  "TotalFats": "9.2 g",
+  "SaturatedFats": "4.0 g",
+  "MonosaturatedFats": "3.8 g",
+  "PolyunsaturatedFats": "1.4 g",
+  "TransFats": "0 g",
+  "Cholesterol": "0 mg",
+  "Sugar": "<0.4 g",
+  "Iron": "11.5 mg",
+  "previews": [
+    {
+      "previewUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC6fM8zz3IOpNGIhhqtAbVqHvm2A4z75m0lg5-vGojusWbnVkbxw6iO9mZvoDnLKwOUW0&usqp=CAU",
+      "thumbUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC6fM8zz3IOpNGIhhqtAbVqHvm2A4z75m0lg5-vGojusWbnVkbxw6iO9mZvoDnLKwOUW0&usqp=CAU"
+    },
+    {
+      "previewUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC6fM8zz3IOpNGIhhqtAbVqHvm2A4z75m0lg5-vGojusWbnVkbxw6iO9mZvoDnLKwOUW0&usqp=CAU",
+      "thumbUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC6fM8zz3IOpNGIhhqtAbVqHvm2A4z75m0lg5-vGojusWbnVkbxw6iO9mZvoDnLKwOUW0&usqp=CAU"
+    },
+    {
+      "previewUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC6fM8zz3IOpNGIhhqtAbVqHvm2A4z75m0lg5-vGojusWbnVkbxw6iO9mZvoDnLKwOUW0&usqp=CAU",
+      "thumbUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC6fM8zz3IOpNGIhhqtAbVqHvm2A4z75m0lg5-vGojusWbnVkbxw6iO9mZvoDnLKwOUW0&usqp=CAU"
+    }
+  ],
+  "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC6fM8zz3IOpNGIhhqtAbVqHvm2A4z75m0lg5-vGojusWbnVkbxw6iO9mZvoDnLKwOUW0&usqp=CAU",
+  "fullDesc": [
+    "Savor the creamy and tangy taste of Cream & Onion Flavored Makhana.",
+    "Roasted to perfection and lightly coated with a rich cream and onion seasoning.",
+    "A healthy snack option that's gluten-free and packed with nutrients.",
+    "Enjoy the perfect blend of flavor and crunch in every bite!"
+  ]
+},
+{
+  "name": "Himalaya Salt & Pepper Flavored Makhana",
+  "category": "Flavored Makhana",
+  "itemCode": "Mk202",
+  "Energy": "236 Kcal",
+  brand :"Nutzz Magic",
+  "Proteins": "4.8 g",
+  "Carbohydrates": "33.5 g",
+  "TotalFats": "9.0 g",
+  "SaturatedFats": "3.9 g",
+  "MonosaturatedFats": "3.7 g",
+  "PolyunsaturatedFats": "1.3 g",
+  "TransFats": "0 g",
+  "Cholesterol": "0 mg",
+  "Sugar": "<0.3 g",
+  "Iron": "11.8 mg",
+  "previews": [
+    {
+      "previewUrl": "https://www.fabbox.in/cdn/shop/products/saltmakhanas.jpg?v=1647946101",
+      "thumbUrl": "https://www.fabbox.in/cdn/shop/products/saltmakhanas.jpg?v=1647946101"
+    },
+    {
+      "previewUrl": "https://i0.wp.com/veganicmart.com/wp-content/uploads/2022/09/51fqU8kbRKL.jpg?fit=500%2C500&ssl=1",
+      "thumbUrl": "https://i0.wp.com/veganicmart.com/wp-content/uploads/2022/09/51fqU8kbRKL.jpg?fit=500%2C500&ssl=1"
+    },
+    {
+      "previewUrl": "https://www.fabbox.in/cdn/shop/products/saltmakhanas.jpg?v=1647946101",
+      "thumbUrl": "https://www.fabbox.in/cdn/shop/products/saltmakhanas.jpg?v=1647946101"
+    }
+  ],
+  "imageUrl": "https://www.fabbox.in/cdn/shop/products/saltmakhanas.jpg?v=1647946101",
+  "fullDesc": [
+    "Indulge in the classic taste of Himalaya Salt & Pepper Flavored Makhana.",
+    "Carefully roasted and seasoned with natural Himalayan salt and pepper.",
+    "A light and wholesome snack that's perfect for any time of the day.",
+    "Rich in nutrients and free from trans fats, making it a healthy choice."
+  ]
+}
+
+
+
+
+
+  // {
+  //   name: "Fox Nuts",
+  //   category: "Fox Nuts",
+  //   // particulars: "Examination Medical Couch Roll",
+  //   itemCode: "SS114",
+  //   // quality: "Paper",
+  //   // SheetCount: "100 Mtr long",
+
+  //   // recommendation:
+  //     // "hospital Bed roll Tissue, Beauty Parlour spa Tissue Papper roll",
+  //   // pulls: "100 Mtr long",
+  //   // dimensions: "60 CM Width * 100 Mtr Long, White 100 Mtr long",
+  //   // ply: 1,
+  //   // gsm: 18 - 19,
+  //   // price: "400",
+  //   // weight: "2kg",
+  //   // material: "Virgin/ Wood Pulp",
+  //   // description:
+  //     // "Designed specifically for Medical examination of Hospital bed ,  massage Centres and beauty therapists",
+  //   // Packaging: "Pack of 6 Rolls",
+  //   // JumboPackaging: "12 packets equal to 72 Rolls in a Carton",
+  //   previews: [
+  //     {
+  //       previewUrl:
+  //         "https://media.post.rvohealth.io/wp-content/uploads/2021/05/makhana-1200x628-facebook.jpg",
+  //       thumbUrl:
+  //         "https://media.post.rvohealth.io/wp-content/uploads/2021/05/makhana-1200x628-facebook.jpg",
+  //     },
+  //     {
+  //       previewUrl:
+  //         "https://m.media-amazon.com/images/I/51yq6QLp1AL._SX522_.jpg",
+  //       thumbUrl:
+  //         "https://m.media-amazon.com/images/I/51yq6QLp1AL._SX522_.jpg",
+  //     },
+  
+  //   ],
+  //   // videoUrl: "",
+  //   // imageUrl:
+  //     // "https://m.media-amazon.com/images/I/31+CSqwVEGL._SX522_.jpg", // Dummy placeholder image URL
+  //   // fullDesc: [
+  //     // "Durable 1-ply paper roll made from virgin wood pulp.",
+  //     // "Soft and comfortable for medical and beauty treatments.",
+  //     // "60 cm wide and 100 meters long, perfect for covering examination tables."
+  //   // ]
+
+  // },
 ];
 
 export default Allproducts;

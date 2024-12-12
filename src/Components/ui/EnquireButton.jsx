@@ -165,7 +165,7 @@ function EnquireButton() {
           onClick={handleEnquireButton}
           className="bg-dark py-2 px-2 rounded-full text-white flex justify-center items-center gap-1"
         >
-          <span className="text-xl ">Enquire</span>{" "}
+          <span className="text-lg ">Quote me</span>{" "}
           <RxQuestionMarkCircled className="text-white mt-1 text-xl" />
         </button>
       ) : (
@@ -177,7 +177,7 @@ function EnquireButton() {
               data-aos-duration="600"
             >
               <h3 className="mb-4 text-dark underline text-center text-2xl md:text-4xl mx-auto sora-600">
-                Enquire!
+              Quote me!
               </h3>
               <div className="absolute top-3 right-5 inline">
                 <FaXmark

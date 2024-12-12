@@ -28,7 +28,7 @@ const MainHome = ({ cart, setCart }) => {
       <OurStrength />
       <PopularCategory />
       <BestSellers cart={cart} setCart={setCart} />
-      <MakhanaSection/>
+      {/* <MakhanaSection/> */}
       {/* <PopularCategories/> */}
       <WhyUs />
       <Testimonials />

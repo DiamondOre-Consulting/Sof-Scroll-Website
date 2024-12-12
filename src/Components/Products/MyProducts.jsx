@@ -63,10 +63,11 @@ const MyProducts = ({ cart, setCart }) => {
                     {/* <p className="text-sm text-gray-600 truncate">
                       {product.description}
                     </p> */}
+                       {product?.quality && (
                     <p className="text-xs italic text-gray-700">
                       Quality: <span className='text-gray-500'>{product.quality}</span>
                     </p>
-
+     )}
                   </div>
                   <Link
                     to={`/product/${product.itemCode}`}

@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { FaWhatsapp, FaInstagram, FaChevronDown } from "react-icons/fa6";
 import { MdMail } from "react-icons/md";
-import logo from '../assets/newlogo.webp';
+import logo from "../assets/newlogo.webp";
 
 const Navbar = ({ cart }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // For mobile menu
@@ -11,7 +11,7 @@ const Navbar = ({ cart }) => {
   const [scrolled, setScrolled] = useState(false); // To track if scrolled
   const location = useLocation();
 
-  console.log(isMenuOpen)
+  console.log(isMenuOpen);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,7 +23,7 @@ const Navbar = ({ cart }) => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    
+
     // Cleanup event listener on component unmount
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -31,36 +31,74 @@ const Navbar = ({ cart }) => {
   const closeMobileMenu = () => {
     setIsMenuOpen(false);
     setActiveDropdown(null); // Close dropdown too
-  }
+  };
 
-
-  const isHomePage = location.pathname === "/"; 
+  const isHomePage = location.pathname === "/";
 
   return (
     <>
       {/* Navbar */}
-      <div className={`sticky top-0 py-2 flex items-center z-50 w-full backdrop-blur   shadow-xs z-70 ${scrolled || !isHomePage ? "bg-black bg-opacity-10" : "bg-transparent"}`}>
+      <div
+        className={`sticky top-0 py-2 flex items-center z-50 w-full backdrop-blur   shadow-xs z-70 ${
+          scrolled || !isHomePage ? "bg-black bg-opacity-10" : "bg-transparent"
+        }`}
+      >
         <nav className="container flex items-center justify-between px-4 mx-auto sm:px-8 md:px-12">
           {/* Logo */}
-         <Link to={'/'}><img src={logo} className="w-[60px] md:w-[130px]   " alt="Logo" /></Link> 
-          
+          <Link to={"/"}>
+            <img src={logo} className="w-[60px] md:w-[130px]   " alt="Logo" />
+          </Link>
+
           {/* Desktop Menu */}
           <div className="items-center hidden h-[4.5rem] space-x-8 uppercase mf md:flex justify-center">
-            <NavLink to="/"  label="Home" location={location.pathname} />
-            <NavLink to="/about-us" label="About Us" location={location.pathname} />
+            <NavLink to="/" label="Home" location={location.pathname} />
+            <NavLink
+              to="/about-us"
+              label="About Us"
+              location={location.pathname}
+            />
             <NavLink
               label="Products"
               location={location.pathname}
               dropdownItems={[
                 { to: "/all-products", label: "All products" },
-                { to: "/products/category/Toilet Rolls", label: "Toilet Tissue" },
-                { to: "/products/category/Kitchen Rolls", label: "Kitchen Tissue" },
-                { to: "/products/category/Hospital Roll", label: "Hospital Roll" },
-                { to: "/products/category/Facial Tissue", label: "Facial Tissue" },
+                {
+                  to: "/products/category/Toilet Rolls",
+                  label: "Toilet Tissue",
+                },
+                {
+                  to: "/products/category/Kitchen Rolls",
+                  label: "Kitchen Tissue",
+                },
+                {
+                  to: "/products/category/Hospital Roll",
+                  label: "Hospital Roll",
+                },
+                {
+                  to: "/products/category/Facial Tissue",
+                  label: "Facial Tissue",
+                },
                 { to: "/products/category/Paper Towel", label: "Paper Towel" },
+               
               ]}
             />
-            <NavLink to="/contact-us" label="Contact Us" location={location.pathname} />
+            <NavLink
+              label="Nutzz Magic"
+              location={location.pathname}
+              dropdownItems={[
+                { to: "/products/category/Row Makhana", label: "Raw Makhana" },
+                { to: "/products/category/Flavored Makhana", label: "Flavored Makhana" },
+              ]}
+              isMobile={isMenuOpen}
+              activeDropdown={activeDropdown}
+              setActiveDropdown={setActiveDropdown}
+              onClick={closeMobileMenu}
+            />
+            <NavLink
+              to="/contact-us"
+              label="Contact Us"
+              location={location.pathname}
+            />
             <Link to="/cart" className="relative">
               <FiShoppingCart className="w-6 h-6 text-gray-100 hover:text-dark" />
               {cart.length > 0 && (
@@ -125,17 +163,31 @@ const Navbar = ({ cart }) => {
                   location={location.pathname}
                   dropdownItems={[
                     { to: "/all-products", label: "All products" },
-                    { to: "/products/category/Toilet Rolls", label: "Toilet Tissue" },
-                    { to: "/products/category/Kitchen Rolls", label: "Kitchen Tissue" },
-                    { to: "/products/category/Hospital Roll", label: "Hospital Roll" },
-                    { to: "/products/category/Facial Tissue", label: "Facial Tissue" },
-                    { to: "/products/category/Paper Towel", label: "Paper Towel" },
+                    {
+                      to: "/products/category/Toilet Rolls",
+                      label: "Toilet Tissue",
+                    },
+                    {
+                      to: "/products/category/Kitchen Rolls",
+                      label: "Kitchen Tissue",
+                    },
+                    {
+                      to: "/products/category/Hospital Roll",
+                      label: "Hospital Roll",
+                    },
+                    {
+                      to: "/products/category/Facial Tissue",
+                      label: "Facial Tissue",
+                    },
+                    {
+                      to: "/products/category/Paper Towel",
+                      label: "Paper Towel",
+                    },
                   ]}
                   isMobile={true}
                   activeDropdown={activeDropdown}
                   setActiveDropdown={setActiveDropdown}
                   onClick={closeMobileMenu}
-                  
                 />
                 <NavLink
                   to="/contact-us"
@@ -173,27 +225,43 @@ const NavLink = ({
 
   return (
     <div
-      className={`z-50 relative item-center flex-col  justify-center h-full flex group ${isMobile && "w-full  text-center"}`}
+      className={`z-50 relative item-center flex-col  justify-center h-full flex group ${
+        isMobile && "w-full  text-center"
+      }`}
       onClick={isMobile && dropdownItems ? handleDropdownToggle : null}
     >
       <div
-        className={`flex items-center justify-center cursor-pointer  hover:text-dark ${location === to ? "font-semibold  underline" : "text-gray-100"}`}
+        className={`flex items-center justify-center cursor-pointer  hover:text-dark ${
+          location === to ? "font-semibold  underline" : "text-gray-100"
+        }`}
       >
         <Link
           to={to || "#"}
           onClick={!dropdownItems ? onClick : undefined}
-          className={`nav-item hover:text-dark ${isMobile ?"text-black":"text-white"}`}
+          className={`nav-item hover:text-dark ${
+            isMobile ? "text-black" : "text-white"
+          }`}
         >
           {label}
         </Link>
         {dropdownItems && (
           <FaChevronDown
-            className={`ml-2 transition-transform duration-300 ${isMobile && isActive ? "rotate-180" : "rotate-0"}`}
+            className={`ml-2 transition-transform duration-300 ${
+              isMobile && isActive ? "rotate-180" : "rotate-0"
+            }`}
           />
         )}
       </div>
       {dropdownItems && (
-        <div className={`md:absolute overflow-hidden left-0 top-12 z-50 md:w-40 ml-24 md:ml-0 mt-2 bg-white rounded-md ${isMobile ? `transition-all duration-200 ease-in-out ${isActive ? "block" : "hidden"}` : "group-hover:block hidden"}`}>
+        <div
+          className={`md:absolute overflow-hidden left-0 top-12 z-50 md:w-40 ml-24 md:ml-0 mt-2 bg-white rounded-md ${
+            isMobile
+              ? `transition-all duration-200 ease-in-out ${
+                  isActive ? "block" : "hidden"
+                }`
+              : "group-hover:block hidden"
+          }`}
+        >
           {dropdownItems.map((item, index) => (
             <Link
               key={index}
