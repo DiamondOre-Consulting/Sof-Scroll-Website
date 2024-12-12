@@ -203,7 +203,7 @@ const ProductDetails = ({ cart, setCart }) => {
             <ProductPreviews images={product.previews} />
           </div>
 
-          <div className="flex flex-col w-full mt-4 overflow-hidden">
+          <div className="flex flex-col w-full mt-4 md:ml-8 overflow-hidden">
             <h1 className="text-3xl font-[600] mf">{product.name}</h1>
             {/* <p  className="mt-2 font-semibold text-gray-600">{product?.particulars}</p> */}
             {/* <p  className="font-semibold ">{product?.quality}</p> */}
