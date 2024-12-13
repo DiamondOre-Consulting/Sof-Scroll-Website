@@ -663,22 +663,22 @@ const Allproducts = [
     "Iron": "10.5 mg",
     "previews": [
       {
-        "previewUrl": "https://5.imimg.com/data5/UU/TJ/LZ/SELLER-31224417/makhana-super-250x250.jpg",
-        "thumbUrl": "https://5.imimg.com/data5/UU/TJ/LZ/SELLER-31224417/makhana-super-250x250.jpg"
+        "previewUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/PW/ZB/SF/112272143/phool-makhana-fox-nuts-lotus-seeds-4-suta-grade-12-7-mm--500x500.png",
+        "thumbUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/PW/ZB/SF/112272143/phool-makhana-fox-nuts-lotus-seeds-4-suta-grade-12-7-mm--500x500.png"
       },
       {
-        "previewUrl": "https://5.imimg.com/data5/UU/TJ/LZ/SELLER-31224417/makhana-super-250x250.jpg",
-        "thumbUrl": "https://5.imimg.com/data5/UU/TJ/LZ/SELLER-31224417/makhana-super-250x250.jpg"
+        "previewUrl": "https://5.imimg.com/data5/SELLER/Default/2024/9/450697548/DJ/CO/ZN/229489692/5-suta-whole-makhana.jpg",
+        "thumbUrl": "https://5.imimg.com/data5/SELLER/Default/2024/9/450697548/DJ/CO/ZN/229489692/5-suta-whole-makhana.jpg"
       }
       ,
       {
-        "previewUrl": "https://5.imimg.com/data5/UU/TJ/LZ/SELLER-31224417/makhana-super-250x250.jpg",
-        "thumbUrl": "https://5.imimg.com/data5/UU/TJ/LZ/SELLER-31224417/makhana-super-250x250.jpg"
+        "previewUrl": "https://m.media-amazon.com/images/I/71LXQP7GUmL.jpg",
+        "thumbUrl": "https://m.media-amazon.com/images/I/71LXQP7GUmL.jpg"
       }
 
 
     ],
-    "imageUrl": "https://5.imimg.com/data5/UU/TJ/LZ/SELLER-31224417/makhana-super-250x250.jpg",
+    "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/PW/ZB/SF/112272143/phool-makhana-fox-nuts-lotus-seeds-4-suta-grade-12-7-mm--500x500.png",
     "fullDesc": [
       "Makhana 4 Suta offers premium-quality roasted lotus seeds.",
       "Light, crunchy, and rich in nutrients, perfect for a healthy snack.",
@@ -708,13 +708,13 @@ const Allproducts = [
         "thumbUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/RX/ZA/TX/63235023/5-suta-phool-makhana-flake-500x500.jpg"
       },
       {
-        "previewUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/RX/ZA/TX/63235023/5-suta-phool-makhana-flake-500x500.jpg",
-        "thumbUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/RX/ZA/TX/63235023/5-suta-phool-makhana-flake-500x500.jpg"
+        "previewUrl": "https://5.imimg.com/data5/XR/GA/MY-12643586/makhana-flakes-500x500.jpg",
+        "thumbUrl": "https://5.imimg.com/data5/XR/GA/MY-12643586/makhana-flakes-500x500.jpg"
       }
       ,
       {
-        "previewUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/RX/ZA/TX/63235023/5-suta-phool-makhana-flake-500x500.jpg",
-        "thumbUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/RX/ZA/TX/63235023/5-suta-phool-makhana-flake-500x500.jpg"
+        "previewUrl": "https://freshbasket.com.pk/cdn/shop/files/PDP_05_1024x1024.png?v=1724331692",
+        "thumbUrl": "https://freshbasket.com.pk/cdn/shop/files/PDP_05_1024x1024.png?v=1724331692"
       }
     ],
     "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/RX/ZA/TX/63235023/5-suta-phool-makhana-flake-500x500.jpg",
@@ -743,8 +743,8 @@ const Allproducts = [
     "Iron": "11.2 mg",
     "previews": [
       {
-        "previewUrl": "https://5.imimg.com/data5/ANDROID/Default/2022/7/SW/CG/SO/77491818/product-jpeg.jpg",
-        "thumbUrl": "https://5.imimg.com/data5/ANDROID/Default/2022/7/SW/CG/SO/77491818/product-jpeg.jpg"
+        "previewUrl": "https://cpimg.tistatic.com/08426172/b/4/Raw-Makhana-6-Suta.jpg",
+        "thumbUrl": "https://cpimg.tistatic.com/08426172/b/4/Raw-Makhana-6-Suta.jpg"
       },
       {
         "previewUrl": "https://5.imimg.com/data5/ANDROID/Default/2022/7/SW/CG/SO/77491818/product-jpeg.jpg",
@@ -752,11 +752,11 @@ const Allproducts = [
       }
       ,
       {
-        "previewUrl": "https://5.imimg.com/data5/ANDROID/Default/2022/7/SW/CG/SO/77491818/product-jpeg.jpg",
-        "thumbUrl": "https://5.imimg.com/data5/ANDROID/Default/2022/7/SW/CG/SO/77491818/product-jpeg.jpg"
+        "previewUrl": "https://5.imimg.com/data5/SELLER/Default/2023/6/319025390/SJ/CJ/XL/144352062/fox-nuts-manufacturer-500x500.png",
+        "thumbUrl": "https://5.imimg.com/data5/SELLER/Default/2023/6/319025390/SJ/CJ/XL/144352062/fox-nuts-manufacturer-500x500.png"
       }
     ],
-    "imageUrl": "https://5.imimg.com/data5/ANDROID/Default/2022/7/SW/CG/SO/77491818/product-jpeg.jpg",
+    "imageUrl": "https://cpimg.tistatic.com/08426172/b/4/Raw-Makhana-6-Suta.jpg",
     "fullDesc": [
       "Makhana 6 Suta is known for its superior quality and rich taste.",
       "Carefully roasted to enhance flavor and retain nutrients.",
@@ -792,12 +792,12 @@ const Allproducts = [
       "thumbUrl": "https://morbiwalasweets.com/cdn/shop/files/9_fc6a5795-b762-4923-9911-3dcaeadb2efa.png?v=1690317654"
     },
     {
-      "previewUrl": "https://morbiwalasweets.com/cdn/shop/files/9_fc6a5795-b762-4923-9911-3dcaeadb2efa.png?v=1690317654",
-      "thumbUrl": "https://morbiwalasweets.com/cdn/shop/files/9_fc6a5795-b762-4923-9911-3dcaeadb2efa.png?v=1690317654"
+      "previewUrl": "https://cdn.shopify.com/s/files/1/0697/7536/0303/files/MAKHANA__BLUE_BG_-removebg_480x480.png?v=1673847600",
+      "thumbUrl": "https://cdn.shopify.com/s/files/1/0697/7536/0303/files/MAKHANA__BLUE_BG_-removebg_480x480.png?v=1673847600"
     },
     {
-      "previewUrl": "https://morbiwalasweets.com/cdn/shop/files/9_fc6a5795-b762-4923-9911-3dcaeadb2efa.png?v=1690317654",
-      "thumbUrl": "https://morbiwalasweets.com/cdn/shop/files/9_fc6a5795-b762-4923-9911-3dcaeadb2efa.png?v=1690317654"
+      "previewUrl": "https://neelamfoodlandhk.com/cdn/shop/products/IMG_9360_275301b6-3034-4e93-b5b5-9da0a0fae0f3_800x.jpg?v=1698137519",
+      "thumbUrl": "https://neelamfoodlandhk.com/cdn/shop/products/IMG_9360_275301b6-3034-4e93-b5b5-9da0a0fae0f3_800x.jpg?v=1698137519"
     }
   ],
   "imageUrl": "https://morbiwalasweets.com/cdn/shop/files/9_fc6a5795-b762-4923-9911-3dcaeadb2efa.png?v=1690317654",
@@ -827,19 +827,19 @@ const Allproducts = [
   "Iron": "11.5 mg",
   "previews": [
     {
-      "previewUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC6fM8zz3IOpNGIhhqtAbVqHvm2A4z75m0lg5-vGojusWbnVkbxw6iO9mZvoDnLKwOUW0&usqp=CAU",
-      "thumbUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC6fM8zz3IOpNGIhhqtAbVqHvm2A4z75m0lg5-vGojusWbnVkbxw6iO9mZvoDnLKwOUW0&usqp=CAU"
+      "previewUrl": "https://hariomsweets.in/cdn/shop/products/81.CREAM___ONION_MAKHANA_960x_crop_center.jpg?v=1682940651",
+      "thumbUrl": "https://hariomsweets.in/cdn/shop/products/81.CREAM___ONION_MAKHANA_960x_crop_center.jpg?v=1682940651"
     },
     {
-      "previewUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC6fM8zz3IOpNGIhhqtAbVqHvm2A4z75m0lg5-vGojusWbnVkbxw6iO9mZvoDnLKwOUW0&usqp=CAU",
-      "thumbUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC6fM8zz3IOpNGIhhqtAbVqHvm2A4z75m0lg5-vGojusWbnVkbxw6iO9mZvoDnLKwOUW0&usqp=CAU"
+      "previewUrl": "https://www.isayorganic.com/cdn/shop/files/0006_Cream_OnionMakhana_720x.jpg?v=1715092750",
+      "thumbUrl": "https://www.isayorganic.com/cdn/shop/files/0006_Cream_OnionMakhana_720x.jpg?v=1715092750"
     },
     {
-      "previewUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC6fM8zz3IOpNGIhhqtAbVqHvm2A4z75m0lg5-vGojusWbnVkbxw6iO9mZvoDnLKwOUW0&usqp=CAU",
-      "thumbUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC6fM8zz3IOpNGIhhqtAbVqHvm2A4z75m0lg5-vGojusWbnVkbxw6iO9mZvoDnLKwOUW0&usqp=CAU"
+      "previewUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg09XyicT0EfpLl8OvxDXX-bj1pGfcd6GFbASAnHg78c375WLp2EUEaSE9zmV0_ke8bSe6oE5LmaB3INKsedsn8CmYAH841xq-HW6J7ourXfYyRP6_qz-M8awjfwF21k1c2xdoM7p9KP-s/s1600/air+fryer+roasted+makhana.jpg",
+      "thumbUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg09XyicT0EfpLl8OvxDXX-bj1pGfcd6GFbASAnHg78c375WLp2EUEaSE9zmV0_ke8bSe6oE5LmaB3INKsedsn8CmYAH841xq-HW6J7ourXfYyRP6_qz-M8awjfwF21k1c2xdoM7p9KP-s/s1600/air+fryer+roasted+makhana.jpg"
     }
   ],
-  "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC6fM8zz3IOpNGIhhqtAbVqHvm2A4z75m0lg5-vGojusWbnVkbxw6iO9mZvoDnLKwOUW0&usqp=CAU",
+  "imageUrl": "https://hariomsweets.in/cdn/shop/products/81.CREAM___ONION_MAKHANA_960x_crop_center.jpg?v=1682940651",
   "fullDesc": [
     "Savor the creamy and tangy taste of Cream & Onion Flavored Makhana.",
     "Roasted to perfection and lightly coated with a rich cream and onion seasoning.",
@@ -865,19 +865,19 @@ const Allproducts = [
   "Iron": "11.8 mg",
   "previews": [
     {
-      "previewUrl": "https://www.fabbox.in/cdn/shop/products/saltmakhanas.jpg?v=1647946101",
-      "thumbUrl": "https://www.fabbox.in/cdn/shop/products/saltmakhanas.jpg?v=1647946101"
+      "previewUrl": "https://goosebumps.store/cdn/shop/files/Himalayan-Pink-Salt-Roasted-Makhana-5_1800x1800.jpg?v=1732259530",
+      "thumbUrl": "https://goosebumps.store/cdn/shop/files/Himalayan-Pink-Salt-Roasted-Makhana-5_1800x1800.jpg?v=1732259530"
     },
     {
-      "previewUrl": "https://i0.wp.com/veganicmart.com/wp-content/uploads/2022/09/51fqU8kbRKL.jpg?fit=500%2C500&ssl=1",
-      "thumbUrl": "https://i0.wp.com/veganicmart.com/wp-content/uploads/2022/09/51fqU8kbRKL.jpg?fit=500%2C500&ssl=1"
+      "previewUrl": "https://m.media-amazon.com/images/I/41X68KXHSZL.jpg",
+      "thumbUrl": "https://m.media-amazon.com/images/I/41X68KXHSZL.jpg"
     },
     {
-      "previewUrl": "https://www.fabbox.in/cdn/shop/products/saltmakhanas.jpg?v=1647946101",
-      "thumbUrl": "https://www.fabbox.in/cdn/shop/products/saltmakhanas.jpg?v=1647946101"
+      "previewUrl": "https://m.media-amazon.com/images/I/61LZZY5rpqL._AC_UF350,350_QL80_.jpg",
+      "thumbUrl": "https://m.media-amazon.com/images/I/61LZZY5rpqL._AC_UF350,350_QL80_.jpg"
     }
   ],
-  "imageUrl": "https://www.fabbox.in/cdn/shop/products/saltmakhanas.jpg?v=1647946101",
+  "imageUrl": "https://goosebumps.store/cdn/shop/files/Himalayan-Pink-Salt-Roasted-Makhana-5_1800x1800.jpg?v=1732259530",
   "fullDesc": [
     "Indulge in the classic taste of Himalaya Salt & Pepper Flavored Makhana.",
     "Carefully roasted and seasoned with natural Himalayan salt and pepper.",
