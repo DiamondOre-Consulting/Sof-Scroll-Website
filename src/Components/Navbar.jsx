@@ -53,6 +53,18 @@ const Navbar = ({ cart }) => {
           <div className="items-center hidden h-[4.5rem] space-x-8 uppercase mf md:flex justify-center">
             <NavLink to="/" label="Home" location={location.pathname} />
             <NavLink
+              label="Nutzz Magic"
+              location={location.pathname}
+              dropdownItems={[
+                { to: "/products/category/Row Makhana", label: "Raw Makhana" },
+                { to: "/products/category/Flavored Makhana", label: "Flavored Makhana" },
+              ]}
+              isMobile={isMenuOpen}
+              activeDropdown={activeDropdown}
+              setActiveDropdown={setActiveDropdown}
+              onClick={closeMobileMenu}
+            />
+            <NavLink
               to="/about-us"
               label="About Us"
               location={location.pathname}
@@ -82,7 +94,7 @@ const Navbar = ({ cart }) => {
                
               ]}
             />
-            <NavLink
+            {/* <NavLink
               label="Nutzz Magic"
               location={location.pathname}
               dropdownItems={[
@@ -93,7 +105,7 @@ const Navbar = ({ cart }) => {
               activeDropdown={activeDropdown}
               setActiveDropdown={setActiveDropdown}
               onClick={closeMobileMenu}
-            />
+            /> */}
             <NavLink
               to="/contact-us"
               label="Contact Us"
@@ -111,7 +123,7 @@ const Navbar = ({ cart }) => {
 
           {/* Mobile Menu Toggle */}
           <div className="flex items-center md:hidden">
-            <Link
+            <Link 
               to="/cart"
               className="relative mr-3"
               onClick={closeMobileMenu}
@@ -151,6 +163,19 @@ const Navbar = ({ cart }) => {
                   onClick={closeMobileMenu}
                   isMobile={true}
                 />
+
+<NavLink
+              label="Nutzz Magic"
+              location={location.pathname}
+              dropdownItems={[
+                { to: "/products/category/Row Makhana", label: "Raw Makhana" },
+                { to: "/products/category/Flavored Makhana", label: "Flavored Makhana" },
+              ]}
+              isMobile={true}
+              activeDropdown={activeDropdown}
+              setActiveDropdown={setActiveDropdown}
+              onClick={closeMobileMenu}
+            />
                 <NavLink
                   to="/about-us"
                   label="About"
