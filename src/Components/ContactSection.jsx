@@ -37,9 +37,9 @@ const ContactSection = ({ contact }) => {
     const toastId = toast.loading("Sending message...");
     setLoadingToastId(toastId);
 
-    const serviceID = "service_uwuijxf";
-    const templateID = "template_je04x6n";
-    const userID = "iz6s-w2-bkXxSr9fL";
+    const serviceID = "service_cjs69us";
+    const templateID = "template_mafjwnv";
+    const userID = "bV5Ar2-E2KVthub0u";
 
     emailjs
       .send(serviceID, templateID, formData, userID)
