@@ -121,10 +121,10 @@ const CartPage = ({ cart, setCart }) => {
     // Send email using EmailJS
     emailjs
       .send(
-        "service_uwuijxf", // Your EmailJS service ID
-        "template_je04x6n", // Your EmailJS template ID
+        "service_cjs69us", // Your EmailJS service ID
+        "template_nai32c3", // Your EmailJS template ID
         orderData,
-        "iz6s-w2-bkXxSr9fL" // Your EmailJS user ID
+        "bV5Ar2-E2KVthub0u" // Your EmailJS user ID
       )
       .then((response) => {
         toast.update(toastId, {
