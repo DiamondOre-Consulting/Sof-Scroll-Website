@@ -6,7 +6,7 @@ import teamImage3 from "../assets/yashashrri.jpeg"; // Team member image 3
 import patternImage from "../assets/22.png"; // Background pattern image
 import BreadCrumbs from "../Components/BreadCrumbs";
 import yashi from "../assets/yashi.jpeg";
-import logo from "../assets/newlogo.webp";
+import logo from "../assets/aifilebg.png";
 import TextRevealByWord from "../Components/ui/text-reveal";
 import AnimatedText from "../Components/AnimatedText";
 import AOS from "aos";
@@ -162,7 +162,7 @@ const AboutUs = () => {
           <img
             src={logo}
             alt=""
-            className="w-60  animate-bounce duration-[0.01s] md:mt-0 mt-20 "
+            className="w-96  animate-bounce duration-[0.01s] md:mt-0 mt-20 "
           />
         </div>
       </div>

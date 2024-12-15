@@ -1,23 +1,14 @@
 import React, { useState } from "react";
 import { FaXmark } from "react-icons/fa6";
-import { FaLocationDot } from "react-icons/fa6";
-import { MdContactPhone } from "react-icons/md";
+import { RxQuestionMarkCircled } from "react-icons/rx";
 import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { IoMdSend } from "react-icons/io";
 import AllProducts from "../../Components/Products/AllProducts";
-import { HiMiniXMark } from "react-icons/hi2";
-import { RxQuestionMarkCircled } from "react-icons/rx";
-import { Client, Storage } from "appwrite";
 
 function EnquireButton() {
   const [enquire, setEnquire] = useState(true);
   const [loading, setLoading] = useState(false);
-  const [loadingToastId, setLoadingToastId] = useState(null);
-
-  const selectedProducts = [];
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,290 +17,196 @@ function EnquireButton() {
     description: "",
     imageURL: "",
   });
-
-  const client = new Client()
-    .setEndpoint("https://cloud.appwrite.io/v1") // my endpoint
-    .setProject("6758255e001bf16e0947"); // myproject ID
-
-  const storage = new Storage(client);
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const handleImageUpload = async (event) => {
     const file = event.target.files[0];
-    console.log("Selected file:", file);
-
     if (!file) {
       toast.error("No file selected.");
       return;
     }
-
     try {
-      console.log("Uploading file to Appwrite...");
-
-      const uniqueFileId = "unique-file-id";
-
-      const response = await storage.createFile(
-        "67591195000345dd781c", // Your bucket ID
-        uniqueFileId,
-        file // File object
-      );
-
-      console.log("Upload response:", response);
-
-      const fileId = response.$id;
-      const fileUrl = `https://cloud.appwrite.io/v1/storage/buckets/67591195000345dd781c/files/${fileId}/view?project=6758255e001bf16e0947`;
-      console.log("myfile url", fileUrl);
-
-      setFormData((prevFormData) => ({
-        ...prevFormData,
-        imageUrl: fileUrl,
-      }));
-
+      const fileUrl = URL.createObjectURL(file);
+      setFormData((prevFormData) => ({ ...prevFormData, imageURL: fileUrl }));
       toast.success("Image uploaded successfully!");
     } catch (error) {
-      console.error("Error details:", error);
       toast.error("Image upload failed.");
     }
   };
-
-  const handleSelectedProductCrossClick = (ind) => {
-    setFormData((prevFormDetails) => {
-      return {
-        ...prevFormDetails,
-        products: prevFormDetails.products.filter((_, i) => i !== ind),
-      };
-    });
-  };
-
-  const allProducts = AllProducts;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleEnquireButton = () => {
-    setEnquire((prev) => !prev);
-  };
-
-  const handleSelectedProductsChange = (e) => {
-    console.log(e.target.value);
-
-    if (formData.products.find((product) => product === e.target.value)) {
-      toast.error("This product is already added!", {
-        autoClose: 2000,
-      });
-    } else {
-      setFormData({
-        ...formData,
-        products: [...formData.products, e.target.value],
-      });
-    }
+  const handleCheckboxChange = (e) => {
+    const { value, checked } = e.target;
+    setFormData((prevFormData) => {
+      const updatedProducts = checked
+        ? [...prevFormData.products, value]
+        : prevFormData.products.filter((product) => product !== value);
+      return { ...prevFormData, products: updatedProducts };
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (
-      !formData.name ||
-      !formData.email ||
-      !formData.phone ||
-      !formData.email ||
-      !formData.description
-    ) {
-      return toast.error("All fields are required");
+  
+    if (!formData.name || !formData.email || !formData.phone || !formData.description) {
+      toast.error("All fields are required.");
+      return;
     }
+  
     setLoading(true);
-    const toastId = toast.loading("Sending message...");
-    setLoadingToastId(toastId);
-
-    const serviceID = "service_cjs69us";
-    const templateID = "template_mafjwnv";
-    const userID = "bV5Ar2-E2KVthub0u";
-
+  
     const emailData = {
-      ...formData,
-      imageUrl: formData.imageUrl,
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      products: formData.products.join(", "), // Convert products array to a string
+      description: formData.description,
+      imageURL: formData.imageURL,
     };
-
+  
     emailjs
-      .send(serviceID, templateID, formData, userID)
-      .then((response) => {
-        toast.update(toastId, {
-          render: "Email sent successfully!",
-          type: "success",
-          isLoading: false,
-          autoClose: 3000,
-        });
-        setLoading(false);
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          products: "",
-          description: "",
-        });
-      })
-      .catch((error) => {
-        toast.update(toastId, {
-          render: "An error occurred while sending the email.",
-          type: "error",
-          isLoading: false,
-          autoClose: 3000,
-        });
-        setLoading(false);
-      });
+      .send("service_cjs69us", "template_mafjwnv", emailData, "bV5Ar2-E2KVthub0u")
+      .then(
+        (response) => {
+          toast.success("Email sent successfully!");
+          setEnquire(false)
+          setLoading(false);
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            products: [],
+            description: "",
+            imageURL: "",
+          });
+        },
+        (error) => {
+          toast.error("Failed to send email. Please try again.");
+          setLoading(false);
+        }
+      );
   };
+  
 
   return (
     <>
       {enquire ? (
         <button
-          onClick={handleEnquireButton}
-          className="bg-dark py-2 px-2 rounded-full text-white flex justify-center items-center gap-1"
+          onClick={() => setEnquire(false)}
+          className="bg-dark py-2 px-4 rounded-full text-white flex justify-center items-center gap-2 shadow-lg hover:bg-gray-800 transition"
         >
-          <span className="text-lg ">Quote me</span>{" "}
-          <RxQuestionMarkCircled className="text-white mt-1 text-xl" />
+          <span className="text-lg">Quote me</span>
+          <RxQuestionMarkCircled className="text-white text-xl" />
         </button>
       ) : (
-        <div className="w-full z-50 flex items-start justify-center fixed top-0 bg-opacity-60 right-0 h-screen bg-black">
-          <div className="md:mx-40 mx-10 z-50 rounded-tr-lg rounded-tl-lg mt-12 md:mt-16 relative flex justify-center w-fit md:w-1/2 bg-white shadow h-fit pb-10">
-            <div
-              className="w-full sm:p-12 z-50 px-6 bg-white shadow-sm rounded-xl enquiryForm mt-2 lg:mt-0"
-              data-aos="fade-up"
-              data-aos-duration="600"
+        <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-start z-50">
+          <div className="w-full mx-4 md:mx-0 md:max-w-4xl mt-12 bg-white p-6 rounded-lg shadow-lg relative">
+            <button
+              onClick={() => setEnquire(true)}
+              className="absolute top-4 right-4 text-red-500 text-2xl"
             >
-              <h3 className="mb-4 text-dark underline text-center text-2xl md:text-4xl mx-auto sora-600">
-              Quote me!
-              </h3>
-              <div className="absolute top-3 right-5 inline">
-                <FaXmark
-                  onClick={() => {
-                    setEnquire((prev) => !prev);
-                  }}
-                  className=" text-3xl md:text-4xl cursor-pointer text-red-500"
+              <FaXmark />
+            </button>
+
+            <h3 className="text-3xl font-semibold text-center underline mb-6">Quote me!</h3>
+
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Your name"
+                  className="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-dark"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Email address"
+                  className="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-dark"
+                  required
                 />
               </div>
-              <form onSubmit={handleSubmit} noValidate>
-                <div className="mb-4">
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Your name"
-                    className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-dark"
-                    required
-                  />
-                </div>
-                <div className="flex flex-wrap mb-2 -mx-2">
-                  <div className="w-full  px-2 mb-4 lg:w-[60%] lg:mb-0">
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="Email address"
-                      className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-dark"
-                      required
-                    />
-                  </div>
-                  <div className="w-full px-2 lg:w-[40%]">
-                    <input
-                      type="number"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="Phone number"
-                      className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-dark"
-                      required
-                    />
-                  </div>
-                </div>
-                <div className="mb-4">
-                  <label className="text-gray-400 p-1 " htmlFor="">
-                    Select Products
-                  </label>
-                  <select
-                    className=" px-1 h-12 md:h-[6rem] w-full mb-3  border border-gray-200 focus:outline-none"
-                    name=""
-                    multiple
-                    id=""
-                    onChange={handleSelectedProductsChange}
-                  >
-                    {allProducts.map((product, index) => {
-                      return (
-                        <option key={index} value={product.name}>
-                          <span className="text-2xl">{index + 1}</span>.{" "}
-                          {product.name}
-                        </option>
-                      );
-                    })}
-                  </select>
 
-                  {formData?.products?.length === 0 ? (
-                    <div className="border  border-gray-200 p-2">
-                      Select products
-                    </div>
-                  ) : (
-                    <div className="border overflow-y-auto max-h-20 enquiryForm gap-3 flex flex-wrap border-gray-200 p-2">
-                      {formData?.products?.map((product, ind) => {
-                        return (
-                          <div
-                            key={ind}
-                            className="border flex gap-2 justify-center items-center"
-                          >
-                            {product}
-                            <span
-                              onClick={() => {
-                                handleSelectedProductCrossClick(ind);
-                              }}
-                              className="text-black text-2xl"
-                            >
-                              <HiMiniXMark className="cursor-pointer" />
-                            </span>
-                          </div>
-                        );
-                      })}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                  type="number"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="Phone number"
+                  className="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-dark"
+                  required
+                />
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleImageUpload}
+                  className="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-dark"
+                />
+              </div>
+
+              <div>
+                <h4 className="text-lg font-medium mb-2">Select Products:</h4>
+                <div className="relative">
+                  <div
+                    className="border p-3 rounded cursor-pointer bg-gray-100"
+                    onClick={() => setDropdownOpen(!isDropdownOpen)}
+                  >
+                    {formData.products.length > 0
+                      ? formData.products.join(", ")
+                      : "Select products"}
+                  </div>
+                  {isDropdownOpen && (
+                    <div className="absolute mt-2 w-full max-h-48 overflow-y-auto border bg-white shadow-lg rounded z-10">
+                      {AllProducts.map((product, index) => (
+                        <label
+                          key={index}
+                          className="block px-3 py-2 hover:bg-gray-100 flex items-center gap-2"
+                        >
+                          <input
+                            type="checkbox"
+                            value={product.name}
+                            checked={formData.products.includes(product.name)}
+                            onChange={handleCheckboxChange}
+                          />
+                          <span>{product.name}</span>
+                        </label>
+                      ))}
                     </div>
                   )}
                 </div>
-                <div className="mb-4">
-                  <textarea
-                    name="description"
-                    value={formData.description}
-                    onChange={handleChange}
-                    placeholder="Add Description"
-                    className="w-full p-2 border rounded resize-none focus:outline-none focus:ring-1 focus:ring-dark"
-                    rows="2"
-                    required
-                  ></textarea>
-                </div>
-                <div>
-                  <input
-                    type="file"
-                    accept="image/*"
-                    onChange={handleImageUpload}
-                    className="w-full p-2 border rounded focus:outline-none focus:ring-1 focus:ring-dark"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="relative  flex items-center w-full px-6 py-[0.6rem] overflow-hidden font-medium text-center transition-all rounded-md bg-[#2F8B69] group"
-                >
-                  <span className="relative flex w-full text-center text-white transition-colors duration-200 ease-in-out group-hover:text-white">
-                    {loading ? (
-                      "Sending..."
-                    ) : (
-                      <span className="flex items-center justify-center w-full gap-2">
-                        Send Message <IoMdSend />
-                      </span>
-                    )}
-                  </span>
-                </button>
-              </form>
-              <ToastContainer />
-            </div>
+              </div>
+
+              <textarea
+                name="description"
+                value={formData.description}
+                onChange={handleChange}
+                placeholder="Description"
+                className="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-dark"
+                rows="4"
+                required
+              />
+
+              <button
+                type="submit"
+                className="w-full bg-dark text-white py-3 rounded shadow hover:bg-gray-800 transition"
+              >
+                Submit
+              </button>
+            </form>
           </div>
         </div>
       )}
+
+      <ToastContainer />
     </>
   );
 }
