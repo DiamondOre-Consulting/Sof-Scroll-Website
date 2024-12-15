@@ -92,7 +92,7 @@ const CartPage = ({ cart, setCart }) => {
                   <td style="font-size: 14px; line-height: 1.5;">
                     <p><strong>Item code:</strong> ${item?.itemCode}</p>
                     <p>${item?.name}</p>
-                    <p><strong>Quantity:</strong> ${item?.quantity} | <strong>Weight:</strong> ${item?.weight}</p>
+                    <p><strong>Quantity:</strong> ${item?.quantity} | <strong>Weight:</strong> ${item?.weight}  <strong>Weight:</strong> ${item?.mkweight} </p>
                   
                   </td>
                 </tr>
@@ -264,7 +264,12 @@ const CartPage = ({ cart, setCart }) => {
                         </div>
                         <div className="space-y-1">
                           <p className="mr-6 font-normal text-gray-800 sm:font-semibold line-clamp-2 text-md">{item?.name}</p>
-
+                          {
+                            item?.mkweight &&(
+                             <p>Total Weight: {Number(item?.mkweight || 0) * Number(item?.quantity || 1)} g</p> 
+                            )
+                          }
+                       
                         </div>
                       </div>
                       <div className="relative flex flex-wrap items-center justify-between gap-2 p-3 py-1 bg-white border rounded-md shadow-sm" >

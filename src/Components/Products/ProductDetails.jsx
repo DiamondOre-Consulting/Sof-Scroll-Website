@@ -283,6 +283,12 @@ const ProductDetails = ({ cart, setCart }) => {
                   <p>{product.dimensions}</p>
                 </>
               )}
+                  {product?.mkweight && (
+                <>
+                  <p className="font-bold">Weight</p>
+                  <p>{product.mkweight} g</p>
+                </>
+              )}
 
               {product?.weight && (
                 <>
