@@ -4,6 +4,7 @@ import { FiShoppingCart } from "react-icons/fi";
 import { FaWhatsapp, FaInstagram, FaChevronDown } from "react-icons/fa6";
 import { MdMail } from "react-icons/md";
 import logo from "../assets/aifilebg.png";
+import newlogo from "../assets/new.png";
 
 const Navbar = ({ cart }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // For mobile menu
@@ -52,6 +53,7 @@ const Navbar = ({ cart }) => {
           {/* Desktop Menu */}
           <div className="items-center hidden h-[4.5rem] space-x-8 uppercase mf md:flex justify-center">
             <NavLink to="/" label="Home" location={location.pathname} />
+            <div className="relative">
             <NavLink
               label="Nutzz Magic"
               location={location.pathname}
@@ -64,6 +66,10 @@ const Navbar = ({ cart }) => {
               setActiveDropdown={setActiveDropdown}
               onClick={closeMobileMenu}
             />
+
+            <img src={newlogo} className="w-10 absolute -top-6 animate-ping " />
+            </div>
+          
             <NavLink
               to="/about-us"
               label="About Us"
