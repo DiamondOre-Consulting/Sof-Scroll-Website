@@ -515,9 +515,9 @@ const Allproducts = [
     previews: [
       {
         previewUrl:
-          "https://img.freepik.com/free-vector/paper-tissue-realistic-package-poster-mockup-with-branding-template-vector-illustration_1284-80142.jpg?t=st=1733738759~exp=1733742359~hmac=ad6d8ddd7d10fc79a62817ed5d7df7937c8836f611979e83eff596ff443ec698&w=996",
+          "https://www.threesixty.life/cdn/shop/files/Sterling_Tissue_Box_Tan_4.jpg?v=1718871140&width=2048",
         thumbUrl:
-          "https://img.freepik.com/free-vector/paper-tissue-realistic-package-poster-mockup-with-branding-template-vector-illustration_1284-80142.jpg?t=st=1733738759~exp=1733742359~hmac=ad6d8ddd7d10fc79a62817ed5d7df7937c8836f611979e83eff596ff443ec698&w=996",
+          "https://www.threesixty.life/cdn/shop/files/Sterling_Tissue_Box_Tan_4.jpg?v=1718871140&width=2048",
       },
 
       {
@@ -530,7 +530,7 @@ const Allproducts = [
     ],
     videoUrl: facialTissue,
     imageUrl:
-      "https://img.freepik.com/free-vector/paper-tissue-realistic-package-poster-mockup-with-branding-template-vector-illustration_1284-80142.jpg?t=st=1733738759~exp=1733742359~hmac=ad6d8ddd7d10fc79a62817ed5d7df7937c8836f611979e83eff596ff443ec698&w=996", // Dummy placeholder image URL
+      "https://www.threesixty.life/cdn/shop/files/Sterling_Tissue_Box_Tan_4.jpg?v=1718871140&width=2048s", // Dummy placeholder image URL
     fullDesc: [
       "Extra soft, absorbent 2-ply facial tissue.",
       "Made from virgin wood pulp for superior quality.",
