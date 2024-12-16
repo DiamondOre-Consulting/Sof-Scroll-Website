@@ -6,6 +6,7 @@ import { MdMail } from "react-icons/md";
 import logo from "../assets/aifilebg.png";
 import newlogo from "../assets/new.png";
 
+
 const Navbar = ({ cart }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // For mobile menu
   const [activeDropdown, setActiveDropdown] = useState(null); // For mobile dropdown
@@ -47,7 +48,7 @@ const Navbar = ({ cart }) => {
         <nav className="container flex items-center justify-between px-4 mx-auto sm:px-8 md:px-12">
           {/* Logo */}
           <Link to={"/"}>
-            <img src={logo} className="w-[120px] md:w-[200px]   " alt="Logo" />
+            <img src={logo} className="w-[120px] md:w-[210px]   " alt="Logo" />
           </Link>
 
           {/* Desktop Menu */}

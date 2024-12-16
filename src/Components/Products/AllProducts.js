@@ -875,12 +875,12 @@ const Allproducts = [
       "thumbUrl": "https://goosebumps.store/cdn/shop/files/Himalayan-Pink-Salt-Roasted-Makhana-5_1800x1800.jpg?v=1732259530"
     },
     {
-      "previewUrl": "https://m.media-amazon.com/images/I/41X68KXHSZL.jpg",
-      "thumbUrl": "https://m.media-amazon.com/images/I/41X68KXHSZL.jpg"
+      "previewUrl": "https://media.licdn.com/dms/image/D5612AQHswgeiiPyf4Q/article-cover_image-shrink_720_1280/0/1714140466753?e=2147483647&v=beta&t=Ot55ArO4icZNoSqX1H5Z2Myn0AAMD5hF0ZqYoIWDKP4",
+      "thumbUrl": "https://media.licdn.com/dms/image/D5612AQHswgeiiPyf4Q/article-cover_image-shrink_720_1280/0/1714140466753?e=2147483647&v=beta&t=Ot55ArO4icZNoSqX1H5Z2Myn0AAMD5hF0ZqYoIWDKP4"
     },
     {
-      "previewUrl": "https://m.media-amazon.com/images/I/61LZZY5rpqL._AC_UF350,350_QL80_.jpg",
-      "thumbUrl": "https://m.media-amazon.com/images/I/61LZZY5rpqL._AC_UF350,350_QL80_.jpg"
+      "previewUrl": "https://recipes.net/wp-content/uploads/2024/01/how-to-eat-makhana-fully-1706249268.jpg",
+      "thumbUrl": "https://recipes.net/wp-content/uploads/2024/01/how-to-eat-makhana-fully-1706249268.jpg"
     }
   ],
   "imageUrl": "https://goosebumps.store/cdn/shop/files/Himalayan-Pink-Salt-Roasted-Makhana-5_1800x1800.jpg?v=1732259530",
