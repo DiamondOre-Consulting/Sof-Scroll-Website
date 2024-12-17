@@ -314,7 +314,7 @@ const AboutUs = () => {
                 className="text-xl lg:text-4xl text-justify mf xl:text-2xl"
                 data-aos="fade-right"
               >
-                Alexander Mohandas is an experienced business leader with over
+                Mr. Alexander Aruldass is an experienced business leader with over
                 20 years in customer experience, sales, and marketing. He has
                 worked with global brands like KFC, HSBC, and Probe Information.
                 Known for his strategic approach, Alexander has driven growth
@@ -326,7 +326,7 @@ const AboutUs = () => {
               <img
                 className="object-cover object-top mt-4 border-2 border-gray-300 rounded-full md:mt-0 min-w-80 h-80"
                 src={teamImage2}
-                alt="Alexander Mohandas"
+                alt="Mr. Alexander Aruldass"
               />
               <p className="mt-4 text-xl font-bold text-center">
               Mr. Alexander Aruldass

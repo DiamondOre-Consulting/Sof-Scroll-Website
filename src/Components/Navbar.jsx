@@ -6,7 +6,6 @@ import { MdMail } from "react-icons/md";
 import logo from "../assets/aifilebg.png";
 import newlogo from "../assets/new.png";
 
-
 const Navbar = ({ cart }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // For mobile menu
   const [activeDropdown, setActiveDropdown] = useState(null); // For mobile dropdown
@@ -55,22 +54,31 @@ const Navbar = ({ cart }) => {
           <div className="items-center hidden h-[4.5rem] space-x-8 uppercase mf md:flex justify-center">
             <NavLink to="/" label="Home" location={location.pathname} />
             <div className="relative">
-            <NavLink
-              label="Nutzz Magic"
-              location={location.pathname}
-              dropdownItems={[
-                { to: "/products/category/Row Makhana", label: "Raw Makhana" },
-                { to: "/products/category/Flavored Makhana", label: "Flavored Makhana" },
-              ]}
-              isMobile={isMenuOpen}
-              activeDropdown={activeDropdown}
-              setActiveDropdown={setActiveDropdown}
-              onClick={closeMobileMenu}
-            />
+              <NavLink
+                label="Nutzz Magic"
+                location={location.pathname}
+                dropdownItems={[
+                  {
+                    to: "/products/category/Row Makhana",
+                    label: "Raw Makhana",
+                  },
+                  {
+                    to: "/products/category/Flavored Makhana",
+                    label: "Flavored Makhana",
+                  },
+                ]}
+                isMobile={isMenuOpen}
+                activeDropdown={activeDropdown}
+                setActiveDropdown={setActiveDropdown}
+                onClick={closeMobileMenu}
+              />
 
-            <img src={newlogo} className="w-10 absolute -top-6 animate-ping " />
+              <img
+                src={newlogo}
+                className="w-8 absolute -top-4 animate-ping "
+              />
             </div>
-          
+
             <NavLink
               to="/about-us"
               label="About Us"
@@ -98,7 +106,6 @@ const Navbar = ({ cart }) => {
                   label: "Facial Tissue",
                 },
                 { to: "/products/category/Paper Towel", label: "Paper Towel" },
-               
               ]}
             />
             {/* <NavLink
@@ -130,7 +137,7 @@ const Navbar = ({ cart }) => {
 
           {/* Mobile Menu Toggle */}
           <div className="flex items-center md:hidden">
-            <Link 
+            <Link
               to="/cart"
               className="relative mr-3"
               onClick={closeMobileMenu}
@@ -171,18 +178,24 @@ const Navbar = ({ cart }) => {
                   isMobile={true}
                 />
 
-<NavLink
-              label="Nutzz Magic"
-              location={location.pathname}
-              dropdownItems={[
-                { to: "/products/category/Row Makhana", label: "Raw Makhana" },
-                { to: "/products/category/Flavored Makhana", label: "Flavored Makhana" },
-              ]}
-              isMobile={true}
-              activeDropdown={activeDropdown}
-              setActiveDropdown={setActiveDropdown}
-              onClick={closeMobileMenu}
-            />
+                <NavLink
+                  label="Nutzz Magic"
+                  location={location.pathname}
+                  dropdownItems={[
+                    {
+                      to: "/products/category/Row Makhana",
+                      label: "Raw Makhana",
+                    },
+                    {
+                      to: "/products/category/Flavored Makhana",
+                      label: "Flavored Makhana",
+                    },
+                  ]}
+                  isMobile={true}
+                  activeDropdown={activeDropdown}
+                  setActiveDropdown={setActiveDropdown}
+                  onClick={closeMobileMenu}
+                />
                 <NavLink
                   to="/about-us"
                   label="About"
@@ -286,7 +299,7 @@ const NavLink = ({
       </div>
       {dropdownItems && (
         <div
-          className={`md:absolute overflow-hidden left-0 top-12 z-50 md:w-40 ml-24 md:ml-0 mt-2 bg-white rounded-md ${
+          className={`md:absolute overflow-hidden left-0 top-10 z-50 md:w-40 ml-24 md:ml-0 mt-2 bg-white rounded-md ${
             isMobile
               ? `transition-all duration-200 ease-in-out ${
                   isActive ? "block" : "hidden"
