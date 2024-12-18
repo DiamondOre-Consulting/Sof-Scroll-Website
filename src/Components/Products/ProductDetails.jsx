@@ -447,55 +447,46 @@ const ProductDetails = ({ cart, setCart }) => {
         />
       </div>
 
-      <div className="w-full p-4 pb-10 bg-slate-200 mt-10" data-aos="fade-down">
-        <h2 className="mb-6 font-bold text-center mf text-[2.7rem]">
-          Product Features
-        </h2>
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
-          <div
-            className="flex flex-col items-center justify-center gap-1"
-            data-aos-duration="1800"
-          >
-            <img
-              className="object-cover rounded-full size-24 sm:size-28 md:size-60"
-              src="https://img.freepik.com/premium-vector/realistic-toilete-paper-paper-towels-with-feathers_80590-7437.jpg?w=740"
-              alt=""
-            />
-            <h1 className="text-[0.9rem] font-semibold">Soft Tissue</h1>
-          </div>
-          {/* <div
-            className="flex flex-col items-center justify-center gap-1"
-            data-aos-duration="1400"
-          >
-            <img
-              className="object-cover rounded-full size-24 sm:size-28 md:size-60"
-              src="https://opil.riteknowledgelabs.in/wp-content/assets/img/product/solution/Facial-Tissue.png"
-              alt=""
-            />
-            <h1 className="text-[0.9rem] font-semibold">Soft Comforty</h1>
-          </div> */}
-          <div className="flex flex-col items-center justify-center gap-1">
-            <img
-              className="object-cover rounded-full size-24 sm:size-28 md:size-60"
-              src="https://img.freepik.com/free-photo/eco-friendly-recycling-concept_23-2148737656.jpg?semt=ais_hybrid"
-              alt=""
-            />
-            <h1 className="text-[0.9rem] font-semibold">Eco Friendly</h1>
-          </div>
 
-          <div
-            className="flex flex-col items-center justify-center gap-1"
-            data-aos-duration="1800"
-          >
-            <img
-              className="object-cover rounded-full size-24 sm:size-28 md:size-60"
-              src="https://media.istockphoto.com/id/1263872609/vector/hand-throwing-away-tissue-into-a-trash-bin-coronavirus-prevention.jpg?s=612x612&w=0&k=20&c=VgqIF7fhivLTBuSCVntvFlc_cUfG0_4SClJVHJeEeeQ="
-              alt=""
-            />
-            <h1 className="text-[0.9rem] font-semibold">Disposable</h1>
+      {!(itemCode && itemCode.startsWith('Mk')) && (
+        <div className="w-full p-4 pb-10 bg-slate-200 mt-10" data-aos="fade-down">
+          <h2 className="mb-6 font-bold text-center mf text-[2.7rem]">
+            Product Features
+          </h2>
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
+            <div
+              className="flex flex-col items-center justify-center gap-1"
+              data-aos-duration="1800"
+            >
+              <img
+                className="object-cover rounded-full size-24 sm:size-28 md:size-60"
+                src="https://img.freepik.com/premium-vector/realistic-toilete-paper-paper-towels-with-feathers_80590-7437.jpg?w=740"
+                alt=""
+              />
+              <h1 className="text-[0.9rem] font-semibold">Soft Tissue</h1>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-1">
+              <img
+                className="object-cover rounded-full size-24 sm:size-28 md:size-60"
+                src="https://img.freepik.com/free-photo/eco-friendly-recycling-concept_23-2148737656.jpg?semt=ais_hybrid"
+                alt=""
+              />
+              <h1 className="text-[0.9rem] font-semibold">Eco Friendly</h1>
+            </div>
+            <div
+              className="flex flex-col items-center justify-center gap-1"
+              data-aos-duration="1800"
+            >
+              <img
+                className="object-cover rounded-full size-24 sm:size-28 md:size-60"
+                src="https://media.istockphoto.com/id/1263872609/vector/hand-throwing-away-tissue-into-a-trash-bin-coronavirus-prevention.jpg?s=612x612&w=0&k=20&c=VgqIF7fhivLTBuSCVntvFlc_cUfG0_4SClJVHJeEeeQ="
+                alt=""
+              />
+              <h1 className="text-[0.9rem] font-semibold">Disposable</h1>
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       <div>
         <ExploreProducts cart={cart} setCart={setCart} />

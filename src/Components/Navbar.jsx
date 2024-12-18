@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { FaWhatsapp, FaInstagram, FaChevronDown } from "react-icons/fa6";
 import { MdMail } from "react-icons/md";
-import logo from "../assets/aifilebg.png";
+import logo from "../assets/aifile.png";
 import newlogo from "../assets/new.png";
 
 const Navbar = ({ cart }) => {
@@ -47,13 +47,13 @@ const Navbar = ({ cart }) => {
         <nav className="container flex items-center justify-between px-4 mx-auto sm:px-8 md:px-12">
           {/* Logo */}
           <Link to={"/"}>
-            <img src={logo} className="w-[120px] md:w-[210px]   " alt="Logo" />
+            <img src={logo} className="w-[120px] md:w-[150px] bg-gray-100 rounded-full" alt="Logo" />
           </Link>
 
           {/* Desktop Menu */}
           <div className="items-center hidden h-[4.5rem] space-x-8 uppercase mf md:flex justify-center">
             <NavLink to="/" label="Home" location={location.pathname} />
-            <div className="relative">
+            <div className="relative ">
               <NavLink
                 label="Nutzz Magic"
                 location={location.pathname}
@@ -75,7 +75,7 @@ const Navbar = ({ cart }) => {
 
               <img
                 src={newlogo}
-                className="w-8 absolute -top-4 animate-ping "
+                className="w-8 absolute -top-4 border border-1 animate-ping "
               />
             </div>
 
@@ -84,9 +84,14 @@ const Navbar = ({ cart }) => {
               label="About Us"
               location={location.pathname}
             />
+
+            <div className="">
+    
             <NavLink
               label="Products"
               location={location.pathname}
+              className="border  border-black"
+            
               dropdownItems={[
                 { to: "/all-products", label: "All products" },
                 {
@@ -108,6 +113,7 @@ const Navbar = ({ cart }) => {
                 { to: "/products/category/Paper Towel", label: "Paper Towel" },
               ]}
             />
+              </div>
             {/* <NavLink
               label="Nutzz Magic"
               location={location.pathname}
@@ -299,7 +305,7 @@ const NavLink = ({
       </div>
       {dropdownItems && (
         <div
-          className={`md:absolute overflow-hidden left-0 top-10 z-50 md:w-40 ml-24 md:ml-0 mt-2 bg-white rounded-md ${
+          className={`md:absolute overflow-hidden left-0 top-4 z-50 md:w-40 ml-24 md:ml-0 mt-2 bg-white rounded-md ${
             isMobile
               ? `transition-all duration-200 ease-in-out ${
                   isActive ? "block" : "hidden"
