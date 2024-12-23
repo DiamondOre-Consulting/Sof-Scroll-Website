@@ -161,7 +161,7 @@ function EnquireButton() {
                     onClick={() => setDropdownOpen(!isDropdownOpen)}
                   >
                     {formData.products.length > 0
-                      ? formData.products.join(", ")
+                      ? formData.products.length 
                       : "Select products"}
                   </div>
                   {isDropdownOpen && (
