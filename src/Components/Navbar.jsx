@@ -75,7 +75,7 @@ const Navbar = ({ cart }) => {
 
               <img
                 src={newlogo}
-                className="w-8 absolute -top-4 border border-1 animate-ping "
+                className="w-8 absolute -top-4  animate-ping "
               />
             </div>
 
