@@ -80,7 +80,7 @@ const Footer = () => {
 
                     <div className="flex space-x-4 items-center mt-3  ">
                       <a
-                        href=" https://www.instagram.com/sof_scroll "
+                        href="https://www.instagram.com/sof_sscrrol/profilecard/?igsh=bDJyMXFveDdibXhy"
                         target="_blank"
                         className="text-[30px] "
                       >
