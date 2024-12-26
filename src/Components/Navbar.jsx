@@ -3,7 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { FaWhatsapp, FaInstagram, FaChevronDown } from "react-icons/fa6";
 import { MdMail } from "react-icons/md";
-import logo from "../assets/aifile.png";
+// import logo from "../assets/aifile.png";
+import logo from "../assets/aifilebg.png";
 import newlogo from "../assets/new.png";
 // import logo from "../assets/sofscrollai.webp";
 
@@ -48,7 +49,7 @@ const Navbar = ({ cart }) => {
         <nav className="container flex items-center justify-between px-4 mx-auto sm:px-8 md:px-12">
           {/* Logo */}
           <Link to={"/"}>
-            <img src={logo} className="w-[120px] md:w-[150px] bg-gray-100 rounded-full" alt="Logo" />
+            <img src={logo} className="w-[150px] md:w-[150px] rounded-full" alt="Logo" />
           </Link>
 
           {/* Desktop Menu */}
