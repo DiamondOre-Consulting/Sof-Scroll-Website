@@ -8,7 +8,7 @@ import {
 import { CiClock1 } from "react-icons/ci";
 import { IoMdMail } from "react-icons/io";
 import { TiSocialInstagram } from "react-icons/ti";
-import { FaLinkedin } from "react-icons/fa";  
+import { FaLinkedin } from "react-icons/fa";
 import { MdOutlineSmartphone } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import logo from "../assets/newlogo.webp";
@@ -79,9 +79,31 @@ const Footer = () => {
                     </li>
 
                     <div className="flex space-x-4 items-center mt-3  ">
-                  <a href="https://www.instagram.com/sof_scroll" target="_blank" className="text-[30px] "> <TiSocialInstagram /></a> 
-                    {/* <TiSocialInstagram /> */}
-                    <a href="https://www.linkedin.com/company/harshawardhan-singh-09052b27/" target="_blank" className="text-[28px] ">  <FaLinkedin /></a>
+                      <a
+                        href="https://www.instagram.com/sof_scroll"
+                        target="_blank"
+                        className="text-[30px] "
+                      >
+                        {" "}
+                        <TiSocialInstagram />
+                      </a>
+                      <a
+                        href="https://www.instagram.com/nuttzmagic/"
+                        target="_blank"
+                        className="text-[30px] "
+                      >
+                        {" "}
+                        <TiSocialInstagram />
+                      </a>
+                      {/* <TiSocialInstagram /> */}
+                      <a
+                        href="https://www.linkedin.com/company/harshawardhan-singh-09052b27/"
+                        target="_blank"
+                        className="text-[28px] "
+                      >
+                        {" "}
+                        <FaLinkedin />
+                      </a>
                     </div>
                   </ul>
                 </div>
@@ -157,13 +179,9 @@ const Footer = () => {
                 <Link to={"/"} className={`flex items-start  gap-1`}>
                   <FaLocationDot className="mt-1 text-4xl" />
                   <p className="text-sm flex-wrap">
-                  #301,302, 1st floor, Junnasandra, 
-                
-                  Sarjapur Main road,
-                
-                  Next to Canara Bank Bangalore -560035 Karnataka, India{" "}
+                    #301,302, 1st floor, Junnasandra, Sarjapur Main road, Next
+                    to Canara Bank Bangalore -560035 Karnataka, India{" "}
                   </p>
-                
                 </Link>
               </div>
             </div>

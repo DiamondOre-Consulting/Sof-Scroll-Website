@@ -5,6 +5,7 @@ import { FaWhatsapp, FaInstagram, FaChevronDown } from "react-icons/fa6";
 import { MdMail } from "react-icons/md";
 import logo from "../assets/aifile.png";
 import newlogo from "../assets/new.png";
+// import logo from "../assets/sofscrollai.webp";
 
 const Navbar = ({ cart }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // For mobile menu
