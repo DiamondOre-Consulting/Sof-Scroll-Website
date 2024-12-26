@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import tisssuevideo from "../assets/tissuev.mp4";
 import AnimatedText from "./AnimatedText";
 import myimg from '../assets/2.png'
-import bg from '../assets/4.mp4'
+import bg from '../assets/mainvideo.mp4'
 import fly from '../assets/myfly.gif'
 
 const Hero = () => {
@@ -12,7 +12,7 @@ const Hero = () => {
     <>
     <div className=" flex  items-center h-[100vh]  overflow-hidden bg-center bg-cover ">
       <video
-         src="https://s3.tebi.io/sof-scroll/socscrollvideo.mp4"
+         src={bg}
         autoPlay
         loop
         muted
