@@ -746,8 +746,8 @@ const Allproducts = [
     "Iron": "11.2 mg",
     "previews": [
       {
-        "previewUrl": "https://cpimg.tistatic.com/08426172/b/4/Raw-Makhana-6-Suta.jpg",
-        "thumbUrl": "https://cpimg.tistatic.com/08426172/b/4/Raw-Makhana-6-Suta.jpg"
+        "previewUrl": "https://img1.exportersindia.com/product_images/bc-full/2024/12/14155042/6-suta-phool-makhana-1734080974-7736215.jpeg",
+        "thumbUrl": "https://img1.exportersindia.com/product_images/bc-full/2024/12/14155042/6-suta-phool-makhana-1734080974-7736215.jpeg"
       },
       {
         "previewUrl": "https://5.imimg.com/data5/ANDROID/Default/2022/7/SW/CG/SO/77491818/product-jpeg.jpg",
@@ -759,7 +759,7 @@ const Allproducts = [
         "thumbUrl": "https://5.imimg.com/data5/SELLER/Default/2023/6/319025390/SJ/CJ/XL/144352062/fox-nuts-manufacturer-500x500.png"
       }
     ],
-    "imageUrl": "https://cpimg.tistatic.com/08426172/b/4/Raw-Makhana-6-Suta.jpg",
+    "imageUrl": "https://img1.exportersindia.com/product_images/bc-full/2024/12/14155042/6-suta-phool-makhana-1734080974-7736215.jpeg",
     "fullDesc": [
       "Makhana 6 Suta is known for its superior quality and rich taste.",
       "Carefully roasted to enhance flavor and retain nutrients.",
