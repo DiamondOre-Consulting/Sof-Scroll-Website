@@ -49,7 +49,7 @@ const Navbar = ({ cart }) => {
         <nav className="container flex items-center justify-between px-4 mx-auto sm:px-8 md:px-12">
           {/* Logo */}
           <Link to={"/"}>
-            <img src={logo} className="w-[150px] md:w-[150px] rounded-full " alt="Logo" />
+            <img src={logo} className="w-[100px] md:w-[150px] rounded-full " alt="Logo" />
           </Link>
 
           {/* Desktop Menu */}
