@@ -176,6 +176,19 @@ const ChatBot = ({ toggleChat }) => {
         //   newOptions = ["Go back to main menu", "Exit"];
           break;
 
+
+          case "hii":
+       
+          newMessage = (
+            <>
+              <p>
+             Hii, How are you ? How may we can help you?
+              </p>
+            </>
+          );
+        //   newOptions = ["Go back to main menu", "Exit"];
+          break;
+
         case "What are the key properties of tissue paper?":
          
           newMessage = (
@@ -395,6 +408,7 @@ const ChatBot = ({ toggleChat }) => {
     "How do I choose tissue paper?",
     "What is the usefulness of Tissue Paper? ",
     "What are the key properties of tissue paper?",
+    "hii"
    
   ];
 
