@@ -254,7 +254,7 @@ const BestSellers = ({ cart, setCart }) => {
     <div>
     <div
       ref={scrollContainerRef}
-      className="w-full h-screen overflow-x-hidden overflow-y-hidden  scroll-container"
+      className="w-full h-screen overflow-x-hidden mt-96 overflow-y-hidden  scroll-container"
       aria-label="Horizontal Scroll Container"
     >
       <div
