@@ -280,19 +280,19 @@ const BestSellers = ({ cart, setCart }) => {
                 />
                 {/* Right side with description */}
                 <div className="w-[100vw] lg:w-[70vw] h-full text-white flex flex-col justify-center items-center p-4 lg:p-10">
-                  <p className="mb-10 text-2xl text-center text-maincolor lg:text-3xl head">
+                  <p className="mb-10 text-md text-center text-maincolor lg:text-3xl head">
                   {product.name}
                   </p>
-                  <span className="text-gray-100">{product.quality}</span>
+                  <span className="text-gray-100 text-xs">{product.quality}</span>
                   <p
-                    className="text-sm font-thin text-center lg:text-xl"
+                    className="text-[10px] font-thin text-center lg:text-xl"
                     style={{ letterSpacing: "2px" }}
                   >
                     {product.description}
                   </p>
                   <Link
                     to={`/product/${product.itemCode}`}
-                    className="w-[93%] p-2 mb-4 mx-auto mt-8 un text-center hover:underline text-white transition-transform duration-300 rounded-md  hover:scale-105 hover:bg-opacity-90"
+                    className="w-[93%] p-2 md:mb-4 mx-auto md:mt-8 un text-center hover:underline text-white transition-transform duration-300 rounded-md  hover:scale-105 hover:bg-opacity-90"
                   >
                     View Product
                   </Link>
