@@ -3,10 +3,11 @@ import { Link, useLocation } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { FaWhatsapp, FaInstagram, FaChevronDown } from "react-icons/fa6";
 import { MdMail } from "react-icons/md";
-// import logo from "../assets/aifile.png";
+import logo from "../assets/aifile.png";
 // import logo from "../assets/aifilebg.png";
 import newlogo from "../assets/new.png";
-import logo from "../assets/Svg File.svg";
+// import logo from "../assets/Svg File.svg";
+// import logo from '../assets/aifile.webp';
 
 const Navbar = ({ cart }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // For mobile menu
@@ -49,7 +50,7 @@ const Navbar = ({ cart }) => {
         <nav className="container flex items-center justify-between px-4 mx-auto sm:px-8 md:px-12">
           {/* Logo */}
           <Link to={"/"}>
-            <img src={logo} className="w-[100px] md:w-[200px] rounded-full " alt="Logo" />
+            <img src={logo} className="w-[100px] md:w-[130px]  " alt="Logo" />
           </Link>
 
           {/* Desktop Menu */}
