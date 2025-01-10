@@ -56,7 +56,7 @@ const ProductCategory = ({ cart, setCart }) => {
 
                         return (
                             <div key={index}>
-                                <div className="w-[24rem] h-full flex flex-col border backdrop-blur overflow-hidden transition-transform duration-300 hover:scale-105">
+                                <div className=" h-full flex flex-col border backdrop-blur overflow-hidden transition-transform duration-300 hover:scale-105">
                                     <div className="relative">
                                         <img
                                             src={product.imageUrl}

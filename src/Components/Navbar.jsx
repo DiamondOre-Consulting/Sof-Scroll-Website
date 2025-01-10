@@ -44,7 +44,7 @@ const Navbar = ({ cart }) => {
       {/* Navbar */}
       <div
         className={`sticky top-0 py-2 flex items-center z-50 w-full backdrop-blur   shadow-xs z-70 ${
-          scrolled || !isHomePage ? "bg-black bg-opacity-10" : "bg-transparent"
+          scrolled || !isHomePage ? "bg-black bg-opacity-30" : "bg-transparent"
         }`}
       >
         <nav className="container flex items-center justify-between px-4 mx-auto sm:px-8 md:px-12">
@@ -285,7 +285,7 @@ const NavLink = ({
       onClick={isMobile && dropdownItems ? handleDropdownToggle : null}
     >
       <div
-        className={`flex items-center justify-center cursor-pointer  hover:text-dark ${
+        className={`flex items-center text-lg justify-center cursor-pointer  hover:text-dark ${
           location === to ? "font-semibold  underline" : "text-gray-100"
         }`}
       >
