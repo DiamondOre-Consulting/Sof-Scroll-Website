@@ -155,7 +155,7 @@ const CartPage = ({ cart, setCart }) => {
 
 
   return (
-    <div className="select-none">
+    <div className="">
       <BreadCrumbs headText={"Your Cart"} items={breadcrumbItems} />
 
 

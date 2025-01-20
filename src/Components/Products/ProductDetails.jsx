@@ -214,7 +214,7 @@ const ProductDetails = ({ cart, setCart }) => {
     <div className="overflow-hidden overflow-x-hidden">
       <BreadCrumbs headText={product.name} items={breadcrumbItems} />
 
-      <div className="w-full  select-none max-w-[80rem] p-4 pt-1 px-4 sm:px-10 mx-auto  md:px-20 lg:px-6">
+      <div className="w-full   max-w-[80rem] p-4 pt-1 px-4 sm:px-10 mx-auto  md:px-20 lg:px-6">
         <div className="grid items-start grid-cols-1 gap-6 mt-4 lg:grid-cols-2 md:gap-0">
           <div data-aos="zoom-in" className="top-0 w-full ">
             <ProductPreviews images={product.previews} />
