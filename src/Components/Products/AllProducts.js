@@ -624,9 +624,9 @@ const Allproducts = [
       },
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732605292/SofScroll/thclilhhgkpevtcb4dvm.avif",
+          "https://5.imimg.com/data5/UV/XN/MY-11500481/hospital-bed-roll-500x500.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732605292/SofScroll/thclilhhgkpevtcb4dvm.avif",
+          "https://5.imimg.com/data5/UV/XN/MY-11500481/hospital-bed-roll-500x500.jpg",
       },
     ],
     videoUrl: "",
