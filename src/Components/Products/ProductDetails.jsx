@@ -134,7 +134,7 @@ const ProductDetails = ({ cart, setCart }) => {
             ></video>
           ) : (
             <div
-              className="relative overflow-hidden w-full h-[50vw] lg:h-[24rem]"
+              className="relative overflow-hidden w-full h-[90vw] lg:h-[30rem]"
               onMouseEnter={() => setIsZoomed(true)}
               onMouseLeave={() => setIsZoomed(false)}
               onMouseMove={(e) => {
@@ -148,7 +148,7 @@ const ProductDetails = ({ cart, setCart }) => {
               <img
                 src={images[selectedImage].previewUrl}
                 alt={`Preview ${selectedImage + 1}`}
-                className={` w-full mx-auto h-[50vw] lg:h-[24rem] lg:w-[34rem] object-cover rounded-md transition-transform duration-200 ${
+                className={` w-full mx-auto h-[90vw] object-center lg:h-[30rem] lg:w-[34rem] object-cover rounded-md transition-transform duration-200 ${
                   isZoomed ? "scale-[2]" : "scale-100"
                 }`}
                 style={{
@@ -175,7 +175,7 @@ const ProductDetails = ({ cart, setCart }) => {
               <img
                 src={image.previewUrl}
                 alt={`Thumbnail ${index + 1}`}
-                className="rounded"
+                className="rounded "
               />
             </button>
           ))}
@@ -215,9 +215,10 @@ const ProductDetails = ({ cart, setCart }) => {
       <BreadCrumbs headText={product.name} items={breadcrumbItems} />
 
       <div className="w-full   max-w-[80rem] p-4 pt-1 px-4 sm:px-10 mx-auto  md:px-20 lg:px-6">
+       
         <div className="grid items-start grid-cols-1 gap-6 mt-4 lg:grid-cols-2 md:gap-0">
-          <div data-aos="zoom-in" className="top-0 w-full ">
-            <ProductPreviews images={product.previews} />
+          <div data-aos="zoom-in" className=" top-0 w-full ">
+            <ProductPreviews images={product.previews}  />
           </div>
 
           <div className="flex flex-col w-full mt-4 md:ml-8 overflow-hidden">

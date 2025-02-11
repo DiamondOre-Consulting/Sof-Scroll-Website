@@ -49,7 +49,7 @@ const ProductCategory = ({ cart, setCart }) => {
 
 
                 {/* <h1 className="text-5xl text-center mf">All Products</h1> */}
-                <div className="grid items-center justify-center grid-cols-1 gap-6 px-6  mt-20 w-fit sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+                <div className="grid items-center justify-center grid-cols-1 gap-6 px-6 w-full   mt-20 w-fit sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
 
                     {filteredProducts.map((product, index) => {
                         const isInCart = cart.find((item) => item.itemCode === product.itemCode);
@@ -61,7 +61,7 @@ const ProductCategory = ({ cart, setCart }) => {
                                         <img
                                             src={product.imageUrl}
                                             alt={product.name}
-                                            className="h-[14rem] w-full object-cover transition-opacity duration-300 hover:opacity-90"
+                                            className="h-[24rem] object-top w-full object-cover  transition-opacity duration-300 hover:opacity-90"
                                         />
                                         {/* <div className="absolute px-2 py-1 text-xs font-medium text-white bg-black rounded top-2 left-2 bg-opacity-60">
                                             New Arrival

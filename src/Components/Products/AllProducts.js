@@ -3,6 +3,26 @@ import toiletJumbo from "../../assets/productAssets/toiletJumbo.mp4";
 import faceTissue from "../../assets/productAssets/faceTissue.mp4";
 import facialTissue from "../../assets/productAssets/facial_tissue.mp4";
 import kitchenPaperRoll from "../../assets/productAssets/kitchenPaperRoll.mp4";
+import legacy from '../../assets/productAssets/legacy1.png'
+import heritage from '../../assets/productAssets/heritage1.png'
+import tangy from '../../assets/productAssets/Tangy Cheese.jpg'
+import saltpaper from '../../assets/productAssets/Salt & Pepper.jpg'
+import pudina from '../../assets/productAssets/pudina.jpg'
+import periperi from '../../assets/productAssets/Peri Peri.jpg'
+import mixedmasala from '../../assets/productAssets/Mixed Masala.jpg'
+import creamonion from '../../assets/productAssets/Cream & Onion.jpg'
+import chatkara from '../../assets/productAssets/Chatkara Tomato.jpg'
+
+
+
+import tangy1 from '../../assets/productAssets/Tangy Cheese30.jpg'
+import saltpaper1 from '../../assets/productAssets/Salt & Pepper30.jpg'
+import pudina1 from '../../assets/productAssets/pudina30.jpg'
+import periperi1 from '../../assets/productAssets/Peri Peri30.jpg'
+import mixedmasala1 from '../../assets/productAssets/Mixed Masala30.jpg'
+import creamonion1 from '../../assets/productAssets/Cream & Onion30.jpg'
+import chatkara1 from '../../assets/productAssets/Chatkara Tomato30.jpg'
+
 
 const Allproducts = [
   // category 1
@@ -645,13 +665,15 @@ const Allproducts = [
 // makhana
 
 
+
+
   {
-    "name": "Makhana 4 Suta",
+    "name": "Legacy",
     "category": "Row Makhana",
+    "brand": "Nutzz Magic",
     "itemCode": "Mk400",
-    brand :"Nutzz Magic",
+    "mkweight": "200",
     "Energy": "233 Kcal",
-    mkweight : "200",
     "Proteins": "4.2 g",
     "Carbohydrates": "34.1 g",
     "TotalFats": "9.0 g",
@@ -664,75 +686,28 @@ const Allproducts = [
     "Iron": "10.5 mg",
     "previews": [
       {
-        "previewUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/PW/ZB/SF/112272143/phool-makhana-fox-nuts-lotus-seeds-4-suta-grade-12-7-mm--500x500.png",
-        "thumbUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/PW/ZB/SF/112272143/phool-makhana-fox-nuts-lotus-seeds-4-suta-grade-12-7-mm--500x500.png"
+        "previewUrl": legacy,
+        "thumbUrl": legacy
       },
-      {
-        "previewUrl": "https://5.imimg.com/data5/SELLER/Default/2024/9/450697548/DJ/CO/ZN/229489692/5-suta-whole-makhana.jpg",
-        "thumbUrl": "https://5.imimg.com/data5/SELLER/Default/2024/9/450697548/DJ/CO/ZN/229489692/5-suta-whole-makhana.jpg"
-      }
-      ,
-      {
-        "previewUrl": "https://m.media-amazon.com/images/I/71LXQP7GUmL.jpg",
-        "thumbUrl": "https://m.media-amazon.com/images/I/71LXQP7GUmL.jpg"
-      }
-
-
+      // {
+      //   "previewUrl": legacy,
+      //   "thumbUrl": legacy
+      // }
     ],
-    "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/PW/ZB/SF/112272143/phool-makhana-fox-nuts-lotus-seeds-4-suta-grade-12-7-mm--500x500.png",
+    "imageUrl": legacy,
     "fullDesc": [
-      "Makhana 4 Suta offers premium-quality roasted lotus seeds.",
-      "Light, crunchy, and rich in nutrients, perfect for a healthy snack.",
-      "Packed with antioxidants and low in cholesterol for guilt-free enjoyment.",
-      "A versatile ingredient for snacking or adding to dishes."
+      "Legacy Makhana is a premium-quality, light, and crunchy snack, perfect for a healthy lifestyle.",
+      "A rich source of protein and fiber, great for weight management and heart health.",
+      "Packed with essential nutrients, low in cholesterol, and free from trans fats.",
+      "Perfect for snacking or as an ingredient in various dishes like kheer and curries."
     ]
   },
   {
-    "name": "Makhana 5 Suta",
+    "name": "Heritage",
     "category": "Row Makhana",
-    brand :"Nutzz Magic",
-    "itemCode": "Mk500",
-    "Energy": "234 Kcal",
-    mkweight : "200",
-    "Proteins": "4.3 g",
-    "Carbohydrates": "34.3 g",
-    "TotalFats": "8.8 g",
-    "SaturatedFats": "3.9 g",
-    "MonosaturatedFats": "3.9 g",
-    "PolyunsaturatedFats": "1.0 g",
-    "TransFats": "0 g",
-    "Cholesterol": "0 mg",
-    "Sugar": "<0.3 g",
-    "Iron": "11 mg",
-    "previews": [
-      {
-        "previewUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/RX/ZA/TX/63235023/5-suta-phool-makhana-flake-500x500.jpg",
-        "thumbUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/RX/ZA/TX/63235023/5-suta-phool-makhana-flake-500x500.jpg"
-      },
-      {
-        "previewUrl": "https://5.imimg.com/data5/XR/GA/MY-12643586/makhana-flakes-500x500.jpg",
-        "thumbUrl": "https://5.imimg.com/data5/XR/GA/MY-12643586/makhana-flakes-500x500.jpg"
-      }
-      ,
-      {
-        "previewUrl": "https://freshbasket.com.pk/cdn/shop/files/PDP_05_1024x1024.png?v=1724331692",
-        "thumbUrl": "https://freshbasket.com.pk/cdn/shop/files/PDP_05_1024x1024.png?v=1724331692"
-      }
-    ],
-    "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2020/9/RX/ZA/TX/63235023/5-suta-phool-makhana-flake-500x500.jpg",
-    "fullDesc": [
-      "Makhana 5 Suta is a premium-grade roasted lotus seed.",
-      "Known for its smooth texture, high protein content, and crispy bite.",
-      "A healthy alternative for snacks, gluten-free and naturally low in calories.",
-      "Perfect for adding crunch to salads, soups, or enjoying on its own."
-    ]
-  },
-  {
-    "name": "Makhana 6 Suta",
-    "category": "Row Makhana",
-    brand :"Nutzz Magic",
+    "brand": "Nutzz Magic",
     "itemCode": "Mk600",
-    mkweight : "200",
+    "mkweight": "200",
     "Energy": "235 Kcal",
     "Proteins": "4.5 g",
     "Carbohydrates": "34.5 g",
@@ -746,33 +721,25 @@ const Allproducts = [
     "Iron": "11.2 mg",
     "previews": [
       {
-        "previewUrl": "https://img1.exportersindia.com/product_images/bc-full/2024/12/14155042/6-suta-phool-makhana-1734080974-7736215.jpeg",
-        "thumbUrl": "https://img1.exportersindia.com/product_images/bc-full/2024/12/14155042/6-suta-phool-makhana-1734080974-7736215.jpeg"
+        "previewUrl": heritage,
+        "thumbUrl": heritage
       },
-      {
-        "previewUrl": "https://5.imimg.com/data5/ANDROID/Default/2022/7/SW/CG/SO/77491818/product-jpeg.jpg",
-        "thumbUrl": "https://5.imimg.com/data5/ANDROID/Default/2022/7/SW/CG/SO/77491818/product-jpeg.jpg"
-      }
-      ,
-      {
-        "previewUrl": "https://5.imimg.com/data5/SELLER/Default/2023/6/319025390/SJ/CJ/XL/144352062/fox-nuts-manufacturer-500x500.png",
-        "thumbUrl": "https://5.imimg.com/data5/SELLER/Default/2023/6/319025390/SJ/CJ/XL/144352062/fox-nuts-manufacturer-500x500.png"
-      }
+      // {
+      //   "previewUrl": heritage,
+      //   "thumbUrl": heritage
+      // }
     ],
-    "imageUrl": "https://img1.exportersindia.com/product_images/bc-full/2024/12/14155042/6-suta-phool-makhana-1734080974-7736215.jpeg",
+    "imageUrl": heritage,
     "fullDesc": [
-      "Makhana 6 Suta is known for its superior quality and rich taste.",
-      "Carefully roasted to enhance flavor and retain nutrients.",
-      "A wholesome and satisfying snack with a delightful crunch.",
-      "Great for tea-time snacking, mid-day hunger pangs, or evening treats."
+      "Heritage Makhana  is a premium roasted lotus seed snack with an irresistible crunch.",
+      "Crafted for those who prefer high-quality, nutrient-rich munching options.",
+      "Loaded with protein and antioxidants, making it a great alternative to fried snacks.",
+      "Ideal for tea-time snacking, fitness-conscious diets, and quick energy boosts."
     ]
   }
-
-
-
-
-
 ,
+
+
 {
   "name": "Peri Peri Flavored Makhana",
   "category": "Flavored Makhana",
@@ -792,19 +759,19 @@ const Allproducts = [
   "Iron": "12 mg",
   "previews": [
     {
-      "previewUrl": "https://morbiwalasweets.com/cdn/shop/files/9_fc6a5795-b762-4923-9911-3dcaeadb2efa.png?v=1690317654",
-      "thumbUrl": "https://morbiwalasweets.com/cdn/shop/files/9_fc6a5795-b762-4923-9911-3dcaeadb2efa.png?v=1690317654"
+      "previewUrl": periperi,
+      "thumbUrl": periperi
     },
     {
-      "previewUrl": "https://cdn.shopify.com/s/files/1/0697/7536/0303/files/MAKHANA__BLUE_BG_-removebg_480x480.png?v=1673847600",
-      "thumbUrl": "https://cdn.shopify.com/s/files/1/0697/7536/0303/files/MAKHANA__BLUE_BG_-removebg_480x480.png?v=1673847600"
+      "previewUrl": periperi1,
+      "thumbUrl": periperi1
     },
-    {
-      "previewUrl": "https://neelamfoodlandhk.com/cdn/shop/products/IMG_9360_275301b6-3034-4e93-b5b5-9da0a0fae0f3_800x.jpg?v=1698137519",
-      "thumbUrl": "https://neelamfoodlandhk.com/cdn/shop/products/IMG_9360_275301b6-3034-4e93-b5b5-9da0a0fae0f3_800x.jpg?v=1698137519"
-    }
+    // {
+    //   "previewUrl": "https://neelamfoodlandhk.com/cdn/shop/products/IMG_9360_275301b6-3034-4e93-b5b5-9da0a0fae0f3_800x.jpg?v=1698137519",
+    //   "thumbUrl": "https://neelamfoodlandhk.com/cdn/shop/products/IMG_9360_275301b6-3034-4e93-b5b5-9da0a0fae0f3_800x.jpg?v=1698137519"
+    // }
   ],
-  "imageUrl": "https://morbiwalasweets.com/cdn/shop/files/9_fc6a5795-b762-4923-9911-3dcaeadb2efa.png?v=1690317654",
+  "imageUrl": periperi,
   "fullDesc": [
     "Spice up your snack time with our Peri Peri Flavored Makhana.",
     "Made with roasted lotus seeds and a bold Peri Peri seasoning.",
@@ -812,7 +779,6 @@ const Allproducts = [
     "Perfect for guilt-free snacking with a spicy kick!"
   ]
 },
-
 {
   "name": "Cream & Onion Flavored Makhana",
   "category": "Flavored Makhana",
@@ -832,19 +798,19 @@ const Allproducts = [
   "Iron": "11.5 mg",
   "previews": [
     {
-      "previewUrl": "https://hariomsweets.in/cdn/shop/products/81.CREAM___ONION_MAKHANA_960x_crop_center.jpg?v=1682940651",
-      "thumbUrl": "https://hariomsweets.in/cdn/shop/products/81.CREAM___ONION_MAKHANA_960x_crop_center.jpg?v=1682940651"
+      "previewUrl": creamonion,
+      "thumbUrl": creamonion
     },
     {
-      "previewUrl": "https://www.isayorganic.com/cdn/shop/files/0006_Cream_OnionMakhana_720x.jpg?v=1715092750",
-      "thumbUrl": "https://www.isayorganic.com/cdn/shop/files/0006_Cream_OnionMakhana_720x.jpg?v=1715092750"
+      "previewUrl": creamonion1,
+      "thumbUrl": creamonion1
     },
-    {
-      "previewUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg09XyicT0EfpLl8OvxDXX-bj1pGfcd6GFbASAnHg78c375WLp2EUEaSE9zmV0_ke8bSe6oE5LmaB3INKsedsn8CmYAH841xq-HW6J7ourXfYyRP6_qz-M8awjfwF21k1c2xdoM7p9KP-s/s1600/air+fryer+roasted+makhana.jpg",
-      "thumbUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg09XyicT0EfpLl8OvxDXX-bj1pGfcd6GFbASAnHg78c375WLp2EUEaSE9zmV0_ke8bSe6oE5LmaB3INKsedsn8CmYAH841xq-HW6J7ourXfYyRP6_qz-M8awjfwF21k1c2xdoM7p9KP-s/s1600/air+fryer+roasted+makhana.jpg"
-    }
+    // {
+    //   "previewUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg09XyicT0EfpLl8OvxDXX-bj1pGfcd6GFbASAnHg78c375WLp2EUEaSE9zmV0_ke8bSe6oE5LmaB3INKsedsn8CmYAH841xq-HW6J7ourXfYyRP6_qz-M8awjfwF21k1c2xdoM7p9KP-s/s1600/air+fryer+roasted+makhana.jpg",
+    //   "thumbUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg09XyicT0EfpLl8OvxDXX-bj1pGfcd6GFbASAnHg78c375WLp2EUEaSE9zmV0_ke8bSe6oE5LmaB3INKsedsn8CmYAH841xq-HW6J7ourXfYyRP6_qz-M8awjfwF21k1c2xdoM7p9KP-s/s1600/air+fryer+roasted+makhana.jpg"
+    // }
   ],
-  "imageUrl": "https://hariomsweets.in/cdn/shop/products/81.CREAM___ONION_MAKHANA_960x_crop_center.jpg?v=1682940651",
+  "imageUrl": creamonion,
   "fullDesc": [
     "Savor the creamy and tangy taste of Cream & Onion Flavored Makhana.",
     "Roasted to perfection and lightly coated with a rich cream and onion seasoning.",
@@ -871,19 +837,19 @@ const Allproducts = [
   "Iron": "11.8 mg",
   "previews": [
     {
-      "previewUrl": "https://goosebumps.store/cdn/shop/files/Himalayan-Pink-Salt-Roasted-Makhana-5_1800x1800.jpg?v=1732259530",
-      "thumbUrl": "https://goosebumps.store/cdn/shop/files/Himalayan-Pink-Salt-Roasted-Makhana-5_1800x1800.jpg?v=1732259530"
+      "previewUrl": saltpaper,
+      "thumbUrl": saltpaper
     },
     {
-      "previewUrl": "https://media.licdn.com/dms/image/D5612AQHswgeiiPyf4Q/article-cover_image-shrink_720_1280/0/1714140466753?e=2147483647&v=beta&t=Ot55ArO4icZNoSqX1H5Z2Myn0AAMD5hF0ZqYoIWDKP4",
-      "thumbUrl": "https://media.licdn.com/dms/image/D5612AQHswgeiiPyf4Q/article-cover_image-shrink_720_1280/0/1714140466753?e=2147483647&v=beta&t=Ot55ArO4icZNoSqX1H5Z2Myn0AAMD5hF0ZqYoIWDKP4"
+      "previewUrl": saltpaper1,
+      "thumbUrl": saltpaper1
     },
-    {
-      "previewUrl": "https://recipes.net/wp-content/uploads/2024/01/how-to-eat-makhana-fully-1706249268.jpg",
-      "thumbUrl": "https://recipes.net/wp-content/uploads/2024/01/how-to-eat-makhana-fully-1706249268.jpg"
-    }
+    // {
+    //   "previewUrl": "https://recipes.net/wp-content/uploads/2024/01/how-to-eat-makhana-fully-1706249268.jpg",
+    //   "thumbUrl": "https://recipes.net/wp-content/uploads/2024/01/how-to-eat-makhana-fully-1706249268.jpg"
+    // }
   ],
-  "imageUrl": "https://goosebumps.store/cdn/shop/files/Himalayan-Pink-Salt-Roasted-Makhana-5_1800x1800.jpg?v=1732259530",
+  "imageUrl": saltpaper,
   "fullDesc": [
     "Indulge in the classic taste of Himalaya Salt & Pepper Flavored Makhana.",
     "Carefully roasted and seasoned with natural Himalayan salt and pepper.",
@@ -891,9 +857,149 @@ const Allproducts = [
     "Rich in nutrients and free from trans fats, making it a healthy choice."
   ]
 }
+,
+
+  {
+    "name": "Tangy Cheese Flavored Makhana",
+    "category": "Flavored Makhana",
+    "itemCode": "Mk202",
+    "Energy": "236 Kcal",
+    "brand": "Nutzz Magic",
+    "mkweight": "200",
+    "Proteins": "4.8 g",
+    "Carbohydrates": "33.5 g",
+    "TotalFats": "9.0 g",
+    "SaturatedFats": "3.9 g",
+    "MonosaturatedFats": "3.7 g",
+    "PolyunsaturatedFats": "1.3 g",
+    "TransFats": "0 g",
+    "Cholesterol": "0 mg",
+    "Sugar": "<0.3 g",
+    "Iron": "11.8 mg",
+    "previews": [
+      {
+        "previewUrl": tangy,
+        "thumbUrl": tangy
+      },
+      {
+        "previewUrl": tangy1,
+        "thumbUrl": tangy1
+      }
+    ],
+    "imageUrl": tangy,
+    "fullDesc": [
+      "Enjoy the rich and tangy flavor of cheese combined with crunchy Makhana.",
+      "A delightful, guilt-free snacking option packed with nutrients.",
+      "Perfect for satisfying your cravings while staying healthy."
+    ]
+  },
+
+  {
+    "name": "Pudina Flavored Makhana",
+    "category": "Flavored Makhana",
+    "itemCode": "Mk203",
+    "Energy": "236 Kcal",
+    "brand": "Nutzz Magic",
+    "mkweight": "200",
+    "Proteins": "4.8 g",
+    "Carbohydrates": "33.5 g",
+    "TotalFats": "9.0 g",
+    "SaturatedFats": "3.9 g",
+    "MonosaturatedFats": "3.7 g",
+    "PolyunsaturatedFats": "1.3 g",
+    "TransFats": "0 g",
+    "Cholesterol": "0 mg",
+    "Sugar": "<0.3 g",
+    "Iron": "11.8 mg",
+    "previews": [
+      {
+        "previewUrl": pudina,
+        "thumbUrl": pudina
+      },
+      {
+        "previewUrl": pudina1,
+        "thumbUrl": pudina1
+      }
+    ],
+    "imageUrl": pudina,
+    "fullDesc": [
+      "Experience the refreshing taste of Pudina (mint) with every bite.",
+      "A light, crispy, and healthy snack perfect for any time of the day.",
+      "Rich in nutrients and free from trans fats, making it a great alternative to chips."
+    ]
+  },
+
+  
+  {
+    "name": "Mixed Masala Flavored Makhana",
+    "category": "Flavored Makhana",
+    "itemCode": "Mk204",
+    "Energy": "236 Kcal",
+    "brand": "Nutzz Magic",
+    "mkweight": "200",
+    "Proteins": "4.8 g",
+    "Carbohydrates": "33.5 g",
+    "TotalFats": "9.0 g",
+    "SaturatedFats": "3.9 g",
+    "MonosaturatedFats": "3.7 g",
+    "PolyunsaturatedFats": "1.3 g",
+    "TransFats": "0 g",
+    "Cholesterol": "0 mg",
+    "Sugar": "<0.3 g",
+    "Iron": "11.8 mg",
+    "previews": [
+      {
+        "previewUrl": mixedmasala,
+        "thumbUrl": mixedmasala
+      },
+      {
+        "previewUrl": mixedmasala1,
+        "thumbUrl": mixedmasala1
+      }
+    ],
+    "imageUrl": mixedmasala,
+    "fullDesc": [
+      "A bold blend of Indian spices and roasted Makhana for a flavorful snack.",
+      "Perfect for those who love a spicy kick with their snacks.",
+      "A crunchy, healthy, and delicious option for any occasion."
+    ]
+  },
 
 
-
+  {
+    "name": "Chatkara Tomato Flavored Makhana",
+    "category": "Flavored Makhana",
+    "itemCode": "Mk205",
+    "Energy": "236 Kcal",
+    "brand": "Nutzz Magic",
+    "mkweight": "200",
+    "Proteins": "4.8 g",
+    "Carbohydrates": "33.5 g",
+    "TotalFats": "9.0 g",
+    "SaturatedFats": "3.9 g",
+    "MonosaturatedFats": "3.7 g",
+    "PolyunsaturatedFats": "1.3 g",
+    "TransFats": "0 g",
+    "Cholesterol": "0 mg",
+    "Sugar": "<0.3 g",
+    "Iron": "11.8 mg",
+    "previews": [
+      {
+        "previewUrl": chatkara,
+        "thumbUrl": chatkara
+      },
+      {
+        "previewUrl": chatkara1,
+        "thumbUrl": chatkara1
+      }
+    ],
+    "imageUrl": chatkara,
+    "fullDesc": [
+      "Tangy tomato flavor infused with crispy Makhana for a mouth-watering treat.",
+      "A tasty and nutritious snack, free from trans fats and cholesterol.",
+      "Enjoy the perfect balance of crunch and spice."
+    ]
+  }
 
 
   // {

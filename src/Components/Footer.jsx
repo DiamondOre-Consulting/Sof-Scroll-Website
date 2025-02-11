@@ -106,6 +106,16 @@ const Footer = () => {
                         <FaLinkedin />
                       </a>
 
+
+                      <a
+                        href="https://www.linkedin.com/showcase/nutzz-magic/posts/?feedView=all"
+                        target="_blank"
+                        className="text-[28px] "
+                      >
+                        {" "}
+                        <FaLinkedin />
+                      </a>
+
                       <a href="https://www.google.com/maps/dir//Kapital+Seed+9+WM5M%2B699+Bengaluru,+Karnataka+560035/@12.9080375,77.6834844,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bae13004569d5db:0x10c63413a4dac9d5!2m2!1d77.6834844!2d12.9080375?entry=ttu&g_ep=EgoyMDI1MDEwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" className="text-[25px]">
                         <FaGoogle />
                       </a>

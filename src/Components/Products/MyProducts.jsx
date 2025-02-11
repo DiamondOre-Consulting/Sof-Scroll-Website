@@ -36,7 +36,6 @@ const MyProducts = ({ cart, setCart }) => {
       <div className="pb-24">
         {/* products bg */}
 
-
         {/* <h1 className="text-5xl text-center mf">All Products</h1> */}
         <div className="grid items-center justify-center grid-cols-1 gap-6 px-6 mx-auto max-w-[80rem] mt-20 w-fit sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
 
@@ -45,12 +44,12 @@ const MyProducts = ({ cart, setCart }) => {
 
             return (
               <div key={index}>
-                <div className="max-w-[24rem] w-full  h-full flex flex-col  backdrop-blur border  overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-sm   border-gray-200 hover:border-dark">
-                  <div className="relative">
+                <div className=" max-w-[24rem] w-full  h-full flex flex-col  backdrop-blur border  overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-sm   border-gray-200 hover:border-dark">
+                  <div className="relative ">
                     <img
                       src={product.imageUrl}
                       alt={product.name}
-                      className="h-[14rem] w-full object-cover transition-opacity duration-300 hover:opacity-90"
+                      className="h-[20rem] object-top w-full object-cover transition-opacity duration-300 hover:opacity-90"
                     />
                     {/* <div className="absolute px-2 py-1 text-xs font-medium text-white bg-black rounded top-2 left-2 bg-opacity-60">
                       New Arrival
