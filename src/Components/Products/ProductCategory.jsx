@@ -49,7 +49,7 @@ const ProductCategory = ({ cart, setCart }) => {
 
 
                 {/* <h1 className="text-5xl text-center mf">All Products</h1> */}
-                <div className="grid items-center justify-center grid-cols-1 gap-6 px-6 mx-auto mt-20 w-fit sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+                <div className="grid items-center justify-center grid-cols-1 gap-6 px-6  mt-20 w-fit sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
 
                     {filteredProducts.map((product, index) => {
                         const isInCart = cart.find((item) => item.itemCode === product.itemCode);
