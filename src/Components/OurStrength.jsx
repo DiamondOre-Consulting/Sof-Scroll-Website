@@ -16,9 +16,9 @@ const OurStrength = () => {
     { icon: <FaShieldAlt size={40} />, label: "Strict quality inspection", time: 1300 },
     { icon: <FaCheckCircle size={40} />, label: "Professional service", time: 1600 },
     { icon: <FaRocket size={40} />, label: "Quick reply", time: 1900 },
-    { icon: <FaHandsHelping size={40} />, label: "OEM & ODM", time: 2200 },
+    // { icon: <FaHandsHelping size={40} />, label: "OEM & ODM", time: 2200 },
     { icon: <FaHeadset size={40} />, label: "Customer service 24 hours online", time: 2500 },
-    { icon: <FaGlobeAmericas size={40} />, label: "Globally Available", time: 2500 },
+    { icon: <FaGlobeAmericas size={40} />, label: "Global Expotter", time: 2500 },
 
 
   ];
