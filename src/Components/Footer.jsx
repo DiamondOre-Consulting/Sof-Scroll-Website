@@ -106,7 +106,6 @@ const Footer = () => {
                         <FaLinkedin />
                       </a>
 
-
                       <a
                         href="https://www.linkedin.com/showcase/nutzz-magic/posts/?feedView=all"
                         target="_blank"
@@ -116,7 +115,11 @@ const Footer = () => {
                         <FaLinkedin />
                       </a>
 
-                      <a href="https://www.google.com/maps/dir//Kapital+Seed+9+WM5M%2B699+Bengaluru,+Karnataka+560035/@12.9080375,77.6834844,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bae13004569d5db:0x10c63413a4dac9d5!2m2!1d77.6834844!2d12.9080375?entry=ttu&g_ep=EgoyMDI1MDEwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" className="text-[25px]">
+                      <a
+                        href="https://www.google.com/maps/dir//Kapital+Seed+9+WM5M%2B699+Bengaluru,+Karnataka+560035/@12.9080375,77.6834844,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bae13004569d5db:0x10c63413a4dac9d5!2m2!1d77.6834844!2d12.9080375?entry=ttu&g_ep=EgoyMDI1MDEwNy4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank"
+                        className="text-[25px]"
+                      >
                         <FaGoogle />
                       </a>
                     </div>
@@ -198,6 +201,24 @@ const Footer = () => {
                     to Canara Bank Bangalore -560035 Karnataka, India{" "}
                   </p>
                 </Link>
+              </div>
+
+              <div className="flex  py-4 space-x-2 ">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/4/46/Make_In_India.png"
+                  alt=""
+                  className="w-20 h-10  "
+                />
+                <img
+                  src="https://5.imimg.com/data5/ANDROID/Default/2022/5/LE/EJ/CX/36991455/product-jpeg-500x500.jpg"
+                  alt=""
+                  className="size-10"
+                />
+                <img
+                  src="https://ts-production.imgix.net/images/mobile-cover-uploaded/ST1715078341742STEND4d4e7019-e24a-4adb-abed-fa0067ef4bdd.jpg?auto=compress,format&w=800&h=450"
+                  alt=""
+                  className="size-10 "
+                />
               </div>
             </div>
           </div>

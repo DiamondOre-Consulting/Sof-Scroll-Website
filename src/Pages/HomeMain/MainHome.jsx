@@ -11,6 +11,7 @@ import OurStrength from "@/Components/OurStrength";
 import GoogleReviews from "@/Components/GoogleReviews";
 import PopularCategory from "@/Components/PopularCategory";
 import MakhanaSection from "@/Components/MakhanaSection";
+import Recognisation from "@/Components/Recognisation";
 
 
 const MainHome = ({ cart, setCart }) => {
@@ -32,6 +33,7 @@ const MainHome = ({ cart, setCart }) => {
       {/* <PopularCategories/> */}
       <WhyUs />
       <Testimonials />
+      {/* <Recognisation/> */}
       {/* <GoogleReviews /> */}
       <ContactUs />
       <FAQPage />
