@@ -12,9 +12,6 @@ import periperi from '../../assets/productAssets/Peri Peri.jpg'
 import mixedmasala from '../../assets/productAssets/Mixed Masala.jpg'
 import creamonion from '../../assets/productAssets/Cream & Onion.jpg'
 import chatkara from '../../assets/productAssets/Chatkara Tomato.jpg'
-
-
-
 import tangy1 from '../../assets/productAssets/Tangy Cheese30.jpg'
 import saltpaper1 from '../../assets/productAssets/Salt & Pepper30.jpg'
 import pudina1 from '../../assets/productAssets/Pudina30.jpg'
