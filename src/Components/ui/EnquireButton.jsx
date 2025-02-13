@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AllProducts from "../../Components/Products/AllProducts";
-
+import logo from '../../assets/aifile.png'
 function EnquireButton() {
   const [enquire, setEnquire] = useState(true);
   const [loading, setLoading] = useState(false);
@@ -95,12 +95,22 @@ function EnquireButton() {
     <>
       {enquire ? (
         <button
-          onClick={() => setEnquire(false)}
-          className="bg-dark py-2 px-4 rounded-full text-white flex justify-center items-center gap-2 shadow-lg hover:bg-gray-800 transition"
-        >
-          <span className="text-lg">Quote me</span>
-          <RxQuestionMarkCircled className="text-white text-xl" />
-        </button>
+                onClick={() => setEnquire(false)}
+                className="bg-dark text-white rounded-full py-2 shadow-lg flex items-center overflow-hidden transition-all duration-500 max-w-[50px] hover:max-w-[300px] px-2 group"
+              >
+            
+                <img
+                  src={logo}
+                  alt="Nutzz Logo"
+                  className="w-[40px] rounded-full"
+                />
+    
+                <span className="whitespace-nowrap opacity-0 scale-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-100 px-3">
+                  Quote me for Sof SScrrol
+                </span>
+    
+                <RxQuestionMarkCircled className="text-xl opacity-0 scale-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-100 px-2" />
+              </button>
       ) : (
         <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-start z-50">
           <div className="w-full mx-4 md:mx-0 md:max-w-4xl mt-12 bg-white p-6 rounded-lg shadow-lg relative">
@@ -166,7 +176,7 @@ function EnquireButton() {
                   </div>
                   {isDropdownOpen && (
                     <div className="absolute mt-2 w-full max-h-48 overflow-y-auto border bg-white shadow-lg rounded z-10">
-                      {AllProducts.map((product, index) => (
+                      {AllProducts.slice(0,12).map((product, index) => (
                         <label
                           key={index}
                           className="block px-3 py-2 hover:bg-gray-100 flex items-center gap-2"

@@ -33,7 +33,7 @@ const MainHome = ({ cart, setCart }) => {
       {/* <PopularCategories/> */}
       <WhyUs />
       <Testimonials />
-      {/* <Recognisation/> */}
+      <Recognisation/>
       {/* <GoogleReviews /> */}
       <ContactUs />
       <FAQPage />
