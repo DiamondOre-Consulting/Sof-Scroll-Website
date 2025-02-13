@@ -132,6 +132,24 @@ const Footer = () => {
                   <Link to={''} target='_blank' className='text-[18px]'><BsInstagram /></Link>
               
                 </div> */}
+
+                <div className="flex  py-4 space-x-4 ">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/en/4/46/Make_In_India.png"
+                    alt=""
+                    className="w-20 h-10  "
+                  />
+                  <img
+                    src="https://5.imimg.com/data5/ANDROID/Default/2022/5/LE/EJ/CX/36991455/product-jpeg-500x500.jpg"
+                    alt=""
+                    className="size-10"
+                  />
+                  <img
+                    src="https://ts-production.imgix.net/images/mobile-cover-uploaded/ST1715078341742STEND4d4e7019-e24a-4adb-abed-fa0067ef4bdd.jpg?auto=compress,format&w=800&h=450"
+                    alt=""
+                    className="size-10 "
+                  />
+                </div>
               </div>
             </div>
 
@@ -201,24 +219,6 @@ const Footer = () => {
                     to Canara Bank Bangalore -560035 Karnataka, India{" "}
                   </p>
                 </Link>
-              </div>
-
-              <div className="flex  py-4 space-x-2 ">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/en/4/46/Make_In_India.png"
-                  alt=""
-                  className="w-20 h-10  "
-                />
-                <img
-                  src="https://5.imimg.com/data5/ANDROID/Default/2022/5/LE/EJ/CX/36991455/product-jpeg-500x500.jpg"
-                  alt=""
-                  className="size-10"
-                />
-                <img
-                  src="https://ts-production.imgix.net/images/mobile-cover-uploaded/ST1715078341742STEND4d4e7019-e24a-4adb-abed-fa0067ef4bdd.jpg?auto=compress,format&w=800&h=450"
-                  alt=""
-                  className="size-10 "
-                />
               </div>
             </div>
           </div>
