@@ -133,7 +133,7 @@ const Footer = () => {
               
                 </div> */}
 
-                <div className="flex  py-4 space-x-4 ">
+                {/* <div className="flex  py-4 space-x-4 ">
                   <img
                     src="https://upload.wikimedia.org/wikipedia/en/4/46/Make_In_India.png"
                     alt=""
@@ -149,7 +149,7 @@ const Footer = () => {
                     alt=""
                     className="size-10 "
                   />
-                </div>
+                </div> */}
               </div>
             </div>
 
