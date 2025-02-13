@@ -175,7 +175,7 @@ function EnquireButton() {
                       : "Select products"}
                   </div>
                   {isDropdownOpen && (
-                    <div className="absolute mt-2 w-full max-h-48 overflow-y-auto border bg-white shadow-lg rounded z-10">
+                    <div className="absolute mt-2 w-full max-h-40 overflow-y-auto border bg-white shadow-lg rounded z-10">
                       {AllProducts.slice(0,12).map((product, index) => (
                         <label
                           key={index}
