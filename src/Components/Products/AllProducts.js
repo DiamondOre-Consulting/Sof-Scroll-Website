@@ -804,9 +804,13 @@ const Allproducts = [
     {
       "previewUrl": a2,
       "thumbUrl": a2
+    },
+      {
+      "previewUrl": a3,
+      "thumbUrl": a3
     }
   ],
-  "videoUrl": "a4CopierPaperOverviewVideo",
+ 
   "imageUrl": a2,
   "fullDesc": [
     "📄 A4 Copier Paper – 70 GSM: Eco-Friendly | Recycled | Virgin – Premium Quality Printing Paper. Ream Weight: 2.200 KG. Load: 2250 Cartons. MOQ: 1 x 40 FT Container.",
