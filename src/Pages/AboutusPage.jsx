@@ -18,6 +18,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import { Helmet } from 'react-helmet-async';
 
 const timelineData = [
   {
@@ -105,6 +106,14 @@ const AboutUs = () => {
 
   return (
     <div className="overflow-x-hidden ">
+
+       <Helmet>
+        <title>About Us | SOF SSCRROL – Tissue & Makhana Innovators</title>
+        <meta
+          name="description"
+          content="Learn about SOF SSCRROL – a leading brand in premium tissue paper and nutritious Makhana products. We are committed to quality, sustainability, and innovation for homes, hospitality, and institutions."
+        />
+      </Helmet>
       {/* <BreadCrumbs items={breadcrumbItems} /> */}
       <div
         className=" relative bg-cover w-full h-[60vh] md:h-screen -top-24"

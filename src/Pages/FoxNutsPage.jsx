@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Allproducts from "@/Components/Products/AllProducts";
+import { Helmet } from 'react-helmet-async';
+
 const FoxNutsPage = ({ cart, setCart }) => {
 
   const itemCode  = "SS114";
@@ -133,6 +135,13 @@ const FoxNutsPage = ({ cart, setCart }) => {
 
   return (
     <div className="w-full mx-auto py-10 bg-gradient-to-r from-blue-100 via-green-100 to-yellow-100 dark:bg-gray-900">
+       <Helmet>
+        <title>Nuts Magic – Premium Roasted Makhana | SOF SSCRROL</title>
+        <meta
+          name="description"
+          content="Discover Nuts Magic by SOF SSCRROL – a delicious and healthy roasted Makhana snack. High in protein, low in calories, and perfect for guilt-free snacking anytime!"
+        />
+      </Helmet>
       <section className="w-full h-full px-6 md:px-12 lg:px-16 py-10">
         <div className="container mx-auto text-center">
           <h1 className="text-5xl font-extrabold text-gray-900 dark:text-white mb-6">

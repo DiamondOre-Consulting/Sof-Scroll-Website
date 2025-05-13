@@ -8,6 +8,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { IoMdSend } from "react-icons/io";
 import ContactSection from '@/Components/ContactSection';
+import { Helmet } from 'react-helmet-async';
 
 const ContactPage = () => {
 
@@ -71,6 +72,15 @@ const ContactPage = () => {
 
   return (
     <div>
+
+        <Helmet>
+        <title>Contact Us | SOF SSCRROL – Tissue & Makhana Solutions</title>
+        <meta
+          name="description"
+          content="Get in touch with SOF SSCRROL for premium tissue paper and nutritious Makhana (Nuts Magic) product inquiries. We're here to assist with bulk orders, partnerships, and customer support."
+        />
+      </Helmet>
+      
       <BreadCrumbs headText={"Contact Us"} items={breadcrumbItems} />
       <ContactSection contact={true} />
 

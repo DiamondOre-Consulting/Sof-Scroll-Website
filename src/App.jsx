@@ -18,6 +18,7 @@ import EnquireButton from "./Components/ui/EnquireButton";
 import mybg from "../src/assets/mybg.png";
 import FoxNutsPage from "./Pages/FoxNutsPage";
 import EnquireForNutzmagic from "./Components/ui/EnquireForNutzmagic";
+import { Helmet } from "react-helmet-async";
 
 function App() {
   // Cart state and useEffect to save/load from localStorage
@@ -45,6 +46,32 @@ function App() {
       className="bg-cover bg-fixed bg-center min-h-screen"
       style={{ backgroundImage: `url(${mybg})` }}
     >
+      <Helmet>
+        <title>SOF SSCRROL – Premium Tissue & Makhana Products</title>
+        <meta
+          name="description"
+          content="SOF SSCRROL is a premium brand offering world-class tissue paper and healthy Makhana snacks under the Nuts Magic range. Shop quality and hygiene today!"
+        />
+        <meta
+          name="keywords"
+          content="tissue paper, makhana, roasted snacks, Nuts Magic, toilet paper, facial tissues, hygiene products, SOF SSCRROL"
+        />
+        <meta name="author" content="SOF SSCRROL" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta
+          property="og:title"
+          content="SOF SSCRROL – Tissue & Makhana Products"
+        />
+        <meta
+          property="og:description"
+          content="Premium tissue products and crunchy roasted makhanas designed for hygiene and healthy snacking. Trusted by homes, hotels, and institutions."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.sofsscrrol.com/" />
+        <meta property="og:image" content="https://www.sofsscrrol.com/" />
+      </Helmet>
+
       <BrowserRouter>
         <Navbar cart={cart} />
         <Routes>

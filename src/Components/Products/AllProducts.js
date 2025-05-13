@@ -19,6 +19,14 @@ import periperi1 from '../../assets/productAssets/Peri Peri30.jpg'
 import mixedmasala1 from '../../assets/productAssets/Mixed Masala30.jpg'
 import creamonion1 from '../../assets/productAssets/Cream & Onion30.jpg'
 import chatkara1 from '../../assets/productAssets/Chatkara Tomato30.jpg'
+import jr1 from '../../assets/productAssets/jr1.png'
+import jr2 from '../../assets/productAssets/jr2.jpg'
+import jr3 from '../../assets/productAssets/jr3.png'
+import jr4 from '../../assets/productAssets/jr4.png'
+
+import th1  from '../../assets/productAssets/th1.jpg'
+import th2  from '../../assets/productAssets/th2.png'
+
 
 
 const Allproducts = [
@@ -355,6 +363,11 @@ const Allproducts = [
     ]
   },
 
+
+  
+
+
+
   // category 2
 
   {
@@ -602,6 +615,68 @@ const Allproducts = [
 
   },
 
+
+  {
+  "name": "Facial & Dispenser Jumbo Tissue Rolls",
+  "category": "Facial Tissue",
+  "brand": "Sof SScrrol",
+  "itemCode": "SS112",
+  "material": "100% Virgin Pulp",
+  "recommendation": "Facial tissue converting, Premium brands, Hospitality, Washrooms",
+  "price": "On Request",
+  "Packaging": "Bulk Jumbo Rolls",
+  "JumboPackaging": "Export-ready, ideal for international and institutional markets",
+  "quality": "Smooth texture, soft touch, lint-free, consistent web, highly absorbent",
+  "weight": "Varies per ply and length",
+  "description": "Multi-purpose jumbo rolls including facial and dispenser towel tissue types, designed for high-efficiency converting and large-scale use.",
+  "variants": [
+    {
+      "type": "Facial 2 Ply",
+      "ply": 2,
+      "gsm": 14.5,
+      "width": "126 CM",
+
+     
+    },
+    {
+      "type": "Facial 3 Ply",
+      "ply": 3,
+      "gsm": 14,
+      "width": "126 CM",
+     
+    },
+    {
+      "type": "Dispenser Towel Roll",
+      "ply": 2,
+      "gsm": 20,
+      "width": "222 CM",
+      
+    }
+  ],
+  "previews": [
+    {
+      "previewUrl":jr1,
+      "thumbUrl": jr1
+    },
+    {
+      "previewUrl": jr2,
+      "thumbUrl": jr2,
+    },
+    {
+      "previewUrl": jr3,
+      "thumbUrl": jr3
+    }
+  ],
+  // "videoUrl": jr4,
+  "imageUrl": jr1,
+  "fullDesc": [
+    "Facial jumbo rolls (2 & 3 ply) offer high-quality softness and converting yield.",
+    "Dispenser towel rolls provide quick-dry performance and commercial-grade strength.",
+    "Suitable for converting lines, premium packaging, and institutional distribution."
+  ]
+}
+,
+
   // category 5
 
   {
@@ -657,10 +732,46 @@ const Allproducts = [
 
   },
 
+{
+  "name": "Thermal Paper Rolls – High-Quality, Jam-Free Printing",
+  "category": "Thermal Rolls",
+  "brand": "Sof SScrrol",
+  "particulars": "Premium Thermal Paper Roll",
+  "itemCode": "SS-THERMAL-001",
+  "recommendation": "Retail billing, restaurants, kiosks, transport tickets, parking meters, ATMs",
+  "pulls": "N/A",
+  "SheetCount": "Continuous Roll",
+  "dimensions": "Custom sizes available (Standard width: 80mm)",
+  "ply": "1",
+  "gsm": "55",
+  "price": "On Request",
+  "quality": "BPA-free, lint-free, smooth finish, fade-resistant, long image life",
+  "material": "Direct Thermal Paper",
+  "weight": "Varies per roll length",
+  "description": "High-sensitivity thermal paper roll designed for smudge-free, inkless, and jam-free printing. Ideal for fast, high-quality printing in POS and kiosk systems.",
+  "Packaging": "Multiple roll bundles (customizable)",
+  "JumboPackaging": "Bulk packing available for wholesale and institutional use",
+  "previews": [
+    {
+      "previewUrl": th1,
+      "thumbUrl": th1
+    },
+    {
+      "previewUrl": th2,
+      "thumbUrl": th2
+    }
+  ],
 
+  "imageUrl":th1,
+  "fullDesc": [
+    "Delivers sharp, smudge-free printing without ink or ribbons.",
+    "Made with high-sensitivity coating for consistent results.",
+    "Perfect for POS systems, ATMs, card readers, and kiosks."
+  ]
+}
+,
 
 // makhana
-
 
 
 

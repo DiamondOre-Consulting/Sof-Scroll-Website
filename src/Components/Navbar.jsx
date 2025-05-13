@@ -114,6 +114,8 @@ const Navbar = ({ cart }) => {
                   label: "Facial Tissue",
                 },
                 { to: "/products/category/Paper Towel", label: "Paper Towel" },
+                { to: "/products/category/Thermal Rolls", label: "Thermal Rolls" },
+
               ]}
             />
               </div>
