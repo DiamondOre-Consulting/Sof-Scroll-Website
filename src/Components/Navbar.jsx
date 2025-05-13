@@ -115,6 +115,8 @@ const Navbar = ({ cart }) => {
                 },
                 { to: "/products/category/Paper Towel", label: "Paper Towel" },
                 { to: "/products/category/Thermal Rolls", label: "Thermal Rolls" },
+                { to: "/products/category/A4 Copier Paper", label: "A4 Copier Paper" },
+
 
               ]}
             />

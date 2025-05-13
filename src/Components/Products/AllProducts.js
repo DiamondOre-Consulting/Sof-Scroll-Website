@@ -23,9 +23,15 @@ import jr1 from '../../assets/productAssets/jr1.png'
 import jr2 from '../../assets/productAssets/jr2.jpg'
 import jr3 from '../../assets/productAssets/jr3.png'
 import jr4 from '../../assets/productAssets/jr4.png'
-
 import th1  from '../../assets/productAssets/th1.jpg'
 import th2  from '../../assets/productAssets/th2.png'
+import a1 from '../../assets/productAssets/a41.png'
+import a2 from '../../assets/productAssets/a42.jpg'
+import a3 from '../../assets/productAssets/a43.png'
+import a4 from '../../assets/productAssets/a44.png'
+
+
+
 
 
 
@@ -770,6 +776,47 @@ const Allproducts = [
   ]
 }
 ,
+
+{
+  "name": "A4 Copier Paper – Eco-Friendly, Recycled & Virgin Pulp Options",
+  "category": "A4 Copier Paper",
+  "brand": "EnvoCopy, TerraCopy",
+  "particulars": "Premium A4 Printing Paper – 70, 75, 80 GSM",
+  "itemCode": "SS-COPIER-001",
+  "recommendation": "Ideal for office printing, photocopying, business documentation",
+  "pulls": "N/A",
+  "SheetCount": "500 sheets per ream",
+  "dimensions": "A4 (210mm x 297mm)",
+  "ply": "1",
+  "gsm": "70 / 75 / 80",
+  "price": "On Request",
+  "quality": "Smooth, jam-free, high-brightness, suitable for all printers & copiers",
+  "material": "Eco-Friendly Agri Fibre, Recycled Pulp, Virgin Pulp",
+  "weight": "2.200 KG / 2.350 KG / 2.500 KG per ream",
+  "description": "A4 Copier Paper available in 70, 75, and 80 GSM variants. Offered in EnvoCopy (Eco-Friendly), TerraCopy Recycled, and TerraCopy Virgin brands. Designed for daily office use, high-volume printing, and business documentation.",
+  "Packaging": "500 sheets per ream, packed in cartons",
+  "JumboPackaging": "40 FT Container Load – 2000 to 2250 cartons depending on GSM",
+  "previews": [
+    {
+      "previewUrl": a1,
+      "thumbUrl": a1
+    },
+    {
+      "previewUrl": a2,
+      "thumbUrl": a2
+    }
+  ],
+  "videoUrl": "a4CopierPaperOverviewVideo",
+  "imageUrl": a2,
+  "fullDesc": [
+    "📄 A4 Copier Paper – 70 GSM: Eco-Friendly | Recycled | Virgin – Premium Quality Printing Paper. Ream Weight: 2.200 KG. Load: 2250 Cartons. MOQ: 1 x 40 FT Container.",
+    "📄 A4 Copier Paper – 75 GSM: Balanced thickness & brightness. Ream Weight: 2.350 KG. Load: 2250 Cartons. MOQ: 40 FT Container.",
+    "📄 A4 Copier Paper – 80 GSM: High-performance, smooth & jam-free. Ream Weight: 2.500 KG. Load: 2000 Cartons. MOQ: 40 FT Container.",
+    "All variants are suitable for daily office printing and copying with high image clarity and minimal jamming.",
+    "Lead Time: 6 Weeks | Origin: India"
+  ]
+},
+
 
 // makhana
 
