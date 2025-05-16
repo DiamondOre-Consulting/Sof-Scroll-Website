@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     const images = [
@@ -16,23 +17,16 @@ const Hero = () => {
 
   
     return (
-        <div className='md:h-screen'>
-          <div className="md:absolute top-0 w-full mb-4">
-            <Swiper
-                modules={[Autoplay, Pagination, EffectFade]}
-                autoplay={{ delay: 3000, disableOnInteraction: false }}
-                pagination={{ clickable: true, type: 'bullets' }}
-                speed={2000}
-                loop={true}
-                effect="fade"
-                className="w-full h-full"
-            >
-                {images?.map((slide, ind) => (
-                    <SwiperSlide key={ind}>
-                        <img src={slide} className="w-full" alt={`Slide ${ind + 1}`} />
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+        <div className='h-full'>
+          <div className="flex flex-col relative -top-10 sm:flex-row top-0 w-full mb-4">
+{/* <Link to=""> */}
+       <img className='w-full sm:w-[50%]' src="https://res.cloudinary.com/disdsorfp/image/upload/v1747397507/Group_6_pycf8s.webp" alt="" />
+{/* </Link> */}
+{/* <Link to=""> */}
+
+       <img className='w-full sm:w-[50%]' src="https://res.cloudinary.com/disdsorfp/image/upload/v1747397496/Group_4_tissue_ymc4ha.webp" alt="" />
+{/* </Link> */}
+      
         </div>
         </div>
     );
