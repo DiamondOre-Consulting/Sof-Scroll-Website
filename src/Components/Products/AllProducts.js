@@ -30,6 +30,19 @@ import a2 from '../../assets/productAssets/a42.jpg'
 import a3 from '../../assets/productAssets/a43.png'
 import a4 from '../../assets/productAssets/a44.png'
 
+import mk1 from '../../assets/productAssets/flavouredmakhana/Pudina.jpg';
+import mk2 from '../../assets/productAssets/flavouredmakhana/Pudina-Back.jpg';
+import mk3 from '../../assets/productAssets/flavouredmakhana/Peri-Peri.jpg';
+import mk4 from '../../assets/productAssets/flavouredmakhana/Peri-Peri Back.jpg';
+import mk5 from '../../assets/productAssets/flavouredmakhana/Roasted.jpg';
+import mk6 from '../../assets/productAssets/flavouredmakhana/Roasted-Back.jpg';
+import mk8 from '../../assets/productAssets/flavouredmakhana/Cream Onion.jpg';
+import mk9 from '../../assets/productAssets/flavouredmakhana/Cream Onion-Back.jpg';
+import mk10 from '../../assets/productAssets/flavouredmakhana/Himalyan.jpg';
+import mk11 from '../../assets/productAssets/flavouredmakhana/Himalyan-Back.jpg';
+
+
+
 
 
 
@@ -918,19 +931,19 @@ const Allproducts = [
   "Iron": "12 mg",
   "previews": [
     {
-      "previewUrl": periperi,
-      "thumbUrl": periperi
+      "previewUrl": mk3,
+      "thumbUrl": mk3
     },
     {
-      "previewUrl": periperi1,
-      "thumbUrl": periperi1
+      "previewUrl": mk4,
+      "thumbUrl": mk4
     },
     // {
     //   "previewUrl": "https://neelamfoodlandhk.com/cdn/shop/products/IMG_9360_275301b6-3034-4e93-b5b5-9da0a0fae0f3_800x.jpg?v=1698137519",
     //   "thumbUrl": "https://neelamfoodlandhk.com/cdn/shop/products/IMG_9360_275301b6-3034-4e93-b5b5-9da0a0fae0f3_800x.jpg?v=1698137519"
     // }
   ],
-  "imageUrl": periperi,
+  "imageUrl": mk3,
   "fullDesc": [
     "Spice up your snack time with our Peri Peri Flavored Makhana.",
     "Made with roasted lotus seeds and a bold Peri Peri seasoning.",
@@ -957,19 +970,19 @@ const Allproducts = [
   "Iron": "11.5 mg",
   "previews": [
     {
-      "previewUrl": creamonion,
-      "thumbUrl": creamonion
+      "previewUrl": mk8,
+      "thumbUrl": mk8
     },
     {
-      "previewUrl": creamonion1,
-      "thumbUrl": creamonion1
+      "previewUrl": mk9,
+      "thumbUrl": mk9
     },
     // {
     //   "previewUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg09XyicT0EfpLl8OvxDXX-bj1pGfcd6GFbASAnHg78c375WLp2EUEaSE9zmV0_ke8bSe6oE5LmaB3INKsedsn8CmYAH841xq-HW6J7ourXfYyRP6_qz-M8awjfwF21k1c2xdoM7p9KP-s/s1600/air+fryer+roasted+makhana.jpg",
     //   "thumbUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg09XyicT0EfpLl8OvxDXX-bj1pGfcd6GFbASAnHg78c375WLp2EUEaSE9zmV0_ke8bSe6oE5LmaB3INKsedsn8CmYAH841xq-HW6J7ourXfYyRP6_qz-M8awjfwF21k1c2xdoM7p9KP-s/s1600/air+fryer+roasted+makhana.jpg"
     // }
   ],
-  "imageUrl": creamonion,
+  "imageUrl": mk8,
   "fullDesc": [
     "Savor the creamy and tangy taste of Cream & Onion Flavored Makhana.",
     "Roasted to perfection and lightly coated with a rich cream and onion seasoning.",
@@ -996,19 +1009,19 @@ const Allproducts = [
   "Iron": "11.8 mg",
   "previews": [
     {
-      "previewUrl": saltpaper,
-      "thumbUrl": saltpaper
+      "previewUrl": mk10,
+      "thumbUrl": mk10
     },
     {
-      "previewUrl": saltpaper1,
-      "thumbUrl": saltpaper1
+      "previewUrl": mk11,
+      "thumbUrl": mk11
     },
     // {
     //   "previewUrl": "https://recipes.net/wp-content/uploads/2024/01/how-to-eat-makhana-fully-1706249268.jpg",
     //   "thumbUrl": "https://recipes.net/wp-content/uploads/2024/01/how-to-eat-makhana-fully-1706249268.jpg"
     // }
   ],
-  "imageUrl": saltpaper,
+  "imageUrl": mk10,
   "fullDesc": [
     "Indulge in the classic taste of Himalaya Salt & Pepper Flavored Makhana.",
     "Carefully roasted and seasoned with natural Himalayan salt and pepper.",
@@ -1072,15 +1085,15 @@ const Allproducts = [
     "Iron": "11.8 mg",
     "previews": [
       {
-        "previewUrl": pudina,
-        "thumbUrl": pudina
+        "previewUrl": mk1,
+        "thumbUrl": mk1
       },
       {
-        "previewUrl": pudina1,
-        "thumbUrl": pudina1
+        "previewUrl": mk2,
+        "thumbUrl": mk2
       }
     ],
-    "imageUrl": pudina,
+    "imageUrl": mk1,
     "fullDesc": [
       "Experience the refreshing taste of Pudina (mint) with every bite.",
       "A light, crispy, and healthy snack perfect for any time of the day.",
