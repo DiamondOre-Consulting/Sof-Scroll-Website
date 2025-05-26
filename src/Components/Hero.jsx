@@ -18,15 +18,21 @@ const Hero = () => {
   
     return (
         <div className='h-full'>
-          <div className="flex flex-col relative -top-10 sm:flex-row top-0 w-full mb-4">
-{/* <Link to=""> */}
-       <img className='w-full sm:w-[50%]' src="https://res.cloudinary.com/disdsorfp/image/upload/v1747397507/Group_6_pycf8s.webp" alt="" />
-{/* </Link> */}
-{/* <Link to=""> */}
-
-       <img className='w-full sm:w-[50%]' src="https://res.cloudinary.com/disdsorfp/image/upload/v1747397496/Group_4_tissue_ymc4ha.webp" alt="" />
-{/* </Link> */}
-      
+          <div className="flex flex-col relative top-0 sm:flex-row top-0 w-full mb-4">
+     <Link to="/products/category/Flavored%20Makhana" className="block w-full sm:w-[50%]">
+                    <img
+                        className="w-full h-full object-cover"
+                        src="https://res.cloudinary.com/disdsorfp/image/upload/v1747397507/Group_6_pycf8s.webp"
+                        alt=""
+                    />
+                </Link>
+   <Link to="/products/category/Toilet%20Rolls" className="block w-full sm:w-[50%]">
+                    <img
+                        className="w-full h-full object-cover"
+                        src="https://res.cloudinary.com/disdsorfp/image/upload/v1747397496/Group_4_tissue_ymc4ha.webp"
+                        alt=""
+                    />
+                </Link>
         </div>
         </div>
     );
