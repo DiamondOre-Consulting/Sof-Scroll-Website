@@ -89,38 +89,43 @@ const Navbar = ({ cart }) => {
             />
 
             <div className="">
-    
-            <NavLink
-              label="Products"
-              location={location.pathname}
-              className="border  border-black"
-            
-              dropdownItems={[
-                { to: "/all-products", label: "All products" },
-                {
-                  to: "/products/category/Toilet Rolls",
-                  label: "Toilet Tissue",
-                },
-                {
-                  to: "/products/category/Kitchen Rolls",
-                  label: "Kitchen Tissue",
-                },
-                {
-                  to: "/products/category/Hospital Roll",
-                  label: "Hospital Roll",
-                },
-                {
-                  to: "/products/category/Facial Tissue",
-                  label: "Facial Tissue",
-                },
-                { to: "/products/category/Paper Towel", label: "Paper Towel" },
-                { to: "/products/category/Thermal Rolls", label: "Thermal Rolls" },
-                { to: "/products/category/A4 Copier Paper", label: "A4 Copier Paper" },
-
-
-              ]}
-            />
-              </div>
+              <NavLink
+                label="Products"
+                location={location.pathname}
+                className="border  border-black"
+                dropdownItems={[
+                  { to: "/all-products", label: "All products" },
+                  {
+                    to: "/products/category/Toilet Rolls",
+                    label: "Toilet Tissue",
+                  },
+                  {
+                    to: "/products/category/Kitchen Rolls",
+                    label: "Kitchen Tissue",
+                  },
+                  {
+                    to: "/products/category/Hospital Roll",
+                    label: "Hospital Roll",
+                  },
+                  {
+                    to: "/products/category/Facial Tissue",
+                    label: "Facial Tissue",
+                  },
+                  {
+                    to: "/products/category/Paper Towel",
+                    label: "Paper Towel",
+                  },
+                  {
+                    to: "/products/category/Thermal Rolls",
+                    label: "Thermal Rolls",
+                  },
+                  {
+                    to: "/products/category/A4 Copier Paper",
+                    label: "A4 Copier Paper",
+                  },
+                ]}
+              />
+            </div>
             {/* <NavLink
               label="Nutzz Magic"
               location={location.pathname}
