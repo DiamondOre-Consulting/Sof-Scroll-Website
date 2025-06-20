@@ -134,7 +134,7 @@ const ProductDetails = ({ cart, setCart }) => {
             ></video>
           ) : (
             <div
-              className="relative overflow-hidden w-full h-[90vw] lg:h-[30rem]"
+              className="relative overflow-hidden w-full h-[90vw] lg:w-[34rem]  lg:h-[30rem]"
               onMouseEnter={() => setIsZoomed(true)}
               onMouseLeave={() => setIsZoomed(false)}
               onMouseMove={(e) => {
@@ -148,7 +148,7 @@ const ProductDetails = ({ cart, setCart }) => {
               <img
                 src={images[selectedImage].previewUrl}
                 alt={`Preview ${selectedImage + 1}`}
-                className={` w-full mx-auto h-[90vw] object-center lg:h-[30rem] lg:w-[34rem] object-cover rounded-md transition-transform duration-200 ${
+                className={` w-full mx-auto h-[90vw] object-center lg:h-[30rem] object-fit rounded-md transition-transform duration-200 ${
                   isZoomed ? "scale-[2]" : "scale-100"
                 }`}
                 style={{
@@ -166,7 +166,7 @@ const ProductDetails = ({ cart, setCart }) => {
                 setSelectedImage(index);
                 setVideoActive(false);
               }}
-              className={`w-20 h-20  ${
+              className={`w-20 overflow-hidden h-20  ${
                 selectedImage === index
                   ? "border-2 rounded border-blue-500"
                   : ""
@@ -215,10 +215,9 @@ const ProductDetails = ({ cart, setCart }) => {
       <BreadCrumbs headText={product.name} items={breadcrumbItems} />
 
       <div className="w-full   max-w-[80rem] p-4 pt-1 px-4 sm:px-10 mx-auto  md:px-20 lg:px-6">
-       
         <div className="grid items-start grid-cols-1 gap-6 mt-4 lg:grid-cols-2 md:gap-0">
           <div data-aos="zoom-in" className=" top-0 w-full ">
-            <ProductPreviews images={product.previews}  />
+            <ProductPreviews images={product.previews} />
           </div>
 
           <div className="flex flex-col w-full mt-4 md:ml-8 overflow-hidden">
@@ -226,9 +225,11 @@ const ProductDetails = ({ cart, setCart }) => {
             {/* <p  className="mt-2 font-semibold text-gray-600">{product?.particulars}</p> */}
             {/* <p  className="font-semibold ">{product?.quality}</p> */}
 
-            <p className="pb-3 mt-2 mb-2 text-gray-700">
-              {product.description}
-            </p>
+            <p className="pb-3  text-gray-700">{product.description}</p>
+
+            {product?.ingredients && (
+              <p className="mb-4 text-sm ">{product?.ingredients}</p>
+            )}
 
             <div className="grid grid-cols-2 gap-y-2">
               <>
@@ -284,7 +285,7 @@ const ProductDetails = ({ cart, setCart }) => {
                   <p>{product.dimensions}</p>
                 </>
               )}
-                  {product?.mkweight && (
+              {product?.mkweight && (
                 <>
                   <p className="font-bold">Weight</p>
                   <p>{product.mkweight} g</p>
@@ -374,6 +375,12 @@ const ProductDetails = ({ cart, setCart }) => {
                 </>
               )}
             </div>
+            {product?.sizesAvailable && (
+              <div className="mt-4 flex space-x-3">
+                <p className="font-semibold">Available in Size: </p>
+                <p className="flex space-x-4 ">{product?.sizesAvailable}</p>
+              </div>
+            )}
 
             <hr className="mt-2"></hr>
 
@@ -448,9 +455,11 @@ const ProductDetails = ({ cart, setCart }) => {
         />
       </div>
 
-
-      {!(itemCode && itemCode.startsWith('Mk')) && (
-        <div className="w-full p-4 pb-10 bg-slate-200 mt-10" data-aos="fade-down">
+      {!(itemCode && itemCode.startsWith("Mk")) && (
+        <div
+          className="w-full p-4 pb-10 bg-slate-200 mt-10"
+          data-aos="fade-down"
+        >
           <h2 className="mb-6 font-bold text-center mf text-[2.7rem]">
             Product Features
           </h2>

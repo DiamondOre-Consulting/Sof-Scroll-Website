@@ -3,50 +3,43 @@ import toiletJumbo from "../../assets/productAssets/toiletJumbo.mp4";
 import faceTissue from "../../assets/productAssets/faceTissue.mp4";
 import facialTissue from "../../assets/productAssets/facial_tissue.mp4";
 import kitchenPaperRoll from "../../assets/productAssets/kitchenPaperRoll.mp4";
-import legacy from '../../assets/productAssets/legacy1.png'
-import heritage from '../../assets/productAssets/heritage1.png'
-import tangy from '../../assets/productAssets/Tangy Cheese.jpg'
-import saltpaper from '../../assets/productAssets/Salt & Pepper.jpg'
-import pudina from '../../assets/productAssets/Pudina.jpg'
-import periperi from '../../assets/productAssets/Peri Peri.jpg'
-import mixedmasala from '../../assets/productAssets/Mixed Masala.jpg'
-import creamonion from '../../assets/productAssets/Cream & Onion.jpg'
-import chatkara from '../../assets/productAssets/Chatkara Tomato.jpg'
-import tangy1 from '../../assets/productAssets/Tangy Cheese30.jpg'
-import saltpaper1 from '../../assets/productAssets/Salt & Pepper30.jpg'
-import pudina1 from '../../assets/productAssets/Pudina30.jpg'
-import periperi1 from '../../assets/productAssets/Peri Peri30.jpg'
-import mixedmasala1 from '../../assets/productAssets/Mixed Masala30.jpg'
-import creamonion1 from '../../assets/productAssets/Cream & Onion30.jpg'
-import chatkara1 from '../../assets/productAssets/Chatkara Tomato30.jpg'
-import jr1 from '../../assets/productAssets/jr1.png'
-import jr2 from '../../assets/productAssets/jr2.jpg'
-import jr3 from '../../assets/productAssets/jr3.png'
-import jr4 from '../../assets/productAssets/jr4.png'
-import th1  from '../../assets/productAssets/th1.jpg'
-import th2  from '../../assets/productAssets/th2.png'
-import a1 from '../../assets/productAssets/a41.png'
-import a2 from '../../assets/productAssets/a42.jpg'
-import a3 from '../../assets/productAssets/a43.png'
-import a4 from '../../assets/productAssets/a44.png'
+import legacy from "../../assets/productAssets/legacy1.png";
+import heritage from "../../assets/productAssets/heritage1.png";
+import tangy from "../../assets/productAssets/Tangy Cheese.jpg";
+import saltpaper from "../../assets/productAssets/Salt & Pepper.jpg";
+import pudina from "../../assets/productAssets/Pudina.jpg";
+import periperi from "../../assets/productAssets/Peri Peri.jpg";
+import mixedmasala from "../../assets/productAssets/Mixed Masala.jpg";
+import creamonion from "../../assets/productAssets/Cream & Onion.jpg";
+import chatkara from "../../assets/productAssets/Chatkara Tomato.jpg";
+import tangy1 from "../../assets/productAssets/Tangy Cheese30.jpg";
+import saltpaper1 from "../../assets/productAssets/Salt & Pepper30.jpg";
+import pudina1 from "../../assets/productAssets/Pudina30.jpg";
+import periperi1 from "../../assets/productAssets/Peri Peri30.jpg";
+import mixedmasala1 from "../../assets/productAssets/Mixed Masala30.jpg";
+import creamonion1 from "../../assets/productAssets/Cream & Onion30.jpg";
+import chatkara1 from "../../assets/productAssets/Chatkara Tomato30.jpg";
+import jr1 from "../../assets/productAssets/jr1.png";
+import jr2 from "../../assets/productAssets/jr2.jpg";
+import jr3 from "../../assets/productAssets/jr3.png";
+import jr4 from "../../assets/productAssets/jr4.png";
+import th1 from "../../assets/productAssets/th1.jpg";
+import th2 from "../../assets/productAssets/th2.png";
+import a1 from "../../assets/productAssets/a41.png";
+import a2 from "../../assets/productAssets/a42.jpg";
+import a3 from "../../assets/productAssets/a43.png";
+import a4 from "../../assets/productAssets/a44.png";
 
-import mk1 from '../../assets/productAssets/flavouredmakhana/Pudina.jpg';
-import mk2 from '../../assets/productAssets/flavouredmakhana/Pudina-Back.jpg';
-import mk3 from '../../assets/productAssets/flavouredmakhana/Peri-Peri.jpg';
-import mk4 from '../../assets/productAssets/flavouredmakhana/Peri-Peri Back.jpg';
-import mk5 from '../../assets/productAssets/flavouredmakhana/Roasted.jpg';
-import mk6 from '../../assets/productAssets/flavouredmakhana/Roasted-Back.jpg';
-import mk8 from '../../assets/productAssets/flavouredmakhana/Cream Onion.jpg';
-import mk9 from '../../assets/productAssets/flavouredmakhana/Cream Onion-Back.jpg';
-import mk10 from '../../assets/productAssets/flavouredmakhana/Himalyan.jpg';
-import mk11 from '../../assets/productAssets/flavouredmakhana/Himalyan-Back.jpg';
-
-
-
-
-
-
-
+import mk1 from "../../assets/productAssets/flavouredmakhana/Pudina.jpg";
+import mk2 from "../../assets/productAssets/flavouredmakhana/Pudina-Back.jpg";
+import mk3 from "../../assets/productAssets/flavouredmakhana/Peri-Peri.jpg";
+import mk4 from "../../assets/productAssets/flavouredmakhana/Peri-Peri Back.jpg";
+import mk5 from "../../assets/productAssets/flavouredmakhana/Roasted.jpg";
+import mk6 from "../../assets/productAssets/flavouredmakhana/Roasted-Back.jpg";
+import mk8 from "../../assets/productAssets/flavouredmakhana/Cream Onion.jpg";
+import mk9 from "../../assets/productAssets/flavouredmakhana/Cream Onion-Back.jpg";
+import mk10 from "../../assets/productAssets/flavouredmakhana/Himalyan.jpg";
+import mk11 from "../../assets/productAssets/flavouredmakhana/Himalyan-Back.jpg";
 
 const Allproducts = [
   // category 1
@@ -54,7 +47,7 @@ const Allproducts = [
   {
     name: "Toilet Tissue Paper Roll / 24 Rolls in a Packet / Virgin/Wood Pulp",
     category: "Toilet Rolls",
-    brand :"Sof SScrrol",
+    brand: "Sof SScrrol",
     recommendation: "Home Use",
     particulars: "Toilet Tissue Paper Roll LUXURY",
     itemCode: "SS100",
@@ -75,32 +68,28 @@ const Allproducts = [
       {
         previewUrl:
           "https://m.media-amazon.com/images/I/61gAWx8qoUL._SX679_.jpg",
-        thumbUrl:
-          "https://m.media-amazon.com/images/I/61gAWx8qoUL._SX679_.jpg",
+        thumbUrl: "https://m.media-amazon.com/images/I/61gAWx8qoUL._SX679_.jpg",
       },
       {
         previewUrl:
           "https://m.media-amazon.com/images/I/71dAs-PDmNL._SX679_.jpg",
-        thumbUrl:
-          "https://m.media-amazon.com/images/I/71dAs-PDmNL._SX679_.jpg",
+        thumbUrl: "https://m.media-amazon.com/images/I/71dAs-PDmNL._SX679_.jpg",
       },
-
     ],
     videoUrl:
       "https://res.cloudinary.com/dmpkp9ux2/video/upload/v1732532214/SofScroll/mpwjfwtiapgkgjgl2sm3.mp4",
-    imageUrl:
-      "https://m.media-amazon.com/images/I/61gAWx8qoUL._SX679_.jpg", // Dummy placeholder image URL
+    imageUrl: "https://m.media-amazon.com/images/I/61gAWx8qoUL._SX679_.jpg", // Dummy placeholder image URL
     fullDesc: [
       "Unparalleled softness and reliability.",
       "3-ply sheets for superior absorbency.",
-      "Made from high-quality virgin wood pulp."
-    ]
+      "Made from high-quality virgin wood pulp.",
+    ],
   },
 
   {
     name: "Toilet Tissue Paper Roll / Virgin/Wood Pulp / 48 Rolls in a Packet ",
     category: "Toilet Rolls",
-    brand :"Sof SScrrol",
+    brand: "Sof SScrrol",
     particulars: "Toilet Tissue Paper Roll LUXURY",
     itemCode: "SS101",
     recommendation: "Home Use",
@@ -121,23 +110,21 @@ const Allproducts = [
       {
         previewUrl:
           "https://m.media-amazon.com/images/I/51tfKhptLxL._SX679_.jpg",
-        thumbUrl:
-          "https://m.media-amazon.com/images/I/51tfKhptLxL._SX679_.jpg",
+        thumbUrl: "https://m.media-amazon.com/images/I/51tfKhptLxL._SX679_.jpg",
       },
       {
         previewUrl:
           "https://m.media-amazon.com/images/I/6102rtxvmQL._SX342_.jpg",
-        thumbUrl:
-          "https://m.media-amazon.com/images/I/6102rtxvmQL._SX342_.jpg",
+        thumbUrl: "https://m.media-amazon.com/images/I/6102rtxvmQL._SX342_.jpg",
       },
       {
-        previewUrl: "https://m.media-amazon.com/images/I/61DecADKkNL._SX342_.jpg",
+        previewUrl:
+          "https://m.media-amazon.com/images/I/61DecADKkNL._SX342_.jpg",
         thumbUrl: "https://m.media-amazon.com/images/I/61DecADKkNL._SX342_.jpg",
       },
     ],
     videoUrl: "",
-    imageUrl:
-      "https://m.media-amazon.com/images/I/51tfKhptLxL._SX679_.jpg", // Dummy placeholder image URL
+    imageUrl: "https://m.media-amazon.com/images/I/51tfKhptLxL._SX679_.jpg", // Dummy placeholder image URL
     fullDesc: [
       "Experience ultimate softness and durability with our Toilet Tissue Paper Rolls, designed for everyday home use.",
       "Each roll features 3-ply sheets made from high-quality virgin wood pulp, ensuring superior absorbency and strength.",
@@ -151,7 +138,7 @@ const Allproducts = [
   {
     name: "Toilet Tissue Paper Roll / Recycle Material / 24 Rolls in a Packet",
     category: "Toilet Rolls",
-    brand :"Sof SScrrol",
+    brand: "Sof SScrrol",
     particulars: "Toilet Tissue Paper Roll Eco Friendly",
     recommendation: "Home Use",
 
@@ -182,18 +169,16 @@ const Allproducts = [
         thumbUrl:
           "https://m.media-amazon.com/images/I/61Ro+lEgkOL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg",
       },
-
     ],
-    videoUrl: "https://res.cloudinary.com/dmpkp9ux2/video/upload/v1732532213/SofScroll/hszouxvj9uoxvoax9eih.mp4",
+    videoUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/video/upload/v1732532213/SofScroll/hszouxvj9uoxvoax9eih.mp4",
     imageUrl:
       "https://m.media-amazon.com/images/I/61PNZyYTrEL._AC_CR0%2C0%2C0%2C0_SX480_SY360_.jpg", // Dummy placeholder image URL
     fullDesc: [
       "Ultimate softness and durability.",
       "3-ply sheets made from high-quality virgin wood pulp.",
-      "Luxurious texture for a comfortable and hygienic experience."
-    ]
-
-
+      "Luxurious texture for a comfortable and hygienic experience.",
+    ],
   },
 
   {
@@ -201,7 +186,7 @@ const Allproducts = [
     category: "Toilet Rolls",
     particulars: "Toilet Tissue Paper Roll Eco Friendly",
     recommendation: "Home Use",
-    brand :"Sof SScrrol",
+    brand: "Sof SScrrol",
     itemCode: "SS103",
     pulls: "140 Pulls",
     SheetCount: "140 Sheets",
@@ -229,23 +214,22 @@ const Allproducts = [
         thumbUrl:
           "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/icqztxtjuhk5mneopbhp.jpg",
       },
-
     ],
-    videoUrl: "https://s3.tebi.io/sof-scrool/WhatsApp%20Video%202024-11-27%20at%2011.19.27_e305fa0f.mp4",
+    videoUrl:
+      "https://s3.tebi.io/sof-scrool/WhatsApp%20Video%202024-11-27%20at%2011.19.27_e305fa0f.mp4",
     imageUrl:
       "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532209/SofScroll/g3icm2qhs2kopr9jzpio.jpg", // Dummy placeholder image URL
     fullDesc: [
       "Eco-friendly, made from 100% recycled materials.",
       "Soft, strong, and durable 2-ply sheets.",
-      "Biodegradable and environmentally sustainable."
-    ]
+      "Biodegradable and environmentally sustainable.",
+    ],
   },
-
 
   {
     name: "Toilet Tissue Paper Roll Bamboo Made / Recycle Material / 24 Rolls in a Packet",
     category: "Toilet Rolls",
-    brand :"Sof SScrrol",
+    brand: "Sof SScrrol",
     particulars: "Toilet Tissue Paper Roll Bamboo Made",
     itemCode: "SS104",
     recommendation: "Home Use",
@@ -266,33 +250,32 @@ const Allproducts = [
       {
         previewUrl:
           "https://m.media-amazon.com/images/I/71x-vWqFNEL._SX679_.jpg",
-        thumbUrl:
-          "https://m.media-amazon.com/images/I/71x-vWqFNEL._SX679_.jpg",
+        thumbUrl: "https://m.media-amazon.com/images/I/71x-vWqFNEL._SX679_.jpg",
       },
       {
-        previewUrl: "https://m.media-amazon.com/images/I/61gyR546opL._SX679_.jpg",
+        previewUrl:
+          "https://m.media-amazon.com/images/I/61gyR546opL._SX679_.jpg",
         thumbUrl: "https://m.media-amazon.com/images/I/61gyR546opL._SX679_.jpg",
       },
       {
-        previewUrl: "https://m.media-amazon.com/images/I/61Lsd4SKukL._SX679_.jpg",
+        previewUrl:
+          "https://m.media-amazon.com/images/I/61Lsd4SKukL._SX679_.jpg",
         thumbUrl: "https://m.media-amazon.com/images/I/61Lsd4SKukL._SX679_.jpg",
       },
     ],
     videoUrl: "",
-    imageUrl:
-      "https://m.media-amazon.com/images/I/71x-vWqFNEL._SX679_.jpg", // Dummy placeholder image URL
+    imageUrl: "https://m.media-amazon.com/images/I/71x-vWqFNEL._SX679_.jpg", // Dummy placeholder image URL
     fullDesc: [
       "Made from 100% natural bamboo, renewable and eco-friendly.",
       "Dye-free, tree-free, BPA-free, and plastic-free.",
-      "Soft, strong, and absorbent 3-ply sheets."
-    ]
-
+      "Soft, strong, and absorbent 3-ply sheets.",
+    ],
   },
 
   {
     name: "Toilet Tissue Paper Roll Bamboo Made / Recycle Material / 48 Rolls in a Packet",
     category: "Toilet Rolls",
-    brand :"Sof SScrrol",
+    brand: "Sof SScrrol",
     particulars: "Toilet Tissue Paper Roll Bamboo Made",
     itemCode: "SS105",
     recommendation: "Home Use",
@@ -317,12 +300,15 @@ const Allproducts = [
           "https://image.made-in-china.com/318f0j00BtlYEaJyaikI/Unbleached-bamboo-toilet-roll-mp4.webp",
       },
       {
-        previewUrl: "https://m.media-amazon.com/images/I/71QZwoT6F-L._SX679_.jpg",
+        previewUrl:
+          "https://m.media-amazon.com/images/I/71QZwoT6F-L._SX679_.jpg",
         thumbUrl: "https://m.media-amazon.com/images/I/71QZwoT6F-L._SX679_.jpg",
       },
       {
-        previewUrl: "https://m.media-amazon.com/images/I/71x-vWqFNEL._SX679_.jpg",
-        thumbUrl: "https://m.media-amazon.com/images/I/71x-vWqFNEL._SX679_.jpg  ",
+        previewUrl:
+          "https://m.media-amazon.com/images/I/71x-vWqFNEL._SX679_.jpg",
+        thumbUrl:
+          "https://m.media-amazon.com/images/I/71x-vWqFNEL._SX679_.jpg  ",
       },
     ],
     videoUrl: "",
@@ -331,15 +317,14 @@ const Allproducts = [
     fullDesc: [
       "Made from 100% natural bamboo, renewable and eco-friendly.",
       "Dye-free, tree-free, BPA-free, and plastic-free.",
-      "Soft, strong, and absorbent 3-ply sheets."
-    ]
-
+      "Soft, strong, and absorbent 3-ply sheets.",
+    ],
   },
 
   {
     name: "Toilet Tissue Paper Jumbo / Recycle Material / 6 Rolls in a Packet",
     category: "Toilet Rolls",
-    brand :"Sof SScrrol",
+    brand: "Sof SScrrol",
     particulars: "Jumbo Toiler Tissue Paper Roll",
     itemCode: "SS106",
     recommendation: "Public Washrooms, Malls , Hospitals",
@@ -370,7 +355,6 @@ const Allproducts = [
         thumbUrl:
           "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532209/SofScroll/x89wjmkgp9tmkmuaunln.jpg",
       },
-
     ],
     videoUrl: toiletJumbo,
     imageUrl:
@@ -378,21 +362,16 @@ const Allproducts = [
     fullDesc: [
       "Soft, strong, and biodegradable 3-ply sheets.",
       "Highly absorbent and eco-friendly.",
-      "Perfect for high-traffic areas, offering long-lasting performance."
-    ]
+      "Perfect for high-traffic areas, offering long-lasting performance.",
+    ],
   },
-
-
-  
-
-
 
   // category 2
 
   {
     name: "Tissue paper towel Dispenser suit/ manual",
     category: "Paper Towel",
-    brand :"Sof SScrrol",
+    brand: "Sof SScrrol",
     particulars: "Hand Towel - M Fold Paper",
     itemCode: "SS107",
     recommendation: "Public Washrooms, Kitchen Area",
@@ -414,31 +393,26 @@ const Allproducts = [
       {
         previewUrl:
           "https://m.media-amazon.com/images/I/41LxQGimGZL._SX679_.jpg",
-        thumbUrl:
-          "https://m.media-amazon.com/images/I/41LxQGimGZL._SX679_.jpg",
+        thumbUrl: "https://m.media-amazon.com/images/I/41LxQGimGZL._SX679_.jpg",
       },
       {
         previewUrl:
           "https://m.media-amazon.com/images/I/51jczhMDW1L._SX679_.jpg",
-        thumbUrl:
-          "https://m.media-amazon.com/images/I/51jczhMDW1L._SX679_.jpg",
+        thumbUrl: "https://m.media-amazon.com/images/I/51jczhMDW1L._SX679_.jpg",
       },
       {
         previewUrl:
           "https://m.media-amazon.com/images/I/817a2AvPRQL._SX679_.jpg",
-        thumbUrl:
-          "https://m.media-amazon.com/images/I/817a2AvPRQL._SX679_.jpg",
+        thumbUrl: "https://m.media-amazon.com/images/I/817a2AvPRQL._SX679_.jpg",
       },
     ],
     videoUrl: "",
-    imageUrl:
-      "https://m.media-amazon.com/images/I/41LxQGimGZL._SX679_.jpg", // Dummy placeholder image URL
+    imageUrl: "https://m.media-amazon.com/images/I/41LxQGimGZL._SX679_.jpg", // Dummy placeholder image URL
     fullDesc: [
       "Highly absorbent, with a single sheet for effective hand drying.",
       "Made from virgin wood pulp for strength and durability.",
-      "Exclusive Absorbency Pockets for quick water absorption."
-    ]
-
+      "Exclusive Absorbency Pockets for quick water absorption.",
+    ],
   },
 
   // category 3
@@ -497,7 +471,7 @@ const Allproducts = [
     name: "Kitchen Tissue Roll",
     category: "Kitchen Rolls",
     itemCode: "SS109",
-    brand :"Sof SScrrol",
+    brand: "Sof SScrrol",
     recommendation: "Home use",
 
     particulars: "Kitchen Tissue Roll",
@@ -523,10 +497,8 @@ const Allproducts = [
       {
         previewUrl:
           "https://m.media-amazon.com/images/I/71nN0udP4BL._SX522_.jpg",
-        thumbUrl:
-          "https://m.media-amazon.com/images/I/71nN0udP4BL._SX522_.jpg",
+        thumbUrl: "https://m.media-amazon.com/images/I/71nN0udP4BL._SX522_.jpg",
       },
-
     ],
     videoUrl: kitchenPaperRoll,
     imageUrl:
@@ -534,9 +506,8 @@ const Allproducts = [
     fullDesc: [
       "Hygienic, multipurpose tissue roll for kitchen tasks.",
       "Food safe, ideal for spills and absorbing excess oil.",
-      "Strong when wet, made from virgin wood pulp."
-    ]
-
+      "Strong when wet, made from virgin wood pulp.",
+    ],
   },
 
   // category 4
@@ -544,7 +515,7 @@ const Allproducts = [
   {
     name: "Facial Tissue Box / Pack of 6 Boxes",
     category: "Facial Tissue",
-    brand :"Sof SScrrol",
+    brand: "Sof SScrrol",
     particulars: "Facial Tissue box",
     itemCode: "SS110",
     recommendation: "Living room, Bathroom, Car, Office desk",
@@ -575,7 +546,6 @@ const Allproducts = [
         thumbUrl:
           "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1732532210/SofScroll/xf9zo2qe60sfflms8ep1.jpg",
       },
-
     ],
     videoUrl: facialTissue,
     imageUrl:
@@ -583,15 +553,14 @@ const Allproducts = [
     fullDesc: [
       "Extra soft, absorbent 2-ply facial tissue.",
       "Made from virgin wood pulp for superior quality.",
-      "Ideal for personal hygiene, makeup removal, and small spills."
-    ]
-
+      "Ideal for personal hygiene, makeup removal, and small spills.",
+    ],
   },
 
   {
     name: "Cube Facial Tissue / Pack of 20 Boxes",
     category: "Facial Tissue",
-    brand :"Sof SScrrol",
+    brand: "Sof SScrrol",
     particulars: "Facial Tissue box",
     itemCode: "SS111",
     recommendation: "Car, Work Desk top, Travel",
@@ -617,11 +586,8 @@ const Allproducts = [
       {
         previewUrl:
           "https://m.media-amazon.com/images/I/71VtfXGvR3L._SX522_.jpg",
-        thumbUrl:
-          "https://m.media-amazon.com/images/I/71VtfXGvR3L._SX522_.jpg",
+        thumbUrl: "https://m.media-amazon.com/images/I/71VtfXGvR3L._SX522_.jpg",
       },
-
-
     ],
     videoUrl: faceTissue,
     imageUrl:
@@ -629,79 +595,75 @@ const Allproducts = [
     fullDesc: [
       "Extra soft, absorbent 3-ply facial tissue.",
       "Made from virgin wood pulp for superior softness.",
-      "Perfect for daily and commercial use, ideal for desks, cars, and travel."
-    ]
-
+      "Perfect for daily and commercial use, ideal for desks, cars, and travel.",
+    ],
   },
 
-
   {
-  "name": "Facial & Dispenser Jumbo Tissue Rolls",
-  "category": "Facial Tissue",
-  "brand": "Sof SScrrol",
-  "itemCode": "SS112",
-  "material": "100% Virgin Pulp",
-  "recommendation": "Facial tissue converting, Premium brands, Hospitality, Washrooms",
-  "price": "On Request",
-  "Packaging": "Bulk Jumbo Rolls",
-  "JumboPackaging": "Export-ready, ideal for international and institutional markets",
-  "quality": "Smooth texture, soft touch, lint-free, consistent web, highly absorbent",
-  "weight": "Varies per ply and length",
-  "description": "Multi-purpose jumbo rolls including facial and dispenser towel tissue types, designed for high-efficiency converting and large-scale use.",
-  "variants": [
-    {
-      "type": "Facial 2 Ply",
-      "ply": 2,
-      "gsm": 14.5,
-      "width": "126 CM",
-
-     
-    },
-    {
-      "type": "Facial 3 Ply",
-      "ply": 3,
-      "gsm": 14,
-      "width": "126 CM",
-     
-    },
-    {
-      "type": "Dispenser Towel Roll",
-      "ply": 2,
-      "gsm": 20,
-      "width": "222 CM",
-      
-    }
-  ],
-  "previews": [
-    {
-      "previewUrl":jr1,
-      "thumbUrl": jr1
-    },
-    {
-      "previewUrl": jr2,
-      "thumbUrl": jr2,
-    },
-    {
-      "previewUrl": jr3,
-      "thumbUrl": jr3
-    }
-  ],
-  // "videoUrl": jr4,
-  "imageUrl": jr1,
-  "fullDesc": [
-    "Facial jumbo rolls (2 & 3 ply) offer high-quality softness and converting yield.",
-    "Dispenser towel rolls provide quick-dry performance and commercial-grade strength.",
-    "Suitable for converting lines, premium packaging, and institutional distribution."
-  ]
-}
-,
-
+    name: "Facial & Dispenser Jumbo Tissue Rolls",
+    category: "Facial Tissue",
+    brand: "Sof SScrrol",
+    itemCode: "SS112",
+    material: "100% Virgin Pulp",
+    recommendation:
+      "Facial tissue converting, Premium brands, Hospitality, Washrooms",
+    price: "On Request",
+    Packaging: "Bulk Jumbo Rolls",
+    JumboPackaging:
+      "Export-ready, ideal for international and institutional markets",
+    quality:
+      "Smooth texture, soft touch, lint-free, consistent web, highly absorbent",
+    weight: "Varies per ply and length",
+    description:
+      "Multi-purpose jumbo rolls including facial and dispenser towel tissue types, designed for high-efficiency converting and large-scale use.",
+    variants: [
+      {
+        type: "Facial 2 Ply",
+        ply: 2,
+        gsm: 14.5,
+        width: "126 CM",
+      },
+      {
+        type: "Facial 3 Ply",
+        ply: 3,
+        gsm: 14,
+        width: "126 CM",
+      },
+      {
+        type: "Dispenser Towel Roll",
+        ply: 2,
+        gsm: 20,
+        width: "222 CM",
+      },
+    ],
+    previews: [
+      {
+        previewUrl: jr1,
+        thumbUrl: jr1,
+      },
+      {
+        previewUrl: jr2,
+        thumbUrl: jr2,
+      },
+      {
+        previewUrl: jr3,
+        thumbUrl: jr3,
+      },
+    ],
+    // "videoUrl": jr4,
+    imageUrl: jr1,
+    fullDesc: [
+      "Facial jumbo rolls (2 & 3 ply) offer high-quality softness and converting yield.",
+      "Dispenser towel rolls provide quick-dry performance and commercial-grade strength.",
+      "Suitable for converting lines, premium packaging, and institutional distribution.",
+    ],
+  },
   // category 5
 
   {
     name: "Hospital Couch Roll",
     category: "Hospital Roll",
-    brand :"Sof SScrrol",
+    brand: "Sof SScrrol",
     particulars: "Examination Medical Couch Roll",
     itemCode: "SS112",
     quality: "Paper",
@@ -724,14 +686,12 @@ const Allproducts = [
       {
         previewUrl:
           "https://m.media-amazon.com/images/I/31+CSqwVEGL._SX522_.jpg",
-        thumbUrl:
-          "https://m.media-amazon.com/images/I/31+CSqwVEGL._SX522_.jpg",
+        thumbUrl: "https://m.media-amazon.com/images/I/31+CSqwVEGL._SX522_.jpg",
       },
       {
         previewUrl:
           "https://m.media-amazon.com/images/I/51yq6QLp1AL._SX522_.jpg",
-        thumbUrl:
-          "https://m.media-amazon.com/images/I/51yq6QLp1AL._SX522_.jpg",
+        thumbUrl: "https://m.media-amazon.com/images/I/51yq6QLp1AL._SX522_.jpg",
       },
       {
         previewUrl:
@@ -741,438 +701,504 @@ const Allproducts = [
       },
     ],
     videoUrl: "",
-    imageUrl:
-      "https://m.media-amazon.com/images/I/31+CSqwVEGL._SX522_.jpg", // Dummy placeholder image URL
+    imageUrl: "https://m.media-amazon.com/images/I/31+CSqwVEGL._SX522_.jpg", // Dummy placeholder image URL
     fullDesc: [
       "Durable 1-ply paper roll made from virgin wood pulp.",
       "Soft and comfortable for medical and beauty treatments.",
-      "60 cm wide and 100 meters long, perfect for covering examination tables."
-    ]
-
+      "60 cm wide and 100 meters long, perfect for covering examination tables.",
+    ],
   },
 
-{
-  "name": "Thermal Paper Rolls – High-Quality, Jam-Free Printing",
-  "category": "Thermal Rolls",
-  "brand": "Sof SScrrol",
-  "particulars": "Premium Thermal Paper Roll",
-  "itemCode": "SS-THERMAL-001",
-  "recommendation": "Retail billing, restaurants, kiosks, transport tickets, parking meters, ATMs",
-  "pulls": "N/A",
-  "SheetCount": "Continuous Roll",
-  "dimensions": "Custom sizes available (Standard width: 80mm)",
-  "ply": "1",
-  "gsm": "55",
-  "price": "On Request",
-  "quality": "BPA-free, lint-free, smooth finish, fade-resistant, long image life",
-  "material": "Direct Thermal Paper",
-  "weight": "Varies per roll length",
-  "description": "High-sensitivity thermal paper roll designed for smudge-free, inkless, and jam-free printing. Ideal for fast, high-quality printing in POS and kiosk systems.",
-  "Packaging": "Multiple roll bundles (customizable)",
-  "JumboPackaging": "Bulk packing available for wholesale and institutional use",
-  "previews": [
-    {
-      "previewUrl": th1,
-      "thumbUrl": th1
-    },
-    {
-      "previewUrl": th2,
-      "thumbUrl": th2
-    }
-  ],
-
-  "imageUrl":th1,
-  "fullDesc": [
-    "Delivers sharp, smudge-free printing without ink or ribbons.",
-    "Made with high-sensitivity coating for consistent results.",
-    "Perfect for POS systems, ATMs, card readers, and kiosks."
-  ]
-}
-,
-
-{
-  "name": "A4 Copier Paper – Eco-Friendly, Recycled & Virgin Pulp Options",
-  "category": "A4 Copier Paper",
-  "brand": "EnvoCopy, TerraCopy",
-  "particulars": "Premium A4 Printing Paper – 70, 75, 80 GSM",
-  "itemCode": "SS-COPIER-001",
-  "recommendation": "Ideal for office printing, photocopying, business documentation",
-  "pulls": "N/A",
-  "SheetCount": "500 sheets per ream",
-  "dimensions": "A4 (210mm x 297mm)",
-  "ply": "1",
-  "gsm": "70 / 75 / 80",
-  "price": "On Request",
-  "quality": "Smooth, jam-free, high-brightness, suitable for all printers & copiers",
-  "material": "Eco-Friendly Agri Fibre, Recycled Pulp, Virgin Pulp",
-  "weight": "2.200 KG / 2.350 KG / 2.500 KG per ream",
-  "description": "A4 Copier Paper available in 70, 75, and 80 GSM variants. Offered in EnvoCopy (Eco-Friendly), TerraCopy Recycled, and TerraCopy Virgin brands. Designed for daily office use, high-volume printing, and business documentation.",
-  "Packaging": "500 sheets per ream, packed in cartons",
-  "JumboPackaging": "40 FT Container Load – 2000 to 2250 cartons depending on GSM",
-  "previews": [
-    {
-      "previewUrl": a1,
-      "thumbUrl": a1
-    },
-    {
-      "previewUrl": a2,
-      "thumbUrl": a2
-    },
+  {
+    name: "Thermal Paper Rolls – High-Quality, Jam-Free Printing",
+    category: "Thermal Rolls",
+    brand: "Sof SScrrol",
+    particulars: "Premium Thermal Paper Roll",
+    itemCode: "SS-THERMAL-001",
+    recommendation:
+      "Retail billing, restaurants, kiosks, transport tickets, parking meters, ATMs",
+    pulls: "N/A",
+    SheetCount: "Continuous Roll",
+    dimensions: "Custom sizes available (Standard width: 80mm)",
+    ply: "1",
+    gsm: "55",
+    price: "On Request",
+    quality:
+      "BPA-free, lint-free, smooth finish, fade-resistant, long image life",
+    material: "Direct Thermal Paper",
+    weight: "Varies per roll length",
+    description:
+      "High-sensitivity thermal paper roll designed for smudge-free, inkless, and jam-free printing. Ideal for fast, high-quality printing in POS and kiosk systems.",
+    Packaging: "Multiple roll bundles (customizable)",
+    JumboPackaging:
+      "Bulk packing available for wholesale and institutional use",
+    previews: [
       {
-      "previewUrl": a3,
-      "thumbUrl": a3
-    }
-  ],
- 
-  "imageUrl": a2,
-  "fullDesc": [
-    "📄 A4 Copier Paper – 70 GSM: Eco-Friendly | Recycled | Virgin – Premium Quality Printing Paper. Ream Weight: 2.200 KG. Load: 2250 Cartons. MOQ: 1 x 40 FT Container.",
-    "📄 A4 Copier Paper – 75 GSM: Balanced thickness & brightness. Ream Weight: 2.350 KG. Load: 2250 Cartons. MOQ: 40 FT Container.",
-    "📄 A4 Copier Paper – 80 GSM: High-performance, smooth & jam-free. Ream Weight: 2.500 KG. Load: 2000 Cartons. MOQ: 40 FT Container.",
-    "All variants are suitable for daily office printing and copying with high image clarity and minimal jamming.",
-    "Lead Time: 6 Weeks | Origin: India"
-  ]
-},
+        previewUrl: th1,
+        thumbUrl: th1,
+      },
+      {
+        previewUrl: th2,
+        thumbUrl: th2,
+      },
+    ],
 
+    imageUrl: th1,
+    fullDesc: [
+      "Delivers sharp, smudge-free printing without ink or ribbons.",
+      "Made with high-sensitivity coating for consistent results.",
+      "Perfect for POS systems, ATMs, card readers, and kiosks.",
+    ],
+  },
+  {
+    name: "A4 Copier Paper – Eco-Friendly, Recycled & Virgin Pulp Options",
+    category: "A4 Copier Paper",
+    brand: "EnvoCopy, TerraCopy",
+    particulars: "Premium A4 Printing Paper – 70, 75, 80 GSM",
+    itemCode: "SS-COPIER-001",
+    recommendation:
+      "Ideal for office printing, photocopying, business documentation",
+    pulls: "N/A",
+    SheetCount: "500 sheets per ream",
+    dimensions: "A4 (210mm x 297mm)",
+    ply: "1",
+    gsm: "70 / 75 / 80",
+    price: "On Request",
+    quality:
+      "Smooth, jam-free, high-brightness, suitable for all printers & copiers",
+    material: "Eco-Friendly Agri Fibre, Recycled Pulp, Virgin Pulp",
+    weight: "2.200 KG / 2.350 KG / 2.500 KG per ream",
+    description:
+      "A4 Copier Paper available in 70, 75, and 80 GSM variants. Offered in EnvoCopy (Eco-Friendly), TerraCopy Recycled, and TerraCopy Virgin brands. Designed for daily office use, high-volume printing, and business documentation.",
+    Packaging: "500 sheets per ream, packed in cartons",
+    JumboPackaging:
+      "40 FT Container Load – 2000 to 2250 cartons depending on GSM",
+    previews: [
+      {
+        previewUrl: a1,
+        thumbUrl: a1,
+      },
+      {
+        previewUrl: a2,
+        thumbUrl: a2,
+      },
+      {
+        previewUrl: a3,
+        thumbUrl: a3,
+      },
+    ],
 
-// makhana
+    imageUrl: a2,
+    fullDesc: [
+      "📄 A4 Copier Paper – 70 GSM: Eco-Friendly | Recycled | Virgin – Premium Quality Printing Paper. Ream Weight: 2.200 KG. Load: 2250 Cartons. MOQ: 1 x 40 FT Container.",
+      "📄 A4 Copier Paper – 75 GSM: Balanced thickness & brightness. Ream Weight: 2.350 KG. Load: 2250 Cartons. MOQ: 40 FT Container.",
+      "📄 A4 Copier Paper – 80 GSM: High-performance, smooth & jam-free. Ream Weight: 2.500 KG. Load: 2000 Cartons. MOQ: 40 FT Container.",
+      "All variants are suitable for daily office printing and copying with high image clarity and minimal jamming.",
+      "Lead Time: 6 Weeks | Origin: India",
+    ],
+  },
 
-
+  // makhana
 
   {
-    "name": "Legacy",
-    "category": "Row Makhana",
-    "brand": "Nutzz Magic",
-    "itemCode": "Mk400",
-    "mkweight": "200",
-    "Energy": "233 Kcal",
-    "Proteins": "4.2 g",
-    "Carbohydrates": "34.1 g",
-    "TotalFats": "9.0 g",
-    "SaturatedFats": "4.0 g",
-    "MonosaturatedFats": "3.8 g",
-    "PolyunsaturatedFats": "1.2 g",
-    "TransFats": "0 g",
-    "Cholesterol": "0 mg",
-    "Sugar": "<0.2 g",
-    "Iron": "10.5 mg",
-    "previews": [
+    name: "Legacy",
+    category: "Row Makhana",
+    brand: "Nutzz Magic",
+    itemCode: "Mk400",
+    mkweight: "200",
+    Energy: "233 Kcal",
+    Proteins: "4.2 g",
+    Carbohydrates: "34.1 g",
+    TotalFats: "9.0 g",
+    SaturatedFats: "4.0 g",
+    MonosaturatedFats: "3.8 g",
+    PolyunsaturatedFats: "1.2 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.2 g",
+    Iron: "10.5 mg",
+    previews: [
       {
-        "previewUrl": legacy,
-        "thumbUrl": legacy
+        previewUrl: legacy,
+        thumbUrl: legacy,
       },
       // {
       //   "previewUrl": legacy,
       //   "thumbUrl": legacy
       // }
     ],
-    "imageUrl": legacy,
-    "fullDesc": [
+    imageUrl: legacy,
+    fullDesc: [
       "Legacy Makhana is a premium-quality, light, and crunchy snack, perfect for a healthy lifestyle.",
       "A rich source of protein and fiber, great for weight management and heart health.",
       "Packed with essential nutrients, low in cholesterol, and free from trans fats.",
-      "Perfect for snacking or as an ingredient in various dishes like kheer and curries."
-    ]
+      "Perfect for snacking or as an ingredient in various dishes like kheer and curries.",
+    ],
   },
   {
-    "name": "Heritage",
-    "category": "Row Makhana",
-    "brand": "Nutzz Magic",
-    "itemCode": "Mk600",
-    "mkweight": "200",
-    "Energy": "235 Kcal",
-    "Proteins": "4.5 g",
-    "Carbohydrates": "34.5 g",
-    "TotalFats": "9.2 g",
-    "SaturatedFats": "4.1 g",
-    "MonosaturatedFats": "3.7 g",
-    "PolyunsaturatedFats": "1.4 g",
-    "TransFats": "0 g",
-    "Cholesterol": "0 mg",
-    "Sugar": "<0.2 g",
-    "Iron": "11.2 mg",
-    "previews": [
+    name: "Heritage",
+    category: "Row Makhana",
+    brand: "Nutzz Magic",
+    itemCode: "Mk600",
+    mkweight: "200",
+    Energy: "235 Kcal",
+    Proteins: "4.5 g",
+    Carbohydrates: "34.5 g",
+    TotalFats: "9.2 g",
+    SaturatedFats: "4.1 g",
+    MonosaturatedFats: "3.7 g",
+    PolyunsaturatedFats: "1.4 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.2 g",
+    Iron: "11.2 mg",
+    previews: [
       {
-        "previewUrl": heritage,
-        "thumbUrl": heritage
+        previewUrl: heritage,
+        thumbUrl: heritage,
       },
       // {
       //   "previewUrl": heritage,
       //   "thumbUrl": heritage
       // }
     ],
-    "imageUrl": heritage,
-    "fullDesc": [
+    imageUrl: heritage,
+    fullDesc: [
       "Heritage Makhana  is a premium roasted lotus seed snack with an irresistible crunch.",
       "Crafted for those who prefer high-quality, nutrient-rich munching options.",
       "Loaded with protein and antioxidants, making it a great alternative to fried snacks.",
-      "Ideal for tea-time snacking, fitness-conscious diets, and quick energy boosts."
-    ]
-  }
-,
-
-
-{
-  "name": "Peri Peri Flavored Makhana",
-  "category": "Flavored Makhana",
-  "itemCode": "Mk200",
-  brand :"Nutzz Magic",
-  "Energy": "237 Kcal",
-  "Proteins": "5.2 g",
-  "Carbohydrates": "33.0 g",
-  "TotalFats": "9.5 g",
-  mkweight : "200",
-  "SaturatedFats": "4.1 g",
-  "MonosaturatedFats": "3.9 g",
-  "PolyunsaturatedFats": "1.5 g",
-  "TransFats": "0 g",
-  "Cholesterol": "0 mg",
-  "Sugar": "<0.5 g",
-  "Iron": "12 mg",
-  "previews": [
-    {
-      "previewUrl": mk3,
-      "thumbUrl": mk3
-    },
-    {
-      "previewUrl": mk4,
-      "thumbUrl": mk4
-    },
-    // {
-    //   "previewUrl": "https://neelamfoodlandhk.com/cdn/shop/products/IMG_9360_275301b6-3034-4e93-b5b5-9da0a0fae0f3_800x.jpg?v=1698137519",
-    //   "thumbUrl": "https://neelamfoodlandhk.com/cdn/shop/products/IMG_9360_275301b6-3034-4e93-b5b5-9da0a0fae0f3_800x.jpg?v=1698137519"
-    // }
-  ],
-  "imageUrl": mk3,
-  "fullDesc": [
-    "Spice up your snack time with our Peri Peri Flavored Makhana.",
-    "Made with roasted lotus seeds and a bold Peri Peri seasoning.",
-    "Low in calories, cholesterol-free, and high in antioxidants.",
-    "Perfect for guilt-free snacking with a spicy kick!"
-  ]
-},
-{
-  "name": "Cream & Onion Flavored Makhana",
-  "category": "Flavored Makhana",
-  "itemCode": "Mk201",
-  brand :"Nutzz Magic",
-  "Energy": "235 Kcal",
-  "Proteins": "5.0 g",
-  "Carbohydrates": "34.0 g",
-  "TotalFats": "9.2 g",
-  "SaturatedFats": "4.0 g",
-  mkweight : "200",
-  "MonosaturatedFats": "3.8 g",
-  "PolyunsaturatedFats": "1.4 g",
-  "TransFats": "0 g",
-  "Cholesterol": "0 mg",
-  "Sugar": "<0.4 g",
-  "Iron": "11.5 mg",
-  "previews": [
-    {
-      "previewUrl": mk8,
-      "thumbUrl": mk8
-    },
-    {
-      "previewUrl": mk9,
-      "thumbUrl": mk9
-    },
-    // {
-    //   "previewUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg09XyicT0EfpLl8OvxDXX-bj1pGfcd6GFbASAnHg78c375WLp2EUEaSE9zmV0_ke8bSe6oE5LmaB3INKsedsn8CmYAH841xq-HW6J7ourXfYyRP6_qz-M8awjfwF21k1c2xdoM7p9KP-s/s1600/air+fryer+roasted+makhana.jpg",
-    //   "thumbUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg09XyicT0EfpLl8OvxDXX-bj1pGfcd6GFbASAnHg78c375WLp2EUEaSE9zmV0_ke8bSe6oE5LmaB3INKsedsn8CmYAH841xq-HW6J7ourXfYyRP6_qz-M8awjfwF21k1c2xdoM7p9KP-s/s1600/air+fryer+roasted+makhana.jpg"
-    // }
-  ],
-  "imageUrl": mk8,
-  "fullDesc": [
-    "Savor the creamy and tangy taste of Cream & Onion Flavored Makhana.",
-    "Roasted to perfection and lightly coated with a rich cream and onion seasoning.",
-    "A healthy snack option that's gluten-free and packed with nutrients.",
-    "Enjoy the perfect blend of flavor and crunch in every bite!"
-  ]
-},
-{
-  "name": "Himalaya Salt & Pepper Flavored Makhana",
-  "category": "Flavored Makhana",
-  "itemCode": "Mk202",
-  "Energy": "236 Kcal",
-  brand :"Nutzz Magic",
-  mkweight : "200",
-  "Proteins": "4.8 g",
-  "Carbohydrates": "33.5 g",
-  "TotalFats": "9.0 g",
-  "SaturatedFats": "3.9 g",
-  "MonosaturatedFats": "3.7 g",
-  "PolyunsaturatedFats": "1.3 g",
-  "TransFats": "0 g",
-  "Cholesterol": "0 mg",
-  "Sugar": "<0.3 g",
-  "Iron": "11.8 mg",
-  "previews": [
-    {
-      "previewUrl": mk10,
-      "thumbUrl": mk10
-    },
-    {
-      "previewUrl": mk11,
-      "thumbUrl": mk11
-    },
-    // {
-    //   "previewUrl": "https://recipes.net/wp-content/uploads/2024/01/how-to-eat-makhana-fully-1706249268.jpg",
-    //   "thumbUrl": "https://recipes.net/wp-content/uploads/2024/01/how-to-eat-makhana-fully-1706249268.jpg"
-    // }
-  ],
-  "imageUrl": mk10,
-  "fullDesc": [
-    "Indulge in the classic taste of Himalaya Salt & Pepper Flavored Makhana.",
-    "Carefully roasted and seasoned with natural Himalayan salt and pepper.",
-    "A light and wholesome snack that's perfect for any time of the day.",
-    "Rich in nutrients and free from trans fats, making it a healthy choice."
-  ]
-}
-,
+      "Ideal for tea-time snacking, fitness-conscious diets, and quick energy boosts.",
+    ],
+  },
 
   {
-    "name": "Tangy Cheese Flavored Makhana",
-    "category": "Flavored Makhana",
-    "itemCode": "Mk202",
-    "Energy": "236 Kcal",
-    "brand": "Nutzz Magic",
-    "mkweight": "200",
-    "Proteins": "4.8 g",
-    "Carbohydrates": "33.5 g",
-    "TotalFats": "9.0 g",
-    "SaturatedFats": "3.9 g",
-    "MonosaturatedFats": "3.7 g",
-    "PolyunsaturatedFats": "1.3 g",
-    "TransFats": "0 g",
-    "Cholesterol": "0 mg",
-    "Sugar": "<0.3 g",
-    "Iron": "11.8 mg",
-    "previews": [
+    name: "Peri Peri Flavored Makhana",
+    category: "Flavored Makhana",
+    itemCode: "Mk200",
+    brand: "Nutzz Magic",
+    Energy: "237 Kcal",
+    Proteins: "5.2 g",
+    Carbohydrates: "33.0 g",
+    TotalFats: "9.5 g",
+    mkweight: "200",
+    SaturatedFats: "4.1 g",
+    MonosaturatedFats: "3.9 g",
+    PolyunsaturatedFats: "1.5 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.5 g",
+    sizesAvailable: "30g, 60g, 90g",
+    ingredients:
+      "MAKHANA, OILVE OIL, SUNFLOWER OIL, SUGAR, SPICES & CONDIMENTS (RED CHILLI, DRIED MANGO, DRIED ONION, CORIANDER SEEDS, CUMIN, DRIED GARLIC FLAKES, NUTMEG, MACE), SALT, MALTODEXTRIN,TOMATO POWDER, ACIDITY REGULATOR (INS-330) & (INS 296), HYDROLYSE PEANUT PROTEIN, COLOUR (INS 160C), NAUSADAR (INS 510), NATURAL AND NATURE IDENTICAL AND FLAVOURING SUBSTANCES (PERI PERI), FLAVOUR ENHANCER (INS 627) & (INS 631",
+    Iron: "12 mg",
+    previews: [
       {
-        "previewUrl": tangy,
-        "thumbUrl": tangy
+        previewUrl: mk3,
+        thumbUrl: mk3,
       },
       {
-        "previewUrl": tangy1,
-        "thumbUrl": tangy1
-      }
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750397684/1.Peri-Peri_yjehpm.png",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750397684/1.Peri-Peri_yjehpm.png",
+      },
+      // {
+      //   "previewUrl": "https://neelamfoodlandhk.com/cdn/shop/products/IMG_9360_275301b6-3034-4e93-b5b5-9da0a0fae0f3_800x.jpg?v=1698137519",
+      //   "thumbUrl": "https://neelamfoodlandhk.com/cdn/shop/products/IMG_9360_275301b6-3034-4e93-b5b5-9da0a0fae0f3_800x.jpg?v=1698137519"
+      // }
     ],
-    "imageUrl": tangy,
-    "fullDesc": [
+    imageUrl: mk3,
+    fullDesc: [
+      "Spice up your snack time with our Peri Peri Flavored Makhana.",
+      "Made with roasted lotus seeds and a bold Peri Peri seasoning.",
+      "Low in calories, cholesterol-free, and high in antioxidants.",
+      "Perfect for guilt-free snacking with a spicy kick!",
+    ],
+  },
+  {
+    name: "Cream & Onion Flavored Makhana",
+    category: "Flavored Makhana",
+    itemCode: "Mk201",
+    brand: "Nutzz Magic",
+    Energy: "235 Kcal",
+    Proteins: "5.0 g",
+    Carbohydrates: "34.0 g",
+    TotalFats: "9.2 g",
+    SaturatedFats: "4.0 g",
+    mkweight: "200",
+    MonosaturatedFats: "3.8 g",
+    PolyunsaturatedFats: "1.4 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.4 g",
+    Iron: "11.5 mg",
+    sizesAvailable: "30g, 60g, 90g",
+    ingredients:
+      "Makhana, olive oil, Sunflower Oil, Spices Makhanacondi ments(Yellow chilli, Onion, Parsley) Salt, Sugar, Milk Solid, maltodextrin, Hydrolysed Vegetable Proteins (Peanut), Acidity Regulator (INS 296), Flavour Enhancer (INS 635). ",
+    previews: [
+      {
+        previewUrl: mk8,
+        thumbUrl: mk8,
+      },
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398207/1.Ceam_Onion_mhuc1p.png",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398207/1.Ceam_Onion_mhuc1p.png",
+      },
+      // {
+      //   "previewUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg09XyicT0EfpLl8OvxDXX-bj1pGfcd6GFbASAnHg78c375WLp2EUEaSE9zmV0_ke8bSe6oE5LmaB3INKsedsn8CmYAH841xq-HW6J7ourXfYyRP6_qz-M8awjfwF21k1c2xdoM7p9KP-s/s1600/air+fryer+roasted+makhana.jpg",
+      //   "thumbUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg09XyicT0EfpLl8OvxDXX-bj1pGfcd6GFbASAnHg78c375WLp2EUEaSE9zmV0_ke8bSe6oE5LmaB3INKsedsn8CmYAH841xq-HW6J7ourXfYyRP6_qz-M8awjfwF21k1c2xdoM7p9KP-s/s1600/air+fryer+roasted+makhana.jpg"
+      // }
+    ],
+    imageUrl: mk8,
+    fullDesc: [
+      "Savor the creamy and tangy taste of Cream & Onion Flavored Makhana.",
+      "Roasted to perfection and lightly coated with a rich cream and onion seasoning.",
+      "A healthy snack option that's gluten-free and packed with nutrients.",
+      "Enjoy the perfect blend of flavor and crunch in every bite!",
+    ],
+  },
+  {
+    name: "Himalaya Salt & Pepper Flavored Makhana",
+    category: "Flavored Makhana",
+    itemCode: "Mk202",
+    Energy: "236 Kcal",
+    brand: "Nutzz Magic",
+    mkweight: "200",
+    Proteins: "4.8 g",
+    Carbohydrates: "33.5 g",
+    TotalFats: "9.0 g",
+    SaturatedFats: "3.9 g",
+    MonosaturatedFats: "3.7 g",
+    PolyunsaturatedFats: "1.3 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.3 g",
+    Iron: "11.8 mg",
+    sizesAvailable: "30g, 60g, 90g",
+    ingredients:
+      "MAKHANA, OLIVE OIL, SUNFLOWER OIL, BLACK PEPPER, PINK SALT, MILK SOLID, MALTODEXRTIN ,HYDROLYSED VEGETABLE PROTEIN (PEANUTS), (FLAVOUR ENHANCER (INS 635 ALLERGEN ADVICE: CONTAINS PEANUT AND MILK SOLID",
+    previews: [
+      {
+        previewUrl: mk10,
+        thumbUrl: mk10,
+      },
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398287/1.Himalyan_Salt_ggzrql.png",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398287/1.Himalyan_Salt_ggzrql.png",
+      },
+      // {
+      //   "previewUrl": "https://recipes.net/wp-content/uploads/2024/01/how-to-eat-makhana-fully-1706249268.jpg",
+      //   "thumbUrl": "https://recipes.net/wp-content/uploads/2024/01/how-to-eat-makhana-fully-1706249268.jpg"
+      // }
+    ],
+    imageUrl: mk10,
+    fullDesc: [
+      "Indulge in the classic taste of Himalaya Salt & Pepper Flavored Makhana.",
+      "Carefully roasted and seasoned with natural Himalayan salt and pepper.",
+      "A light and wholesome snack that's perfect for any time of the day.",
+      "Rich in nutrients and free from trans fats, making it a healthy choice.",
+    ],
+  },
+  {
+    name: "Tangy Cheese Flavored Makhana",
+    category: "Flavored Makhana",
+    itemCode: "Mk11",
+    Energy: "236 Kcal",
+    brand: "Nutzz Magic",
+    mkweight: "200",
+    Proteins: "4.8 g",
+    Carbohydrates: "33.5 g",
+    TotalFats: "9.0 g",
+    SaturatedFats: "3.9 g",
+    MonosaturatedFats: "3.7 g",
+    PolyunsaturatedFats: "1.3 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.3 g",
+    Iron: "11.8 mg",
+    sizesAvailable: "30g, 60g, 90g",
+    ingredients:
+      " Makhana, olive oil, Sunflower Oil, Sugar, Salt, Maltodextrin,Hydrolyses Peanut Protein, Dehydrated Blend of Whey (From Milk), Stabilizer Emulsifier (INS 339), Acidity Regulator (INS 330), Cheese Concentrate, Colour (INS 160c).CONTANS ADDED FLAVOUR (NATURAL, NATURE IDENTICAL AND ARTIFICIAL FLAVOURING SUBSTANCES: MILK",
+    previews: [
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750143979/Tangy_Chees_wqmgtz.jpg",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750143979/Tangy_Chees_wqmgtz.jpg",
+      },
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398376/1.Tangy_Cheese_di0xn5.png",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398376/1.Tangy_Cheese_di0xn5.png",
+      },
+    ],
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750143979/Tangy_Chees_wqmgtz.jpg",
+    fullDesc: [
       "Enjoy the rich and tangy flavor of cheese combined with crunchy Makhana.",
       "A delightful, guilt-free snacking option packed with nutrients.",
-      "Perfect for satisfying your cravings while staying healthy."
-    ]
+      "Perfect for satisfying your cravings while staying healthy.",
+    ],
   },
 
   {
-    "name": "Pudina Flavored Makhana",
-    "category": "Flavored Makhana",
-    "itemCode": "Mk203",
-    "Energy": "236 Kcal",
-    "brand": "Nutzz Magic",
-    "mkweight": "200",
-    "Proteins": "4.8 g",
-    "Carbohydrates": "33.5 g",
-    "TotalFats": "9.0 g",
-    "SaturatedFats": "3.9 g",
-    "MonosaturatedFats": "3.7 g",
-    "PolyunsaturatedFats": "1.3 g",
-    "TransFats": "0 g",
-    "Cholesterol": "0 mg",
-    "Sugar": "<0.3 g",
-    "Iron": "11.8 mg",
-    "previews": [
+    name: "Pudina Flavored Makhana",
+    category: "Flavored Makhana",
+    itemCode: "Mk203",
+    Energy: "236 Kcal",
+    brand: "Nutzz Magic",
+    mkweight: "200",
+    Proteins: "4.8 g",
+    Carbohydrates: "33.5 g",
+    TotalFats: "9.0 g",
+    SaturatedFats: "3.9 g",
+    MonosaturatedFats: "3.7 g",
+    PolyunsaturatedFats: "1.3 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.3 g",
+    Iron: "11.8 mg",
+    sizesAvailable: "30g, 60g, 90g",
+    ingredients:
+      " MAKHANA, OLIVE OIL, SUNFLOWER OIL, SPICES & CONDIMENTS (RED CHILLS, CORIANDER SEEDS, DRIED MANGO ,CUMIN , TURMERIC ,DRIED GINGER, LONG PEPPER, FENUGREEK ,MACE, NUTMEG),EDIBLE SALT, BLACK SALT, SUGAR,MINT LEAVES (7%),FENUGREEK LEAVES, HYDROLYSED VEG.PROTEIN(PEANUT) , ACIDITY REGULATOR(INS-330),NATURAL FLAVOUR (MINT),FLAVOUR  ENHANCER (INS -627) (INS-631),ANTICAKING AGENT (INS-551).",
+    previews: [
       {
-        "previewUrl": mk1,
-        "thumbUrl": mk1
+        previewUrl: mk1,
+        thumbUrl: mk1,
       },
       {
-        "previewUrl": mk2,
-        "thumbUrl": mk2
-      }
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398486/1.Pudina_y23xvc.png",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398486/1.Pudina_y23xvc.png",
+      },
     ],
-    "imageUrl": mk1,
-    "fullDesc": [
+    imageUrl: mk1,
+    fullDesc: [
       "Experience the refreshing taste of Pudina (mint) with every bite.",
       "A light, crispy, and healthy snack perfect for any time of the day.",
-      "Rich in nutrients and free from trans fats, making it a great alternative to chips."
-    ]
+      "Rich in nutrients and free from trans fats, making it a great alternative to chips.",
+    ],
   },
 
-  
   {
-    "name": "Mixed Masala Flavored Makhana",
-    "category": "Flavored Makhana",
-    "itemCode": "Mk204",
-    "Energy": "236 Kcal",
-    "brand": "Nutzz Magic",
-    "mkweight": "200",
-    "Proteins": "4.8 g",
-    "Carbohydrates": "33.5 g",
-    "TotalFats": "9.0 g",
-    "SaturatedFats": "3.9 g",
-    "MonosaturatedFats": "3.7 g",
-    "PolyunsaturatedFats": "1.3 g",
-    "TransFats": "0 g",
-    "Cholesterol": "0 mg",
-    "Sugar": "<0.3 g",
-    "Iron": "11.8 mg",
-    "previews": [
+    name: "Roasted Makhana",
+    category: "Flavored Makhana",
+    itemCode: "Mk204",
+    Energy: "236 Kcal",
+    brand: "Nutzz Magic",
+    mkweight: "200",
+    Proteins: "4.8 g",
+    Carbohydrates: "33.5 g",
+    TotalFats: "9.0 g",
+    SaturatedFats: "3.9 g",
+    MonosaturatedFats: "3.7 g",
+    PolyunsaturatedFats: "1.3 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.3 g",
+    Iron: "11.8 mg",
+    sizesAvailable: "30g, 60g, 250g , 1kg",
+    ingredients:
+      " Blossoms in Water, as light as Air-Foxnuts (makhana) are a nutritious snack that are high in protein and fibre, while being naturally free of fat",
+    previews: [
       {
-        "previewUrl": mixedmasala,
-        "thumbUrl": mixedmasala
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750144164/Roasted_mox91j.jpg",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750144164/Roasted_mox91j.jpg",
       },
+
       {
-        "previewUrl": mixedmasala1,
-        "thumbUrl": mixedmasala1
-      }
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398689/1.Roasted_fitih1.png",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398689/1.Roasted_fitih1.png",
+      },
     ],
-    "imageUrl": mixedmasala,
-    "fullDesc": [
-      "A bold blend of Indian spices and roasted Makhana for a flavorful snack.",
-      "Perfect for those who love a spicy kick with their snacks.",
-      "A crunchy, healthy, and delicious option for any occasion."
-    ]
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750144164/Roasted_mox91j.jpg",
+    fullDesc: [
+      "Enjoy the crunch of perfectly roasted Makhana, a wholesome and satisfying snack.",
+      "Naturally low in cholesterol and trans fats, making it a heart-healthy choice.",
+      "Rich in protein, iron, and essential nutrients—ideal for guilt-free snacking.",
+    ],
   },
 
+  // {
+  //   name: "Mixed Masala Flavored Makhana",
+  //   category: "Flavored Makhana",
+  //   itemCode: "Mk204",
+  //   Energy: "236 Kcal",
+  //   brand: "Nutzz Magic",
+  //   mkweight: "200",
+  //   Proteins: "4.8 g",
+  //   Carbohydrates: "33.5 g",
+  //   TotalFats: "9.0 g",
+  //   SaturatedFats: "3.9 g",
+  //   MonosaturatedFats: "3.7 g",
+  //   PolyunsaturatedFats: "1.3 g",
+  //   TransFats: "0 g",
+  //   Cholesterol: "0 mg",
+  //   Sugar: "<0.3 g",
+  //   Iron: "11.8 mg",
+  //   previews: [
+  //     {
+  //       previewUrl: mixedmasala,
+  //       thumbUrl: mixedmasala,
+  //     },
+  //     {
+  //       previewUrl: mixedmasala1,
+  //       thumbUrl: mixedmasala1,
+  //     },
+  //   ],
+  //   imageUrl: mixedmasala,
+  //   fullDesc: [
+  //     "A bold blend of Indian spices and roasted Makhana for a flavorful snack.",
+  //     "Perfect for those who love a spicy kick with their snacks.",
+  //     "A crunchy, healthy, and delicious option for any occasion.",
+  //   ],
+  // },
 
-  {
-    "name": "Chatkara Tomato Flavored Makhana",
-    "category": "Flavored Makhana",
-    "itemCode": "Mk205",
-    "Energy": "236 Kcal",
-    "brand": "Nutzz Magic",
-    "mkweight": "200",
-    "Proteins": "4.8 g",
-    "Carbohydrates": "33.5 g",
-    "TotalFats": "9.0 g",
-    "SaturatedFats": "3.9 g",
-    "MonosaturatedFats": "3.7 g",
-    "PolyunsaturatedFats": "1.3 g",
-    "TransFats": "0 g",
-    "Cholesterol": "0 mg",
-    "Sugar": "<0.3 g",
-    "Iron": "11.8 mg",
-    "previews": [
-      {
-        "previewUrl": chatkara,
-        "thumbUrl": chatkara
-      },
-      {
-        "previewUrl": chatkara1,
-        "thumbUrl": chatkara1
-      }
-    ],
-    "imageUrl": chatkara,
-    "fullDesc": [
-      "Tangy tomato flavor infused with crispy Makhana for a mouth-watering treat.",
-      "A tasty and nutritious snack, free from trans fats and cholesterol.",
-      "Enjoy the perfect balance of crunch and spice."
-    ]
-  }
-
+  // {
+  //   name: "Chatkara Tomato Flavored Makhana",
+  //   category: "Flavored Makhana",
+  //   itemCode: "Mk205",
+  //   Energy: "236 Kcal",
+  //   brand: "Nutzz Magic",
+  //   mkweight: "200",
+  //   Proteins: "4.8 g",
+  //   Carbohydrates: "33.5 g",
+  //   TotalFats: "9.0 g",
+  //   SaturatedFats: "3.9 g",
+  //   MonosaturatedFats: "3.7 g",
+  //   PolyunsaturatedFats: "1.3 g",
+  //   TransFats: "0 g",
+  //   Cholesterol: "0 mg",
+  //   Sugar: "<0.3 g",
+  //   Iron: "11.8 mg",
+  //   previews: [
+  //     {
+  //       previewUrl: chatkara,
+  //       thumbUrl: chatkara,
+  //     },
+  //     {
+  //       previewUrl: chatkara1,
+  //       thumbUrl: chatkara1,
+  //     },
+  //   ],
+  //   imageUrl: chatkara,
+  //   fullDesc: [
+  //     "Tangy tomato flavor infused with crispy Makhana for a mouth-watering treat.",
+  //     "A tasty and nutritious snack, free from trans fats and cholesterol.",
+  //     "Enjoy the perfect balance of crunch and spice.",
+  //   ],
+  // },
 
   // {
   //   name: "Fox Nuts",
@@ -1208,7 +1234,7 @@ const Allproducts = [
   //       thumbUrl:
   //         "https://m.media-amazon.com/images/I/51yq6QLp1AL._SX522_.jpg",
   //     },
-  
+
   //   ],
   //   // videoUrl: "",
   //   // imageUrl:

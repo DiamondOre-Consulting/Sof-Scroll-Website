@@ -204,7 +204,7 @@ const ProductCategory = ({ cart, setCart }) => {
                     <img
                       src={product.imageUrl}
                       alt={product.name}
-                      className="h-[24rem] object-top w-full object-cover  transition-opacity duration-300 hover:opacity-90"
+                      className="h-[24rem]  scale-[1] w-full object-cover  transition-opacity duration-300 hover:opacity-90"
                     />
                     {/* <div className="absolute px-2 py-1 text-xs font-medium text-white bg-black rounded top-2 left-2 bg-opacity-60">
                                             New Arrival
