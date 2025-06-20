@@ -43,8 +43,10 @@ const Navbar = ({ cart }) => {
     <>
       {/* Navbar */}
       <div
-        className={`sticky top-0 py-2 flex items-center z-50 w-full backdrop-blur  bg-black/60 shadow-xs z-70 ${
-          scrolled || !isHomePage ? "bg-black bg-opacity-30" : "bg-transparent"
+        className={` top-0 py-2 flex items-center z-50 w-full backdrop-blur  bg-black/60 shadow-xs z-70 ${
+          scrolled || !isHomePage
+            ? "bg-black bg-opacity-30 sticky"
+            : "bg-transparent fixed"
         }`}
       >
         <nav className="container flex items-center justify-between px-4 mx-auto sm:px-8 md:px-12">

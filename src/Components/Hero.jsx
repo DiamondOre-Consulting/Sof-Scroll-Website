@@ -15,20 +15,52 @@ const Hero = () => {
   ];
 
   return (
-    <div className=" flex  items-center h-[50vh] md:h-[100vh]  overflow-hidden bg-center bg-cover ">
-      <video
-        src="https://res.cloudinary.com/dmpkp9ux2/video/upload/v1750394018/M-T_j8z4fy.mp4"
-        autoPlay
-        loop
-        muted
-        className="absolute inset-0 object-cover w-full h-[50vh] md:h-full"
-      ></video>
-      <div className="absolute inset-0 bg-black opacity-10"></div>
-      <div className="container px-4 md:w-[60rem] flex justify-center flex-col items-center mx-auto font-bold text-white text-[2rem] -mt-40 head sm:text-[4rem]  md:text-[4rem] mf sm:px-2 ">
-        <AnimatedText text2={"Luxury  You  Can  Trust"} />
-        <AnimatedText text2={"Softness  You  Can  Feel"} />
+    <div className="h-full relative top-0 w-full h-screen">
+      <div className="flex flex-col sm:flex-row w-full h-full">
+        <Link
+          to="/products/category/Toilet%20Rolls"
+          className="block w-full sm:w-1/2"
+        >
+          <video
+            className="w-full h-full object-cover"
+            src="https://res.cloudinary.com/dmpkp9ux2/video/upload/v1750412139/img1_b6vy3k.mp4"
+            loop
+            autoPlay
+            muted
+            playsInline
+          />
+        </Link>
+
+        <Link
+          to="/products/category/Flavored%20Makhana"
+          className="block w-full sm:w-1/2"
+        >
+          <video
+            className="w-full h-full object-cover"
+            src="https://res.cloudinary.com/dmpkp9ux2/video/upload/v1750412155/img2_rx8zos.mp4"
+            loop
+            autoPlay
+            muted
+            playsInline
+          />
+        </Link>
       </div>
     </div>
+
+    // <div className=" flex  items-center h-[50vh] md:h-[100vh]  overflow-hidden bg-center bg-cover ">
+    //   <video
+    //     src="https://res.cloudinary.com/dmpkp9ux2/video/upload/v1750394018/M-T_j8z4fy.mp4"
+    //     autoPlay
+    //     loop
+    //     muted
+    //     className="absolute inset-0 object-cover w-full h-[50vh] md:h-full"
+    //   ></video>
+    //   <div className="absolute inset-0 bg-black opacity-10"></div>
+    //   <div className="container px-4 md:w-[60rem] flex justify-center flex-col items-center mx-auto font-bold text-white text-[2rem] -mt-40 head sm:text-[4rem]  md:text-[4rem] mf sm:px-2 ">
+    //     <AnimatedText text2={"Luxury  You  Can  Trust"} />
+    //     <AnimatedText text2={"Softness  You  Can  Feel"} />
+    //   </div>
+    // </div>
     // <div className="h-full">
     //   <div className="flex flex-col relative -top-0 sm:flex-row top-0 w-full mb-4">
     //     <Link

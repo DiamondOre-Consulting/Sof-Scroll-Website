@@ -893,8 +893,10 @@ const Allproducts = [
     Iron: "12 mg",
     previews: [
       {
-        previewUrl: mk3,
-        thumbUrl: mk3,
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750411265/Peri-Peri_xkdjyy.jpg",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750411265/Peri-Peri_xkdjyy.jpg",
       },
       {
         previewUrl:
@@ -907,7 +909,8 @@ const Allproducts = [
       //   "thumbUrl": "https://neelamfoodlandhk.com/cdn/shop/products/IMG_9360_275301b6-3034-4e93-b5b5-9da0a0fae0f3_800x.jpg?v=1698137519"
       // }
     ],
-    imageUrl: mk3,
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750411265/Peri-Peri_xkdjyy.jpg",
     fullDesc: [
       "Spice up your snack time with our Peri Peri Flavored Makhana.",
       "Made with roasted lotus seeds and a bold Peri Peri seasoning.",
@@ -937,8 +940,10 @@ const Allproducts = [
       "Makhana, olive oil, Sunflower Oil, Spices Makhanacondi ments(Yellow chilli, Onion, Parsley) Salt, Sugar, Milk Solid, maltodextrin, Hydrolysed Vegetable Proteins (Peanut), Acidity Regulator (INS 296), Flavour Enhancer (INS 635). ",
     previews: [
       {
-        previewUrl: mk8,
-        thumbUrl: mk8,
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750411381/Cream_Onion20_qrkcv2.jpg",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750411381/Cream_Onion20_qrkcv2.jpg",
       },
       {
         previewUrl:
@@ -951,7 +956,8 @@ const Allproducts = [
       //   "thumbUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg09XyicT0EfpLl8OvxDXX-bj1pGfcd6GFbASAnHg78c375WLp2EUEaSE9zmV0_ke8bSe6oE5LmaB3INKsedsn8CmYAH841xq-HW6J7ourXfYyRP6_qz-M8awjfwF21k1c2xdoM7p9KP-s/s1600/air+fryer+roasted+makhana.jpg"
       // }
     ],
-    imageUrl: mk8,
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750411381/Cream_Onion20_qrkcv2.jpg",
     fullDesc: [
       "Savor the creamy and tangy taste of Cream & Onion Flavored Makhana.",
       "Roasted to perfection and lightly coated with a rich cream and onion seasoning.",
@@ -981,8 +987,10 @@ const Allproducts = [
       "MAKHANA, OLIVE OIL, SUNFLOWER OIL, BLACK PEPPER, PINK SALT, MILK SOLID, MALTODEXRTIN ,HYDROLYSED VEGETABLE PROTEIN (PEANUTS), (FLAVOUR ENHANCER (INS 635 ALLERGEN ADVICE: CONTAINS PEANUT AND MILK SOLID",
     previews: [
       {
-        previewUrl: mk10,
-        thumbUrl: mk10,
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750411513/Himalyan20_xpzui1.jpg",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750411513/Himalyan20_xpzui1.jpg",
       },
       {
         previewUrl:
@@ -995,7 +1003,8 @@ const Allproducts = [
       //   "thumbUrl": "https://recipes.net/wp-content/uploads/2024/01/how-to-eat-makhana-fully-1706249268.jpg"
       // }
     ],
-    imageUrl: mk10,
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750411513/Himalyan20_xpzui1.jpg",
     fullDesc: [
       "Indulge in the classic taste of Himalaya Salt & Pepper Flavored Makhana.",
       "Carefully roasted and seasoned with natural Himalayan salt and pepper.",
@@ -1068,8 +1077,10 @@ const Allproducts = [
       " MAKHANA, OLIVE OIL, SUNFLOWER OIL, SPICES & CONDIMENTS (RED CHILLS, CORIANDER SEEDS, DRIED MANGO ,CUMIN , TURMERIC ,DRIED GINGER, LONG PEPPER, FENUGREEK ,MACE, NUTMEG),EDIBLE SALT, BLACK SALT, SUGAR,MINT LEAVES (7%),FENUGREEK LEAVES, HYDROLYSED VEG.PROTEIN(PEANUT) , ACIDITY REGULATOR(INS-330),NATURAL FLAVOUR (MINT),FLAVOUR  ENHANCER (INS -627) (INS-631),ANTICAKING AGENT (INS-551).",
     previews: [
       {
-        previewUrl: mk1,
-        thumbUrl: mk1,
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750411739/Pudina20_p7pdeo.jpg",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750411739/Pudina20_p7pdeo.jpg",
       },
       {
         previewUrl:
@@ -1078,7 +1089,8 @@ const Allproducts = [
           "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398486/1.Pudina_y23xvc.png",
       },
     ],
-    imageUrl: mk1,
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750411739/Pudina20_p7pdeo.jpg",
     fullDesc: [
       "Experience the refreshing taste of Pudina (mint) with every bite.",
       "A light, crispy, and healthy snack perfect for any time of the day.",

@@ -148,7 +148,7 @@ const ProductDetails = ({ cart, setCart }) => {
               <img
                 src={images[selectedImage].previewUrl}
                 alt={`Preview ${selectedImage + 1}`}
-                className={` w-full mx-auto h-[90vw] object-center lg:h-[30rem] object-fit rounded-md transition-transform duration-200 ${
+                className={` w-auto mx-auto h-[90vw] object-fit lg:h-[30rem] object-fit rounded-md transition-transform duration-200 ${
                   isZoomed ? "scale-[2]" : "scale-100"
                 }`}
                 style={{
