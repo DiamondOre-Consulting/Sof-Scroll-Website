@@ -2,14 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import pattern2 from "../assets/pattern2.png";
 import TextRevealByWord from "./ui/text-reveal";
-import img from '../assets/butterfly.png'
+import img from "../assets/butterfly.png";
 
 const AboutUs = () => {
   return (
     <>
       <div className="">
         <div className="flex flex-col items-center justify-center mx-auto md:py-10 text-start xl md:px-0">
-          <h1 data-aos="fade-left" className="mb-1 text-5xl mb-4 text-gray-800 md:text-5xl head ">
+          <h1
+            data-aos="fade-left"
+            className="mb-1 text-5xl mb-4 text-gray-800 md:text-5xl head "
+          >
             About US
           </h1>
           {/* <div className="flex gap-1 mb-8 ">
@@ -22,10 +25,31 @@ const AboutUs = () => {
           {/* <img src={img} alt="" className="absolute w-60 right-40 opacity-70" /> */}
 
           <div className="z-10 w-full px-4 text-justify md:px-10 h-fit">
-            <p className="text-xl lg:text-4xl xl:text-2xl mf  md:max-w-5xl mx-auto " data-aos="fade-right">
-            SOF SSCRROL is a premium brand renowned for its world-class tissue paper products and institutional commodities, designed to meet global needs. Engineered with cutting-edge technology, our tissue variants offer unmatched strength, softness, and absorbency, catering to both luxury and practicality. From toilet paper rolls and facial tissues to jumbo tissues and hospital couch rolls, our products are ultra-hygienic and tailored for HORECA, hospitality, and household use—prioritizing hygiene and comfort in every space.
+            <p
+              className="text-xl lg:text-4xl xl:text-2xl mf  md:max-w-6xl mx-auto "
+              data-aos="fade-right"
+            >
+              <strong>Sofsscroll</strong> is a premium platform offering
+              high-quality products designed to elevate everyday living. Our
+              offerings span two essential categories — wellness and hygiene.
+              <br />
+              <br />
+              <strong>Nutzz Magic</strong> brings you delicious,{" "}
+              <strong>GLUTEN-FREE</strong> and <strong>VEGAN</strong> flavored
+              makhanas, roasted in olive oil and packed with bold flavors — the
+              perfect snack for health-conscious lifestyles.
+              <br />
+              <br />
+              Our <strong>Sofsscroll tissue range</strong> is crafted with
+              advanced technology for unmatched softness, strength, and
+              absorbency. From facial tissues to jumbo rolls, we serve homes,
+              hospitality, and institutions with trusted hygiene solutions.
+              <br />
+              <br />
+              At Sofsscroll, we blend taste and care — delivering snacks and
+              essentials that prioritize your health, comfort, and everyday
+              needs.
             </p>
-
           </div>
           {/* <p className="mt-10 mb-4 md:text-5xl">
         

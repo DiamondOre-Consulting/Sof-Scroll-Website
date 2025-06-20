@@ -18,7 +18,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 const timelineData = [
   {
@@ -106,8 +106,7 @@ const AboutUs = () => {
 
   return (
     <div className="overflow-x-hidden ">
-
-       <Helmet>
+      <Helmet>
         <title>About Us | SOF SSCRROL – Tissue & Makhana Innovators</title>
         <meta
           name="description"
@@ -151,19 +150,25 @@ const AboutUs = () => {
             data-aos="fade-left"
             className="text-xl mf text-justify lg:text-4xl xl:text-2xl"
           >
-            <p>
-              SOF SSCRROL is a global leader in premium tissue paper products
-              and institutional solutions. With a focus on innovation and
-              quality, our range combines softness, strength, and absorbency,
-              catering to diverse needs across households, hospitality, and
-              public spaces.
-            </p>
-            <p>
-              Crafted from pure, recycled, and bamboo fibers, our products
-              embody luxury and sustainability, offering a perfect balance of
-              elegance and practicality. At SOF SSCRROL, hygiene and comfort are
-              at the heart of everything we create.
-            </p>
+            <strong>Sofsscroll</strong> is a premium platform offering
+            high-quality products designed to elevate everyday living. Our
+            offerings span two essential categories — wellness and hygiene.
+            <br />
+            <br />
+            <strong>Nutzz Magic</strong> brings you delicious,{" "}
+            <strong>GLUTEN-FREE</strong> and <strong>VEGAN</strong> flavored
+            makhanas, roasted in olive oil and packed with bold flavors — the
+            perfect snack for health-conscious lifestyles.
+            <br />
+            <br />
+            Our <strong>Sofsscroll tissue range</strong> is crafted with
+            advanced technology for unmatched softness, strength, and
+            absorbency. From facial tissues to jumbo rolls, we serve homes,
+            hospitality, and institutions with trusted hygiene solutions.
+            <br />
+            <br />
+            At Sofsscroll, we blend taste and care — delivering snacks and
+            essentials that prioritize your health, comfort, and everyday needs.
           </p>
         </div>
 
@@ -308,7 +313,7 @@ const AboutUs = () => {
                 alt="Harshawardhan Singh"
               />
               <p className="mt-4 text-2xl font-bold text-center">
-              Mr. Harshawardhan Singh
+                Mr. Harshawardhan Singh
               </p>
               <p className="mt-1 text-sm font-bold text-center text-gray-800 uppercase">
                 Co-Founder & CEO
@@ -323,12 +328,12 @@ const AboutUs = () => {
                 className="text-xl lg:text-4xl text-justify mf xl:text-2xl"
                 data-aos="fade-right"
               >
-                Mr. Alexander Aruldass is an experienced business leader with over
-                20 years in customer experience, sales, and marketing. He has
-                worked with global brands like KFC, HSBC, and Probe Information.
-                Known for his strategic approach, Alexander has driven growth
-                and customer satisfaction, using his deep understanding of
-                market needs to expand businesses successfully.
+                Mr. Alexander Aruldass is an experienced business leader with
+                over 20 years in customer experience, sales, and marketing. He
+                has worked with global brands like KFC, HSBC, and Probe
+                Information. Known for his strategic approach, Alexander has
+                driven growth and customer satisfaction, using his deep
+                understanding of market needs to expand businesses successfully.
               </p>
             </div>
             <div className="flex flex-col items-center" data-aos="fade-left">
@@ -338,7 +343,7 @@ const AboutUs = () => {
                 alt="Mr. Alexander Aruldass"
               />
               <p className="mt-4 text-xl font-bold text-center">
-              Mr. Alexander Aruldass
+                Mr. Alexander Aruldass
               </p>
               <p className="mt-1 text-sm font-bold text-center text-gray-800 uppercase">
                 Co-Founder & CMO
