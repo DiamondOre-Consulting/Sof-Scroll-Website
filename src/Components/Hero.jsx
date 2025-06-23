@@ -37,7 +37,7 @@ const Hero = () => {
         >
           <video
             className="w-full h-full object-cover"
-            src="https://res.cloudinary.com/dmpkp9ux2/video/upload/v1750412155/img2_rx8zos.mp4"
+            src="https://res.cloudinary.com/dmpkp9ux2/video/upload/v1750651603/Untitled_design_won5nm.mp4"
             loop
             autoPlay
             muted
