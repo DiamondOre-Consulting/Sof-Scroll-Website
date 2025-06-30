@@ -12,42 +12,39 @@ import GoogleReviews from "@/Components/GoogleReviews";
 import PopularCategory from "@/Components/PopularCategory";
 import MakhanaSection from "@/Components/MakhanaSection";
 import Recognisation from "@/Components/Recognisation";
-import { Helmet } from 'react-helmet-async';
-
+import { Helmet } from "react-helmet-async";
+import BenefitsOfMakhana from "@/Components/BenifitsOfMakhana";
 
 const MainHome = ({ cart, setCart }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-
-
   return (
     <div className="overflow-x-hidden ">
       <Helmet>
-  <title>SOF SSCRROL | Premium Tissue & Makhana Products</title>
-  <meta
-    name="description"
-    content="SOF SSCRROL is a premium brand renowned for world-class tissue paper products and institutional commodities. Our tissues—ranging from toilet rolls to hospital couch rolls—are engineered for luxury, hygiene, and absorbency, tailored for HORECA, hospitality, and homes."
-  />
-</Helmet>
+        <title>SOF SSCRROL | Premium Tissue & Makhana Products</title>
+        <meta
+          name="description"
+          content="SOF SSCRROL is a premium brand renowned for world-class tissue paper products and institutional commodities. Our tissues—ranging from toilet rolls to hospital couch rolls—are engineered for luxury, hygiene, and absorbency, tailored for HORECA, hospitality, and homes."
+        />
+      </Helmet>
 
-      
       <Hero />
       <AboutUs />
-    
+
       <OurStrength />
       <PopularCategory />
+      <BenefitsOfMakhana />
       <BestSellers cart={cart} setCart={setCart} />
       {/* <MakhanaSection/> */}
       {/* <PopularCategories/> */}
       <WhyUs />
       <Testimonials />
-      <Recognisation/>
+      <Recognisation />
       {/* <GoogleReviews /> */}
       <ContactUs />
       <FAQPage />
-
     </div>
   );
 };

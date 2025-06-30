@@ -800,94 +800,795 @@ const Allproducts = [
 
   // makhana
 
-  {
-    name: "Legacy",
-    category: "Row Makhana",
-    brand: "Nutzz Magic",
-    itemCode: "Mk400",
-    mkweight: "200",
-    Energy: "233 Kcal",
-    Proteins: "4.2 g",
-    Carbohydrates: "34.1 g",
-    TotalFats: "9.0 g",
-    SaturatedFats: "4.0 g",
-    MonosaturatedFats: "3.8 g",
-    PolyunsaturatedFats: "1.2 g",
-    TransFats: "0 g",
-    Cholesterol: "0 mg",
-    Sugar: "<0.2 g",
-    Iron: "10.5 mg",
-    previews: [
-      {
-        previewUrl: legacy,
-        thumbUrl: legacy,
-      },
-      // {
-      //   "previewUrl": legacy,
-      //   "thumbUrl": legacy
-      // }
-    ],
-    imageUrl: legacy,
-    fullDesc: [
-      "Legacy Makhana is a premium-quality, light, and crunchy snack, perfect for a healthy lifestyle.",
-      "A rich source of protein and fiber, great for weight management and heart health.",
-      "Packed with essential nutrients, low in cholesterol, and free from trans fats.",
-      "Perfect for snacking or as an ingredient in various dishes like kheer and curries.",
-    ],
-  },
-  {
-    name: "Heritage",
-    category: "Row Makhana",
-    brand: "Nutzz Magic",
-    itemCode: "Mk600",
-    mkweight: "200",
-    Energy: "235 Kcal",
-    Proteins: "4.5 g",
-    Carbohydrates: "34.5 g",
-    TotalFats: "9.2 g",
-    SaturatedFats: "4.1 g",
-    MonosaturatedFats: "3.7 g",
-    PolyunsaturatedFats: "1.4 g",
-    TransFats: "0 g",
-    Cholesterol: "0 mg",
-    Sugar: "<0.2 g",
-    Iron: "11.2 mg",
-    previews: [
-      {
-        previewUrl: heritage,
-        thumbUrl: heritage,
-      },
-      // {
-      //   "previewUrl": heritage,
-      //   "thumbUrl": heritage
-      // }
-    ],
-    imageUrl: heritage,
-    fullDesc: [
-      "Heritage Makhana  is a premium roasted lotus seed snack with an irresistible crunch.",
-      "Crafted for those who prefer high-quality, nutrient-rich munching options.",
-      "Loaded with protein and antioxidants, making it a great alternative to fried snacks.",
-      "Ideal for tea-time snacking, fitness-conscious diets, and quick energy boosts.",
-    ],
-  },
+  // {
+  //   name: "Legacy",
+  //   category: "Row Makhana",
+  //   brand: "Nutzz Magic",
+  //   itemCode: "Mk400",
+  //   mkweight: "200",
+  //   Energy: "233 Kcal",
+  //   Proteins: "4.2 g",
+  //   Carbohydrates: "34.1 g",
+  //   TotalFats: "9.0 g",
+  //   SaturatedFats: "4.0 g",
+  //   MonosaturatedFats: "3.8 g",
+  //   PolyunsaturatedFats: "1.2 g",
+  //   TransFats: "0 g",
+  //   Cholesterol: "0 mg",
+  //   Sugar: "<0.2 g",
+  //   Iron: "10.5 mg",
+  //   previews: [
+  //     {
+  //       previewUrl: legacy,
+  //       thumbUrl: legacy,
+  //     },
+  //     // {
+  //     //   "previewUrl": legacy,
+  //     //   "thumbUrl": legacy
+  //     // }
+  //   ],
+  //   imageUrl: legacy,
+  //   fullDesc: [
+  //     "Legacy Makhana is a premium-quality, light, and crunchy snack, perfect for a healthy lifestyle.",
+  //     "A rich source of protein and fiber, great for weight management and heart health.",
+  //     "Packed with essential nutrients, low in cholesterol, and free from trans fats.",
+  //     "Perfect for snacking or as an ingredient in various dishes like kheer and curries.",
+  //   ],
+  // },
+  // {
+  //   name: "Heritage",
+  //   category: "Row Makhana",
+  //   brand: "Nutzz Magic",
+  //   itemCode: "Mk600",
+  //   mkweight: "200",
+  //   Energy: "235 Kcal",
+  //   Proteins: "4.5 g",
+  //   Carbohydrates: "34.5 g",
+  //   TotalFats: "9.2 g",
+  //   SaturatedFats: "4.1 g",
+  //   MonosaturatedFats: "3.7 g",
+  //   PolyunsaturatedFats: "1.4 g",
+  //   TransFats: "0 g",
+  //   Cholesterol: "0 mg",
+  //   Sugar: "<0.2 g",
+  //   Iron: "11.2 mg",
+  //   previews: [
+  //     {
+  //       previewUrl: heritage,
+  //       thumbUrl: heritage,
+  //     },
+  //     // {
+  //     //   "previewUrl": heritage,
+  //     //   "thumbUrl": heritage
+  //     // }
+  //   ],
+  //   imageUrl: heritage,
+  //   fullDesc: [
+  //     "Heritage Makhana  is a premium roasted lotus seed snack with an irresistible crunch.",
+  //     "Crafted for those who prefer high-quality, nutrient-rich munching options.",
+  //     "Loaded with protein and antioxidants, making it a great alternative to fried snacks.",
+  //     "Ideal for tea-time snacking, fitness-conscious diets, and quick energy boosts.",
+  //   ],
+  // },
 
   {
-    name: "Peri Peri Flavored Makhana",
-    category: "Flavored Makhana",
-    itemCode: "Mk200",
+    name: "4 Suta Normal",
+    category: "Row Makhana",
+    categoryHeading: "4 SUTA",
+    itemCode: "Mk400",
     brand: "Nutzz Magic",
     Energy: "237 Kcal",
     Proteins: "5.2 g",
     Carbohydrates: "33.0 g",
     TotalFats: "9.5 g",
-    mkweight: "200",
     SaturatedFats: "4.1 g",
     MonosaturatedFats: "3.9 g",
     PolyunsaturatedFats: "1.5 g",
     TransFats: "0 g",
     Cholesterol: "0 mg",
     Sugar: "<0.5 g",
-    sizesAvailable: "30g, 60g, 90g",
+    Iron: "12 mg",
+    previews: [
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256219/4_sutta_normal_reeqm0.jpg",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256219/4_sutta_normal_reeqm0.jpg",
+      },
+    ],
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256219/4_sutta_normal_reeqm0.jpg",
+    fullDesc: [
+      "Standard 4 Suta grade makhana with consistent 18-20mm size",
+      "Sun-dried lotus seeds with natural earthy flavor",
+      "Contains 92% whole seeds - ideal for bulk cooking",
+      "Perfect for making makhana kheer, curries or basic roasting",
+      "Budget-friendly option with good nutritional value",
+    ],
+  },
+  {
+    name: "4 Suta Handpicked",
+    category: "Row Makhana",
+    categoryHeading: "4 SUTA",
+    itemCode: "Mk401",
+    brand: "Nutzz Magic",
+    Energy: "237 Kcal",
+    Proteins: "5.2 g",
+    Carbohydrates: "33.0 g",
+    TotalFats: "9.5 g",
+    SaturatedFats: "4.1 g",
+    MonosaturatedFats: "3.9 g",
+    PolyunsaturatedFats: "1.5 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.5 g",
+    Iron: "12 mg",
+    previews: [
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256219/4_sutta_handpicked_behrnm.webp",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256219/4_sutta_handpicked_behrnm.webp",
+      },
+    ],
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256219/4_sutta_handpicked_behrnm.webp",
+    fullDesc: [
+      "Hand-selected 4 Suta makhana with 95% whole seeds",
+      "Uniform 19-21mm size for even roasting",
+      "Lower moisture content ensures better crispness",
+      "Ideal for making premium roasted snacks",
+      "Preferred by chefs for consistent cooking results",
+    ],
+  },
+  {
+    name: "4+ Suta",
+    category: "Row Makhana",
+    categoryHeading: "4 SUTA",
+    itemCode: "Mk402",
+    brand: "Nutzz Magic",
+    Energy: "240 Kcal",
+    Proteins: "5.5 g",
+    Carbohydrates: "33.5 g",
+    TotalFats: "9.8 g",
+    SaturatedFats: "4.2 g",
+    MonosaturatedFats: "4.0 g",
+    PolyunsaturatedFats: "1.6 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.5 g",
+    Iron: "13 mg",
+    previews: [
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256219/4_sutta_guueph.webp",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256219/4_sutta_guueph.webp",
+      },
+    ],
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256219/4_sutta_guueph.webp",
+    fullDesc: [
+      "Upgraded 4+ Suta with 20-22mm seed size",
+      "Special sorting process removes undersized seeds",
+      "Higher protein content than standard 4 Suta",
+      "Puffs uniformly when roasted - no uneven cooking",
+      "Great balance between quality and affordability",
+    ],
+  },
+  {
+    name: "4+ Handpicked",
+    category: "Row Makhana",
+    categoryHeading: "4 SUTA",
+    itemCode: "Mk403",
+    brand: "Nutzz Magic",
+    Energy: "240 Kcal",
+    Proteins: "5.5 g",
+    Carbohydrates: "33.5 g",
+    TotalFats: "9.8 g",
+    SaturatedFats: "4.2 g",
+    MonosaturatedFats: "4.0 g",
+    PolyunsaturatedFats: "1.6 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.5 g",
+    Iron: "13 mg",
+    previews: [
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256219/4_handpicked_t8dofq.jpg",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256219/4_handpicked_t8dofq.jpg",
+      },
+    ],
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256219/4_handpicked_t8dofq.jpg",
+    fullDesc: [
+      "Premium selection of 4+ Suta grade (21-23mm)",
+      "Triple-sorted for maximum whole seeds (98%+)",
+      "Thicker seed walls provide extra crunch",
+      "Lower breakage rate during processing",
+      "Export-quality with superior puffing ability",
+    ],
+  },
+  {
+    name: "5 Suta Normal",
+    category: "Row Makhana",
+    categoryHeading: "5 SUTA",
+    itemCode: "Mk500",
+    brand: "Nutzz Magic",
+    Energy: "235 Kcal",
+    Proteins: "5.0 g",
+    Carbohydrates: "32.5 g",
+    TotalFats: "9.3 g",
+    SaturatedFats: "4.0 g",
+    MonosaturatedFats: "3.8 g",
+    PolyunsaturatedFats: "1.5 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.5 g",
+    Iron: "11 mg",
+    previews: [
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256220/5_sutta_normal_g3dut3.webp",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256220/5_sutta_normal_g3dut3.webp",
+      },
+    ],
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256220/5_sutta_normal_g3dut3.webp",
+    fullDesc: [
+      "Classic 5 Suta grade (22-24mm size)",
+      "Naturally sweet flavor with earthy notes",
+      "Contains 90-92% whole seeds",
+      "Perfect for traditional makhana recipes",
+      "Most popular grade for household use",
+    ],
+  },
+  {
+    name: "5 Suta Handpicked",
+    category: "Row Makhana",
+    categoryHeading: "5 SUTA",
+    itemCode: "Mk501",
+    brand: "Nutzz Magic",
+    Energy: "235 Kcal",
+    Proteins: "5.0 g",
+    Carbohydrates: "32.5 g",
+    TotalFats: "9.3 g",
+    SaturatedFats: "4.0 g",
+    MonosaturatedFats: "3.8 g",
+    PolyunsaturatedFats: "1.5 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.5 g",
+    Iron: "11 mg",
+    previews: [
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256221/5_sutta_handpicked_zid4at.webp",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256221/5_sutta_handpicked_zid4at.webp",
+      },
+    ],
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256221/5_sutta_handpicked_zid4at.webp",
+    fullDesc: [
+      "Hand-selected 5 Suta (23-25mm size)",
+      "95%+ whole seeds with minimal breakage",
+      "Denser texture holds flavors better",
+      "Preferred by snack manufacturers",
+      "Consistent quality batch after batch",
+    ],
+  },
+  {
+    name: "5+",
+    category: "Row Makhana",
+    categoryHeading: "5 SUTA",
+    itemCode: "Mk502",
+    brand: "Nutzz Magic",
+    Energy: "238 Kcal",
+    Proteins: "5.3 g",
+    Carbohydrates: "33.2 g",
+    TotalFats: "9.6 g",
+    SaturatedFats: "4.1 g",
+    MonosaturatedFats: "3.9 g",
+    PolyunsaturatedFats: "1.6 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.5 g",
+    Iron: "12 mg",
+    previews: [
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256226/5_sitta_sxyjv4.jpg",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256226/5_sitta_sxyjv4.jpg",
+      },
+    ],
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256226/5_sitta_sxyjv4.jpg",
+    fullDesc: [
+      "Upgraded 5+ Suta (24-26mm size)",
+      "Special drying process enhances crispness",
+      "Higher iron content than standard 5 Suta",
+      "Maintains shape better during cooking",
+      "Ideal for gourmet snacks and recipes",
+    ],
+  },
+  {
+    name: "5+ Handpicked",
+    category: "Row Makhana",
+    categoryHeading: "5 SUTA",
+    itemCode: "Mk503",
+    brand: "Nutzz Magic",
+    Energy: "238 Kcal",
+    Proteins: "5.3 g",
+    Carbohydrates: "33.2 g",
+    TotalFats: "9.6 g",
+    SaturatedFats: "4.1 g",
+    MonosaturatedFats: "3.9 g",
+    PolyunsaturatedFats: "1.6 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.5 g",
+    Iron: "12 mg",
+    previews: [
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256220/5_handpicked_yavrdi.jpg",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256220/5_handpicked_yavrdi.jpg",
+      },
+    ],
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256220/5_handpicked_yavrdi.jpg",
+    fullDesc: [
+      "Premium 5+ Handpicked (25-27mm size)",
+      "98% whole seeds - virtually no breakage",
+      "Thicker walls provide satisfying crunch",
+      "Slow-roasting variety for best texture",
+      "Used by premium snack brands worldwide",
+    ],
+  },
+  {
+    name: "6+",
+    category: "Row Makhana",
+    categoryHeading: "6 SUTA",
+    itemCode: "Mk602",
+    brand: "Nutzz Magic",
+    Energy: "242 Kcal",
+    Proteins: "5.6 g",
+    Carbohydrates: "34.0 g",
+    TotalFats: "10.0 g",
+    SaturatedFats: "4.3 g",
+    MonosaturatedFats: "4.1 g",
+    PolyunsaturatedFats: "1.6 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.5 g",
+    Iron: "13 mg",
+    previews: [
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256219/6_w5jkli.webp",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256219/6_w5jkli.webp",
+      },
+    ],
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256219/6_w5jkli.webp",
+    fullDesc: [
+      "Large 6+ Suta grade (26-28mm size)",
+      "Extra-thick walls for maximum puffing",
+      "Naturally sweeter flavor profile",
+      "Contains 15% more protein than 5 Suta",
+      "First choice for health food manufacturers",
+    ],
+  },
+  {
+    name: "6+ Handpicked",
+    category: "Row Makhana",
+    categoryHeading: "6 SUTA",
+    itemCode: "Mk603",
+    brand: "Nutzz Magic",
+    Energy: "242 Kcal",
+    Proteins: "5.6 g",
+    Carbohydrates: "34.0 g",
+    TotalFats: "10.0 g",
+    SaturatedFats: "4.3 g",
+    MonosaturatedFats: "4.1 g",
+    PolyunsaturatedFats: "1.6 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.5 g",
+    Iron: "13 mg",
+    previews: [
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256220/6_handpicked_amlzd8.webp",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256220/6_handpicked_amlzd8.webp",
+      },
+    ],
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751256220/6_handpicked_amlzd8.webp",
+    fullDesc: [
+      "Royal selection 6+ Handpicked (27-29mm)",
+      "Only 1% breakage - finest quality available",
+      "Exceptionally high mineral content",
+      "Maintains crispness longer after roasting",
+      "Used in luxury snacks and gift packages",
+    ],
+  },
+  {
+    name: "6.5 Suta",
+    category: "Row Makhana",
+    categoryHeading: "6 SUTA",
+    itemCode: "Mk600",
+    brand: "Nutzz Magic",
+    Energy: "240 Kcal",
+    Proteins: "5.4 g",
+    Carbohydrates: "33.8 g",
+    TotalFats: "9.8 g",
+    SaturatedFats: "4.2 g",
+    MonosaturatedFats: "4.0 g",
+    PolyunsaturatedFats: "1.6 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.5 g",
+    Iron: "12 mg",
+    previews: [
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751257949/6.5_sutta_hbynay.webp",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751257949/6.5_sutta_hbynay.webp",
+      },
+    ],
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751257949/6.5_sutta_hbynay.webp",
+    fullDesc: [
+      "Rare 6.5 Suta grade (28-30mm size)",
+      "Extra-large seeds with thick walls",
+      "Naturally low in sodium",
+      "Puffs to nearly double size when roasted",
+      "Preferred by Ayurvedic practitioners",
+    ],
+  },
+  {
+    name: "6.5 Handpicked",
+    category: "Row Makhana",
+    categoryHeading: "6 SUTA",
+    itemCode: "Mk651",
+    brand: "Nutzz Magic",
+    Energy: "243 Kcal",
+    Proteins: "5.7 g",
+    Carbohydrates: "34.2 g",
+    TotalFats: "10.1 g",
+    SaturatedFats: "4.4 g",
+    MonosaturatedFats: "4.2 g",
+    PolyunsaturatedFats: "1.7 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.5 g",
+    Iron: "14 mg",
+    previews: [
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751258060/6.5_handpicked_odoca7.webp",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751258060/6.5_handpicked_odoca7.webp",
+      },
+    ],
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751258060/6.5_handpicked_odoca7.webp",
+    fullDesc: [
+      "Ultra-premium 6.5 Handpicked (29-32mm)",
+      "Only 0.5% breakage - supreme quality",
+      "Highest protein content in our range",
+      "Maintains crispness for weeks",
+      "The gold standard for gourmet makhana",
+    ],
+  },
+
+  //30gram
+  {
+    name: "Peri Peri Flavored Makhana",
+    category: "Flavored Makhana",
+    categoryHeading: "30 Gram",
+    itemCode: "Mk200",
+    brand: "Nutzz Magic",
+    Energy: "237 Kcal",
+    Proteins: "5.2 g",
+    Carbohydrates: "33.0 g",
+    TotalFats: "9.5 g",
+    // mkweight: "200",
+    SaturatedFats: "4.1 g",
+    MonosaturatedFats: "3.9 g",
+    PolyunsaturatedFats: "1.5 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.5 g",
+    // sizesAvailable: "30g, 60g, 90g",
+    ingredients:
+      "MAKHANA, OILVE OIL, SUNFLOWER OIL, SUGAR, SPICES & CONDIMENTS (RED CHILLI, DRIED MANGO, DRIED ONION, CORIANDER SEEDS, CUMIN, DRIED GARLIC FLAKES, NUTMEG, MACE), SALT, MALTODEXTRIN,TOMATO POWDER, ACIDITY REGULATOR (INS-330) & (INS 296), HYDROLYSE PEANUT PROTEIN, COLOUR (INS 160C), NAUSADAR (INS 510), NATURAL AND NATURE IDENTICAL AND FLAVOURING SUBSTANCES (PERI PERI), FLAVOUR ENHANCER (INS 627) & (INS 631",
+    Iron: "12 mg",
+    previews: [
+      // {
+      //   previewUrl:
+      //     "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750411265/Peri-Peri_xkdjyy.jpg",
+      //   thumbUrl:
+      //     "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750411265/Peri-Peri_xkdjyy.jpg",
+      // },
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750397684/1.Peri-Peri_yjehpm.png",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750397684/1.Peri-Peri_yjehpm.png",
+      },
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751010928/1.Peri-Peri-Back_kjw0gh.png",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751010928/1.Peri-Peri-Back_kjw0gh.png",
+      },
+    ],
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750397684/1.Peri-Peri_yjehpm.png",
+    fullDesc: [
+      "Spice up your snack time with our Peri Peri Flavored Makhana.",
+      "Made with roasted lotus seeds and a bold Peri Peri seasoning.",
+      "Low in calories, cholesterol-free, and high in antioxidants.",
+      "Perfect for guilt-free snacking with a spicy kick!",
+    ],
+  },
+  {
+    name: "Cream & Onion Flavored Makhana",
+    category: "Flavored Makhana",
+    categoryHeading: "30 Gram",
+    itemCode: "Mk201",
+    brand: "Nutzz Magic",
+    Energy: "235 Kcal",
+    Proteins: "5.0 g",
+    Carbohydrates: "34.0 g",
+    TotalFats: "9.2 g",
+    SaturatedFats: "4.0 g",
+    // mkweight: "200",
+    MonosaturatedFats: "3.8 g",
+    PolyunsaturatedFats: "1.4 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.4 g",
+    Iron: "11.5 mg",
+    // sizesAvailable: "30g, 60g, 90g",
+    ingredients:
+      "Makhana, olive oil, Sunflower Oil, Spices Makhanacondi ments(Yellow chilli, Onion, Parsley) Salt, Sugar, Milk Solid, maltodextrin, Hydrolysed Vegetable Proteins (Peanut), Acidity Regulator (INS 296), Flavour Enhancer (INS 635). ",
+    previews: [
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398207/1.Ceam_Onion_mhuc1p.png",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398207/1.Ceam_Onion_mhuc1p.png",
+      },
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751010916/1.Ceam_Onion-Back_nk9ura.png",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751010916/1.Ceam_Onion-Back_nk9ura.png",
+      },
+      // {
+      //   "previewUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg09XyicT0EfpLl8OvxDXX-bj1pGfcd6GFbASAnHg78c375WLp2EUEaSE9zmV0_ke8bSe6oE5LmaB3INKsedsn8CmYAH841xq-HW6J7ourXfYyRP6_qz-M8awjfwF21k1c2xdoM7p9KP-s/s1600/air+fryer+roasted+makhana.jpg",
+      //   "thumbUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg09XyicT0EfpLl8OvxDXX-bj1pGfcd6GFbASAnHg78c375WLp2EUEaSE9zmV0_ke8bSe6oE5LmaB3INKsedsn8CmYAH841xq-HW6J7ourXfYyRP6_qz-M8awjfwF21k1c2xdoM7p9KP-s/s1600/air+fryer+roasted+makhana.jpg"
+      // }
+    ],
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398207/1.Ceam_Onion_mhuc1p.png",
+    fullDesc: [
+      "Savor the creamy and tangy taste of Cream & Onion Flavored Makhana.",
+      "Roasted to perfection and lightly coated with a rich cream and onion seasoning.",
+      "A healthy snack option that's gluten-free and packed with nutrients.",
+      "Enjoy the perfect blend of flavor and crunch in every bite!",
+    ],
+  },
+  {
+    name: "Himalaya Salt & Pepper Flavored Makhana",
+    category: "Flavored Makhana",
+    categoryHeading: "30 Gram",
+    itemCode: "Mk202",
+    Energy: "236 Kcal",
+    brand: "Nutzz Magic",
+    // mkweight: "200",
+    Proteins: "4.8 g",
+    Carbohydrates: "33.5 g",
+    TotalFats: "9.0 g",
+    SaturatedFats: "3.9 g",
+    MonosaturatedFats: "3.7 g",
+    PolyunsaturatedFats: "1.3 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.3 g",
+    Iron: "11.8 mg",
+    // sizesAvailable: "30g, 60g, 90g",
+    ingredients:
+      "MAKHANA, OLIVE OIL, SUNFLOWER OIL, BLACK PEPPER, PINK SALT, MILK SOLID, MALTODEXRTIN ,HYDROLYSED VEGETABLE PROTEIN (PEANUTS), (FLAVOUR ENHANCER (INS 635 ALLERGEN ADVICE: CONTAINS PEANUT AND MILK SOLID",
+    previews: [
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398287/1.Himalyan_Salt_ggzrql.png",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398287/1.Himalyan_Salt_ggzrql.png",
+      },
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751010924/1.Himalyan_Salt-Back_q1eo88.png",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751010924/1.Himalyan_Salt-Back_q1eo88.png",
+      },
+      // {
+      //   "previewUrl": "https://recipes.net/wp-content/uploads/2024/01/how-to-eat-makhana-fully-1706249268.jpg",
+      //   "thumbUrl": "https://recipes.net/wp-content/uploads/2024/01/how-to-eat-makhana-fully-1706249268.jpg"
+      // }
+    ],
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398287/1.Himalyan_Salt_ggzrql.png",
+    fullDesc: [
+      "Indulge in the classic taste of Himalaya Salt & Pepper Flavored Makhana.",
+      "Carefully roasted and seasoned with natural Himalayan salt and pepper.",
+      "A light and wholesome snack that's perfect for any time of the day.",
+      "Rich in nutrients and free from trans fats, making it a healthy choice.",
+    ],
+  },
+  {
+    name: "Tangy Cheese Flavored Makhana",
+    category: "Flavored Makhana",
+    categoryHeading: "30 Gram",
+    itemCode: "Mk11",
+    Energy: "236 Kcal",
+    brand: "Nutzz Magic",
+    // mkweight: "200",
+    Proteins: "4.8 g",
+    Carbohydrates: "33.5 g",
+    TotalFats: "9.0 g",
+    SaturatedFats: "3.9 g",
+    MonosaturatedFats: "3.7 g",
+    PolyunsaturatedFats: "1.3 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.3 g",
+    Iron: "11.8 mg",
+    // sizesAvailable: "30g, 60g, 90g",
+    ingredients:
+      " Makhana, olive oil, Sunflower Oil, Sugar, Salt, Maltodextrin,Hydrolyses Peanut Protein, Dehydrated Blend of Whey (From Milk), Stabilizer Emulsifier (INS 339), Acidity Regulator (INS 330), Cheese Concentrate, Colour (INS 160c).CONTANS ADDED FLAVOUR (NATURAL, NATURE IDENTICAL AND ARTIFICIAL FLAVOURING SUBSTANCES: MILK",
+    previews: [
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398376/1.Tangy_Cheese_di0xn5.png",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398376/1.Tangy_Cheese_di0xn5.png",
+      },
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751010916/1.Tangy_Cheese-Back_gykui3.png",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751010916/1.Tangy_Cheese-Back_gykui3.png",
+      },
+    ],
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398376/1.Tangy_Cheese_di0xn5.png",
+    fullDesc: [
+      "Enjoy the rich and tangy flavor of cheese combined with crunchy Makhana.",
+      "A delightful, guilt-free snacking option packed with nutrients.",
+      "Perfect for satisfying your cravings while staying healthy.",
+    ],
+  },
+  {
+    name: "Pudina Flavored Makhana",
+    category: "Flavored Makhana",
+    categoryHeading: "30 Gram",
+    itemCode: "Mk203",
+    Energy: "236 Kcal",
+    brand: "Nutzz Magic",
+    // mkweight: "200",
+    Proteins: "4.8 g",
+    Carbohydrates: "33.5 g",
+    TotalFats: "9.0 g",
+    SaturatedFats: "3.9 g",
+    MonosaturatedFats: "3.7 g",
+    PolyunsaturatedFats: "1.3 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.3 g",
+    Iron: "11.8 mg",
+    // sizesAvailable: "30g, 60g, 90g",
+    ingredients:
+      " MAKHANA, OLIVE OIL, SUNFLOWER OIL, SPICES & CONDIMENTS (RED CHILLS, CORIANDER SEEDS, DRIED MANGO ,CUMIN , TURMERIC ,DRIED GINGER, LONG PEPPER, FENUGREEK ,MACE, NUTMEG),EDIBLE SALT, BLACK SALT, SUGAR,MINT LEAVES (7%),FENUGREEK LEAVES, HYDROLYSED VEG.PROTEIN(PEANUT) , ACIDITY REGULATOR(INS-330),NATURAL FLAVOUR (MINT),FLAVOUR  ENHANCER (INS -627) (INS-631),ANTICAKING AGENT (INS-551).",
+    previews: [
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398486/1.Pudina_y23xvc.png",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398486/1.Pudina_y23xvc.png",
+      },
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751010917/1.Pudina-Back_ivvyq0.png",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751010917/1.Pudina-Back_ivvyq0.png",
+      },
+    ],
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398486/1.Pudina_y23xvc.png",
+    fullDesc: [
+      "Experience the refreshing taste of Pudina (mint) with every bite.",
+      "A light, crispy, and healthy snack perfect for any time of the day.",
+      "Rich in nutrients and free from trans fats, making it a great alternative to chips.",
+    ],
+  },
+  {
+    name: "Roasted Makhana",
+    category: "Flavored Makhana",
+    categoryHeading: "30 Gram",
+    itemCode: "Mk204",
+    Energy: "236 Kcal",
+    brand: "Nutzz Magic",
+    // mkweight: "200",
+    Proteins: "4.8 g",
+    Carbohydrates: "33.5 g",
+    TotalFats: "9.0 g",
+    SaturatedFats: "3.9 g",
+    MonosaturatedFats: "3.7 g",
+    PolyunsaturatedFats: "1.3 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.3 g",
+    Iron: "11.8 mg",
+    // sizesAvailable: "30g, 60g, 250g , 1kg",
+    ingredients:
+      " Blossoms in Water, as light as Air-Foxnuts (makhana) are a nutritious snack that are high in protein and fibre, while being naturally free of fat",
+    previews: [
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398689/1.Roasted_fitih1.png",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398689/1.Roasted_fitih1.png",
+      },
+      {
+        previewUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751010915/1.Roasted-Back_yiktrw.png",
+        thumbUrl:
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751010915/1.Roasted-Back_yiktrw.png",
+      },
+    ],
+    imageUrl:
+      "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398689/1.Roasted_fitih1.png",
+    fullDesc: [
+      "Enjoy the crunch of perfectly roasted Makhana, a wholesome and satisfying snack.",
+      "Naturally low in cholesterol and trans fats, making it a heart-healthy choice.",
+      "Rich in protein, iron, and essential nutrients—ideal for guilt-free snacking.",
+    ],
+  },
+
+  //60gm
+
+  {
+    name: "Peri Peri Flavored Makhana",
+    category: "Flavored Makhana",
+    categoryHeading: "60 Gram",
+    itemCode: "Mk300",
+    brand: "Nutzz Magic",
+    Energy: "237 Kcal",
+    Proteins: "5.2 g",
+    Carbohydrates: "33.0 g",
+    TotalFats: "9.5 g",
+    // mkweight: "200",
+    SaturatedFats: "4.1 g",
+    MonosaturatedFats: "3.9 g",
+    PolyunsaturatedFats: "1.5 g",
+    TransFats: "0 g",
+    Cholesterol: "0 mg",
+    Sugar: "<0.5 g",
+    // sizesAvailable: "30g, 60g, 90g",
     ingredients:
       "MAKHANA, OILVE OIL, SUNFLOWER OIL, SUGAR, SPICES & CONDIMENTS (RED CHILLI, DRIED MANGO, DRIED ONION, CORIANDER SEEDS, CUMIN, DRIED GARLIC FLAKES, NUTMEG, MACE), SALT, MALTODEXTRIN,TOMATO POWDER, ACIDITY REGULATOR (INS-330) & (INS 296), HYDROLYSE PEANUT PROTEIN, COLOUR (INS 160C), NAUSADAR (INS 510), NATURAL AND NATURE IDENTICAL AND FLAVOURING SUBSTANCES (PERI PERI), FLAVOUR ENHANCER (INS 627) & (INS 631",
     Iron: "12 mg",
@@ -900,9 +1601,9 @@ const Allproducts = [
       },
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750397684/1.Peri-Peri_yjehpm.png",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751016324/Peri-Peri_Back_60_ofyd2w.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750397684/1.Peri-Peri_yjehpm.png",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751016324/Peri-Peri_Back_60_ofyd2w.jpg",
       },
       // {
       //   "previewUrl": "https://neelamfoodlandhk.com/cdn/shop/products/IMG_9360_275301b6-3034-4e93-b5b5-9da0a0fae0f3_800x.jpg?v=1698137519",
@@ -921,21 +1622,22 @@ const Allproducts = [
   {
     name: "Cream & Onion Flavored Makhana",
     category: "Flavored Makhana",
-    itemCode: "Mk201",
+    categoryHeading: "60 Gram",
+    itemCode: "Mk301",
     brand: "Nutzz Magic",
     Energy: "235 Kcal",
     Proteins: "5.0 g",
     Carbohydrates: "34.0 g",
     TotalFats: "9.2 g",
     SaturatedFats: "4.0 g",
-    mkweight: "200",
+    // mkweight: "200",
     MonosaturatedFats: "3.8 g",
     PolyunsaturatedFats: "1.4 g",
     TransFats: "0 g",
     Cholesterol: "0 mg",
     Sugar: "<0.4 g",
     Iron: "11.5 mg",
-    sizesAvailable: "30g, 60g, 90g",
+    // sizesAvailable: "30g, 60g, 90g",
     ingredients:
       "Makhana, olive oil, Sunflower Oil, Spices Makhanacondi ments(Yellow chilli, Onion, Parsley) Salt, Sugar, Milk Solid, maltodextrin, Hydrolysed Vegetable Proteins (Peanut), Acidity Regulator (INS 296), Flavour Enhancer (INS 635). ",
     previews: [
@@ -947,14 +1649,16 @@ const Allproducts = [
       },
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398207/1.Ceam_Onion_mhuc1p.png",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751016364/Cream_Onion-Back_60_nprcrc.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398207/1.Ceam_Onion_mhuc1p.png",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751016364/Cream_Onion-Back_60_nprcrc.jpg",
       },
       // {
-      //   "previewUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg09XyicT0EfpLl8OvxDXX-bj1pGfcd6GFbASAnHg78c375WLp2EUEaSE9zmV0_ke8bSe6oE5LmaB3INKsedsn8CmYAH841xq-HW6J7ourXfYyRP6_qz-M8awjfwF21k1c2xdoM7p9KP-s/s1600/air+fryer+roasted+makhana.jpg",
-      //   "thumbUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg09XyicT0EfpLl8OvxDXX-bj1pGfcd6GFbASAnHg78c375WLp2EUEaSE9zmV0_ke8bSe6oE5LmaB3INKsedsn8CmYAH841xq-HW6J7ourXfYyRP6_qz-M8awjfwF21k1c2xdoM7p9KP-s/s1600/air+fryer+roasted+makhana.jpg"
-      // }
+      //   previewUrl:
+      //     "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg09XyicT0EfpLl8OvxDXX-bj1pGfcd6GFbASAnHg78c375WLp2EUEaSE9zmV0_ke8bSe6oE5LmaB3INKsedsn8CmYAH841xq-HW6J7ourXfYyRP6_qz-M8awjfwF21k1c2xdoM7p9KP-s/s1600/air+fryer+roasted+makhana.jpg",
+      //   thumbUrl:
+      //     "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg09XyicT0EfpLl8OvxDXX-bj1pGfcd6GFbASAnHg78c375WLp2EUEaSE9zmV0_ke8bSe6oE5LmaB3INKsedsn8CmYAH841xq-HW6J7ourXfYyRP6_qz-M8awjfwF21k1c2xdoM7p9KP-s/s1600/air+fryer+roasted+makhana.jpg",
+      // },
     ],
     imageUrl:
       "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750411381/Cream_Onion20_qrkcv2.jpg",
@@ -968,10 +1672,11 @@ const Allproducts = [
   {
     name: "Himalaya Salt & Pepper Flavored Makhana",
     category: "Flavored Makhana",
-    itemCode: "Mk202",
+    categoryHeading: "60 Gram",
+    itemCode: "Mk302",
     Energy: "236 Kcal",
     brand: "Nutzz Magic",
-    mkweight: "200",
+    // mkweight: "200",
     Proteins: "4.8 g",
     Carbohydrates: "33.5 g",
     TotalFats: "9.0 g",
@@ -982,7 +1687,7 @@ const Allproducts = [
     Cholesterol: "0 mg",
     Sugar: "<0.3 g",
     Iron: "11.8 mg",
-    sizesAvailable: "30g, 60g, 90g",
+    // sizesAvailable: "30g, 60g, 90g",
     ingredients:
       "MAKHANA, OLIVE OIL, SUNFLOWER OIL, BLACK PEPPER, PINK SALT, MILK SOLID, MALTODEXRTIN ,HYDROLYSED VEGETABLE PROTEIN (PEANUTS), (FLAVOUR ENHANCER (INS 635 ALLERGEN ADVICE: CONTAINS PEANUT AND MILK SOLID",
     previews: [
@@ -994,14 +1699,16 @@ const Allproducts = [
       },
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398287/1.Himalyan_Salt_ggzrql.png",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751016366/Himalyan-Back_60_ffpinb.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398287/1.Himalyan_Salt_ggzrql.png",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751016366/Himalyan-Back_60_ffpinb.jpg",
       },
       // {
-      //   "previewUrl": "https://recipes.net/wp-content/uploads/2024/01/how-to-eat-makhana-fully-1706249268.jpg",
-      //   "thumbUrl": "https://recipes.net/wp-content/uploads/2024/01/how-to-eat-makhana-fully-1706249268.jpg"
-      // }
+      //   previewUrl:
+      //     "https://recipes.net/wp-content/uploads/2024/01/how-to-eat-makhana-fully-1706249268.jpg",
+      //   thumbUrl:
+      //     "https://recipes.net/wp-content/uploads/2024/01/how-to-eat-makhana-fully-1706249268.jpg",
+      // },
     ],
     imageUrl:
       "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750411513/Himalyan20_xpzui1.jpg",
@@ -1015,10 +1722,11 @@ const Allproducts = [
   {
     name: "Tangy Cheese Flavored Makhana",
     category: "Flavored Makhana",
-    itemCode: "Mk11",
+    categoryHeading: "60 Gram",
+    itemCode: "Mk303",
     Energy: "236 Kcal",
     brand: "Nutzz Magic",
-    mkweight: "200",
+    // mkweight: "200",
     Proteins: "4.8 g",
     Carbohydrates: "33.5 g",
     TotalFats: "9.0 g",
@@ -1029,7 +1737,7 @@ const Allproducts = [
     Cholesterol: "0 mg",
     Sugar: "<0.3 g",
     Iron: "11.8 mg",
-    sizesAvailable: "30g, 60g, 90g",
+    // sizesAvailable: "30g, 60g, 90g",
     ingredients:
       " Makhana, olive oil, Sunflower Oil, Sugar, Salt, Maltodextrin,Hydrolyses Peanut Protein, Dehydrated Blend of Whey (From Milk), Stabilizer Emulsifier (INS 339), Acidity Regulator (INS 330), Cheese Concentrate, Colour (INS 160c).CONTANS ADDED FLAVOUR (NATURAL, NATURE IDENTICAL AND ARTIFICIAL FLAVOURING SUBSTANCES: MILK",
     previews: [
@@ -1041,9 +1749,9 @@ const Allproducts = [
       },
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398376/1.Tangy_Cheese_di0xn5.png",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751255543/Tangy_Chees-Back-60_voonyf.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398376/1.Tangy_Cheese_di0xn5.png",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751255543/Tangy_Chees-Back-60_voonyf.jpg",
       },
     ],
     imageUrl:
@@ -1054,14 +1762,14 @@ const Allproducts = [
       "Perfect for satisfying your cravings while staying healthy.",
     ],
   },
-
   {
     name: "Pudina Flavored Makhana",
     category: "Flavored Makhana",
-    itemCode: "Mk203",
+    categoryHeading: "60 Gram",
+    itemCode: "Mk304",
     Energy: "236 Kcal",
     brand: "Nutzz Magic",
-    mkweight: "200",
+    // mkweight: "200",
     Proteins: "4.8 g",
     Carbohydrates: "33.5 g",
     TotalFats: "9.0 g",
@@ -1072,7 +1780,7 @@ const Allproducts = [
     Cholesterol: "0 mg",
     Sugar: "<0.3 g",
     Iron: "11.8 mg",
-    sizesAvailable: "30g, 60g, 90g",
+    // sizesAvailable: "30g, 60g, 90g",
     ingredients:
       " MAKHANA, OLIVE OIL, SUNFLOWER OIL, SPICES & CONDIMENTS (RED CHILLS, CORIANDER SEEDS, DRIED MANGO ,CUMIN , TURMERIC ,DRIED GINGER, LONG PEPPER, FENUGREEK ,MACE, NUTMEG),EDIBLE SALT, BLACK SALT, SUGAR,MINT LEAVES (7%),FENUGREEK LEAVES, HYDROLYSED VEG.PROTEIN(PEANUT) , ACIDITY REGULATOR(INS-330),NATURAL FLAVOUR (MINT),FLAVOUR  ENHANCER (INS -627) (INS-631),ANTICAKING AGENT (INS-551).",
     previews: [
@@ -1084,9 +1792,9 @@ const Allproducts = [
       },
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398486/1.Pudina_y23xvc.png",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751016368/Pudina-Back_60_l9ogk0.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398486/1.Pudina_y23xvc.png",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751016368/Pudina-Back_60_l9ogk0.jpg",
       },
     ],
     imageUrl:
@@ -1097,14 +1805,14 @@ const Allproducts = [
       "Rich in nutrients and free from trans fats, making it a great alternative to chips.",
     ],
   },
-
   {
     name: "Roasted Makhana",
     category: "Flavored Makhana",
-    itemCode: "Mk204",
+    categoryHeading: "60 Gram",
+    itemCode: "Mk305",
     Energy: "236 Kcal",
     brand: "Nutzz Magic",
-    mkweight: "200",
+    // mkweight: "200",
     Proteins: "4.8 g",
     Carbohydrates: "33.5 g",
     TotalFats: "9.0 g",
@@ -1115,7 +1823,7 @@ const Allproducts = [
     Cholesterol: "0 mg",
     Sugar: "<0.3 g",
     Iron: "11.8 mg",
-    sizesAvailable: "30g, 60g, 250g , 1kg",
+    // sizesAvailable: "30g, 60g, 250g , 1kg",
     ingredients:
       " Blossoms in Water, as light as Air-Foxnuts (makhana) are a nutritious snack that are high in protein and fibre, while being naturally free of fat",
     previews: [
@@ -1128,9 +1836,9 @@ const Allproducts = [
 
       {
         previewUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398689/1.Roasted_fitih1.png",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751016366/Roasted-Back_60_makd0w.jpg",
         thumbUrl:
-          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750398689/1.Roasted_fitih1.png",
+          "https://res.cloudinary.com/dmpkp9ux2/image/upload/v1751016366/Roasted-Back_60_makd0w.jpg",
       },
     ],
     imageUrl:

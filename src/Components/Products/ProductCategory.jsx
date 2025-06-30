@@ -3,6 +3,7 @@ import Allproducts from "./AllProducts";
 import { Link, useParams } from "react-router-dom";
 import productsbg from "../../assets/productsbg.jpg";
 import BreadCrumbs from "../BreadCrumbs";
+import BenefitsOfMakhana from "../BenifitsOfMakhana";
 
 const ProductCategory = ({ cart, setCart }) => {
   console.log(1);
@@ -48,7 +49,7 @@ const ProductCategory = ({ cart, setCart }) => {
             >
               <div className="mx-auto p-6 md:p-10">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-6">
-                  Premium Raw Jumbo Makhana
+                  Premium Raw Makhana
                 </h2>
                 <ul className="space-y-4 text-gray-700 text-lg md:text-xl leading-relaxed">
                   <li className="flex items-start">
@@ -106,6 +107,8 @@ const ProductCategory = ({ cart, setCart }) => {
                   </li>
                 </ul>
               </div>
+
+              <BenefitsOfMakhana />
             </section>
           )}
 
@@ -187,54 +190,65 @@ const ProductCategory = ({ cart, setCart }) => {
                   </p>
                 </div>
               </div>
+
+              <BenefitsOfMakhana />
             </section>
           )}
 
         {/* <h1 className="text-5xl text-center mf">All Products</h1> */}
-        <div className="grid items-center justify-center grid-cols-1 gap-6 px-6 w-full   mt-20 w-fit sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-          {filteredProducts.map((product, index) => {
-            const isInCart = cart.find(
-              (item) => item.itemCode === product.itemCode
-            );
-
-            return (
-              <div key={index}>
-                <div className=" h-full flex flex-col border backdrop-blur overflow-hidden transition-transform duration-300 hover:scale-105">
-                  <div className="relative">
-                    <img
-                      src={product.imageUrl}
-                      alt={product.name}
-                      className="h-[24rem]  scale-[1] w-full object-cover  transition-opacity duration-300 hover:opacity-90"
-                    />
-                    {/* <div className="absolute px-2 py-1 text-xs font-medium text-white bg-black rounded top-2 left-2 bg-opacity-60">
-                                            New Arrival
-                                        </div> */}
+        {Object.entries(
+          filteredProducts.reduce((acc, product) => {
+            const heading = product.categoryHeading || "";
+            if (!acc[heading]) acc[heading] = [];
+            acc[heading].push(product);
+            return acc;
+          }, {})
+        ).map(([heading, products]) => (
+          <div key={heading} className="mb-12">
+            <h2 className="text-5xl font-bold uppercase  text-gray-700 mb-8 ml-10 mb-6 px-6">
+              {heading}
+            </h2>
+            <div className="grid items-center justify-center grid-cols-1 gap-6 px-6 w-full sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+              {products.map((product, index) => {
+                const isInCart = cart.find(
+                  (item) => item.itemCode === product.itemCode
+                );
+                return (
+                  <div key={index}>
+                    <div className="h-full flex flex-col border backdrop-blur overflow-hidden transition-transform duration-300 hover:scale-105">
+                      <div className="relative">
+                        <img
+                          src={product.imageUrl}
+                          alt={product.name}
+                          className="h-[28rem] w-full object-cover transition-opacity duration-300 hover:opacity-90"
+                        />
+                      </div>
+                      <div className="flex flex-col px-4 pb-3 mt-2 space-y-1">
+                        <h1 className="text-[1.15rem] font-semibold text-gray-800 truncate hover:text-dark">
+                          {product.name}
+                        </h1>
+                        {product?.quality && (
+                          <p className="text-xs italic text-gray-700">
+                            Quality:{" "}
+                            <span className="text-gray-500">
+                              {product.quality}
+                            </span>
+                          </p>
+                        )}
+                      </div>
+                      <Link
+                        to={`/product/${product.itemCode}`}
+                        className="w-[93%] p-2 mx-auto mb-4 text-center text-white transition-transform duration-300 rounded-md bg-dark hover:scale-105 hover:bg-opacity-90"
+                      >
+                        View Product
+                      </Link>
+                    </div>
                   </div>
-                  <div className="flex flex-col px-4 pb-3 mt-2 space-y">
-                    <h1 className="text-[1.15rem] text-wrap font-semibold text-gray-800 truncate transition-colors duration-300 hover:text-dark">
-                      {product.name}
-                    </h1>
-                    {/* <p className="text-sm text-gray-600 truncate">
-                                            {product.description}
-                                        </p> */}
-                    {product?.quality && (
-                      <p className="text-xs italic text-gray-700">
-                        Quality:{" "}
-                        <span className="text-gray-500">{product.quality}</span>
-                      </p>
-                    )}
-                  </div>
-                  <Link
-                    to={`/product/${product.itemCode}`}
-                    className="w-[93%] p-2 mx-auto mb-4  text-center text-white transition-transform duration-300 rounded-md bg-dark hover:scale-105 hover:bg-opacity-90"
-                  >
-                    View Product
-                  </Link>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+                );
+              })}
+            </div>
+          </div>
+        ))}
       </div>
     </>
   );

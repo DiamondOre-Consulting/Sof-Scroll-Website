@@ -31,7 +31,7 @@ const PopularCategory = () => {
       },
     });
 
-    console.log("fixed")
+    console.log("fixed");
 
     tl.from(".card-container", {
       y: () => blockHeight / 2,
@@ -163,7 +163,7 @@ const PopularCategory = () => {
           </div>
         </div>
       </div>
-      <section className="h-[120vh] md:h-[250vh] flex items-center justify-center">
+      <section className="h-[135vh] md:h-[250vh] flex items-center justify-center">
         {/* <h1>Scroll down to see the animation</h1> */}
       </section>
     </>

@@ -42,12 +42,13 @@ function App() {
   }, []);
 
   return (
-    <div
-      className="bg-cover bg-fixed bg-center min-h-screen"
-      style={{
-        backgroundImage: `url(${"https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750396575/ChatGPT_Image_Jun_20_2025_10_45_54_AM_fojoij.png"})`,
-      }}
-    >
+    // <div
+    //   className="bg-cover bg-fixed bg-center min-h-screen"
+    //   style={{
+    //     backgroundImage: `url(${"https://res.cloudinary.com/dmpkp9ux2/image/upload/v1750396575/ChatGPT_Image_Jun_20_2025_10_45_54_AM_fojoij.png"})`,
+    //   }}
+    // >
+    <div className="bg-[#FFFDF6] ">
       <Helmet>
         <title>SOF SSCRROL – Premium Tissue & Makhana Products</title>
         <meta
