@@ -56,7 +56,7 @@ const ProductCategory = ({ cart, setCart }) => {
                     <span className="text-green-500 text-2xl mr-3">
                       &#8226;
                     </span>
-                    Experience purity and freshness with our Premium Raw Jumbo
+                    Experience purity and freshness with our Premium Raw 
                     Makhana, carefully sourced from trusted farms to deliver
                     exceptional quality.
                   </li>
